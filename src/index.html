@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Home - SB Admin Pro</title>
+        <link href="styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <img src="assets/logo1_transparent_md.png" style="width: 200px;" alt="easybase logo" />
+                </div>
+                <nav>
+                    <div class="nav-mobile">
+                        <a id="nav-toggle" href="#!"><span></span></a>
+                    </div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#!">Home</a>
+                        </li>
+                        <li>
+                            <a href="#!">About</a>
+                        </li>
+                        <li>
+                            <a href="#!">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contact</a>
+                        </li>
+                        <li>
+                            <a aria-disabled="true"><button type="button" class="btn btn-raised btn-success">Login</button></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <section class="bg-blue section-overflow">
+            <div class="full-screen">
+                <div class="splash-root">
+                    
+                    <div class="splash-text-root">
+                        <h1 class="splash-primary-text">Database integration, easy</h1>
+                        <h3>Instantly deploy into any application or </h3>
+                        <div class="splash-buttons">
+                            <button type="button" style="padding: 0 40px; box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);" class="btn btn-raised btn-lg btn-success">Try Now</button>
+                            <button type="button" class="btn btn-outline-light btn-lg">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div style="width: 500px;">
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-overflow content-section">
+            <div class="container">
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+                <h1>Hello</h1>
+            </div>
+        </section>
+
+        <section class="section-overflow footer">
+            <div class="container">
+                <div></div>
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () { 
+                $('body').bootstrapMaterialDesign();
+
+                var scroll_pos = 0;
+                $(document).scroll(function () {
+                    scroll_pos = $(this).scrollTop();
+                    if (scroll_pos > 410) {
+                        $(".navigation").addClass("nav-scrolled")
+                    } else {
+                        $(".navigation").removeClass("nav-scrolled");
+                    }
+                });
+            });
+            (function ($) {
+                    $(function () {
+                        $('nav ul li > a:not(:only-child)').click(function (e) {
+                            $(this).siblings('.nav-dropdown').toggle();
+                            $('.nav-dropdown').not($(this).siblings()).hide();
+                            e.stopPropagation();
+                        });
+                        $('html').click(function () {
+                            $('.nav-dropdown').hide();
+                        });
+                    });
+                    document.querySelector('#nav-toggle').addEventListener('click', function () {
+                        this.classList.toggle('active');
+                    });
+                    $('#nav-toggle').click(function () {
+                        $('nav ul').toggle();
+                    });
+                })(jQuery);
+        </script>
+    </body>
+</html>
