@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Home - SB Admin Pro</title>
+        <title>EASYBASE</title>
         <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:300,400,500,700">    
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
         <link href="fontawesome/css/brands.css" rel="stylesheet">
 
@@ -42,29 +42,31 @@
             </div>
         </section>
 
+        <canvas class="confetti-canvas"></canvas>   
         <section class="bg-blue section-overflow">
-            <div class="full-screen">
-                <div class="splash-root">
-                    
-                    <div class="splash-text-root">
-                        <h1 class="splash-primary-text">Database integration, easy</h1>
-                        <h3>Instantly deploy into any application or </h3>
-                        <div class="splash-buttons">
-                            <button type="button" style="padding: 0 40px; box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);" class="btn btn-raised btn-lg btn-success">Try Now</button>
-                            <button type="button" class="btn btn-outline-light btn-lg">Learn More</button>
+            <div class="full-screen-bg-blue-connection">
+                <div class="full-screen">
+                    <div class="splash-root">
+                        
+                        <div class="splash-text-root">
+                            <h1 class="splash-primary-text">The fast & visual way to empower your website or app</h1>
+                            <h4 class="splash-secondary-text">EasyBase is an powerful, no-code database with a self-building API and visual query builder </h4>
+                            <div class="splash-buttons">
+                                <button type="button" class="btn btn-raised btn-lg btn-success splash-button-try">Try Now</button>
+                                <button type="button" class="btn btn-outline-light btn-lg">Learn More</button>
+                            </div>
                         </div>
+    
+                        <div class="splash-gif">
+                            <div>Hello</div>
+                        </div>
+    
+    
                     </div>
-
-                    <div class="splash-gif">
-                        <div>Hello</div>
-                    </div>
-
-
                 </div>
             </div>
         </section>
         
-        <canvas class="confetti-canvas"></canvas>
 
         <section class="section-overflow">
             <div class="container">
@@ -79,6 +81,7 @@
                 </div>
             </div>
         </section>
+
 
         <section class="section-overflow footer">
             <div class="container">
@@ -102,13 +105,18 @@
 
                 var scroll_pos = 0;
                 $(document).scroll(function () {
-                    scroll_pos = $(this).scrollTop();
-                    if (scroll_pos > 410) {
-                        $(".navigation").addClass("nav-scrolled")
-                    } else {
-                        $(".navigation").removeClass("nav-scrolled");
+                    if ($(window).width() > 800)
+                    {
+                        scroll_pos = $(this).scrollTop();
+                        if (scroll_pos > 210) {
+                            $(".navigation").addClass("nav-scrolled")
+                        } else {
+                            $(".navigation").removeClass("nav-scrolled");
+                        }
                     }
                 });
+ 
+                if ($(window).width() <= 800) $(".navigation").addClass("nav-scrolled")
 
                 const canvasEl = document.querySelector('.confetti-canvas');
 
@@ -128,7 +136,8 @@
 
                 function Confetti() {
                     //construct confetti
-                    const colours = ['#fde132', '#009bde', '#ff6b00'];
+                    // const colours = ['#fde132', '#009bde', '#ff6b00'];
+                    const colours = [ '#ff9e22', '#ffcf57', '#8b9aff', '#556cd6' ]
 
                     this.x = Math.round(Math.random() * w);
                     this.y = Math.round(Math.random() * h) - (h / 2);
@@ -139,7 +148,7 @@
 
                     this.color = colours[Math.floor(colours.length * Math.random())];
 
-                    this.speed = this.size / 7;
+                    this.speed = this.size / 9;
 
                     this.opacity = Math.random();
 
@@ -176,7 +185,7 @@
                 };
 
                 const ctx = canvasEl.getContext('2d');
-                const confNum = Math.floor(w / 20);
+                const confNum = Math.floor(w / 40);
                 const confs = new Array(confNum).fill().map(_ => new Confetti());
 
                 loop();
