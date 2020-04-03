@@ -7,7 +7,8 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:300,400,500,700">    
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-        <link href="fontawesome/css/brands.css" rel="stylesheet">
+        <link href="fontawesome/css/brands.min.css" rel="stylesheet">
+        <link href="fontawesome/css/all.min.css" rel="stylesheet">
 
     </head>
     <body>
@@ -42,8 +43,13 @@
             </div>
         </section>
 
-        <canvas class="confetti-canvas"></canvas>   
+        <!-- <canvas class="confetti-canvas"></canvas>    -->
+
         <section class="bg-blue section-overflow">
+            <div style="position: relative;">
+                <div class="bg-blue-rect-1"></div>
+                <div class="bg-blue-circle"></div>
+            </div>
             <div class="full-screen-bg-blue-connection">
                 <div class="full-screen">
                     <div class="splash-root">
@@ -66,9 +72,72 @@
                 </div>
             </div>
         </section>
-        
 
-        <section class="section-overflow">
+        <section class="section-about section-overflow">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <h1 class="section-header">Simple, powerful</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        Hello
+                    </div>
+                    <div class="col-md-6">
+                        World
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-price section-overflow">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <h1 class="section-header">Only pay for what you use</h1>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <h3 class="section-subheader">We operate on an on-demand pricing model.</h3>
+                        </div>
+                        <div class="row">
+                            <p>We automatically keep tabs on your data storage and transfer on a monthly basis. <a href="www.google.com">Learn more about pricing.</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        World
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-secure section-overflow">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <h1 class="section-header">Secure & Scalable</h1>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-md-6">
+                        Hello
+                    </div>
+                    <div class="col-md-6">
+                        World
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="section-overflow">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -80,21 +149,32 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
-        <section class="section-overflow footer">
-            <div class="container">
-                <div>
-                    <ul>
-                        <li><a href="#"><i class="fa fa-stack-overflow"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    </ul>
+        <footer class="page-footer pt-4 section-elevation">
+            <div class="container text-center text-md-left">
+                <div class="footer-cta-socials-root">
+                        <div class="footer-cta-root">
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+                            <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        </div>
+
+                        <div class="footer-socials-root">
+                            <button class="btn btn-primary bmd-btn-fab mx-2"><i class="fab fa-stack-overflow footer-socials-root-button"></i></a>
+                            <button class="btn btn-primary bmd-btn-fab mx-2"><i class="fab fa-twitter footer-socials-root-button "></i></a>
+                            <button class="btn btn-primary bmd-btn-fab mx-2"><i class="fab fa-facebook footer-socials-root-button "></i></a>
+                            <button class="btn btn-primary bmd-btn-fab mx-2"><i class="fab fa-google-plus footer-socials-root-button "></i></>
+                        </div>
                 </div>
+                <hr />
             </div>
-        </section>
+        
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="https://mdbootstrap.com/"> EasyBase</a>
+            </div>
+        
+        </footer>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
@@ -108,7 +188,7 @@
                     if ($(window).width() > 800)
                     {
                         scroll_pos = $(this).scrollTop();
-                        if (scroll_pos > 210) {
+                        if (scroll_pos > 150) {
                             $(".navigation").addClass("nav-scrolled")
                         } else {
                             $(".navigation").removeClass("nav-scrolled");
@@ -128,7 +208,7 @@
                     ctx.clearRect(0, 0, w, h);
 
                     confs.forEach((conf) => {
-                        conf.update();
+                        // conf.update();
                         conf.draw();
                     })
 
@@ -140,7 +220,8 @@
                     const colours = [ '#ff9e22', '#ffcf57', '#8b9aff', '#556cd6' ]
 
                     this.x = Math.round(Math.random() * w);
-                    this.y = Math.round(Math.random() * h) - (h / 2);
+                    // this.y = Math.round(Math.random() * h) - (h / 2);
+                    this.y = Math.round(Math.random() * h);
                     this.rotation = Math.random() * 360;
 
                     const size = Math.random() * (w / 60);
