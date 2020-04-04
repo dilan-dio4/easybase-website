@@ -53,8 +53,8 @@
             <div class="full-screen-bg-blue-connection">
                 <div class="full-screen">
                     <div class="splash-root">
-                        
                         <div class="splash-text-root">
+                            <img src="assets/brush-stroke.svg" class="brush-stroke" />
                             <h1 class="splash-primary-text">The fast & visual way to empower your website or app</h1>
                             <h4 class="splash-secondary-text">EasyBase is an powerful, no-code database with a self-building API and visual query builder </h4>
                             <div class="splash-buttons">
@@ -75,18 +75,17 @@
 
         <section class="section-about section-overflow">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12">
-                        <h1 class="section-header">Simple, powerful</h1>
-                    </div>
-                </div>
-
                 <div class="row">
                     <div class="col-md-6">
                         Hello
                     </div>
                     <div class="col-md-6">
-                        World
+                        <div class="row">
+                            <h3 class="section-subheader">Managing your data has never been easier</h3>
+                        </div>
+                        <div class="row">
+                            <p class="section-text-content">Utilize the power of an enterprise NoSQL backend framework without the hassle of complicated queries or formal DBMS training.</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,19 +94,14 @@
 
         <section class="section-price section-overflow">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12">
-                        <h1 class="section-header">Only pay for what you use</h1>
-                    </div>
-                </div>
         
                 <div class="row">
                     <div class="col-md-6">
                         <div class="row">
-                            <h3 class="section-subheader">We operate on an on-demand pricing model.</h3>
+                            <h3 class="section-subheader">We operate on an on-demand pricing model</h3>
                         </div>
                         <div class="row">
-                            <p>We automatically keep tabs on your data storage and transfer on a monthly basis. <a href="www.google.com">Learn more about pricing.</a></p>
+                            <p class="section-text-content">We automatically keep tabs on your data storage and transfer on a monthly basis. <a href="www.google.com">Learn more about pricing.</a></p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -183,18 +177,18 @@
             $(document).ready(function () { 
                 $('body').bootstrapMaterialDesign();
 
-                var scroll_pos = 0;
-                $(document).scroll(function () {
-                    if ($(window).width() > 800)
-                    {
-                        scroll_pos = $(this).scrollTop();
-                        if (scroll_pos > 150) {
-                            $(".navigation").addClass("nav-scrolled")
-                        } else {
-                            $(".navigation").removeClass("nav-scrolled");
-                        }
-                    }
-                });
+                // var scroll_pos = 0;
+                // $(document).scroll(function () {
+                //     if ($(window).width() > 800)
+                //     {
+                //         scroll_pos = $(this).scrollTop();
+                //         if (scroll_pos > 150) {
+                //             $(".navigation").addClass("nav-scrolled")
+                //         } else {
+                //             $(".navigation").removeClass("nav-scrolled");
+                //         }
+                //     }
+                // });
  
                 if ($(window).width() <= 800) $(".navigation").addClass("nav-scrolled")
 
