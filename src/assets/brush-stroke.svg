@@ -25,7 +25,7 @@
   </metadata>
     <defs>
         <linearGradient id="gradient">
-            <stop offset="15%" stop-color="#EEE" />
+            <stop offset="0%" stop-color="#EEE" />
         </linearGradient>
     </defs>
   <path
