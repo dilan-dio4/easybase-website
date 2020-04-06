@@ -49,32 +49,13 @@ body {
     background-color: white !important;
 }
 
-/* .bg-blue { position: relative; overflow: hidden; }
-
-.bg-blue::before {
-    background-color: #556cd6;
-    background-image: url("https://www.transparenttextures.com/patterns/pinstripe-dark.png");
-    
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
-    content: "";
-    height: 200px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    -webkit-transform: skewY(-14deg) scaleY(5.5);
-    transform: skewY(-14deg) scaleY(6.75);
-    width: 100%;
-    z-index: 10;
-} */
-
 .brush-stroke {
     position: absolute;
-    right: 23%;
-    top: 615px;
+    left: 23px;
+    top: 0px;
     width: 230px;
     z-index: -1;
-    transform: rotate(170deg);
+    /* transform: rotate(170deg); */
 }
 
 .bg-blue {
@@ -119,46 +100,12 @@ body {
 
 .footer-bg-blue {
     overflow: hidden;
-    height: 300px;
-}
-
-.footer-bg-blue-rect-1{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 40vh;
-    width: 58vw;
-    /* background-color: #556cd6; */
-    background: linear-gradient(90deg, rgba(85,108,214,1) 0%, rgba(66,93,214,1) 100%);
-
-
-
-    z-index: -2;
-    overflow-x: hidden;
-        -webkit-box-shadow: 0px -15px 0px 0px #8b9aff;
+    position: relative;
+    background: linear-gradient(90deg, rgba(66,93,214,1) 0%, rgba(85,108,214,1) 100%);
+    -webkit-box-shadow: 0px -15px 0px 0px #8b9aff;
             box-shadow: 0px -15px 0px 0px #8b9aff;
+
 }
-
-.footer-bg-blue-circle{
-    position: absolute;
-    top: -0;
-    right: calc(58vw - 55vw);
-    height: 188vh;
-    width: 110vw;
-    background-color: #556cd6;
-
-    border-radius: 50%;
-    z-index: -3;
-    overflow-x: hidden;
-        -webkit-box-shadow: 0px -15px 0px 0px #8b9aff;
-            box-shadow: 0px -15px 0px 0px #8b9aff;
-}
-
-
-.full-screen-bg-blue-connection{
-    height: 100vh;
-}
-
 
 .section-overflow {
     max-width: 100%;
@@ -437,12 +384,6 @@ nav ul li ul li a {
     justify-content: center;
 }
 
-.section-elevation {
-    -webkit-box-shadow: 0 9px 12px 1px rgba(0,0,0,0.14), 0 3px 16px 2px rgba(0,0,0,0.12), 0 5px 6px -3px rgba(0,0,0,0.20);
-            box-shadow: 0 9px 12px 1px rgba(0,0,0,0.14), 0 3px 16px 2px rgba(0,0,0,0.12), 0 5px 6px -3px rgba(0,0,0,0.20);
-
-}
-
 .section-about { 
     margin-top: 100px;
     position: relative; 
@@ -477,6 +418,7 @@ nav ul li ul li a {
     font-size: 37px;
     letter-spacing: 0.65px;
     margin-bottom: 40px;
+    font-family: 'Roboto Slab', serif;
 
 }
 
@@ -486,7 +428,6 @@ nav ul li ul li a {
 
 
 .footer-content-container {
-    padding-top: 50px;
     color: #eee;
 }
 
@@ -599,4 +540,5 @@ nav ul li ul li a {
 
 .product-view-root {
     padding: 30px;
+    display: flex;
 }

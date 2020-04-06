@@ -43,8 +43,6 @@
             </div>
         </section>
 
-        <!-- <canvas class="confetti-canvas"></canvas>    -->
-
         <section class="bg-blue section-overflow">
             <div style="position: relative;">
                 <div class="bg-blue-rect-1"></div>
@@ -54,7 +52,7 @@
                 <div class="full-screen">
                     <div class="splash-root">
                         <div class="splash-text-root">
-                            <img src="assets/brush-stroke.svg" class="brush-stroke unselectable-image" />
+                            <!-- <img src="assets/brush-stroke.svg" class="brush-stroke unselectable-image" /> -->
                             <h1 class="splash-primary-text">The fast & visual way to empower your website or app</h1>
                             <h4 class="splash-secondary-text">EasyBase is an powerful, no-code database with a self-building API and visual query builder </h4>
                             <div class="splash-buttons">
@@ -78,15 +76,15 @@
             <div class="container">
                 <div class="row" style="align-items: center;">
                     <div class="col-md-6">
-                        <div class="product-view-root">
+                        <div class="product-view-root justify-content-center justify-content-lg-between">
                             <img src="assets/product-screen-2-colorized.png" class="unselectable-image product-screen-img" />
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="row">
+                    <div class="col-md-6 py-2">
+                        <div class="row px-4">
                             <h3 class="section-subheader">Managing your data has never been easier</h3>
                         </div>
-                        <div class="row">
+                        <div class="row px-4">
                             <p class="section-text-content">Utilize the power of an enterprise NoSQL backend framework without the hassle of complicated queries or formal DBMS training.</a></p>
                         </div>
                     </div>
@@ -149,11 +147,7 @@
         </section> -->
 
 
-        <footer class="pt-4 section-elevation footer-bg-blue">
-            <div style="position: relative;">
-                <div class="footer-bg-blue-rect-1"></div>
-                <div class="footer-bg-blue-circle"></div>
-            </div>
+        <footer class="py-5 footer-bg-blue">
             <div class="container text-center text-md-left footer-content-container">
                 <div class="footer-cta-socials-root">
                         <div class="footer-cta-root">
@@ -198,81 +192,6 @@
                 // });
  
                 if ($(window).width() <= 800) $(".navigation").addClass("nav-scrolled")
-
-                const canvasEl = document.querySelector('.confetti-canvas');
-
-                const w = canvasEl.width = window.innerWidth;
-                const h = canvasEl.height = window.innerHeight * 2;
-
-                function loop() {
-                    requestAnimationFrame(loop);
-                    ctx.clearRect(0, 0, w, h);
-
-                    confs.forEach((conf) => {
-                        // conf.update();
-                        conf.draw();
-                    })
-
-                }
-
-                function Confetti() {
-                    //construct confetti
-                    // const colours = ['#fde132', '#009bde', '#ff6b00'];
-                    const colours = [ '#ff9e22', '#ffcf57', '#8b9aff', '#556cd6' ]
-
-                    this.x = Math.round(Math.random() * w);
-                    // this.y = Math.round(Math.random() * h) - (h / 2);
-                    this.y = Math.round(Math.random() * h);
-                    this.rotation = Math.random() * 360;
-
-                    const size = Math.random() * (w / 60);
-                    this.size = size < 15 ? 15 : size;
-
-                    this.color = colours[Math.floor(colours.length * Math.random())];
-
-                    this.speed = this.size / 9;
-
-                    this.opacity = Math.random();
-
-                    this.shiftDirection = Math.random() > 0.5 ? 1 : -1;
-                }
-
-                Confetti.prototype.border = function () {
-                    // Hit bottom
-                    if (this.y >= h) {
-                        this.y = 0;
-                        this.x = Math.round(Math.random() * w);
-                    }
-                }
-
-                Confetti.prototype.update = function () {
-                    this.y += this.speed;
-
-                    if (this.y <= h) {
-                        this.x += this.shiftDirection / 3;
-                        this.rotation += this.shiftDirection * this.speed / 100;
-                    }
-
-                    if (this.y > h) this.border();
-                };
-
-                Confetti.prototype.draw = function () {
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.size, this.rotation, this.rotation + (Math.PI / 2));
-                    ctx.lineTo(this.x, this.y);
-                    ctx.closePath();
-                    ctx.globalAlpha = this.opacity;
-                    ctx.fillStyle = this.color;
-                    ctx.fill();
-                };
-
-                const ctx = canvasEl.getContext('2d');
-                const confNum = Math.floor(w / 40);
-                const confs = new Array(confNum).fill().map(_ => new Confetti());
-
-                loop();
-
-
             });
             (function ($) {
                     $(function () {
