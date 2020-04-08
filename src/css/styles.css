@@ -509,6 +509,7 @@ nav ul li ul li a {
     }
     .hero-bg {
         height: 100vh;
+        background-size: cover;
     }
 }
 
