@@ -97,7 +97,7 @@ body {
 
 .hero-bg {
     background-image: url("../assets/hero-bg.png");
-    background-size: cover;
+    background-size: 100vw 93vh;
     background-repeat: no-repeat;
     background-position: 0 0;
     position: absolute;
