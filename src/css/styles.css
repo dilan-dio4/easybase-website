@@ -339,12 +339,14 @@ nav ul li ul li a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: center;
+
 }
 
 .splash-checks div {
     display: flex;
     flex-wrap: nowrap;
-    flex-basis: 30%;
+    flex-basis: 29%;
     flex-direction: row;
     align-items: center;
 }
@@ -352,9 +354,11 @@ nav ul li ul li a {
 .splash-checks h6 {
     font-family: 'Baloo 2', serif;
     font-size: 18px;
-    padding-left: 5px;
+    padding-left: 9px;
     margin: 0;
     word-wrap: none;
+    letter-spacing: 0.8px;
+    font-weight: 300;
 }
 
 .footer-cta-socials-root {
