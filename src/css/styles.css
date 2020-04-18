@@ -90,7 +90,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-image: url("../assets/hero-bg.png");
+    background-image: url("../assets/footer-bg.png");
 
 }
 
@@ -531,7 +531,7 @@ nav ul li ul li a {
         -ms-flex-align: center;
         align-items: center;
         height: 100%;
-        padding: 0px 54px;
+        padding: 0px 9%;
     }
     .brand {
         display: flex;
