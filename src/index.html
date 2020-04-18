@@ -17,7 +17,7 @@
                 <div class="brand">
                     <img src="assets/logo1_transparent_md.png" style="width: 200px;" alt="easybase logo" />
                 </div>
-                <nav>
+                <nav style="display: flex; flex-grow: 1; justify-content: center;">
                     <div class="nav-mobile">
                         <a id="nav-toggle" href="#!"><span></span></a>
                     </div>
@@ -166,6 +166,27 @@
         </section>
 
 
+        <section class="section-price section-overflow">
+            <div class="container">
+        
+                <div class="row" style="align-items: center;">
+                    <div class="col-md-6 py-2">
+                        <div class="row px-4">
+                            <h3 class="section-subheader">Hook Up!</h3>
+                        </div>
+                        <div class="row px-4">
+                            <p class="section-text-content">EasyBase's on-demand pricing model saves you money by automatically
+                                keeping tabs on your data storage and transfer. Charges are calculated based on usage so periods
+                                of low transfer are cost-effective. <a href="www.google.com">Learn more about pricing.</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        World
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- <section class="section-overflow">
             <div class="container">
                 <div class="row">
@@ -181,7 +202,7 @@
         </section> -->
 
 
-        <footer class="py-5 footer-bg-blue">
+        <footer class="py-5 footer-bg">
             <div class="container text-center text-md-left footer-content-container">
                 <div class="footer-cta-socials-root">
                         <div class="footer-cta-root">
@@ -213,32 +234,9 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-        <script>
-        $('body').on("mousewheel scroll", function () {
-            // remove default behavior
-            event.preventDefault();
-
-            //scroll without smoothing
-            var wheelDelta = event.wheelDelta / 2;
-            var currentScrollPosition = window.pageYOffset;
-            window.scrollTo(0, currentScrollPosition - wheelDelta);
-        });
-                
+        <script> 
             $(document).ready(function () { 
                 $('body').bootstrapMaterialDesign();
-
-                // var scroll_pos = 0;
-                // $(document).scroll(function () {
-                //     if ($(window).width() > 800)
-                //     {
-                //         scroll_pos = $(this).scrollTop();
-                //         if (scroll_pos > 150) {
-                //             $(".navigation").addClass("nav-scrolled")
-                //         } else {
-                //             $(".navigation").removeClass("nav-scrolled");
-                //         }
-                //     }
-                // });
  
                 if ($(window).width() <= 800) $(".navigation").addClass("nav-scrolled")
             });
