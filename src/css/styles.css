@@ -545,7 +545,7 @@ nav ul li ul li a {
 
 .contact-text {
     text-decoration: underline !important;
-    color: white !important;
+    color: white;
 }
 
 .action-card {
