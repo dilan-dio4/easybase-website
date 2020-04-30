@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:300,400,500,700">
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link href="/assets/css/blog_styles.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="/assets/images/logo1_blue_orange_transparent.png" style="width: 200px;" alt="easybase logo" />
+            </div>
+            <nav style="display: flex; flex-grow: 1; justify-content: center;">
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#!"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a class="nav-regular-link" href="#!">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-regular-link" href="#!">About</a>
+                    </li>
+                    <li>
+                        <a class="nav-regular-link" href="#!">Pricing</a>
+                    </li>
+                    <li>
+                        <a class="nav-regular-link" href="#!">Contact</a>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-raised btn-success nav-login-button">Login</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <section>
+        {{ content }}
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('body').bootstrapMaterialDesign();
+
+            if ($(window).width() <= 800) $(".navigation").addClass("nav-scrolled")
+        });
+        (function ($) {
+            $(function () {
+                $('nav ul li > a:not(:only-child)').click(function (e) {
+                    $(this).siblings('.nav-dropdown').toggle();
+                    $('.nav-dropdown').not($(this).siblings()).hide();
+                    e.stopPropagation();
+                });
+                $('html').click(function () {
+                    $('.nav-dropdown').hide();
+                });
+            });
+            document.querySelector('#nav-toggle').addEventListener('click', function () {
+                this.classList.toggle('active');
+            });
+            $('#nav-toggle').click(function () {
+                $('nav ul').toggle();
+            });
+        })(jQuery);
+
+
+    </script>
+</body>
+
+</html>

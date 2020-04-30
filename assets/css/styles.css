@@ -69,7 +69,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 -10px;
-    background-image: url("../assets/footer-bg.png");
+    background-image: url("../images/footer-bg.png");
 }
 
 .section-overflow {
@@ -78,7 +78,7 @@ body {
 }
 
 .hero-bg {
-    background-image: url("../assets/hero-bg.png");
+    background-image: url("../images/hero-bg.png");
     background-size: 100vw 93vh;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -105,17 +105,21 @@ nav ul li {
     position: relative;
 }
 
-nav ul li a {
-    display: block;
-    padding: 0 20px;
-    line-height: 70px;
+.nav-regular-link {
+    padding: 12px 20px;
     color: #fff;
     font-weight: 500;
+    transition: all linear 50ms;
+    text-decoration: none !important;
 }
 
-nav ul li a:not(:only-child):after {
+.nav-regular-link:not(:only-child):after {
     padding-left: 4px;
     content: ' ▾';
+}
+
+.nav-login-button {
+    font-family: 'Roboto', sans-serif;
 }
 
 nav ul li ul li {
@@ -414,10 +418,13 @@ nav ul li ul li a {
     nav ul li {
         float: none;
     }
-    nav ul li a {
+    .nav-regular-link {
         font-family: 'Roboto', sans-serif;
-        padding: 15px;
-        line-height: 20px;
+        font-size: 30px;
+    }
+    .nav-login-button {
+        margin: 20px;
+        font-size: 25px;
     }
     nav ul li ul li a {
         padding-left: 30px;
@@ -471,7 +478,8 @@ nav ul li ul li a {
 
 @media screen and (min-width: 800px) {
     .nav-list {
-        display: block !important;
+        display: flex;
+        align-items: center;
     }
     .nav-container {
         display: -webkit-box;
@@ -488,7 +496,7 @@ nav ul li ul li a {
         flex-grow: 1;
         justify-content: center;
     }
-    nav ul li a {
+    .nav-regular-link {
         font-family: 'Roboto', sans-serif;
     }
     .footer-content-text {
@@ -496,6 +504,10 @@ nav ul li ul li a {
     }
     .splash-checks h6 {
         padding: 3px 25px 0 3px;
+    }
+    .nav-login-button {
+        margin: 15px 20px !important;
+        font-size: 25px; 
     }
 }
 
