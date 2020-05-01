@@ -514,7 +514,7 @@ nav ul li ul li a {
         font-family: 'Roboto', sans-serif;
     }
     .footer-content-text {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .splash-checks h6 {
         padding: 3px 25px 0 3px;
@@ -572,6 +572,7 @@ nav ul li ul li a {
 
 .contact-text {
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .action-card {
@@ -680,12 +681,12 @@ nav ul li ul li a {
     line-height: normal !important;
 }
 
-a {
+.inline-a {
     transition: border linear 50ms;
 }
 
-a:hover {
+.inline-a:hover {
     text-decoration: none !important;
-    border-bottom-width: 1px;
+    border-bottom-width: 2px;
     border-bottom-style: solid;
 }
