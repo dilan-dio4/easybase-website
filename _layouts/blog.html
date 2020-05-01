@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>{{ page.title }}</title>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:300,400,500,700">
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Nunito+Sans:300,400,500,700">
     <link rel="stylesheet"
         href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
@@ -18,7 +18,7 @@
     <section class="navigation">
         <div class="nav-container">
             <div class="brand">
-                <img src="/assets/images/logo1_blue_orange_transparent.png" style="width: 200px;" alt="easybase logo" />
+                <a href="https://easybase.io"><img src="/assets/images/logo1_blue_orange_transparent.png" style="width: 200px;" alt="easybase logo" /></a>
             </div>
             <nav style="display: flex; flex-grow: 1; justify-content: center;">
                 <div class="nav-mobile">
@@ -46,12 +46,201 @@
     </section>
 
 
-    <section>
-        {{ content }}
+    <section class="main-content">
+        <div class="wide-container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <nav class="inline-breadcrumb-root" aria-label="breadcrumb">
+                        <ol class="breadcrumb inline-breadcrumb">
+                            {% for tag in page.tags %}
+                            <li class="breadcrumb-item"><a href="/tags/{{ tag }}/">{{ tag }}</a></li>
+                            {% endfor %}
+                        </ol>
+                    </nav>
+                    <h1 class="post-title">{{ page.title }}</h1>
+
+
+                    {% if page.title_image %}
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <img class="title-image" src={{ page.title_image }} />
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="content-text">
+                        {{ content }}
+                    </div>
+                    <hr />
+                    <div class="socials-content-footer">
+                        <h3 style="font-weight: 600;">Share</h3>
+                        <div class="socials-content-footer-buttons">
+                            <button href="twitter.com" class="btn btn-raised btn-success" style="background-color: #29c5f6;">
+                                <ion-icon name="logo-twitter" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                            </button>
+                            <button href="facebook.com" class="btn btn-raised btn-success" style="background-color: #6788ce;">
+                                <ion-icon name="logo-facebook" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                            </button>
+                            <button href="linkeding.com" class="btn btn-raised btn-success" style="background-color: #3a9bdc;">
+                                <ion-icon name="logo-linkedin" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="sidebar-cards-root">
+                        <div class="about-easybase-card-root">
+                            <h2 class="about-easybase-card-title">About EasyBase</h2>
+                            <p class="about-easybase-card-content">EasyBase is a powerful, no-code database with a self-building API
+                            and visual query builder</p>
+                            <div class="about-easybase-checks">
+                                <span>
+                                    <ion-icon name="checkmark" style="color: #4caf50; font-size: 20px;"></ion-icon>
+                                    <p>99% Uptime*</p>
+                                </span>
+                                <span>
+                                    <ion-icon name="checkmark" style="color: #4caf50; font-size: 20px;"></ion-icon>
+                                    <p>First $50 Free</p>
+                                </span>
+                                <span>
+                                    <ion-icon name="checkmark" style="color: #4caf50; font-size: 20px;"></ion-icon>
+                                    <p>Instant Setup</p>
+                                </span>
+                            </div>
+                            <div class="splash-buttons">
+                                <button type="button" class="btn btn-raised btn-success splash-button-try">Try Free</button>
+                                <button type="button" class="btn btn-outline-secondary">Learn More</button>
+                            </div>
+                        </div>
+                        <div class="author-card-root">
+                            <div class="author-root">
+                                <img class="author-image" src={{ page.author_image }} />
+                            </div>
+                            <h4 class="author-name">Written By <a href="www.google.com">{{ page.author_name }}</a></h4>
+                            <p class="author-description">{{page.author_description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="easybase-preview-root">
+                        sdaffsd
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
+    <footer class="footer-root">
+        <div class="container footer-content-container">
+            <div class="row">
+                <div class="col-md-3 d-flex justify-content-center">
+                    <div style="width: 360px;">
+                        <div
+                            style="display: flex; flex-wrap: nowrap; align-items: flex-start; justify-content: flex-start;">
+                            <div>
+                                <ion-icon name="pin-outline" size="large"></ion-icon>
+                            </div>
+                            <div class="mt-1">
+                                <p class="footer-content-text pb-1 pl-3">1679 Main Street Ave</p>
+                                <p class="footer-content-text pb-1 pl-3">New York, NY</p>
+                                <p class="footer-content-text pb-1 pl-3">14984</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex justify-content-center">
+                    <div style="width: 360px;">
+                        <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; justify-content: flex-start;">
+                            <div>
+                                <ion-icon name="chatbubbles-outline" size="large"></ion-icon>
+                            </div>
+                            <div class="mt-1">
+                                <p class="footer-content-text pb-1 pl-3">
+                                    <a href="mailto:hello@easybase.io" class="contact-text">hello@easybase.io</a>
+                                </p>
+                                <p class="footer-content-text pb-1 pl-3">
+                                    <a href="tel:1234567890" class="contact-text">585-555-5555</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex justify-content-center">
+                    <div style="width: 360px;">
+                        <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; justify-content: flex-start;">
+                            <div>
+                                <ion-icon name="link-outline" size="large"></ion-icon>
+                            </div>
+                            <div class="mt-1">
+                                <p class="footer-content-text pb-1 pl-3">
+                                    <a href="https://easybase.io" class="contact-text">Home</a>
+                                </p>
+                                <p class="footer-content-text pb-1 pl-3">
+                                    <a href="https://easybase.io/pricing" class="contact-text">Pricing</a>
+                                </p>
+                                <p class="footer-content-text pb-1 pl-3">
+                                    <a href="https://easybase.io" class="contact-text">About</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="https://www.twitter.com/easybase_io" style="border: none;" target="_blank">
+                                <button class="btn btn-danger bmd-btn-fab mr-2" style="background-color: #29c5f6;">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </button>
+                            </a>
+                            <a href="https://www.twitter.com/easybase_io" style="border: none;" target="_blank">
+                                <button class="btn btn-danger bmd-btn-fab" style="background-color: #FF9900" href="" target="_blank">
+                                    <ion-icon name="logo-stackoverflow"></ion-icon>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 py-2">
+                            <a href="https://www.twitter.com/easybase_io" style="border: none;" target="_blank">
+                                <button class="btn btn-danger bmd-btn-fab mr-2" style="background-color: #3a9bdc;" href="" target="_blank">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </button>
+                            </a>
+                            <a href="https://www.twitter.com/easybase_io" style="border: none;" target="_blank">
+                                <button class="btn btn-danger bmd-btn-fab" style="background-color: #6788ce;" href="" target="_blank">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="footer-footer col-md-4 left-flex">
+                    <a class="footer-footlink" href="https://mdbootstrap.com/">Terms</a>
+                    <a class="footer-footlink" href="https://mdbootstrap.com/">Privacy</a>
+                    <a class="footer-footlink" href="https://mdbootstrap.com/">DNSMI</a>
+                </div>
+                <div class="footer-footer col-md-4 center-flex">
+                    <p style="color: #eee; margin: 0;">© EasyBase 2016-2020</p>
+                </div>
+                <div class="footer-footer col-md-4 right-flex">
+                    <img src="/assets/images/logo1_transparent_md.png" style="width: 150px;" alt="easybase logo" />
+                </div>
+            </div>
+        </div>
 
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -65,8 +254,6 @@
     <script>
         $(document).ready(function () {
             $('body').bootstrapMaterialDesign();
-
-            if ($(window).width() <= 800) $(".navigation").addClass("nav-scrolled")
         });
         (function ($) {
             $(function () {
@@ -89,6 +276,7 @@
 
 
     </script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </body>
 
 </html>
