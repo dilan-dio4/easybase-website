@@ -75,17 +75,17 @@
                     <div class="socials-content-footer">
                         <h3 style="font-weight: 600;">Share</h3>
                         <div class="socials-content-footer-buttons">
-                            <a class="a-button" href="http://twitter.com/share/?url=https://easybase.io{{ page.url }}&text={{ page.title }}&via=easybase_io" target="_blank">
+                            <a class="a-button" href="http://twitter.com/share/?url=https://easybase.io{{ page.url }}&text={{ page.title | url_encode  }}&via=easybase_io" target="_blank">
                                 <button class="btn btn-raised btn-success" style="background-color: #29c5f6;">
                                     <ion-icon name="logo-twitter" size="large" style="color:white; vertical-align: middle;"></ion-icon>
                                 </button>
                             </a>
-                            <a class="a-button" href="facebook.com" target="_blank">
+                            <a class="a-button" href="https://www.facebook.com/sharer/sharer.php?u=https://easybase.io{{ page.url }}{{ page.title | url_encode }}" target="_blank">
                                 <button class="btn btn-raised btn-success" style="background-color: #6788ce;">
                                     <ion-icon name="logo-facebook" size="large" style="color:white; vertical-align: middle;"></ion-icon>
                                 </button>
                             </a>
-                            <a class="a-button" href="linkeding.com" target="_blank">
+                            <a class="a-button" href="https://www.linkedin.com/shareArticle?mini=true&url=https://easybase.io{{ page.url }}&title={{ page.title | url_encode }}&summary={{ page.excerpt | url_encode }}&source=EasyBase.io" target="_blank">
                                 <button class="btn btn-raised btn-success" style="background-color: #3a9bdc;">
                                     <ion-icon name="logo-linkedin" size="large" style="color:white; vertical-align: middle;"></ion-icon>
                                 </button>
@@ -124,13 +124,15 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="author-card-root d-none d-lg-block">
-                            <div class="author-root">
-                                <img class="author-image" src={{ page.author_image }} />
+                        {% if page.title != 404 and page.title != "Blog" %}
+                            <div class="author-card-root d-none d-lg-block">
+                                <div class="author-root">
+                                    <img class="author-image" src={{ page.author_image }} />
+                                </div>
+                                <h4 class="author-name">Written By <a href="www.google.com">{{ page.author_name }}</a></h4>
+                                <p class="author-description">{{page.author_description}}</p>
                             </div>
-                            <h4 class="author-name">Written By <a href="www.google.com">{{ page.author_name }}</a></h4>
-                            <p class="author-description">{{page.author_description}}</p>
-                        </div>
+                        {% endif %}
                         <div class="sticky-sidebar">
                             <h4 class="sticky-card-title pt-4 px-3">You can <span class="blog-highlight">empower</span> your <b>app or website</b></h4>
                             <div class="video-root">

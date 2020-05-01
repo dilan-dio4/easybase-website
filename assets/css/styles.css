@@ -681,12 +681,17 @@ nav ul li ul li a {
     line-height: normal !important;
 }
 
-.inline-a {
+a {
     transition: border linear 50ms;
 }
 
-.inline-a:hover {
+a:hover {
     text-decoration: none !important;
     border-bottom-width: 2px;
     border-bottom-style: solid;
+}
+
+.a-button {
+    border: none !important;
+    display: flex;
 }
