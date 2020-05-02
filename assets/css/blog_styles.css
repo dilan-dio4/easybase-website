@@ -2,10 +2,24 @@
     Template content styles
 */
 
-.brand a {
-    border: none !important;
+.brand {
+    height: 100%;
 }
 
+.brand a {
+    border: none !important;
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    background-position: left;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space:nowrap;
+    width: 200px;
+    height: 100%;
+    text-decoration: none;
+}
 .easybase-preview-root {
     background-color: #f5f8fa;
     border: 1px solid #cbd6e2;
@@ -14,7 +28,7 @@
 }
 
 .footer-root {
-    padding-top: 100px;
+    padding-top: 35px;
     padding-bottom: 40px;
     width: 100%;
     background-color: #ff7a59;
@@ -116,7 +130,8 @@ body {
 }
 
 .splash-button-try {
-    padding: 0 33px !important;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
     -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.20);
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.20);
     margin-right: 30px;
@@ -185,9 +200,6 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.main-content {
-    margin-top: 25px;
-}
 
 nav {
     float: right;
@@ -318,12 +330,16 @@ nav ul li ul li a {
 /* Mobile */
 
 @media only screen and (max-width: 800px) {
+    
+    .main-content {
+        margin-top: 90px;
+    }
     .nav-mobile {
         display: block;
     }
     nav {
         width: 100%;
-        padding: 30px 0 15px;
+        padding: 0 0 15px;
     }
     nav ul {
         display: none;
@@ -353,30 +369,37 @@ nav ul li ul li a {
     }
     .nav-container {
         display: block;
+        height: 100%;
     }
     .brand {
-        top: 50%;
-        -webkit-transform: translateY(50%);
-        -ms-transform: translateY(50%);
-        transform: translateY(50%);
         position: relative;
         padding: 0px 20px;
     }
+    .brand a {
+        background-image: url("../images/logo1_transparent_md.png");
+    }
     .nav-list {
-        background-color: #262626;
+        background-color: #313133;
         width: 100%;
     }
     .navigation {
         position: fixed;
-        background-color: #262626;
+        background-color: #313133;
         height: 70px;
         top: 0;
+    }
+
+    .footer-footer {
+        justify-content: center !important;
     }
 }
 
 /* Regular */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) {    
+    .main-content {
+        margin-top: 25px;
+    }
     .nav-list {
         display: flex;
         align-items: center;
@@ -398,6 +421,9 @@ nav ul li ul li a {
         display: flex;
         flex-grow: 1;
         justify-content: center;
+    }
+    .brand a {
+        background-image: url("../images/logo1_blue_orange_transparent.png");
     }
     .nav-regular-link {
         font-family: 'Roboto', sans-serif;
@@ -513,3 +539,10 @@ a:hover {
     z-index: -1;
 }
 
+
+.footer-content-section {
+    display: flex; 
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;   
+}
