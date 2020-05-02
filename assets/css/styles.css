@@ -66,9 +66,9 @@ body {
 
 .footer-bg {
     position: relative;
-    background-size: cover;
+    background-size: auto 126vh;
     background-repeat: no-repeat;
-    background-position: 0 -10px;
+    background-position: 0 -30px;
     background-image: url("../images/footer-bg.png");
 }
 
@@ -227,7 +227,7 @@ nav ul li ul li a {
 }
 
 .splash-root {
-    width: 85vw;
+    width: 86vw;
     height: 80vh;
     z-index: 100;
 }
@@ -298,10 +298,10 @@ nav ul li ul li a {
 }
 
 .splash-checks h6 {
-    font-size: 18px;
+    font-size: 17px;
     margin: 0;
     word-wrap: none;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.85px;
     font-weight: 300;
     display: inline-block;
     vertical-align: middle;
@@ -446,9 +446,17 @@ nav ul li ul li a {
     .footer-content-text {
         font-size: 1.15rem;
     }
+
+    .footer-content-section {
+        margin-left: 15%;
+    }
     
     .splash-checks h6 {
-        padding: 3px 100px 0 6px;
+        padding: 3px 100px 0 6px !important;
+    }
+
+    .footer-button-root {
+        justify-content: center;
     }
 }
 
@@ -489,11 +497,15 @@ nav ul li ul li a {
         font-size: 1rem;
     }
     .splash-checks h6 {
-        padding: 3px 25px 0 3px;
+        padding: 2px 25px 0 3px;
     }
     .nav-login-button {
         margin: 15px 20px !important;
         font-size: 25px; 
+    }
+
+    .footer-button-root {
+        justify-content: flex-start;
     }
 }
 

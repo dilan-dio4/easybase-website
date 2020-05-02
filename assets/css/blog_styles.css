@@ -389,8 +389,16 @@ nav ul li ul li a {
         top: 0;
     }
 
+    .footer-content-section {
+        margin-left: 15%;
+    }
+
     .footer-footer {
         justify-content: center !important;
+    }
+
+    .footer-button-root {
+        justify-content: center;
     }
 }
 
@@ -429,7 +437,10 @@ nav ul li ul li a {
         font-family: 'Roboto', sans-serif;
         border-bottom: 2px solid transparent;
     }
-
+    
+    .footer-button-root {
+        justify-content: flex-start;
+    }
 }
 
 @media (min-width: 576px) {
