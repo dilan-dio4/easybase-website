@@ -106,7 +106,6 @@ nav ul li {
 }
 
 .nav-regular-link {
-    padding: 12px 20px;
     color: #fff;
     font-weight: 500;
     transition: border linear 70ms, color linear 70ms;
@@ -158,7 +157,7 @@ nav ul li ul li a {
 #nav-toggle {
     position: absolute;
     left: 18px;
-    top: 22px;
+    top: 17px;
     cursor: pointer;
     padding: 10px 35px 16px 0px;
 }
@@ -385,17 +384,19 @@ nav ul li ul li a {
     }
     nav {
         width: 100%;
-        padding: 30px 0 15px;
     }
     nav ul {
         display: none;
+        padding-top: 30px;
     }
     nav ul li {
         float: none;
+        padding: 10px 0;
     }
     .nav-regular-link {
         font-family: 'Roboto', sans-serif;
         font-size: 30px;
+        padding: 42px 20px;
     }
     .nav-login-button {
         margin: 20px;
@@ -411,10 +412,7 @@ nav ul li ul li a {
         display: block;
     }
     .brand {
-        top: 50%;
-        -webkit-transform: translateY(50%);
-        -ms-transform: translateY(50%);
-        transform: translateY(50%);
+        top: 12px;
         position: relative;
         padding: 0px 20px;
     }
@@ -425,7 +423,7 @@ nav ul li ul li a {
     .navigation {
         position: fixed;
         background-color: #313133;
-        height: 70px;
+        height: 60px;
         top: 0;
     }
     .splash-primary-text {
@@ -492,6 +490,7 @@ nav ul li ul li a {
     }
     .nav-regular-link {
         font-family: 'Roboto', sans-serif;
+        padding: 12px 20px;
     }
     .footer-content-text {
         font-size: 1rem;

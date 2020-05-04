@@ -9,16 +9,16 @@
 .brand a {
     border: none !important;
     background-repeat: no-repeat;
-    background-size: 215px auto;
+    background-size: 205px auto;
     background-position: left;
     display: block;
     cursor: pointer;
     overflow: hidden;
     text-indent: 100%;
     white-space:nowrap;
-    width: 215px;
     height: 100%;
     text-decoration: none;
+    width: 205px;
 }
 .easybase-preview-root {
     background-color: #f5f8fa;
@@ -269,7 +269,7 @@ nav ul li ul li a {
 #nav-toggle {
     position: absolute;
     left: 18px;
-    top: 22px;
+    top: 17px;
     cursor: pointer;
     padding: 10px 35px 16px 0px;
 }
@@ -385,7 +385,7 @@ nav ul li ul li a {
     .navigation {
         position: fixed;
         background-color: #313133;
-        height: 70px;
+        height: 60px;
         top: 0;
     }
 
