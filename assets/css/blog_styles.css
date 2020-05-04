@@ -9,14 +9,14 @@
 .brand a {
     border: none !important;
     background-repeat: no-repeat;
-    background-size: 200px auto;
+    background-size: 215px auto;
     background-position: left;
     display: block;
     cursor: pointer;
     overflow: hidden;
     text-indent: 100%;
     white-space:nowrap;
-    width: 200px;
+    width: 215px;
     height: 100%;
     text-decoration: none;
 }
@@ -376,7 +376,7 @@ nav ul li ul li a {
         padding: 0px 20px;
     }
     .brand a {
-        background-image: url("../images/logo1_transparent_md.png");
+        background-image: url("../images/logo2_transparent_md.png");
     }
     .nav-list {
         background-color: #313133;
@@ -431,7 +431,7 @@ nav ul li ul li a {
         justify-content: center;
     }
     .brand a {
-        background-image: url("../images/logo1_blue_orange_transparent.png");
+        background-image: url("../images/logo2_blog_md.png");
     }
     .nav-regular-link {
         font-family: 'Roboto', sans-serif;
