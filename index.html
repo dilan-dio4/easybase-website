@@ -15,6 +15,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <script src="assets/js/yall.min.js"></script>
+    <script>
+            document.addEventListener("DOMContentLoaded", yall);
+    </script>
 </head>
 
 <body>
@@ -22,7 +26,7 @@
     <section class="navigation">
         <div class="nav-container">
             <div class="brand">
-                <img src="assets/images/logo2_transparent_md.png" style="width: 205px;" alt="easybase logo" />
+                <img class="lazy" data-src="assets/images/logo2_transparent_md.png" style="width: 205px;" alt="easybase logo" />
             </div>
             <nav style="display: flex; flex-grow: 1; justify-content: center;">
                 <div class="nav-mobile">
@@ -101,8 +105,7 @@
             <div class="row" style="align-items: center;">
                 <div class="col-md-6">
                     <div class="product-view-root justify-content-center justify-content-lg-between">
-                        <img src="assets/images/product-screen-2-colorized.png"
-                            class="unselectable-image product-screen-img" />
+                        <img data-src="assets/images/product-screen-2-colorized.png" class="lazy unselectable-image product-screen-img" />
                     </div>
                 </div>
                 <div class="col-md-6 py-2">
@@ -346,7 +349,7 @@
                     <p style="color: #eee; margin: 0; font-family: 'Roboto', sans-serif;">© EasyBase 2016-2020</p>
                 </div>
                 <div class="footer-footer col-md-4 right-flex">
-                    <img src="/assets/images/logo2_transparent_md.png" style="width: 150px;" alt="easybase logo" />
+                    <img class="lazy" data-src="/assets/images/logo2_transparent_md.png" style="width: 150px;" alt="easybase logo" />
                 </div>
             </div>
         </div>
