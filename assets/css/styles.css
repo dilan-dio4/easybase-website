@@ -68,8 +68,8 @@ body {
     position: relative;
     background-size: auto 126vh;
     background-repeat: no-repeat;
-    background-position: 0 -30px;
-    background-image: url("../images/footer-bg.png");
+    background-position: 0 -50px;
+    background-image: url("../images/footer-bg-tiny.png");
 }
 
 .section-overflow {
@@ -78,7 +78,7 @@ body {
 }
 
 .hero-bg {
-    background-image: url("../images/hero-bg.png");
+    background-image: url("../images/hero-bg-tiny.png");
     background-size: 100vw 93vh;
     background-repeat: no-repeat;
     background-position: 0 0;
