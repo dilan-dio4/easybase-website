@@ -378,6 +378,21 @@
     <script>
         $(document).ready(function () {
             $('body').bootstrapMaterialDesign();
+            
+            var scroll_pos = 0;
+            $(document).scroll(function () {
+                if ($(window).width() <= 800)
+                {
+                    scroll_pos = $(this).scrollTop();
+                    if (scroll_pos > 150) {
+                        $(".navigation").addClass("navigation-mobile-grey-bg")
+                        $(".nav-list").addClass("navigation-mobile-grey-bg")
+                    } else if (!$("#nav-toggle").hasClass("active")) {
+                        $(".navigation").removeClass("navigation-mobile-grey-bg");
+                        $(".nav-list").removeClass("navigation-mobile-grey-bg");
+                    }
+                }
+            });
         });
         (function ($) {
             $(function () {
@@ -392,6 +407,12 @@
             });
             document.querySelector('#nav-toggle').addEventListener('click', function () {
                 this.classList.toggle('active');
+                if ($(window).width() <= 800) {
+                    if (window.scrollY <= 150) {
+                        $(".navigation").toggleClass("navigation-mobile-grey-bg")
+                        $(".nav-list").toggleClass("navigation-mobile-grey-bg")
+                    }
+                }
             });
             $('#nav-toggle').click(function () {
                 $('nav ul').toggle();
