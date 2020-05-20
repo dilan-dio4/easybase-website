@@ -384,7 +384,7 @@
                 if ($(window).width() <= 800)
                 {
                     scroll_pos = $(this).scrollTop();
-                    if (scroll_pos > 150) {
+                    if (scroll_pos > 75) {
                         $(".navigation").addClass("navigation-mobile-grey-bg")
                         $(".nav-list").addClass("navigation-mobile-grey-bg")
                     } else if (!$("#nav-toggle").hasClass("active")) {
@@ -408,7 +408,7 @@
             document.querySelector('#nav-toggle').addEventListener('click', function () {
                 this.classList.toggle('active');
                 if ($(window).width() <= 800) {
-                    if (window.scrollY <= 150) {
+                    if (window.scrollY <= 75) {
                         $(".navigation").toggleClass("navigation-mobile-grey-bg")
                         $(".nav-list").toggleClass("navigation-mobile-grey-bg")
                     }
