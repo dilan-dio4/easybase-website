@@ -65,11 +65,12 @@ body {
 }
 
 .footer-bg {
-    position: relative;
+    /* position: relative;
     background-size: auto 126vh;
     background-repeat: no-repeat;
     background-position: 0 -50px;
-    background-image: url("../images/footer-bg-tiny.png");
+    background-image: url("../images/footer-bg-tiny.png"); */
+    background-color: #647df5;
 }
 
 .section-overflow {
@@ -78,15 +79,16 @@ body {
 }
 
 .hero-bg {
-    background-image: url("../images/hero-bg-tiny.png");
-    background-size: 100vw 93vh;
+    background-color: white;
+    background-image: url("../images/newhero3.jpg");
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
     background-position: 0 0;
     position: absolute;
-    top: 0;
+    top: -32px;
     left: 0;
     width: 100%;
-    height: 93vh;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -213,7 +215,7 @@ nav ul li ul li a {
 
 .full-screen {
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -227,7 +229,7 @@ nav ul li ul li a {
 
 .splash-root {
     width: 86vw;
-    height: 80vh;
+    height: 67vh;
     z-index: 100;
 }
 
@@ -683,4 +685,31 @@ a:hover {
     flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: flex-start;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: row !important;
+    box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.20) !important;
+}
+
+.pricing-card-free-tier-header {
+    height: 100px;
+}
+
+.pricing-card-free-tier {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pricing-card-flexible-tier-header {
+    height: 100px;
+    background-color: blue;
+}
+
+.pricing-card-flexible-tier {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
