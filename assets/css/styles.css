@@ -255,7 +255,9 @@ nav ul li ul li a {
 
 .splash-gif {
     display: flex;
+    flex-direction: column;
     height: 100%;
+    align-items: center;
 }
 
 .splash-button-try {
@@ -263,6 +265,7 @@ nav ul li ul li a {
     padding-right: 35px !important;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.20);
     margin-right: 30px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .splash-primary-text {
@@ -562,7 +565,7 @@ nav ul li ul li a {
 }
 
 .action-card {
-    box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.20) !important;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.20);
     border-radius: .4rem !important;
     margin: 4% 12%;
 }
@@ -687,29 +690,41 @@ a:hover {
     justify-content: flex-start;
 }
 
-.pricing-card {
+.free-tier-card {
+    width: 400px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.20);
+    border-radius: .4rem !important;
+}
+
+.free-tier-card-list-root {
+    list-style-type: none;
+    margin-left: 2.5em;
+    padding-left: 0;
+}
+
+.free-tier-card-list-root li {
     display: flex;
-    flex-direction: row !important;
-    box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.20) !important;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 19px;
 }
 
-.pricing-card-free-tier-header {
-    height: 100px;
+.free-tier-card-list-root ion-icon {
+    font-size: 32px;
+    margin-right: 10px;
 }
 
-.pricing-card-free-tier {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.free-tier-card-title {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
-.pricing-card-flexible-tier-header {
-    height: 100px;
-    background-color: blue;
+.free-tier-card-price {
+    font-size: 35px;
 }
 
-.pricing-card-flexible-tier {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.free-tier-card-price span {
+    font-size: 17px;
+    margin-left: 3px;
 }
