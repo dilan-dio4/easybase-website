@@ -294,34 +294,37 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
-        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
-        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
-        crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function () {
-            $('body').bootstrapMaterialDesign();
-        });
-        (function ($) {
-            $(function () {
-                $('nav ul li > a:not(:only-child)').click(function (e) {
-                    $(this).siblings('.nav-dropdown').toggle();
-                    $('.nav-dropdown').not($(this).siblings()).hide();
-                    e.stopPropagation();
+            window.addEventListener("DOMContentLoaded", function () {
+
+                var getScrollY = function () { return (window.pageYOffset || window.document.documentElement.scrollTop) - (window.document.documentElement.clientTop || 0); };
+                var getWindowWidth = function () { return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; };
+
+                var scroll_pos = 0;
+                window.addEventListener("scroll", function () {
+                    if (getWindowWidth() <= 800) {
+                        scroll_pos = getScrollY();
+                        if (!document.querySelector("#nav-toggle").classList.contains("active")) {
+                            document.querySelector(".navigation").classList.remove("navigation-mobile-grey-bg");
+                            document.querySelector(".nav-list").classList.remove("navigation-mobile-grey-bg");
+                        }
+                    }
                 });
-                $('html').click(function () {
-                    $('.nav-dropdown').hide();
+
+                var jqueryToggle = function (ele) {
+                    if (getComputedStyle(ele, null).display == "none") {
+                        ele.style.display = "block";
+                    } else {
+                        ele.style.display = "none";
+                    }
+                }
+
+                document.getElementById('nav-toggle').addEventListener("click", function () {
+                    document.getElementById('nav-toggle').classList.toggle('active');
+                    jqueryToggle(document.querySelector('nav ul'));
+
                 });
             });
-            document.querySelector('#nav-toggle').addEventListener('click', function () {
-                this.classList.toggle('active');
-            });
-            $('#nav-toggle').click(function () {
-                $('nav ul').toggle();
-            });
-        })(jQuery);
 
     </script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
