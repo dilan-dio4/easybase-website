@@ -555,3 +555,32 @@ a:hover {
     align-items: flex-start;
     justify-content: flex-start;
 }
+
+.footer-content-container {
+    color: #eee;
+    margin-top: 40px;
+}
+
+.footer-content-text {
+    margin: 0px;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-content-text-header {
+    margin: 0px;
+    letter-spacing: 0.95px;
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.contact-text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.footer-bg {
+    background-color: #647df5;
+}
