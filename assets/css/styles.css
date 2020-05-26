@@ -64,10 +64,6 @@ body {
     /* transform: rotate(170deg); */
 }
 
-.footer-bg {
-    background-color: #647df5;
-}
-
 .section-overflow {
     max-width: 100%;
     overflow: hidden;
@@ -344,25 +340,6 @@ nav ul li ul li a {
     font-weight: 500;
 }
 
-.footer-content-container {
-    color: #eee;
-    margin-top: 40px;
-}
-
-.footer-content-text {
-    margin: 0px;
-    letter-spacing: 0.5px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.footer-content-text-header {
-    margin: 0px;
-    letter-spacing: 0.95px;
-    font-size: 19px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-}
-
 .navigation-mobile-grey-bg {
     background-color: #313133;
 }
@@ -443,21 +420,24 @@ nav ul li ul li a {
         height: 100vh;
         background-size: 100% 220%;
     }
-    .footer-footer {
-        justify-content: center !important;
-        padding-bottom: 10px;
-    }
-    .footer-content-text {
-        font-size: 1.15rem;
-    }
-    .footer-content-section {
-        margin-left: 15%;
-    }
     .splash-checks h6 {
         padding: 3px 100px 0 6px !important;
     }
     .footer-button-root {
         justify-content: center;
+    }
+    .hide-mobile {
+        display: none !important;
+    }
+    .show-mobile {
+        display: flex;
+    }
+    .footer-footer {
+        justify-content: center !important;
+        margin-bottom: 13px;
+    }
+    .contact-text {
+        font-size: 20px !important;
     }
 }
 
@@ -508,6 +488,12 @@ nav ul li ul li a {
     .footer-button-root {
         justify-content: flex-start;
     }
+    .hide-mobile {
+        display: flex;
+    }
+    .show-mobile {
+        display: none !important;
+    }
 }
 
 .unselectable-image {
@@ -528,36 +514,6 @@ nav ul li ul li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-}
-
-.footer-footlink {
-    margin-right: 8px;
-    color: #27234b;
-    font-family: 'Roboto', sans-serif;
-}
-
-.left-flex {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.right-flex {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.center-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contact-text {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
 }
 
 .action-card {
@@ -679,13 +635,6 @@ a:hover {
     display: flex;
 }
 
-.footer-content-section {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
 .free-tier-card {
     width: 400px;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.20);
@@ -724,3 +673,82 @@ a:hover {
     font-size: 17px;
     margin-left: 3px;
 }
+
+/* Footer ++++++++++++++++++++++++++++ */
+
+.footer-social-fab {
+    background-color: #46444e !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+
+.footer-content-section-root {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content-section-mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 300px;
+    overflow: hidden;
+}
+
+.footer-bg {
+    background-color: #5673e9;
+}
+
+.footer-content-section {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.footer-footlink {
+    margin-right: 8px;
+    color: #27234b;
+    font-family: 'Roboto', sans-serif;
+}
+
+.left-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.right-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content-container {
+    color: #eee;
+    margin-top: 40px;
+}
+
+.footer-content-text {
+    margin: 0px;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Footer -------------------------------- */
