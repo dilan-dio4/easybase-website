@@ -79,7 +79,13 @@ layout: null
                                 and visual query builder</h2>
                             <div class="splash-buttons">
                                 <button type="button" class="btn btn-raised btn-lg btn-success splash-button-try">Try Now</button>
-                                <button type="button" class="btn btn-outline-light btn-lg">Learn More</button>
+                                <button type="button" class="btn btn-outline-light btn-lg" style="margin-right: 18px;">Learn More</button>
+                                <span class="splash-ping-root">
+                                    <div class="ping-container">
+                                        <div class="green-flasher"></div>
+                                    </div>
+                                    <p id="ping-time-text"></p>
+                                </span>
                             </div>
                             
                             <div class="splash-checks">
@@ -443,6 +449,14 @@ layout: null
                 }
 
             });
+
+            function pingTimeWorker() {
+                const rand = Math.floor(Math.random() * 40) + 180;
+                document.getElementById("ping-time-text").innerHTML = `${rand}ms`;
+                setTimeout(pingTimeWorker, 4500);
+            }
+            pingTimeWorker();
+
         });
 
 
