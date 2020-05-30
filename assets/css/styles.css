@@ -227,10 +227,11 @@ nav ul li ul li a {
 .splash-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     font-family: 'Roboto', sans-serif;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    max-width: 342px;
 }
 
 .splash-gif {
@@ -244,8 +245,8 @@ nav ul li ul li a {
     padding-left: 35px !important;
     padding-right: 35px !important;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.20);
-    margin-right: 30px;
     font-family: 'Roboto', sans-serif;
+    height: 48px;
 }
 
 .splash-primary-text {
@@ -294,8 +295,6 @@ nav ul li ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(3px + 0.75rem);
-    margin-top: calc(0.75rem);
 }
 
 .splash-ping-root p {
