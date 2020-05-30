@@ -294,8 +294,8 @@ nav ul li ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(3px + 0.55rem);
-    margin-top: calc(0.55rem);
+    margin-bottom: calc(3px + 0.75rem);
+    margin-top: calc(0.75rem);
 }
 
 .splash-ping-root p {
@@ -500,12 +500,6 @@ nav ul li ul li a {
     }
     .contact-text {
         font-size: 20px !important;
-    }
-    .splash-buttons {
-        flex-direction: column;
-        align-items: flex-start;
-        height: 166px;
-        justify-content: space-between;
     }
 }
 
