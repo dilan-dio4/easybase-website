@@ -462,9 +462,10 @@ layout: null
 
             });
 
-            function pingTimeWorker() {
-                const rand = Math.floor(Math.random() * 40) + 180;
-                Array.from(document.getElementsByClassName("ping-time-text")).forEach(ele => ele.innerHTML = `${rand}ms`);
+            async function pingTimeWorker() {
+                const ping_res = await fetch('https://api.easybase.io/pingResponseTime');
+                const num = await ping_res.text();
+                Array.from(document.getElementsByClassName("ping-time-text")).forEach(ele => ele.innerHTML = `${num}ms`);
                 setTimeout(pingTimeWorker, 4500);
             }
             pingTimeWorker();
