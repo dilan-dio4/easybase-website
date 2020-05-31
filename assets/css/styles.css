@@ -298,10 +298,11 @@ nav ul li ul li a {
 }
 
 .splash-ping-root p {
-    font-family: sans-serif;
+    font-family: monospace, monospace;
+    /* font-family: "courier new"; */
     margin: 0 !important;
     color: #00ff08;
-    letter-spacing: 1.7px;
+    letter-spacing: 1.15px;
     font-weight: 100;
     font-size: 15px;
     position: relative;
