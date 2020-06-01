@@ -293,13 +293,13 @@ nav ul li ul li a {
 
 .splash-ping-root {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    width: 90px;
 }
 
 .splash-ping-root p {
     font-family: monospace, monospace;
-    /* font-family: "courier new"; */
     margin: 0 !important;
     color: #00ff08;
     letter-spacing: 1.15px;
