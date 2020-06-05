@@ -29,10 +29,7 @@ layout: null
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <script src="assets/js/yall.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", yall);
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css" integrity="sha256-iNIdqSl2o3Ge4o0EfZkhHY241Bb4iIBttf1jicmtaC4=" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -41,12 +38,12 @@ layout: null
         <div class="banner_banner invert-theme">
             <a class="banner_text_link" href="/blog/zeit-is-now-vercel" style="display: flex;">
                 <span class="banner_title">
-                    <span class="geist-hide-on-mobile">Vercel (formerly ZEIT) announces $21M in funding</span>
-                    <span class="geist-show-on-mobile">ZEIT is now Vercel</span>
+                    <span class="geist-hide-on-mobile" style="align-items: center;">EASYBASE announces mobile application <ion-icon name="chevron-forward-outline"></ion-icon></span>
+                    <span class="geist-show-on-mobile" style="align-items: center;">EASYBASE announces mobile application <ion-icon name="chevron-forward-outline"></ion-icon></span>
                 </span>
-                <span class="banner_link">Learn More →</span>
+                <!-- <span class="banner_link">Learn More →</span> -->
             </a>
-            <span class="banner_close">
+            <span id="banner_close" class="banner_close">
                 <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision" style="color:currentColor">
                     <path d="M18 6L6 18"></path>
                     <path d="M6 6l12 12"></path>
@@ -56,19 +53,81 @@ layout: null
         <div class="header_wrapper">
             <header class="header_header" style="--full:var(--geist-page-width-with-margin);">
                 <aside class="header_nav_upper">
-                    <div class="header_logo">
-                        <svg height="25" viewBox="0 0 75 65" fill="var(--geist-foreground)">
-                            <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
+                    <div class="header_logo mr-2">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="25.000000pt" height="25.000000pt"
+                            viewBox="0 0 25.000000 25.000000" preserveAspectRatio="xMidYMid meet">
+                            <metadata>
+                                Created by potrace 1.16, written by Peter Selinger 2001-2019
+                            </metadata>
+                            <g transform="translate(0.000000,25.000000) scale(0.004244,-0.004673)" fill="#000000" stroke="none">
+                                <path d="M5705 5309 c-379 -79 -921 -161 -1350 -203 -430 -43 -707 -59 -1250
+                        -72 -143 -3 -262 -10 -265 -14 -4 -6 -5 -1195 -1 -1234 1 -7 489 -1 676 9 44
+                        2 134 7 200 10 66 3 140 8 165 10 25 2 88 7 140 10 52 3 111 8 130 10 19 2 69
+                        7 110 10 68 6 362 38 450 50 502 65 1169 186 1171 211 0 8 1 287 2 622 0 592
+                        0 607 -19 609 -10 1 -82 -12 -159 -28z" />
+                                <path d="M960 4942 c0 -219 1 -238 18 -239 9 -1 87 -11 172 -22 162 -21 428
+                        -51 455 -51 13 0 15 30 15 233 l0 234 -117 12 c-165 17 -515 61 -530 66 -10 3
+                        -13 -47 -13 -233z" />
+                                <path d="M1910 4836 l0 -236 48 -1 c26 0 54 -2 62 -3 18 -4 189 -13 398 -22
+                        l152 -7 0 237 0 236 -92 1 c-51 0 -102 2 -113 4 -11 1 -83 6 -160 9 -77 4
+                        -175 9 -217 13 l-78 6 0 -237z" />
+                                <path d="M0 4327 l0 -233 143 -28 c187 -37 511 -95 514 -92 4 4 4 458 0 462
+                        -1 2 -115 24 -251 49 -137 25 -277 52 -313 60 -35 8 -71 15 -79 15 -12 0 -14
+                        -37 -14 -233z" />
+                                <path d="M1910 4056 l0 -236 38 -1 c20 0 46 -2 57 -4 28 -4 192 -13 393 -21
+                        l172 -7 0 236 0 237 -107 1 c-60 0 -115 2 -123 3 -8 2 -80 6 -160 10 -80 3
+                        -173 9 -207 13 l-63 6 0 -237z" />
+                                <path d="M5778 3434 c-269 -65 -999 -177 -1423 -219 -244 -23 -250 -24 -400
+                        -34 -318 -22 -497 -30 -859 -36 -137 -2 -251 -7 -254 -9 -3 -3 -5 -284 -5
+                        -623 l0 -618 189 1 c209 1 658 13 695 19 13 2 78 6 144 10 66 3 138 8 160 10
+                        22 2 74 7 115 10 440 34 970 108 1503 211 192 38 237 49 238 63 0 9 1 289 2
+                        624 l2 607 -25 -1 c-14 -1 -51 -7 -82 -15z" />
+                                <path d="M962 3048 l3 -233 90 -12 c114 -16 529 -63 550 -63 13 0 15 30 15
+                        233 l0 234 -167 17 c-93 10 -231 26 -307 37 -77 10 -150 19 -163 19 l-23 0 2
+                        -232z" />
+                                <path d="M1910 2946 l0 -236 28 0 c15 0 90 -4 167 -10 77 -5 213 -12 303 -16
+                        l162 -7 0 235 0 235 -187 7 c-104 4 -201 9 -218 11 -16 2 -81 7 -142 10 l-113
+                        7 0 -236z" />
+                                <path d="M2 2438 l3 -233 105 -22 c58 -12 195 -38 305 -58 110 -20 210 -38
+                        223 -41 l22 -4 0 234 0 234 -27 6 c-16 3 -82 15 -148 26 -66 12 -199 37 -295
+                        56 -96 19 -178 34 -183 34 -4 0 -6 -105 -5 -232z" />
+                                <path d="M1910 2166 l0 -236 23 0 c12 -1 82 -5 156 -10 73 -5 212 -12 307 -16
+                        l174 -7 0 237 0 236 -107 1 c-60 0 -115 2 -123 3 -8 2 -80 6 -160 10 -80 4
+                        -173 9 -207 13 l-63 5 0 -236z" />
+                                <path d="M5700 1529 c-180 -39 -668 -121 -910 -153 -550 -73 -1088 -111 -1713
+                        -121 -126 -2 -231 -6 -234 -9 -5 -4 -8 -1172 -4 -1234 1 -11 51 -13 284 -8
+                        155 4 325 8 377 11 229 11 329 16 380 20 30 2 93 7 140 10 347 25 859 88 1260
+                        156 237 40 591 108 599 115 2 2 4 282 4 621 l1 618 -25 2 c-13 0 -85 -12 -159
+                        -28z" />
+                                <path d="M962 1158 l3 -232 130 -18 c117 -15 309 -37 468 -54 l57 -6 0 235 0
+                        235 -77 7 c-43 3 -185 20 -315 36 -131 16 -245 29 -253 29 -13 0 -15 -29 -13
+                        -232z" />
+                                <path d="M1910 1058 l0 -236 123 -6 c67 -4 138 -9 157 -11 19 -2 113 -7 208
+                        -11 l172 -6 0 236 0 236 -92 1 c-51 0 -102 2 -113 4 -11 1 -83 6 -160 9 -77 4
+                        -175 9 -217 13 l-78 6 0 -235z" />
+                                <path d="M2 548 l3 -233 105 -22 c58 -12 195 -38 305 -58 110 -20 210 -38 223
+                        -41 l22 -4 0 235 c0 129 -2 235 -5 235 -13 0 -507 92 -562 105 -35 8 -71 15
+                        -79 15 -12 0 -14 -34 -12 -232z" />
+                                <path d="M1910 277 l0 -235 108 -6 c59 -4 123 -9 142 -11 19 -2 119 -7 223
+                        -11 l187 -7 0 237 0 236 -107 1 c-60 0 -115 2 -123 3 -8 2 -80 6 -160 10 -80
+                        3 -173 9 -207 13 l-63 6 0 -236z" />
+                            </g>
                         </svg>
+                        <span class="splash-ping-root geist-show-on-mobile ml-3">
+                            <div class="ping-container">
+                                <div class="green-flasher"></div>
+                            </div>
+                            <p class="ping-time-text"></p>
+                        </span>
                     </div>
                     <div class="mobile-menu_indicator">
-                        <div class="menu-toggle_wrap" aria-label="open menu"></div>
+                        <ion-icon name="ellipsis-vertical"></ion-icon>
                     </div>
                 </aside>
                 <aside class="header_nav_lower">
                     <div class="header_desktop_only">
                         <div class="header_nav header_left header_visible">
-                            <span class="header-tab-root">
+                            <!-- <span class="header-tab-root">
                                 Platform
                                 <span class="header-tab-svg-root wrap inline">
                                     <span class="header-tab-svg-root link">
@@ -91,8 +150,10 @@ layout: null
                                         </svg>
                                     </span>
                                 </span>
-                            </span>
+                            </span> -->
                             <a class="" href="/pricing">Pricing</a>
+                            <a class="" href="/pricing">Blog</a>
+                            <a class="" href="/pricing">About</a>
                             <div class="header-contact-us">
                                 <a role="button" type="text" href="/contact" class="button-muted custom-button button medium icon-color geist-themed geist-secondary geist-secondary-fill" style="font-weight: 400; text-transform: none;">
                                     <span class="button-muted custom-button text">Contact Us</span>
@@ -124,107 +185,465 @@ layout: null
                 </aside>
             </header>
         </div>
+
         <div>
             <div class="home_hero">
-                <div class="hero-content-root">
-
-                    <h1 class="hero-primary-text mt-5">Your Data. Empowered.</h1>
-                    <h2 class="hero-secondary-text mt-3">EasyBase is a powerful, no-code database with a self-building API and visual query builder</h2>
-                    <div class="hero-buttons-root mt-4">
-                        
-                        <div style="display: flex; flex-direction: column;">
-                            
-                            <div class="geist-container">
-                                <a role="button" type="text" href="/signup" class="hero-button hero-button-primary button shadow icon-color geist-themed geist-success geist-success-fill">
-                                    <span class="hero-button hero-button-primary text">Deploy Free</span>
-                                </a>
-                            </div>
-
-                            <span class="splash-ping-root geist-show-on-mobile">
-                                <div class="ping-container">
-                                    <div class="green-flasher"></div>
+                <div class="wide-container">
+                    <div class="row hero-row-root">
+                        <div class="col-md-5 grow-on-mobile">
+        
+                            <div class="hero-left-root">
+                                <h1 class="hero-primary-text mb-5">Your Data. Empowered.</h1>
+                                <h2 class="hero-secondary-text mb-4">EasyBase is a powerful, low-code database with a self-building API and visual query builder.</h2>
+                                <div class="hero-buttons-root mt-2">
+                                
+                                    <div class="geist-container mr-3">
+                                        <a role="button" type="text" href="/signup" class="hero-button hero-button-primary button shadow icon-color geist-themed geist-success geist-success-fill">
+                                            <span class="hero-button hero-button-primary text">Learn More</span>
+                                        </a>
+                                    </div>
+        
+                                    <div class="geist-container ml-3">
+                                        <!-- <a role="button" type="text" href="/signup"
+                                            class="hero-button hero-button-secondary button shadow icon-color geist-themed geist-success geist-success-fill">
+                                            <span class="hero-button hero-button-secondary text">Learn More</span>
+                                        </a> -->
+                                        <a class="section-footer-button section-footer-button-hero" href="">
+                                            Try Now
+                                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                                        </a>
+                                    </div>
+            
                                 </div>
-                                <p class="ping-time-text"></p>
-                            </span>
-                        </div>
-
-                            <div class="geist-container">
-                                <a role="button" type="text" href="/signup"
-                                    class="hero-button hero-button-secondary button shadow icon-color geist-themed geist-success geist-success-fill">
-                                    <span class="hero-button hero-button-secondary text">Deploy Free</span>
-                                </a>
+                                <div class="hero-checks my-5">
+                                    <span>
+                                        <ion-icon name="checkmark">
+                                        </ion-icon>
+                                        <h6>99.9% uptime*</h6>
+                                    </span>
+                                
+                                    <span>
+                                        <ion-icon name="checkmark"></ion-icon>
+                                        <h6>Free tier</h6>
+                                    </span>
+                                
+                                    <span>
+                                        <ion-icon name="checkmark">
+                                        </ion-icon>
+                                        <h6 style="padding-right: 0;">Instant setup</h6>
+                                    </span>
+                                </div>
+                                
                             </div>
-
+                        
+                        </div>
+                        <div class="col-md-7 geist-hide-on-mobile">
+                            <div class="hero-video-root mb-5">
+                                <img src="/assets/images/test_hq_image.jpg" class="hero-video" width="700px" height="400px" />
+                            </div>
+                        </div>
                     </div>
-                    <div class="hero-checks mt-5">
-                        <span>
-                            <ion-icon name="checkmark-circle-outline" style="color: #4caf50; vertical-align: middle; font-size: 24px;">
-                            </ion-icon>
-                            <h6>99.9% uptime*</h6>
-                        </span>
-                    
-                        <span>
-                            <ion-icon name="checkmark-circle-outline" style="color: #4caf50; vertical-align: middle; font-size: 24px;">
-                            </ion-icon>
-                            <h6>Free Tier</h6>
-                        </span>
-                    
-                        <span>
-                            <ion-icon name="checkmark-circle-outline" style="color: #4caf50; vertical-align: middle; font-size: 24px;">
-                            </ion-icon>
-                            <h6 style="padding-right: 0;">Instant setup</h6>
-                        </span>
-                    </div>
-                    
-                    <div class="hero-video-root">
-                        <img src="/assets/images/test_hq_image.jpg" class="hero-video" width="800px"/>
-                    </div>
-                    
+                
                 </div>
             </div>
+
+            <section class="section-grey">
+                <div class="wide-container">
+                    <div class="row d-flex justify-content-around">
+            
+                        <div class="mini-out-card geist-shadow">
+                            <a href="/case-studies/barnebys">
+                                <div class="mini-out-card-content-root">
+                                    <figure>
+                                        <img async="" decoding="async" loading="lazy" importance="low"
+                                            src="https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?ixlib=rb-1.2.1&q=80&fm=jpg&crop=edges&w=400&h=300&fit=crop"
+                                            alt="Barnebys case study thumbnail" />
+                                    </figure>
+                                    <div class="mini-out-card-content">
+                                        <h3 class="geist-text geist-text-no-margin h3"
+                                            style="font-family: var(--font-sans); color: inherit;">How we help</h3>
+                                        <small class="geist-text geist-text-no-margin small"
+                                            style="font-family: var(--font-sans); color: inherit;">Common use cases</small>
+                                    </div>
+                                    <div class="mini-out-card-footer">
+            
+                                        <small class="geist-text geist-text-no-margin small"
+                                            style="font-family: var(--font-sans); color: inherit; display: flex; align-items: center; justify-content: flex-end;">Read
+                                            More
+                                            <ion-icon name="chevron-forward-outline" style="margin-top: 1px; font-size: inherit;">
+                                            </ion-icon>
+                                        </small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mini-out-card geist-shadow">
+                            <a href="/case-studies/barnebys">
+                                <div class="mini-out-card-content-root">
+                                    <figure>
+                                        <img async="" decoding="async" loading="lazy" importance="low"
+                                            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&q=40&fm=jpg&crop=focalpoint&cs=tinysrgb&fit=crop&ixid=eyJhcHBfaWQiOjF9&fp-x=0.35&fp-y=5&fp-z=1.75"
+                                            alt="Barnebys case study thumbnail" />
+                                    </figure>
+                                    <div class="mini-out-card-content">
+                                        <h3 class="geist-text geist-text-no-margin h3"
+                                            style="font-family: var(--font-sans); color: inherit;">Success Stories</h3>
+                                        <small class="geist-text geist-text-no-margin small"
+                                            style="font-family: var(--font-sans); color: inherit;">Empowering people</small>
+                                    </div>
+                                    <div class="mini-out-card-footer">
+            
+                                        <small class="geist-text geist-text-no-margin small"
+                                            style="font-family: var(--font-sans); color: inherit; display: flex; align-items: center; justify-content: flex-end;">Read
+                                            More
+                                            <ion-icon name="chevron-forward-outline" style="margin-top: 1px; font-size: inherit;">
+                                            </ion-icon>
+                                        </small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="mini-out-card geist-shadow">
+                            <a href="/case-studies/barnebys">
+                                <div class="mini-out-card-content-root"> 
+                                    <figure>
+                                        <img async="" decoding="async" loading="lazy" importance="low"
+                                            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&q=40&fm=jpg&crop=focalpoint&cs=tinysrgb&fit=crop&ixid=eyJhcHBfaWQiOjF9&fp-x=0.5&fp-y=0.5&fp-z=1.5"
+                                            alt="Barnebys case study thumbnail" />
+                                    </figure>
+                                    <div class="mini-out-card-content">
+                                        <h3 class="geist-text geist-text-no-margin h3" style="font-family: var(--font-sans); color: inherit;">Our Mission</h3>
+                                        <small class="geist-text geist-text-no-margin small" style="font-family: var(--font-sans); color: inherit;">Auction</small>
+                                    </div>
+                                    <div class="mini-out-card-footer">
+                        
+                                        <small class="geist-text geist-text-no-margin small"
+                                            style="font-family: var(--font-sans); color: inherit; display: flex; align-items: center; justify-content: flex-end;">Read
+                                            More
+                                            <ion-icon name="chevron-forward-outline" style="margin-top: 1px; font-size: inherit;">
+                                            </ion-icon>
+                                        </small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+            
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-white">
+                <div class="container">
+                	<h2 class="section-header-text">Less work, <span class="highlight"><span>more fun</span></span>!</h2>
+                	<div class="geist-container">
+                	    <h5 class="section-secondary-text mt-2">Integrating data has never been easier.</h5>
+                	</div>
+                    
+                    <div class="section-header-content-spacer"></div>
+                	
+                	<div class="row">
+                	    <div class="col-md-6">
+                	        <div style="width: 100%; height: 1px;">
+                	            sdf
+                	        </div>
+                	    </div>
+                	    <div class="col-md-6">
+                	        <div class="content-bullet-list-root">
+                	            <article>
+                	                <span>
+                	                    <ion-icon name="code"></ion-icon>
+                	                </span>
+                	                <div class="ml-4 pl-3">
+                	                    <h4 class="content-bullet-list-header-text">Visual</h4>
+                	                    <p class="section-content-text mt-3">The visual query builder and self-building API make database integration extremely accessable without the need of complicated queries and enterprise DBMS education.</p>
+                	                </div>
+                	            </article>
+                
+                	            <article>
+                	                <span>
+                	                    <ion-icon name="lock-closed"></ion-icon>
+                	                </span>
+                	                <div class="ml-4 pl-3">
+                	                    <h4 class="content-bullet-list-header-text">Secure</h4>
+                	                    <p class="section-content-text mt-3">We take privacy and security very important. All data is stored and transferred with state-of-the-art backend security technologies.</p>
+                	                </div>
+                	            </article>
+                
+                	            <article>
+                	                <span>
+                	                    <ion-icon name="flash"></ion-icon>
+                	                </span>
+                	                <div class="ml-4 pl-3">
+                	                    <h4 class="content-bullet-list-header-text">Instant</h4>
+                	                    <p class="section-content-text mt-3">Integrations are updated live such that your changes are instantly accessable from your programs.</p>
+                	                </div>
+                	            </article>
+                	        </div>
+                	    </div>
+                	</div>
+                            
+                </div>
+            </section>
+
+            <section class="section-grey">
+                <div class="container">
+                    <div class="row d-flex justify-content-center">
+                    
+                        <div class="col-12">
+                            <div class="languages-tabs-card">
+                                <header>
+                                    <div id="material-tabs">
+                                        <a id="tab1-tab" href="#tab1" class="active">DEFISCALISATION</a>
+                                        <a id="tab2-tab" href="#tab2">AUDIT</a>
+                                        <a id="tab3-tab" href="#tab3">DECLARATION</a>
+                                        <a id="tab4-tab" href="#tab4">GESTION D'ACTIFS</a>
+                                        <span class="tabs-accent-bar"></span>
+                                    </div>
+                                </header>
+                    
+                                <div class="tab-content-root">
+                                    <div id="tab1-content">
+                                        <p>There are three basic ideas invoved in creating these tabs:</p>
+                                        <ol>
+                                            <li>Use anchor tags as tabs.</li>
+                                            <li>Use a span class for the tab highlight.</li>
+                                            <li>In your CSS, adjust the <strong>position</strong> of the highlight, as well as it's
+                                                <strong>width</strong>, by detecting the anchor tag with an 'active' class. Then adjust its
+                                                left
+                                                property and width property. Add a transition in your CSS, <em>et voil&agrave;</em>.</li>
+                                        </ol>
+                                    </div>
+                                    <div id="tab2-content">
+                                        <pre>
+                                            <code class="language-java">public class Abc {
+
+                                                public void doesItWork() {
+                                                    System.out.println("Yes, it does!");
+                                                }
+
+                                            }
+                                            </code>
+                                        </pre>
+                                    </div>
+                                    <div id="tab3-content">
+                                        <p>Third tab content.</p>
+                                    </div>
+                                    <div id="tab4-content">
+                                        <p>Third tab content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-white">
+                <div class="container">
+                    <h2 class="section-header-text">Only pay for what you use</h2>
+                    <div class="geist-container">
+                        <h5 class="section-secondary-text">this is smaller</h5>
+                    </div>
+                    
+                    <div class="section-header-content-spacer"></div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <h3 class="section-content-header-text">Only pay for what you use</h3>
+                            </div>
+                            <div class="row mt-4">
+                                <p class="section-content-text">EasyBase's on-demand pricing model saves you money by
+                                    automatically keeping tabs on your data storage and transfer. Charges are calculated based
+                                    on usage, so periods of low transfer are very cost-effective.</p>
+                            </div>
+                            <div class="row justify-content-end">
+                                <a class="section-footer-button" href="">
+                                    Learn More
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            <div class="pricing-card">
+                                <div class="card-contents-root">
+                                    <h2 style="font-size:48px;" class=" mb-3 section-header-text geist-text-no-margin">Free Tier</h2>
+                                    <h2 style="font-size:43px;" class="section-header-text geist-text-no-margin">
+                                        $0<span class="pricing-month-text">/mo</span>
+                                    </h2>
+    
+                                    <ul class="free-tier-card-list-root my-4">
+                                        <li>
+                                            <ion-icon name="checkmark-outline"></ion-icon>Single User
+                                        </li>
+                                        <li>
+                                            <ion-icon name="checkmark-outline"></ion-icon>1000 Records
+                                        </li>
+                                        <li>
+                                            <ion-icon name="checkmark-outline"></ion-icon>Unlimited Tables
+                                        </li>
+                                        <li>
+                                            <ion-icon name="checkmark-outline"></ion-icon>100 GB / month
+                                        </li>
+                                        <li class="text-muted">
+                                            <ion-icon name="close-outline"></ion-icon>Instant Support
+                                        </li>
+                                        <li class="text-muted">
+                                            <ion-icon name="close-outline"></ion-icon>Private Integrations
+                                        </li>
+                                    </ul>
+    
+                                    <div class="geist-container">
+                                        <a role="button" type="text" href="/signup"
+                                            class="hero-button hero-button-primary button shadow icon-color geist-themed geist-success geist-success-fill">
+                                            <span class="hero-button hero-button-primary text">Get Started for Free</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+            
         </div>
     </div>
+
+    <footer class="py-2 section-grey">
+        <div class="container footer-content-container">
+            <div class="row py-4 geist-hide-on-mobile">
+                <div class="col-md-3 footer-content-section-root">
+                    <div class="footer-content-section mt-3">
+                        <ion-icon name="pin-outline" size="large" style="margin-left: -9px;"></ion-icon>
+                        <p class="footer-content-text contact-text pb-3 pl-1 mt-4">1679 Main Street Ave</p>
+                        <p class="footer-content-text contact-text pb-3 pl-1">New York, NY</p>
+                        <p class="footer-content-text contact-text pb-3 pl-1">14984</p>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-content-section-root">
+                    <div class="footer-content-section mt-3">
+                        <ion-icon name="chatbubbles-outline" size="large"></ion-icon>
+                        <p class="footer-content-text pb-3 pl-1 mt-4"><a href="mailto:hello@easybase.io"
+                                class="contact-text">hello@easybase.io</a></p>
+                        <p class="footer-content-text pb-3 pl-1"><a href="tel:1234567890"
+                                class="contact-text">585-555-5555</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-content-section-root">
+                    <div class="footer-content-section mt-3">
+                        <ion-icon class="mb-4" name="newspaper-outline" size="large"></ion-icon>
+                        {% for post in site.posts limit:4 %}
+                        <p class="footer-content-text pb-3 pl-1"><a href="{{ post.url }}"
+                                class="contact-text">{{ post.title }}</a></p>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-3 footer-content-section-root">
+                    <div class="footer-content-section mt-3">
+                        <ion-icon name="link-outline" size="large"></ion-icon>
+                        <p class="footer-content-text pb-3 pl-1 mt-4"><a href="/" class="contact-text">Home</a></p>
+                        <p class="footer-content-text pb-3 pl-1"><a href="/pricing" class="contact-text">Pricing</a></p>
+                        <p class="footer-content-text pb-3 pl-1"><a href="/about" class="contact-text">About Us</a></p>
+                        <p class="footer-content-text pb-3 pl-1"><a href="/blog" class="contact-text">Blog</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="geist-show-on-mobile" style="display: block;">
+                <div class="row d-flex justify-content-center">
+                    <div class="footer-content-section-mobile mb-5">
+                        <div class="mr-4">
+                            <ion-icon name="pin-outline" style="font-size: 40px;"></ion-icon>
+                        </div>
+                        <div>
+                            <p class="footer-content-text contact-text pb-3 pl-1">1679 Main Street Ave</p>
+                            <p class="footer-content-text contact-text pb-3 pl-1">New York, NY</p>
+                            <p class="footer-content-text contact-text pb-3 pl-1">14984</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="footer-content-section-mobile mb-5">
+                        <div class="mr-4">
+                            <ion-icon name="chatbubbles-outline" style="font-size: 40px;"></ion-icon>
+                        </div>
+                        <div>
+                            <p class="footer-content-text pb-3 pl-1"><a href="mailto:hello@easybase.io"
+                                    class="contact-text">hello@easybase.io</a></p>
+                            <p class="footer-content-text pb-3 pl-1"><a href="tel:1234567890"
+                                    class="contact-text">585-555-5555</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="footer-content-section-mobile mb-3">
+                        <div class="mr-4">
+                            <ion-icon name="newspaper-outline" style="font-size: 40px;"></ion-icon>
+                        </div>
+                        <div>
+                            {% for post in site.posts limit:4 %}
+                            <p class="footer-content-text pb-3 pl-1"><a href="{{ post.url }}"
+                                    class="contact-text">{{ post.title }}</a></p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+    
+        <div class="container">
+            <div class="row footer-button-root">
+    
+                <div class="footer-footer col-md-4 left-flex">
+                    <a href="https://www.twitter.com/easybase_io" style="border: none;" target="_blank">
+                        <button class="btn bmd-btn-fab bmd-btn-fab-sm mr-2 footer-social-fab">
+                            <ion-icon name="logo-twitter" size="small"></ion-icon>
+                        </button>
+                    </a>
+                    <a href="https://www.twitter.com/easybase_io" style="border: none;" target="_blank">
+                        <button class="btn bmd-btn-fab bmd-btn-fab-sm mr-2 footer-social-fab">
+                            <ion-icon name="logo-stackoverflow" size="small"></ion-icon>
+                        </button>
+                    </a>
+                    <a href="https://www.twitter.com/easybase_io" style="border: none;" target="_blank">
+                        <button class="btn bmd-btn-fab bmd-btn-fab-sm mr-2 footer-social-fab">
+                            <ion-icon name="logo-linkedin" size="small"></ion-icon>
+                        </button>
+                    </a>
+                    <a href="https://www.twitter.com/easybase_io" style="border: none;" target="_blank">
+                        <button class="btn bmd-btn-fab bmd-btn-fab-sm mr-2 footer-social-fab">
+                            <ion-icon name="logo-facebook" size="small"></ion-icon>
+                        </button>
+                    </a>
+                </div>
+    
+                <div class="footer-footer col-md-4 center-flex">
+                    <p class="copyright-text">© EasyBase 2016-2020</p>
+                </div>
+    
+                <div class="footer-footer col-md-4 right-flex">
+                    <a class="footer-footlink " href="https://mdbootstrap.com/">Terms</a>
+                    <a class="footer-footlink " href="https://mdbootstrap.com/">Privacy</a>
+                    <a class="footer-footlink " href="https://mdbootstrap.com/">DNSMI</a>
+                </div>
+    
+            </div>
+        </div>
+    
+    </footer>
 
     <script>
 
         window.addEventListener("DOMContentLoaded", function () {
 
-            var getScrollY = function () { return (window.pageYOffset || window.document.documentElement.scrollTop) - (window.document.documentElement.clientTop || 0); };
-            var getWindowWidth = function () { return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; };
-
-            var scroll_pos = 0;
-            window.addEventListener("scroll", function () {
-                if (getWindowWidth() <= 800) {
-                    scroll_pos = getScrollY();
-                    if (scroll_pos > 75) {
-                        document.querySelector(".navigation").classList.add("navigation-mobile-grey-bg")
-                        document.querySelector(".nav-list").classList.add("navigation-mobile-grey-bg")
-                    } else if (!document.querySelector("#nav-toggle").classList.contains("active")) {
-                        document.querySelector(".navigation").classList.remove("navigation-mobile-grey-bg");
-                        document.querySelector(".nav-list").classList.remove("navigation-mobile-grey-bg");
-                    }
-                }
-            });
-
-            var jqueryToggle = function (ele) {
-                if (getComputedStyle(ele, null).display == "none") {
-                    ele.style.display = "block";
-                } else {
-                    ele.style.display = "none";
-                }
-            }
-
-            document.getElementById('nav-toggle').addEventListener("click", function () {
-                document.getElementById('nav-toggle').classList.toggle('active');
-                jqueryToggle(document.querySelector('nav ul'));
-
-                if (getWindowWidth() <= 800) {
-                    if (getScrollY() <= 75) {
-                        document.querySelector(".navigation").classList.toggle("navigation-mobile-grey-bg")
-                        document.querySelector(".nav-list").classList.toggle("navigation-mobile-grey-bg")
-                    }
-                }
-
+            document.getElementById('banner_close').addEventListener('click', function () {
+                document.getElementsByClassName('banner_banner')[0].classList.toggle('banner_hidden');
+                document.documentElement.style.setProperty('--banner-height', "0px");
             });
 
             async function pingTimeWorker() {
@@ -234,6 +653,54 @@ layout: null
                 setTimeout(pingTimeWorker, 4500);
             }
             pingTimeWorker();
+
+
+
+            var tabs_name_list = ["tab1", "tab2", "tab3", "tab4"];
+            var tabs_tab_list = tabs_name_list.map(ele => document.getElementById(ele + '-tab'));
+            var tabs_content_list = tabs_name_list.map(ele => document.getElementById(ele + '-content'));
+
+            var tabs_header = document.getElementById('material-tabs');
+
+            var active_tab = tabs_tab_list[0];
+            active_tab.classList.add('active');
+            
+            var active_content = tabs_content_list[0];
+
+
+            tabs_content_list.slice(1).forEach(ele => {
+                ele.style.display = 'none';
+            });
+
+            tabs_tab_list.forEach((ele, i) => ele.addEventListener('click', function(e) {
+                active_tab.classList.remove('active');
+                active_content.style.display = 'none';
+
+                active_tab = tabs_tab_list[i];
+                active_content = tabs_content_list[i];
+
+                active_tab.classList.add('active');
+                active_content.style.display = 'block';
+
+                e.preventDefault();
+
+            }, false));
+
+            var getScrollY = function () { return (window.pageYOffset || window.document.documentElement.scrollTop) - (window.document.documentElement.clientTop || 0); };
+            var getWindowWidth = function () { return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; };
+
+            window.addEventListener("scroll", function () {
+                const banner_height = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue("--banner-height").match(/\d+/));
+                var scroll_pos = getScrollY();
+                if (getWindowWidth() > 800)
+                {
+                    if (scroll_pos > banner_height) {
+                        document.querySelector(".header_wrapper").classList.add("nav-on-scroll");
+                    } else {
+                        document.querySelector(".header_wrapper").classList.remove("nav-on-scroll");
+                    }
+                }
+            });
 
         });
 
@@ -253,6 +720,9 @@ layout: null
         })();
     </script>
     <!--End of Tawk.to Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/components/'</script>
 </body>
 
 </html>
