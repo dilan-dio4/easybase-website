@@ -960,11 +960,13 @@ div.header-contact-us {
     margin: auto;
     border-radius: 26px;
     border: 0.001rem solid var(--accents-2);
-    background: url(/assets/images/circuit_board.svg) repeat center center fixed;
+    background-image: url(/assets/images/circuit_board.svg);
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
     transform: translatez(0);
     -webkit-transform: translateZ(0);
-    /* -webkit-backface-visibility: hidden; */
-    /* -webkit-perspective: 1000; */
+    -webkit-backface-visibility: hidden;
 }
 
 @keyframes pulsate {
@@ -1023,11 +1025,7 @@ div.header-contact-us {
         width: 99vw;
     }
     .hero-primary-text {
-        text-align: center;
         font-size: 50px;
-    }
-    .hero-secondary-text {
-        text-align: center;
     }
     .hero-buttons-root {
         justify-content: center;
