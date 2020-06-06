@@ -687,13 +687,12 @@ div.header-contact-us {
 
 .section-grey {
     border-bottom: 1px solid var(--accents-2);
-    background: var(--accents-1);
+    background-color: var(--accents-1);
     padding: calc(2*var(--mod-gap-double)) 0;
 }
 
 .section-white {
     border-bottom: 1px solid var(--accents-2);
-    background: var(--accents-1);
     padding: calc(2*var(--mod-gap-double)) 0;
     background-color: #fff;
 }
@@ -938,7 +937,7 @@ div.header-contact-us {
 }
 
 .small-content-text {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.85rem;
     color: var(--accents-8);
 }
@@ -953,6 +952,15 @@ div.header-contact-us {
     text-align: center;
     font-size: 32px;
     color: var(--accents-3);
+}
+
+.image-window {
+    width: 100%;
+    height: 90px;
+    margin: auto;
+    border-radius: 26px;
+    border: 0.001rem solid var(--accents-2);
+    background: url(/assets/images/circuit_board.svg) repeat center center fixed;
 }
 
 @keyframes pulsate {
