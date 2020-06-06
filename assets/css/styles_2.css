@@ -963,8 +963,8 @@ div.header-contact-us {
     background: url(/assets/images/circuit_board.svg) repeat center center fixed;
     transform: translatez(0);
     -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
+    /* -webkit-backface-visibility: hidden; */
+    /* -webkit-perspective: 1000; */
 }
 
 @keyframes pulsate {
