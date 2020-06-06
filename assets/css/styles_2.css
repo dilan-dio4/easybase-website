@@ -44,6 +44,27 @@ body, html {
     position: relative;
 }
 
+.highlight-sm::before {
+    content: '';
+    background: var(--highlight-color);
+    position: absolute;
+    left: 0;
+    right: -2px;
+    bottom: 2px;
+    height: 10px;
+    z-index: 8;
+}
+
+.highlight-sm {
+    position: relative;
+    background: 0 0;
+}
+
+.highlight-sm span {
+    z-index: 10;
+    position: relative;
+}
+
 .header_wrapper {
     position: sticky;
     top: 0px;
@@ -724,7 +745,7 @@ div.header-contact-us {
     text-align: inherit;
     margin: 0;
     font-family: var(--font-sans);
-    line-height: 1.6em;
+    line-height: 1.8em;
     font-size: 1.1rem;
     text-transform: none;
 }
@@ -914,6 +935,24 @@ div.header-contact-us {
     height: var(--header-height-expanded);
     position: fixed !important;
     top: 0 !important;
+}
+
+.small-content-text {
+    font-size: 16px;
+    line-height: 1.85rem;
+    color: var(--accents-8);
+}
+
+.small-content-header {
+    letter-spacing: 0.015rem;
+    font-weight: 600;
+}
+
+.small-arrow-down {
+    font-weight: 200;
+    text-align: center;
+    font-size: 32px;
+    color: var(--accents-3);
 }
 
 @keyframes pulsate {
