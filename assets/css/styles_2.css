@@ -961,6 +961,10 @@ div.header-contact-us {
     border-radius: 26px;
     border: 0.001rem solid var(--accents-2);
     background: url(/assets/images/circuit_board.svg) repeat center center fixed;
+    transform: translatez(0);
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
 }
 
 @keyframes pulsate {
@@ -1020,6 +1024,7 @@ div.header-contact-us {
     }
     .hero-primary-text {
         text-align: center;
+        font-size: 50px;
     }
     .hero-secondary-text {
         text-align: center;
