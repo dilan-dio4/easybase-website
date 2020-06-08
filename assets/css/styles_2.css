@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 100;
@@ -76,7 +76,7 @@
     font-weight: 900;
     font-display: swap;
     src: url("https://rsms.me/inter/font-files/Inter-Black.woff2?3.13") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Black.woff?3.13") format("woff");
-}
+} */
 
 body, html {
     font-family: var(--font-sans) !important;
