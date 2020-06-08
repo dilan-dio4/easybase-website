@@ -48,7 +48,7 @@ layout: null
 
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css" integrity="sha256-iNIdqSl2o3Ge4o0EfZkhHY241Bb4iIBttf1jicmtaC4=" crossorigin="anonymous" />
+    <link media="print" onload="this.media='all'" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css" integrity="sha256-iNIdqSl2o3Ge4o0EfZkhHY241Bb4iIBttf1jicmtaC4=" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -775,7 +775,7 @@ layout: null
 
     <script>
 
-        window.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("load", function () {
 
             document.getElementById('banner_close').addEventListener('click', function () {
                 document.getElementsByClassName('banner_banner')[0].classList.toggle('banner_hidden');
