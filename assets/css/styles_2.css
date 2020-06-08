@@ -128,7 +128,6 @@ body, html {
 }
 
 .header_logo {
-    cursor: pointer;
     display: inline-flex;
     position: relative;
 }
@@ -706,7 +705,7 @@ div.header-contact-us {
 
 .cta-white-text {
     color: var(--mod-background);
-    letter-spacing: 0.75px;
+    letter-spacing: 0.55px;
     font-weight: 700;
 }
 
@@ -785,13 +784,10 @@ div.header-contact-us {
     display: -ms-flexbox;
     display: flex;
     border-radius: var(--mod-marketing-radius);
-    max-width: 1000px;
     box-shadow: var(--shadow-large);
-    overflow: hidden;
     width: 100%;
     background-color: #fff;
-    align-items: center;
-    height: 550px;
+    height: 100%;
 }
 
 .free-tier-card-list-root {
@@ -813,8 +809,7 @@ div.header-contact-us {
 }
 
 .card-contents-root {
-    background-color: #fff;
-    height: 350px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     -webkit-box-pack: center;
@@ -822,6 +817,11 @@ div.header-contact-us {
     -webkit-box-align: center;
     align-items: center;
     flex: 1 1 0%;
+    padding: 60px 0;
+    border-top-left-radius: var(--mod-marketing-radius);
+    border-bottom-left-radius: var(--mod-marketing-radius);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .pricing-month-text {
@@ -902,6 +902,7 @@ div.header-contact-us {
     display: flex;
     flex-direction: row;
     margin-bottom: 50px;
+    min-height: 180px;
 }
 
 .section-header-content-spacer {
@@ -969,6 +970,56 @@ div.header-contact-us {
     -webkit-backface-visibility: hidden;
 }
 
+.newsletter-input-form {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    border-collapse: separate;
+    width: 100%;
+    height: 48px;
+    border-radius: 6px;
+    background: #fff;
+    border: 1px solid #e9edf3;
+    -webkit-transition: border-color .2s, background-color .2s;
+    transition: border-color .2s, background-color .2s;
+}
+
+.newsletter-input-form button {
+    background: transparent;
+    color: #7cabff;
+    font-size: 23px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    outline: none !important;
+}
+
+.newsletter-input-form input {
+    border: none;
+    background: hsla(0, 0%, 100%, .2);
+    border-radius: 4px 0 0 4px;
+    font-size: 13px;
+    color: #24282e;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 500;
+    height: 100%;
+    outline: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0 16px 1px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    border-radius: 6px 0 0 6px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-left: 46px;
+}
+
 @keyframes pulsate {
     0% {
         transform: scale(0.1, 0.1);
@@ -1020,6 +1071,10 @@ div.header-contact-us {
     color: var(--accents-7);
 }
 
+.secondary-section-hero {
+    margin-top: var(--header-height);
+}
+
 @media screen and (max-width: 800px) {
     .hero-checks span {
         width: 99vw;
@@ -1045,6 +1100,15 @@ div.header-contact-us {
     }
     .mod-show-on-mobile {
         display: flex;
+    }
+    .pricing-card {
+        flex-direction: column;
+    }
+    .card-contents-root {
+        border-top-left-radius: var(--mod-marketing-radius);
+        border-bottom-left-radius: 0;
+        border-top-right-radius: var(--mod-marketing-radius);
+        border-bottom-right-radius: 0;
     }
 }
 
@@ -1133,6 +1197,9 @@ div.header-contact-us {
     }
     .mod-shadow:hover {
         box-shadow: var(--shadow-hover);
+    }
+    .newsletter-input-form:hover {
+        border: 1px solid var(--mod-success-dark);
     }
 }
 
@@ -1471,8 +1538,9 @@ header {
 .mobile-nav__social {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
+    height: 100%;
 }
 
 .mobile-nav__social a ion-icon {
