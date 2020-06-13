@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        code[class*="language-"], pre[class*="language-"] {
+            color: #f8f8f2;
+            background: none;
+            text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 13px;
+            text-align: left;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.5;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none;
+        }
+
+        /* Code blocks */
+
+        pre[class*="language-"] {
+            padding: 1em;
+            margin: .5em 0;
+            overflow: auto;
+            border-radius: 0.3em;
+        }
+
+        :not(pre)>code[class*="language-"], pre[class*="language-"] {
+            background: #272822;
+        }
+
+        /* Inline code */
+
+        :not(pre)>code[class*="language-"] {
+            padding: .1em;
+            border-radius: .3em;
+            white-space: normal;
+        }
+
+        .token.comment, .token.prolog, .token.doctype, .token.cdata {
+            color: slategray;
+        }
+
+        .token.punctuation {
+            color: #f8f8f2;
+        }
+
+        .token.namespace {
+            opacity: .7;
+        }
+
+        .token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
+            color: #f92672;
+        }
+
+        .token.boolean, .token.number {
+            color: #ae81ff;
+        }
+
+        .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+            color: #a6e22e;
+        }
+
+        .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable {
+            color: #f8f8f2;
+        }
+
+        .token.atrule, .token.attr-value, .token.function, .token.class-name {
+            color: #e6db74;
+        }
+
+        .token.keyword {
+            color: #66d9ef;
+        }
+
+        .token.regex, .token.important {
+            color: #fd971f;
+        }
+
+        .token.important, .token.bold {
+            font-weight: bold;
+        }
+
+        .token.italic {
+            font-style: italic;
+        }
+
+        .token.entity {
+            cursor: help;
+        }
+
+        .token.custom {
+            color: #ff7700;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const {
+            colors,
+            CssBaseline,
+            ThemeProvider,
+            Typography,
+            Container,
+            makeStyles,
+            createMuiTheme,
+            Box,
+            SvgIcon,
+            Link,
+            Tab,
+            Tabs,
+            TextField,
+            Checkbox,
+            Paper,
+            DialogActions,
+            Switch,
+            FormControlLabel,
+            Button
+        } = MaterialUI;
+
+        const theme = createMuiTheme({
+            palette: {
+                primary: {
+                    main: '#556cd6',
+                    light: '#8b9aff',
+                    dark: '#0c42a4'
+                },
+                secondary: {
+                    main: '#ff9e22',
+                    light: '#ffcf57',
+                    dark: '#c66f00'
+                },
+                error: {
+                    main: '#FF0000',
+                },
+                info: {
+                    main: '#eceff1'
+                },
+                success: {
+                    main: '#00C851'
+                },
+                background: {
+                    default: '#fff',
+                },
+                grey: {
+                    main: '#757575'
+                }
+            },
+            typography: {
+            },
+        });
+
+        const useStyles = makeStyles(theme => ({
+            tabsBorder: {
+                borderBottom: '1px solid #e8e8e8',
+            },
+            refractorRoot: {
+                padding: '5px 15px'
+            },
+            codeRoot: {
+                backgroundColor: '#272822',
+                padding: 15,
+                width: '100%',
+                borderRadius: '0.3em',
+            },
+            clearButtonRoot: {
+                color: '#757575',
+                borderRadius: 4,
+                display: 'flex',
+                cursor: 'pointer',
+                marginRight: 8,
+                '&:hover': {
+                    backgroundColor: theme.palette.error.main,
+                    color: '#ffffff'
+                }
+            },
+            singleComponent: {
+                padding: theme.spacing(1, 0),
+                flexGrow: 1,
+                display: 'flex',
+                justifyContent: 'flex-end'
+            },
+            columnHeaderTypography: {
+                wordBreak: 'break-all',
+                fontWeight: 500,
+                fontSize: 18
+            },
+            optionsPaper: {
+                borderRadius: 6,
+                position: 'relative',
+                width: 375,
+            },
+            helpIcon: {
+                position: "absolute",
+                top: 12,
+                right: 12,
+                cursor: 'pointer'
+            }
+        }));
+
+
+        function TabPanel(props) {
+            const { children, value, index, ...other } = props;
+
+            return (
+                <div
+                    role="tabpanel"
+                    hidden={value !== index}
+                    id={`simple-tabpanel-${index}`}
+                    aria-labelledby={`simple-tab-${index}`}
+                    {...other}
+                >
+                    {value === index && (
+                        <div>{children}</div>
+                    )}
+                </div>
+            );
+        }
+
+
+        const QueryListGenerator = ({ accessorToColumnTypeMap, typeToValueMap, queryValueChangeCallback, largeText = false }) => {
+
+            const classes = useStyles();
+
+            return (
+                <div>
+                    {Object.entries(accessorToColumnTypeMap).map(([key, value]) =>
+                        <div className="my-1 d-flex align-items-center w-100">
+                            <Typography className={largeText && classes.columnHeaderTypography} variant={!largeText && "body1"}>{key}</Typography>
+                            <span className={classes.singleComponent}>
+                                {(() => {
+                                    switch (value) {
+                                        case "text":
+                                        case "richtext":
+                                        case "file":
+                                        case "image":
+                                        case "video":
+                                            return <TextField
+                                                variant="outlined"
+                                                size="small"
+                                                style={{ width: 125 }}
+                                                value={typeToValueMap[key]}
+                                                onChange={e => e.target.value !== "" ? queryValueChangeCallback(e.target.value, key) : queryValueChangeCallback(null, key)}
+                                            />
+                                        case "location":
+                                        case "number":
+                                            return <TextField
+                                                variant="outlined"
+                                                type="number"
+                                                size="small"
+                                                style={{ width: 125 }}
+                                                value={typeToValueMap[key]}
+                                                onChange={e => e.target.value !== "" ? queryValueChangeCallback(Number(e.target.value), key) : queryValueChangeCallback(null, key)}
+                                            />
+                                        case "boolean":
+                                            return <Switch
+                                                checked={typeToValueMap[key]}
+                                                onChange={e => queryValueChangeCallback(e.target.checked, key)}
+                                            />
+                                        default:
+                                            break;
+                                    }
+                                })()}
+                            </span>
+                        </div>
+                    )}
+                </div>
+            )
+
+        }
+
+        const generateUrl = (redisID, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap) => {
+
+            const _generateBareUrl = () => `https://api.easybase.io/get/${redisID}` + (!isLimitReturnAll || codeOffset !== 0 || Object.values(typeToValueMap).some(ele => ele !== null) ? "?" : "");
+            const _generateUrlParams = () => {
+                const params = [];
+                !isLimitReturnAll && params.push(`limit=${codeLimit}`);
+                codeOffset !== 0 && params.push(`offset=${codeOffset}`);
+                Object.entries(typeToValueMap).forEach(([key, value]) => {
+                    if (value !== null) params.push(`${key}=${value}`);
+                })
+
+                return params;
+            }
+
+            const urlParams = _generateUrlParams();
+            return <div>
+                {_generateBareUrl()}
+                {urlParams.map((ele, i) => <span className="token custom">{ele}{i !== urlParams.length - 1 && <span className="token string">&amp;</span>}</span>)}
+            </div>
+        }
+
+        const generateLanguageContent = (redisID, typeFormats, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap) => {
+
+            const _generate_language_variables = (col_type, col_name, lang) => {
+                switch (col_type) {
+                    case "HH:MM 12h":
+                    case "HH:MM 24h":
+                    case "String":
+                    case "RTE":
+                    case "HTML":
+                        switch (lang) {
+                            case "swift":
+                                return <div><span className="token keyword">var</span>{` ${col_name}: `}<span className="token builtin">String</span><span className="token operator">?</span></div>;
+                            case "java":
+                                return <div><span className="token class-name">String</span>{` ${col_name};`}</div>;                        
+                            default:
+                                break;
+                        }
+                    case "URL":
+                        switch (lang) {
+                            case "swift":
+                                return <div><span className="token keyword">var</span>{` ${col_name}: `}<span className="token builtin">String</span><span className="token operator">?</span></div>;
+                            case "java":
+                                return <div><span className="token class-name">String</span>{` ${col_name};`}</div>;     
+                            default:
+                                break;
+                        }
+                    case "MM/DD/YYYY":
+                    case "YYYY/MM/DD":
+                    case "dd-mmm-yyyy":
+                    case "dd.mm.yyyy":
+                        switch (lang) {
+                            case "swift":
+                                return <div><span className="token keyword">var</span>{` ${col_name}: `}<span className="token builtin">String</span><span className="token operator">?</span></div>;
+                            case "java":
+                                return <div><span className="token class-name">String</span>{` ${col_name};`}</div>;      
+                            default:
+                                break;
+                        }
+                    case "Coordinates":
+                    case "ISO String":
+                    case "Object":
+                        switch (lang) {
+                            case "swift":
+                                return <div><span className="token keyword">var</span>{` ${col_name}: `}<span className="token builtin">String</span><span className="token operator">?</span></div>;
+                            case "java":
+                                return <div><span className="token class-name">String</span>{` ${col_name};`}</div>;
+                            default:
+                                break;
+                        }
+                    case "Number":
+                        switch (lang) {
+                            case "swift":
+                                return <div><span className="token keyword">var</span>{` ${col_name}: `}<span className="token builtin">Float</span><span className="token operator">?</span></div>;
+                            case "java":
+                                return <div><span className="token class-name">float</span>{` ${col_name};`}</div>; 
+                            default:
+                                break;
+                        }
+                    case "1/0":
+                    case "Total Minutes":
+                        switch (lang) {
+                            case "swift":
+                                return <div><span className="token keyword">var</span>{` ${col_name}: `}<span className="token builtin">Int</span><span className="token operator">?</span></div>;
+                            case "java":
+                                return <div><span className="token class-name">int</span>{` ${col_name};`}</div>;
+                            default:
+                                break;
+                        }
+                    case "T/F":
+                        switch (lang) {
+                            case "swift":
+                                return <div><span className="token keyword">var</span>{` ${col_name}: `}<span className="token builtin">Bool</span><span className="token operator">?</span></div>;
+                            case "java":
+                                return <div><span className="token class-name">boolean</span>{` ${col_name};`}</div>;
+                            default:
+                                break;
+                        }
+                    case "UNIX Stamp":
+                        switch (lang) {
+                            case "swift":
+                                return <div><span className="token keyword">var</span>{` ${col_name}: `}<span className="token builtin">Int</span><span className="token operator">?</span></div>;
+                            case "java":
+                                return <div><span className="token class-name">int</span>{` ${col_name};`}</div>;
+                            default:
+                                break;
+                        }
+                    default:
+                        break;
+                }
+            }
+
+            const _javascript_code_gen = () => {
+                // `fetch("${generateUrl()}")
+                //     .then(resp => resp.json())
+                //     .then(raw_json => console.log(raw_json));
+                // `
+                return (
+                <code className="language-javascript">
+                        <span className="token function">fetch</span><span className="token punctuation">(</span><span className="token string">"{generateUrl(redisID, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap)}"</span><span className="token punctuation">)</span>
+                    <br />{"    "}<span className="token punctuation">.</span><span className="token function">then</span><span className="token punctuation">(</span><span className="token parameter">resp</span> <span className="token operator">=&gt;</span> resp<span className="token punctuation">.</span><span className="token function">json</span><span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">)</span>
+                    <br />{"    "}<span className="token punctuation">.</span><span className="token function">then</span><span className="token punctuation">(</span><span className="token parameter">raw_json</span> <span className="token operator">=&gt;</span> console<span className="token punctuation">.</span><span className="token function">log</span><span className="token punctuation">(</span>raw_json<span className="token punctuation">)</span><span className="token punctuation">)</span><span className="token punctuation">;</span>
+                </code>
+                )
+            }
+
+            const _php_code_gen = () => {
+                // `<?php
+                //     $easybase_url = "${generateUrl()}";
+                //     $json = file_get_contents($easybase_url);
+                //     $json_data = json_decode($json, false);
+
+                //     print_r($json_data);
+                //     // OR
+                //     foreach ($json_data as $cur){
+                // ${Object.keys(typeFormats).map(ele => `\t\techo $cur->${ele};`).join("\n")}
+                //     }
+
+                // ?>
+                // `
+
+                return (
+                    <code className=" language-php"><span className="token php language-php"><span className="token delimiter important">&lt;?php</span>
+                        <br />{"    "}<span className="token variable">$easybase_url</span> <span className="token operator">=</span> <span className="token double-quoted-string string">"{generateUrl(redisID, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap)}"</span><span className="token punctuation">;</span>
+                        <br />{"    "}<span className="token variable">$json</span> <span className="token operator">=</span> <span className="token function">file_get_contents</span><span className="token punctuation">(</span><span className="token variable">$easybase_url</span><span className="token punctuation">)</span><span className="token punctuation">;</span>
+                        <br />{"    "}<span className="token variable">$json_data</span> <span className="token operator">=</span> <span className="token function">json_decode</span><span className="token punctuation">(</span><span className="token variable">$json</span><span className="token punctuation">,</span> <span className="token boolean constant">false</span><span className="token punctuation">)</span><span className="token punctuation">;</span>
+
+                        <br />{"    "}<span className="token function">print_r</span><span className="token punctuation">(</span><span className="token variable">$json_data</span><span className="token punctuation">)</span><span className="token punctuation">;</span>
+                        <br />{"    "}<span className="token comment">// OR</span>
+                        <br />{"    "}<span className="token keyword">foreach</span> <span className="token punctuation">(</span><span className="token variable">$json_data</span> <span className="token keyword">as</span> <span className="token variable">$cur</span><span className="token punctuation">)</span><span className="token punctuation">{'{'}</span>
+                            {Object.keys(typeFormats).map(ele => <div>
+                                <br />{"    "}{"    "}<span className="token keyword">echo</span> <span className="token variable">$cur</span><span className="token operator">-</span><span className="token operator">&gt;</span><span className="token property">{ele}</span><span className="token punctuation">;</span>
+                            </div>)}
+                        <br />{"    "}<span className="token punctuation">{'}'}</span>
+
+                        <br /><span className="token delimiter important">?&gt;</span></span>
+                    </code>
+                )
+            }
+
+            const _node_code_gen = () => {
+                const key_object_example = "{ " + Object.keys(typeFormats).join(", ") + " }";
+
+                // `// npm install --save axios
+
+                // var axios = require('axios');
+
+                // async function getDataFromEasybase()
+                // {
+                //     const easybase_url = "${generateUrl()}";
+                //     const resp = await axios.get(easybase_url);
+                //     console.log(resp.data);  // [ ${key_object_example}, ${key_object_example}, ... ]
+                // }
+
+                // getDataFromEasybase();`
+                return (
+                    <code className=" language-javascript"><span className="token comment">// npm install --save axios</span>
+
+                        <br /><span className="token keyword">var</span> axios <span className="token operator">=</span> <span className="token function">require</span><span className="token punctuation">(</span><span className="token string">'axios'</span><span className="token punctuation">)</span><span className="token punctuation">;</span>
+
+                        <br /><span className="token keyword">async</span> <span className="token keyword">function</span> <span className="token function">getDataFromEasybase</span><span className="token punctuation">(</span><span className="token punctuation">)</span>
+                        <br /><span className="token punctuation">{'{'}</span>
+                        <br />{"    "}<span className="token keyword">const</span> easybase_url <span className="token operator">=</span> <span className="token string">"{generateUrl(redisID, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap)}"</span><span className="token punctuation">;</span>
+                        <br />{"    "}<span className="token keyword">const</span> resp <span className="token operator">=</span> <span className="token keyword">await</span> axios<span className="token punctuation">.</span><span className="token function">get</span><span className="token punctuation">(</span>easybase_url<span className="token punctuation">)</span><span className="token punctuation">;</span>
+                        <br />{"    "}console<span className="token punctuation">.</span><span className="token function">log</span><span className="token punctuation">(</span>resp<span className="token punctuation">.</span>data<span className="token punctuation">)</span><span className="token punctuation">;</span>  <span className="token comment">// [ {key_object_example}, {key_object_example}, ... ]</span>
+                        <br /><span className="token punctuation">{'}'}</span>
+
+                        <br /><span className="token function">getDataFromEasybase</span><span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">;</span>
+                    </code>
+                )
+            }
+
+            const _python_2_code_gen = () => {
+                // `import urllib, json, pprint
+                // url = "${generateUrl()}"
+                // response = urllib.urlopen(url)
+                // easybase_data = json.loads(response.read())
+                // pprint.pprint(easybase_data) # pretty print, or 'print'
+                //         `
+                return (
+                    <code className=" language-python"><span className="token keyword">import</span> urllib<span className="token punctuation">,</span> json<span className="token punctuation">,</span> pprint
+                        <br />url <span className="token operator">=</span> <span className="token string">"{generateUrl(redisID, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap)}"</span>
+                        <br />
+                        <br />response <span className="token operator">=</span> urllib<span className="token punctuation">.</span>urlopen<span className="token punctuation">(</span>url<span className="token punctuation">)</span>
+                        <br />easybase_data <span className="token operator">=</span> json<span className="token punctuation">.</span>loads<span className="token punctuation">(</span>response<span className="token punctuation">.</span>read<span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">)</span>
+                        <br />pprint<span className="token punctuation">.</span>pprint<span className="token punctuation">(</span>easybase_data<span className="token punctuation">)</span> <span className="token comment"># pretty print, or 'print'</span>
+                    </code>
+                )
+            }
+
+            const _python_3_code_gen = () => {
+                // `import urllib.request, json, pprint
+
+                // url = "${generateUrl()}"
+                // with urllib.request.urlopen(url) as response:
+                //     easybase_data = json.loads(response.read().decode())
+                //     pprint.pprint(easybase_data) # pretty print, or 'print'
+                // `
+                return (
+                    <code className=" language-python"><span className="token keyword">import</span> urllib<span className="token punctuation">.</span>request<span className="token punctuation">,</span> json<span className="token punctuation">,</span> pprint
+
+                        <br />url <span className="token operator">=</span> <span className="token string">"{generateUrl(redisID, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap)}"</span>
+                        <br />
+                        <br /><span className="token keyword">with</span> urllib<span className="token punctuation">.</span>request<span className="token punctuation">.</span>urlopen<span className="token punctuation">(</span>url<span className="token punctuation">)</span> <span className="token keyword">as</span> response<span className="token punctuation">:</span>
+                        <br />{"    "}easybase_data <span className="token operator">=</span> json<span className="token punctuation">.</span>loads<span className="token punctuation">(</span>response<span className="token punctuation">.</span>read<span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">.</span>decode<span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">)</span>
+                        <br />{"    "}pprint<span className="token punctuation">.</span>pprint<span className="token punctuation">(</span>easybase_data<span className="token punctuation">)</span> <span className="token comment"># pretty print, or 'print'</span>
+                    </code>
+                )
+            }
+
+            const _java_code_gen = () => {
+
+                // `import java.net.URL;
+                // import java.io.BufferedReader;
+                // import java.io.InputStreamReader;
+
+                // // https://github.com/google/gson
+                // import com.google.gson.Gson; 
+                // import com.google.gson.GsonBuilder;  
+
+                // private class EasybaseObj {
+                // ${Object.entries(typeFormats).map(([key, value]) => _generate_language_variables(value, key, "java")).join("\n")}
+                // }
+
+                // public class HelloWorld{
+
+                //     public static void main(String[] args) {
+                //         String response = "";
+                        
+                //         try {
+                //             URL url = new URL("${generateUrl()}");
+                //             BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
+                //             String str = "";
+                //             while (null != (str = br.readLine())) {
+                //                 response += str;
+                //             }
+                //         } catch (Exception ex) {
+                //             ex.printStackTrace();
+                //         }
+                        
+                //         Gson gson = new Gson();  
+                        
+                //         EasybaseObj[] easybase_data = gson.fromJson(response, EasybaseObj[].class);  
+                        
+                //     }
+                // }`
+
+                return (
+                    <code className=" language-java"><span className="token keyword">import</span> <span className="token namespace">java<span className="token punctuation">.</span>net<span className="token punctuation">.</span></span>URL<span className="token punctuation">;</span>
+                        <br /><span className="token keyword">import</span> <span className="token namespace">java<span className="token punctuation">.</span>io<span className="token punctuation">.</span></span><span className="token class-name">BufferedReader</span><span className="token punctuation">;</span>
+                        <br /><span className="token keyword">import</span> <span className="token namespace">java<span className="token punctuation">.</span>io<span className="token punctuation">.</span></span><span className="token class-name">InputStreamReader</span><span className="token punctuation">;</span>
+                        <br />
+                        <br /><span className="token comment">// https://github.com/google/gson</span>
+                        <br /><span className="token keyword">import</span> <span className="token namespace">com<span className="token punctuation">.</span>google<span className="token punctuation">.</span>gson<span className="token punctuation">.</span></span><span className="token class-name">Gson</span><span className="token punctuation">;</span> 
+                        <br /><span className="token keyword">import</span> <span className="token namespace">com<span className="token punctuation">.</span>google<span className="token punctuation">.</span>gson<span className="token punctuation">.</span></span><span className="token class-name">GsonBuilder</span><span className="token punctuation">;</span>  
+                        <br />
+                        <br /><span className="token keyword">private</span> <span className="token keyword">class</span> <span className="token class-name">EasybaseObj</span> <span className="token punctuation">{'{'}</span>
+                        {Object.entries(typeFormats).map(([key, value]) => <div><br />{"    "}{_generate_language_variables(value, key, "java")}</div>)}
+                        <br /><span className="token punctuation">{'}'}</span>
+                        <br />
+                        <br /><span className="token keyword">public</span> <span className="token keyword">class</span> <span className="token class-name">HelloWorld</span><span className="token punctuation">{'{'}</span>
+                        <br />
+                        <br />{"    "}<span className="token keyword">public</span> <span className="token keyword">static</span> <span className="token keyword">void</span> <span className="token function">main</span><span className="token punctuation">(</span><span className="token class-name">String</span><span className="token punctuation">[</span><span className="token punctuation">]</span> args<span className="token punctuation">)</span> <span className="token punctuation">{'{'}</span>
+                        <br />{"    "}{"    "}<span className="token class-name">String</span> response <span className="token operator">=</span> <span className="token string">""</span><span className="token punctuation">;</span>
+                        <br />
+                        <br />{"    "}{"    "}<span className="token keyword">try</span> <span className="token punctuation">{'{'}</span>
+                        <br />{"    "}{"    "}{"    "}<span className="token class-name">URL</span> url <span className="token operator">=</span> <span className="token keyword">new</span> <span className="token function">URL</span><span className="token punctuation">(</span><span className="token string">"{generateUrl(redisID, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap)}"</span><span className="token punctuation">)</span><span className="token punctuation">;</span>
+                        <br />{"    "}{"    "}{"    "}<span className="token class-name">BufferedReader</span> br <span className="token operator">=</span> <span className="token keyword">new</span> <span className="token class-name">BufferedReader</span><span className="token punctuation">(</span><span className="token keyword">new</span> <span className="token class-name">InputStreamReader</span><span className="token punctuation">(</span>url<span className="token punctuation">.</span><span className="token function">openStream</span><span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">)</span><span className="token punctuation">)</span><span className="token punctuation">;</span>
+                        <br />{"    "}{"    "}{"    "}<span className="token class-name">String</span> str <span className="token operator">=</span> <span className="token string">""</span><span className="token punctuation">;</span>
+                        <br />{"    "}{"    "}{"    "}<span className="token keyword">while</span> <span className="token punctuation">(</span><span className="token keyword">null</span> <span className="token operator">!=</span> <span className="token punctuation">(</span>str <span className="token operator">=</span> br<span className="token punctuation">.</span><span className="token function">readLine</span><span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">)</span><span className="token punctuation">)</span> <span className="token punctuation">{'{'}</span>
+                        <br />{"    "}{"    "}{"    "}{"    "}response <span className="token operator">+=</span> str<span className="token punctuation">;</span>
+                        <br />{"    "}{"    "}{"    "}<span className="token punctuation">{'}'}</span>
+                        <br />{"    "}{"    "}<span className="token punctuation">{'}'}</span> <span className="token keyword">catch</span> <span className="token punctuation">(</span><span className="token class-name">Exception</span> ex<span className="token punctuation">)</span> <span className="token punctuation">{'{'}</span>
+                        <br />{"    "}{"    "}{"    "}ex<span className="token punctuation">.</span><span className="token function">printStackTrace</span><span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">;</span>
+                        <br />{"    "}{"    "}<span className="token punctuation">{'}'}</span>
+                        <br />
+                        <br />{"    "}{"    "}<span className="token class-name">Gson</span> gson <span className="token operator">=</span> <span className="token keyword">new</span> <span className="token class-name">Gson</span><span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">;</span>  
+                        <br />
+                        <br />{"    "}{"    "}<span className="token class-name">EasybaseObj</span><span className="token punctuation">[</span><span className="token punctuation">]</span> easybase_data <span className="token operator">=</span> gson<span className="token punctuation">.</span><span className="token function">fromJson</span><span className="token punctuation">(</span>response<span className="token punctuation">,</span> <span className="token class-name">EasybaseObj</span><span className="token punctuation">[</span><span className="token punctuation">]</span><span className="token punctuation">.</span><span className="token keyword">class</span><span className="token punctuation">)</span><span className="token punctuation">;</span>  
+                        <br />        
+                        <br />{"    "}<span className="token punctuation">{'}'}</span>
+                        <br /><span className="token punctuation">{'}'}</span>
+                    </code>
+                )
+            }
+
+            const _c_sharp_code_gen = () => {
+                // `using System;
+                // using Newtonsoft.Json; // NuGet Newtonsoft.Json
+
+                // public class Program
+                // {
+                //     public static void Main()
+                //     {
+                //         String url="${generateUrl()}";
+                //         System.Net.WebClient client = new System.Net.WebClient();
+                //         String json_string = client.DownloadString(url);
+                //         dynamic easybase_data = JsonConvert.DeserializeObject(json_string);
+                //         Console.WriteLine(easybase_data);
+                //     }
+                // }`
+
+                return (
+                    <code className=" language-csharp"><span className="token keyword">using</span> <span className="token namespace">System</span><span className="token punctuation">;</span>
+                        <br /><span className="token keyword">using</span> <span className="token namespace">Newtonsoft<span className="token punctuation">.</span>Json</span><span className="token punctuation">;</span> <span className="token comment">// NuGet Newtonsoft.Json</span>
+                        <br />
+                        <br /><span className="token keyword">public</span> <span className="token keyword">class</span> <span className="token class-name">Program</span>
+                        <br /><span className="token punctuation">{'{'}</span>
+                        <br />{"    "}<span className="token keyword">public</span> <span className="token keyword">static</span> <span className="token return-type class-name"><span className="token keyword">void</span></span> <span className="token function">Main</span><span className="token punctuation">(</span><span className="token punctuation">)</span>
+                        <br />{"    "}<span className="token punctuation">{'{'}</span>
+                        <br />{"    "}{"    "}<span className="token class-name">String</span> url<span className="token operator">=</span><span className="token string">"{generateUrl(redisID, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap)}"</span><span className="token punctuation">;</span>
+                        <br />{"    "}{"    "}<span className="token class-name">System<span className="token punctuation">.</span>Net<span className="token punctuation">.</span>WebClient</span> client <span className="token operator">=</span> <span className="token keyword">new</span> <span className="token constructor-invocation class-name">System<span className="token punctuation">.</span>Net<span className="token punctuation">.</span>WebClient</span><span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">;</span>
+                        <br />{"    "}{"    "}<span className="token class-name">String</span> json_string <span className="token operator">=</span> client<span className="token punctuation">.</span><span className="token function">DownloadString</span><span className="token punctuation">(</span>url<span className="token punctuation">)</span><span className="token punctuation">;</span>
+                        <br />{"    "}{"    "}<span className="token class-name"><span className="token keyword">dynamic</span></span> easybase_data <span className="token operator">=</span> JsonConvert<span className="token punctuation">.</span><span className="token function">DeserializeObject</span><span className="token punctuation">(</span>json_string<span className="token punctuation">)</span><span className="token punctuation">;</span>
+                        <br />{"    "}{"    "}Console<span className="token punctuation">.</span><span className="token function">WriteLine</span><span className="token punctuation">(</span>easybase_data<span className="token punctuation">)</span><span className="token punctuation">;</span>
+                        <br />{"    "}<span className="token punctuation">{'}'}</span>
+                        <br /><span className="token punctuation">{'}'}</span>
+                    </code>
+                )
+
+            }
+
+            const _swift_code_gen = () => {
+                // `import UIKit
+
+                // struct EasyBaseEntry: Codable {
+                // ${Object.entries(typeFormats).map(([key, value]) => _generate_language_variables(value, key, "swift")).join("\n")}
+                // }
+
+                // if let url = URL(string: "${generateUrl()}") {
+                //     URLSession.shared.dataTask(with: url) { data, response, error in
+                //     if let data = data {
+                //         do {
+                //             let res = try JSONDecoder().decode([EasyBaseEntry].self, from: data)
+                //             print(res)
+                //         } catch let error {
+                //             print(error)
+                //         }
+                //         }
+                //     }.resume()
+                // }`
+
+                return (
+                    <code className=" language-swift"><span className="token keyword">import</span> <span className="token builtin">UIKit</span>
+                        <br />
+                        <br /><span className="token keyword">struct</span> <span className="token builtin">EasyBaseEntry</span><span className="token punctuation">:</span> <span className="token builtin">Codable</span> <span className="token punctuation">{'{'}</span>
+                        {Object.entries(typeFormats).map(([key, value]) => <div><br />{"    "}{_generate_language_variables(value, key, "swift")}</div>)}
+                        <br /><span className="token punctuation">{'}'}</span>
+                        <br />
+                        <br /><span className="token keyword">if</span> <span className="token keyword">let</span> url <span className="token operator">=</span> <span className="token function">URL</span><span className="token punctuation">(</span>string<span className="token punctuation">:</span> <span className="token string">"{generateUrl(redisID, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap)}"</span><span className="token punctuation">)</span> <span className="token punctuation">{'{'}</span>
+                        <br />{"    "}<span className="token builtin">URLSession</span><span className="token punctuation">.</span>shared<span className="token punctuation">.</span><span className="token function">dataTask</span><span className="token punctuation">(</span>with<span className="token punctuation">:</span> url<span className="token punctuation">)</span> <span className="token punctuation">{'{'}</span> data<span className="token punctuation">,</span> response<span className="token punctuation">,</span> error <span className="token keyword">in</span>
+                        <br />{"    "}{"    "}<span className="token keyword">if</span> <span className="token keyword">let</span> data <span className="token operator">=</span> data <span className="token punctuation">{'{'}</span>
+                        <br />{"    "}{"    "}{"    "}<span className="token keyword">do</span> <span className="token punctuation">{'{'}</span>
+                        <br />{"    "}{"    "}{"    "}{"    "}<span className="token keyword">let</span> res <span className="token operator">=</span> <span className="token keyword">try</span> <span className="token function">JSONDecoder</span><span className="token punctuation">(</span><span className="token punctuation">)</span><span className="token punctuation">.</span><span className="token function">decode</span><span className="token punctuation">(</span><span className="token punctuation">[</span><span className="token builtin">EasyBaseEntry</span><span className="token punctuation">]</span><span className="token punctuation">.</span><span className="token keyword">self</span><span className="token punctuation">,</span> from<span className="token punctuation">:</span> data<span className="token punctuation">)</span>
+                        <br />{"    "}{"    "}{"    "}{"    "}<span className="token function">print</span><span className="token punctuation">(</span>res<span className="token punctuation">)</span>
+                        <br />{"    "}{"    "}{"    "}<span className="token punctuation">{'}'}</span> <span className="token keyword">catch</span> <span className="token keyword">let</span> error <span className="token punctuation">{'{'}</span>
+                        <br />{"    "}{"    "}{"    "}{"    "}<span className="token function">print</span><span className="token punctuation">(</span>error<span className="token punctuation">)</span>
+                        <br />{"    "}{"    "}{"    "}<span className="token punctuation">{'}'}</span>
+                        <br />{"    "}{"    "}<span className="token punctuation">{'}'}</span>
+                        <br />{"    "}<span className="token punctuation">{'}'}</span><span className="token punctuation">.</span><span className="token function">resume</span><span className="token punctuation">(</span><span className="token punctuation">)</span>
+                        <br /><span className="token punctuation">{'}'}</span>
+                    </code>
+                )
+            }
+
+
+
+            return [
+                {
+                    language_name: "JavaScript",
+                    code_element: _javascript_code_gen()
+                },
+                {
+                    language_name: 'PHP',
+                    code_element: _php_code_gen(),
+                },
+                {
+                    language_name: "Node.js",
+                    code_element: _node_code_gen(),
+                },
+                {
+                    language_name: 'Python 2',
+                    code_element: _python_2_code_gen(),
+                },
+                {
+                    language_name: 'Python 3',
+                    code_element: _python_3_code_gen(),
+                },
+                {
+                    language_name: 'Java',
+                    code_element: _java_code_gen(),
+                },
+                {
+                    language_name: 'C#',
+                    code_element: _c_sharp_code_gen(),
+                },
+                {
+                    language_name: 'Swift',
+                    code_element: _swift_code_gen(),
+                }
+            ];
+        }
+
+        const IntegratorPopupDialogContent = ({ options, onClose }) => {
+
+            const { redisID, type, typeFormats, queryObject, accessorToColumnTypeMap } = options;
+
+            const [selectedTab, setSelectedTab] = React.useState(0);
+            const [codeLimit, setCodeLimit] = React.useState(10);
+            const [isLimitReturnAll, setIsLimitReturnAll] = React.useState(false);
+            const [codeOffset, setCodeOffset] = React.useState(0);
+            const [typeToValueMap, setTypeToValueMap] = React.useState(Object.keys(typeFormats).reduce((a, key) => Object.assign(a, { [key]: null }), {}));
+
+            const classes = useStyles();
+
+            const language_content = React.useMemo(() => generateLanguageContent(redisID, typeFormats, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap), [redisID, typeFormats, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap]);
+
+            const handleCodeLimitChange = e => {
+                e.target.value >= 0 && setCodeLimit(Number(e.target.value));
+            }
+
+            const handleCodeOffsetChange = e => {
+                e.target.value >= 0 && setCodeOffset(Number(e.target.value));
+            }
+
+            const handleQueryValueChange = (new_val, key) => {
+                setTypeToValueMap(prev => {
+                    prev[key] = new_val;
+                    return { ...prev };
+                })
+            }
+
+
+            return (
+                <div style={{ backgroundColor: 'white', width: 1030, maxWidth: 1030 }}>
+                    <Tabs
+                        scrollButtons="auto"
+                        onChange={(_, newVal) => setSelectedTab(newVal)}
+                        variant="scrollable"
+                        aria-label="language example integration helper tabs"
+                        value={selectedTab}
+                        indicatorColor="primary"
+                        textColor="primary"
+                        classes={{ root: classes.tabsBorder }}
+                    >
+                        {
+                            language_content.map(ele => <Tab label={ele.language_name} />)
+                        }
+                    </Tabs>
+                    {
+                        language_content.map((ele, index) => (
+                            <TabPanel value={selectedTab} index={index} className={classes.refractorRoot}>
+                                <pre className={classes.codeRoot}>
+                                    {ele.code_element}
+                                </pre>
+                            </TabPanel>
+                        ))
+                    }
+
+                    <div className={classes.refractorRoot}>
+                        <pre className={classes.codeRoot}>
+                            <code className="language-"><span className="token string">{generateUrl(redisID, codeLimit, codeOffset, isLimitReturnAll, typeToValueMap)}</span></code>
+                        </pre>
+                        <Typography variant="body2" className="mt-1 mb-2" style={{ color: '#757575', textAlign: 'end' }}>* Works in browser</Typography>
+                    </div>
+
+                    <div className={`d-flex align-items-start justify-content-space-between ${classes.refractorRoot}`}>
+
+                        <div className="ml-2 d-flex">
+                            <div className="d-flex align-items-center">
+                                <Typography variant="body1" className="pr-3">offset: </Typography>
+                                <TextField
+                                    variant="outlined"
+                                    value={codeOffset}
+                                    onChange={handleCodeOffsetChange}
+                                    type="number"
+                                    size="small"
+                                    style={{ width: 75 }}
+                                    className="mr-5"
+                                />
+
+                            </div>
+
+                            <div className="d-flex align-items-center">
+                                <Typography variant="body1" className="pr-3">limit: </Typography>
+                                <TextField
+                                    variant="outlined"
+                                    value={codeLimit}
+                                    onChange={handleCodeLimitChange}
+                                    type="number"
+                                    size="small"
+                                    style={{ width: 75 }}
+                                    disabled={isLimitReturnAll}
+                                />
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox color="primary" checked={isLimitReturnAll} onChange={e => setIsLimitReturnAll(e.target.checked)} />
+                                    }
+                                    label="Return all"
+                                    className="ml-1"
+                                />
+                            </div>
+                        </div>
+
+                        <Paper elevation={4} className={`mr-4 ${classes.optionsPaper}`}>
+                            <div className="px-4 py-2">
+                                <Typography variant="h6" className="mt-3">Customize Query Values: </Typography>
+                                <Typography variant="body2" className="mt-1 mb-4" style={{ color: '#757575' }}>Overwrite the values in an imported query.</Typography>
+                                {Object.keys(queryObject).length === 0 ?
+
+                                    <Typography className="my-4" style={{ color: '#757575' }} >Import a query to customize values via URL.</Typography>
+                                    :
+                                    Object.keys(typeToValueMap).length === 0 ?
+                                        <Typography className="my-4" style={{ color: '#757575' }} >Add the columns that you want to return from this query under 'GET' in the integration editor drawer.</Typography>
+                                        :
+                                        <QueryListGenerator
+                                            accessorToColumnTypeMap={accessorToColumnTypeMap}
+                                            typeToValueMap={typeToValueMap}
+                                            queryValueChangeCallback={handleQueryValueChange}
+                                            largeText
+                                        />
+                                }
+                            </div>
+                        </Paper>
+
+
+                    </div>
+
+                    <div className={classes.refractorRoot}>
+                        <Typography variant="body1">Dynamically set these parameters in production.</Typography>
+                    </div>
+
+                    <DialogActions>
+                        <Button color="primary" variant="contained" onClick={onClose} disableElevation>
+                            Close
+                    </Button>
+                    </DialogActions>
+                </div>
+            );
+        };
+
+
+        
+        ReactDOM.render(
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <IntegratorPopupDialogContent options={{ redisID: "YOUR_INTEGRATION_KEY", typeFormats: { time: "Total Minutes", capper: "T/F" }, queryObject: { time: 1245 }, accessorToColumnTypeMap: { time: "time", capper: "boolean" } }} onClose={() => {}}/>
+            </ThemeProvider>,
+            document.getElementById('root')
+        );
+    </script>
+
+</body>
+</html>
