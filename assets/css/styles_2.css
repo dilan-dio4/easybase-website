@@ -444,7 +444,7 @@ div.header-contact-us {
 }
 
 .home_hero {
-    background-image: radial-gradient(70% 70% at 50% 100%, #e8e8e8 0, #fafafa 100%);
+    background-image: linear-gradient(#fbfbfb 90%, #ececec 100%);
     height: calc(100vh - var(--banner-height) - var(--header-height));
     display: flex;
     justify-content: center;

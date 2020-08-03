@@ -17,13 +17,13 @@ layout: null
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"></script>
+    <script src="https://afarkas.github.io/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"></script>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Empower your app or website with the fast & visual database-as-a-service solution, featuring a visual query builder and painless integration. Try it free!">
     <title>The no-code database for apps and websites · EasyBase</title>
     <link href="/assets/css/styles_2.css" rel="stylesheet" />
-    <!-- <link rel="preload" href="https://assets.vercel.com/raw/upload/v1587415301/fonts/2/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
     <link href='https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700&subset=latin' rel='stylesheet' type='text/css'>
@@ -296,7 +296,8 @@ layout: null
                         </div>
                         <div class="col-md-7 mod-hide-on-mobile">
                             <div class="hero-video-root mb-5">
-                                <img src="/assets/images/test_hq_image.jpg" class="hero-video" width="700px" height="400px" />
+                                <div id="hero-video-raw-replay" style="position: absolute; left: 43%; top: 33%; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.5s linear; cursor: pointer;"><ion-icon style="font-size: 128px;" name="play-circle-outline"></ion-icon></div>
+                                <video id="hero-video-raw" width="100%" style="position: relative; right: -50px;" class="lazyload" data-autoplay="" preload="none" muted="" src="https://pitt.box.com/shared/static/novn7c4lyrsjmc5k8dza3actjm5000c2.mp4"></video>
                             </div>
                         </div>
                     </div>
@@ -457,7 +458,7 @@ layout: null
                             <p class="small-arrow-down mt-3">↓</p>
                         </div>
                         <div class="languages-tabs-card">
-                            <iframe class="mod-hide-on-mobile lazyload" frameborder="0" allowfullscreen="" style="border: 0;" data-src="/builder" onload="this.height=this.contentWindow.document.body.scrollHeight;this.width=this.contentWindow.document.body.scrollWidth + 20;"></iframe>
+                            <iframe class="mod-hide-on-mobile lazyload" frameborder="0" allowfullscreen="" style="border: 0;" data-src="/builder" height="598" width="1050"></iframe>
                             <!-- Add Height and width compatable with lazyload library -->
                         </div>
                     </div>
@@ -810,6 +811,21 @@ layout: null
 
             io.observe(document.getElementById("image-window"));
 
+            document.getElementById('hero-video-raw-replay').onclick = function () {
+                document.getElementById('hero-video-raw-replay').style.visibility = "hidden";
+                document.getElementById('hero-video-raw-replay').style.opacity = "0";
+                document.getElementById('hero-video-raw').style.visibility = "visible";
+                document.getElementById('hero-video-raw').play();
+            }
+
+            document.getElementById('hero-video-raw').onended = function () {
+                setTimeout(function () {
+                    document.getElementById('hero-video-raw-replay').style.visibility = "visible";
+                    document.getElementById('hero-video-raw-replay').style.opacity = "1";
+                }, 750);
+
+                document.getElementById('hero-video-raw').style.visibility = "hidden";
+            }
         });
 
     </script>
