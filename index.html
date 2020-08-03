@@ -245,9 +245,9 @@ layout: null
 
         <div>
             <div class="home_hero">
-                <div class="wide-container">
+                <div class="wide-container" style="overflow: visible;">
                     <div class="row hero-row-root">
-                        <div class="col-md-5 grow-on-mobile">
+                        <div class="col-md-5 grow-on-mobile no-padding">
         
                             <div class="hero-left-root">
                                 <h1 class="hero-primary-text mb-5 text-center text-md-left">Your Data. Empowered.</h1>
@@ -294,10 +294,18 @@ layout: null
                             </div>
                         
                         </div>
-                        <div class="col-md-7 mod-hide-on-mobile">
-                            <div class="hero-video-root mb-5">
-                                <div id="hero-video-raw-replay" style="position: absolute; left: 43%; top: 33%; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.5s linear; cursor: pointer;"><ion-icon style="font-size: 128px;" name="play-circle-outline"></ion-icon></div>
-                                <video id="hero-video-raw" width="100%" style="position: relative; right: -50px;" class="lazyload" data-autoplay="" preload="none" muted="" src="https://pitt.box.com/shared/static/novn7c4lyrsjmc5k8dza3actjm5000c2.mp4"></video>
+                        <div class="col-md-7 mod-hide-on-mobile no-padding">
+                            <div class="hero-video-root mb-5" style="overflow: visible;">
+                                <div id="hero-video-raw-replay" style="visibility: hidden; opacity: 0;">
+                                    {% for post in site.posts limit:2 %}
+                                    <div class="video-replay-article-root mb-4">
+                                        <img src="{{ post.title_image }}" />
+                                        <a href="{{ post.url }}">{{ post.title }}</a>
+                                    </div>
+                                    {% endfor %}
+                                    <img id="hero-video-raw-replay-icon" src="./assets/images/noun_replay.svg" style="cursor: pointer; height: 89px; width: 89;" />
+                                </div>
+                                <video id="hero-video-raw" style="position: relative; right: 0%;" class="lazyload hero-video-width" data-autoplay="" preload="none" muted="" src="https://pitt.box.com/shared/static/novn7c4lyrsjmc5k8dza3actjm5000c2.mp4"></video>
                             </div>
                         </div>
                     </div>
@@ -812,10 +820,13 @@ layout: null
             io.observe(document.getElementById("image-window"));
 
             document.getElementById('hero-video-raw-replay').onclick = function () {
-                document.getElementById('hero-video-raw-replay').style.visibility = "hidden";
                 document.getElementById('hero-video-raw-replay').style.opacity = "0";
-                document.getElementById('hero-video-raw').style.visibility = "visible";
-                document.getElementById('hero-video-raw').play();
+                document.getElementById('hero-video-raw-replay-icon').classList.remove('spin-once');
+                setTimeout(function () {
+                    document.getElementById('hero-video-raw-replay').style.visibility = "hidden";
+                    document.getElementById('hero-video-raw').style.visibility = "visible";
+                    document.getElementById('hero-video-raw').play();
+                }, 750);
             }
 
             document.getElementById('hero-video-raw').onended = function () {
@@ -823,6 +834,10 @@ layout: null
                     document.getElementById('hero-video-raw-replay').style.visibility = "visible";
                     document.getElementById('hero-video-raw-replay').style.opacity = "1";
                 }, 750);
+
+                setTimeout(function () {
+                    document.getElementById('hero-video-raw-replay-icon').classList.add('spin-once');
+                }, 1100)
 
                 document.getElementById('hero-video-raw').style.visibility = "hidden";
             }
