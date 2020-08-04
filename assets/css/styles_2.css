@@ -1058,9 +1058,16 @@ div.header-contact-us {
         max-width: 1250px;
     }
     .hero-video-width {
+        width: 760px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero-video-width {
         width: 860px;
     }
 }
+
 
 .wide-container {
     width: 100%;

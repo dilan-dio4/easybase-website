@@ -305,7 +305,7 @@ layout: null
                                     {% endfor %}
                                     <img id="hero-video-raw-replay-icon" src="./assets/images/noun_replay.svg" style="cursor: pointer; height: 89px; width: 89;" />
                                 </div>
-                                <video id="hero-video-raw" style="position: relative; right: 0%;" class="lazyload hero-video-width" data-autoplay="" preload="none" muted="" src="https://pitt.box.com/shared/static/novn7c4lyrsjmc5k8dza3actjm5000c2.mp4"></video>
+                                <video id="hero-video-raw" style="position: relative; right: 0%;" class="lazyload hero-video-width" data-autoplay="" preload="none" muted="" src="https://pitt.box.com/shared/static/hhxlwlnles3jl32wbax5m9bu8i2xhai7.mp4"></video>
                             </div>
                         </div>
                     </div>
@@ -477,7 +477,8 @@ layout: null
                             <p class="small-arrow-down mt-3">↓</p>
                         </div>
                         <div class="languages-tabs-card">
-                            <iframe class="lazyload" width="1100" height="700" data-src="//jsfiddle.net/prywnzgd/5/embedded/result,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                            <!-- <iframe class="lazyload" width="1100" height="700" data-src="https://jsfiddle.net/prywnzgd/5/embedded" frameborder="0" sandbox="allow-modals allow-forms allow-same-origin allow-scripts allow-popups allow-top-navigation-by-user-activation allow-downloads" ></iframe> -->
+                            <div id="jsFiddleRoot" style="overflow: hidden; border-radius: 8px; transform: translateY(0px); width: 1100px; height: 700px;"></div>
                         </div>
                     </div>
                 </div>
@@ -815,10 +816,35 @@ layout: null
                         document.getElementsByClassName("behind-window-svg")[0].style.display = "none";
 
                 });
-            }, { threshold: 0, rootMargin: '60px' });
+            }, { threshold: 0, rootMargin: '100px' });
 
             io.observe(document.getElementById("image-window"));
 
+            var io2 = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !document.getElementById('jsFiddleIframe'))
+                    {
+                        var uriEmbedded           = "https://jsfiddle.net/prywnzgd/5/embedded/result,html/dark/"
+                        var currentSlug           = "prywnzgd"
+                        var target                = document.querySelector("div#jsFiddleRoot")
+                        var iframe                = document.createElement("iframe")
+
+                        iframe.src               = uriEmbedded;
+                        iframe.id                = "jsFiddleIframe";
+                        iframe.width             = "1100"
+                        iframe.height            = "700"
+                        iframe.frameBorder       = "0"
+                        iframe.allowtransparency = true
+                        iframe.sandbox           = "allow-modals allow-forms allow-same-origin allow-scripts allow-popups allow-top-navigation-by-user-activation allow-downloads"
+                        iframe.allow             = "midi; geolocation; microphone; camera; display-capture; encrypted-media;"
+
+                        target.appendChild(iframe);
+                    }
+                });
+            }, { threshold: 0, rootMargin: '100px' });
+
+            io2.observe(document.getElementById("jsFiddleRoot"));
+        
             document.getElementById('hero-video-raw-replay').onclick = function () {
                 document.getElementById('hero-video-raw-replay').style.opacity = "0";
                 document.getElementById('hero-video-raw-replay-icon').classList.remove('spin-once');
@@ -841,6 +867,7 @@ layout: null
 
                 document.getElementById('hero-video-raw').style.visibility = "hidden";
             }
+
         });
 
     </script>
