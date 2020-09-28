@@ -34,7 +34,12 @@ permalink: pretty
 theme: minima
 plugins:
   - jekyll-feed
-
+exclude:
+  - integration-builder/node_modules/
+  - integration-builder/src/
+  - integration-builder/package.json/
+  - integration-builder/package-lock.json/
+  - integration-builder/README.md/
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
