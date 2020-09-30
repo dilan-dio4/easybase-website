@@ -279,7 +279,7 @@ export const generatePOSTLanguageContent = (redisID, typeToValueMap) => {
         return `
         # pip install easybase-python
         
-        from easybase-python import get, post, update, delete
+        from easybase import get, post, update, delete
 
         newRecord = {
             ${generatePostBody(fixedTypeToValueMap, " : ", ",\n            ", false, true)}
@@ -542,7 +542,7 @@ export const generateUPDATELanguageContent = (redisID, typeToValueMap) => {
         return `
         # pip install easybase-python
         
-        from easybase-python import get, post, update, delete
+        from easybase import get, post, update, delete
         ${isMapNotAllNulls(pythonCustomQueryMap) ? `
         query = {
             ${generatePostBody(pythonCustomQueryMap, " : ", ",\n            ", false, true)}
@@ -820,7 +820,7 @@ export const generateDELETELanguageContent = (redisID, typeToValueMap) => {
         return `
         # pip install easybase-python
 
-        from easybase-python import get, post, update, delete
+        from easybase import get, post, update, delete
         ${isMapNotAllNulls(pythonCustomQueryMap) ? `
         query = {
             ${generatePostBody(pythonCustomQueryMap, " : ", ",\n            ", false, true)}
@@ -1179,7 +1179,7 @@ export const generateGETLanguageContent = (redisID, typeFormats, typeToValueMap)
         return `
         # pip install easybase-python
         
-        from easybase-python import get, post, update, delete
+        from easybase import get, post, update, delete
         ${isMapNotAllNulls(fixedTypeToValueMap) ? `
         customQuery = {
             ${generatePostBody(fixedTypeToValueMap, " : ", ",\n            ", false, true)}
