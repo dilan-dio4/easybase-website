@@ -689,3 +689,13 @@ a:hover {
 .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 
 /* code CSS ------------------------*/
+
+.custom-lightbox {
+    cursor: pointer;
+    transition: filter 100ms ease-in-out;
+    border-radius: 4px;
+}
+
+.custom-lightbox:hover {
+    filter: brightness(80%) grayscale(20%);
+}

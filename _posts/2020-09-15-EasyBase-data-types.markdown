@@ -56,7 +56,7 @@ sidebar_video: https://www.youtube.com/embed/S1o24hvcNNs
 # Date
 <hr />
 
-#### This data type represents a date. Date will be stored in UTC format.
+#### This data type represents a date. Dates will be stored in UTC format.
 
 <br />
 
@@ -69,7 +69,7 @@ sidebar_video: https://www.youtube.com/embed/S1o24hvcNNs
 # Image
 <hr />
 
-#### Images can be uploaded directly to the EasyBases CDN or, if an image is already publicly available, a link can be posted to your integration.
+#### Images can be uploaded directly to the EasyBases CDN. The link to an image can be posted to your integration if it is already publicly available.
 
 <br />
 
@@ -82,7 +82,20 @@ sidebar_video: https://www.youtube.com/embed/S1o24hvcNNs
 # Video
 <hr />
 
-#### Videos can be uploaded directly to the EasyBases CDN or, if a video is already publicly available, a link can be posted to your integration.
+#### Videos can be uploaded directly to the EasyBases CDN. The link to a video can be posted to your integration if it is already publicly available.
+
+<br />
+
+##### GET Formats: **URL**
+##### Query Formats: **URL**
+
+<br />
+<br />
+
+# File
+<hr />
+
+#### Files function as a generic type of the photo and video data type. Files can be uploaded directly to the EasyBases CDN. The link to a file can be posted to your integration if it is already publicly available.
 
 <br />
 
@@ -95,7 +108,7 @@ sidebar_video: https://www.youtube.com/embed/S1o24hvcNNs
 # Location
 <hr />
 
-#### Locations are coordinates that can be used to perform geospatial queries. EasyBase provides a visual way to create these object using Google Maps API.
+#### Locations are stored as coordinates that can be used to perform geospatial queries. EasyBase provides a visual way to create these object using Maps API.
 
 <br />
 
@@ -112,7 +125,7 @@ sidebar_video: https://www.youtube.com/embed/S1o24hvcNNs
 
 <br />
 
-##### GET Formats: **Preview image, "lat, lon", Common name**
+##### GET Formats: **1/0, T/F**
 ##### Query Formats: **1, 0, true, false, string of any of preceding**
 
 <br />
@@ -121,7 +134,7 @@ sidebar_video: https://www.youtube.com/embed/S1o24hvcNNs
 # Rich Text
 <hr />
 
-#### Rich text allows for basic formatting of text (font size, adding images). It is synchronously converted to raw HTML. The raw HTML can be injected directly into a website or app for more text flexibility.
+#### Rich text adds the capability of basic formatting (font size, adding images). It is synchronously converted to raw HTML. The raw HTML can be injected directly into a website or app for more text flexibility.
 
 <br />
 
