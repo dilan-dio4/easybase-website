@@ -11,7 +11,7 @@ sidebar_video: https://www.youtube.com/embed/S1o24hvcNNs
 ---
 #### Customizing query values is a powerful way to combine EasyBase's Visual Query Building with production code.
 <br />
-After creating an integration with a static query, developers will often want to be able customize the values in that query. These variables will often be determined at runtime. Custom queries can be passed into intregation requests to satisfy this requirement.
+After creating an integration with a static query, developers will often want to be able to customize the values in that query. These variables will often be determined at runtime. Custom queries can be passed into integration requests to satisfy this requirement.
 
 Consider the collection 'Students':
 <img src="/assets/images/posts_images/customize_1.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox" />
@@ -47,7 +47,7 @@ This integration will by default filter your data through your query with the st
 
 **But what if you want to use custom query values on-demand?**
 
-This is where custom query values come into play. An object can be passed into your integration to overwrite the given values in your query. The structure of the object is as follows; **map the column names [that are used in the query] to new values that you want passed into your query** 
+This is where custom query values come into play. An object can be passed into your integration to overwrite the given values in your query. The structure of the object is as follows; **map the column names [that are used in the query] to new values that you want to be passed into your query** 
 
 If we wanted to query for ages < 25 rather than < 22 we would use an object like `{ "age": 25 }`
 
@@ -72,7 +72,7 @@ Result:
 ```
 <br />
 
-We can see that, even though our visual query looks for ages less than 22, we can overwrite that value to any other number. In this case we used 25 to demonstrate that the query changed with our `customQuery` object.
+We can see that, even though our visual query looks for ages less than 22, we can overwrite that value to any other number. In this case, we used 25 to demonstrate that the query changed with our `customQuery` object.
 
 Custom query parameters are supported by any integration that supports static queries.
 

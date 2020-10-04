@@ -17,7 +17,7 @@ sidebar_video: https://www.youtube.com/embed/S1o24hvcNNs
 # Number
 <hr />
 
-#### This data types contains all raw numbers including integers, floats, etc.
+#### This data type contains all raw numbers including integers, floats, etc.
 
 <br />
 
@@ -108,7 +108,7 @@ sidebar_video: https://www.youtube.com/embed/S1o24hvcNNs
 # Location
 <hr />
 
-#### Locations are stored as coordinates that can be used to perform geospatial queries. EasyBase provides a visual way to create these object using Maps API.
+#### Locations are stored as coordinates that can be used to perform geospatial queries. EasyBase provides a visual way to create these objects using Maps API.
 
 <br />
 
@@ -121,7 +121,7 @@ sidebar_video: https://www.youtube.com/embed/S1o24hvcNNs
 # Boolean
 <hr />
 
-#### The most primative of the data types, the boolean can be in 1 of 3 states; true, false, or null.
+#### The most primitive of the data types, the boolean can be in 1 of 3 states; true, false, or null.
 
 <br />
 
