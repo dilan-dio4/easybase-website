@@ -1,7 +1,7 @@
 ---
 layout: blog
 title:  Announcing Mobile Application
-date:   2020-07-07 21:39:03 -0400
+date:   2020-09-20 10:39:03 -0400
 categories: about
 title_image: https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=80
 tags: Home Blog EasyBase
