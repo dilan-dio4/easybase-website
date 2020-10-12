@@ -700,6 +700,7 @@ div.header-contact-us {
     color: var(--mod-background);
     letter-spacing: 0.55px;
     font-weight: 700;
+    font-size: 2.5rem;
 }
 
 .section-header-text {

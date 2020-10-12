@@ -1,2 +1,3 @@
+Sitemap: http://easybase.io/sitemap.xml
 User-agent: *
 Disallow:
