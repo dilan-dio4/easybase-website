@@ -305,43 +305,51 @@
     </footer>
 
     <script>
-            window.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("DOMContentLoaded", function () {
 
-                var getScrollY = function () { return (window.pageYOffset || window.document.documentElement.scrollTop) - (window.document.documentElement.clientTop || 0); };
-                var getWindowWidth = function () { return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; };
+            var getScrollY = function () { return (window.pageYOffset || window.document.documentElement.scrollTop) - (window.document.documentElement.clientTop || 0); };
+            var getWindowWidth = function () { return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; };
 
-                function checkNavHeight() {
-                    if (getWindowWidth() > 800) {
-                        var scroll_pos = getScrollY();
-                        if (scroll_pos > 50) document.querySelector(".navigation").classList.add("navigation-scrolled");
-                        else document.querySelector(".navigation").classList.remove("navigation-scrolled");
-                    }
+            function checkNavHeight() {
+                if (getWindowWidth() > 800) {
+                    var scroll_pos = getScrollY();
+                    if (scroll_pos > 50) document.querySelector(".navigation").classList.add("navigation-scrolled");
+                    else document.querySelector(".navigation").classList.remove("navigation-scrolled");
                 }
+            }
 
-                checkNavHeight();
-                
-                window.addEventListener("scroll", checkNavHeight);
+            checkNavHeight();
+            
+            window.addEventListener("scroll", checkNavHeight);
 
-                var jqueryToggle = function (ele) {
-                    if (getComputedStyle(ele, null).display == "none") {
-                        ele.style.display = "block";
-                    } else {
-                        ele.style.display = "none";
-                    }
+            var jqueryToggle = function (ele) {
+                if (getComputedStyle(ele, null).display == "none") {
+                    ele.style.display = "block";
+                } else {
+                    ele.style.display = "none";
                 }
+            }
 
-                document.getElementById('nav-toggle').addEventListener("click", function () {
-                    document.getElementById('nav-toggle').classList.toggle('active');
-                    jqueryToggle(document.querySelector('nav ul'));
+            document.getElementById('nav-toggle').addEventListener("click", function () {
+                document.getElementById('nav-toggle').classList.toggle('active');
+                jqueryToggle(document.querySelector('nav ul'));
 
-                });
             });
+        });
 
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
 
-    <script async src="https://cdn.jsdelivr.net/gh/felixhagspiel/jsonlylightbox/js/lightbox.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/gh/felixhagspiel/jsonlylightbox/js/lightbox.min.js" type="text/javascript"></script>
     <script>
+        Array.from(document.getElementsByTagName('img')).forEach(function(ele) {
+            if (ele.hasAttribute('data-jslghtbx')) {
+                if (ele.hasAttribute('data-src'))
+                    ele.setAttribute('data-jslghtbx', ele.getAttribute('data-src'));
+                else
+                    ele.setAttribute('data-jslghtbx', ele.getAttribute('src'));
+            }
+        });
 	    var lightbox = new Lightbox();
  	    lightbox.load();
     </script>
