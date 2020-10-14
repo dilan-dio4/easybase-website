@@ -14,16 +14,16 @@ sidebar_video: https://www.youtube-nocookie.com/embed/VslCVu7T9iw
 After creating an integration with a static query, developers will often want to be able to customize the values in that query. These variables will often be determined at runtime. Custom queries can be passed into integration requests to satisfy this requirement.
 
 Consider the collection 'Students':
-<img src="/assets/images/posts_images/customize_1.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox" />
+<img data-src="/assets/images/posts_images/customize_1.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 
 A developer has an application that features two text boxes and wants to be able to query collection by age and name, based on what users enter into the text boxes.
 
 Assume that you have a **"GET"** integration with the following query:
 
-<img src="/assets/images/posts_images/customize_2.png" alt="Customizing EasyBase Query Values 2" width="100%" data-jslghtbx class="custom-lightbox" />
+<img data-src="/assets/images/posts_images/customize_2.png" alt="Customizing EasyBase Query Values 2" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 <br />
 <br />
-<img src="/assets/images/posts_images/customize_3.png" alt="Customizing EasyBase Query Values 3" width="100%" data-jslghtbx class="custom-lightbox" />
+<img data-src="/assets/images/posts_images/customize_3.png" alt="Customizing EasyBase Query Values 3" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 
 Calling this integration with Python:
 ```python
@@ -78,7 +78,7 @@ Custom query parameters are supported by any integration that supports static qu
 
 **Remember, you can always use the integration popup to design your integration, including custom queries, in your preferred language.**
 
-<img src="/assets/images/posts_images/customize_4.png" alt="Customizing EasyBase Query Values 3" width="100%" data-jslghtbx class="custom-lightbox" />
+<img data-src="/assets/images/posts_images/customize_4.png" alt="Customizing EasyBase Query Values 3" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 <br />
 <br />
 <br />

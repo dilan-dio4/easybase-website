@@ -10,4 +10,4 @@ author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for EasyBase. He has previously written and contributed to various tech-related publications.
 sidebar_video: https://www.youtube-nocookie.com/embed/VslCVu7T9iw
 ---
-<img src="/assets/images/app-icon.png" alt="easybase app icon" />
+<img data-src="/assets/images/app-icon.png" alt="easybase app icon" class="lazyload" />

@@ -16,7 +16,7 @@ sidebar_video: https://www.youtube-nocookie.com/embed/VslCVu7T9iw
 
 Cloud databases are all the rage nowadays. Unfortunately, many of the mainstream database services are hard to configure and maintain. Without experience in programming and training in DBMS, many people find it difficult to pick the right database service for their project. EasyBase makes it easy to integrate your database with your application/project and track analytics.
 
-**Beyond optimizing performance and cost, our service fulfils three objectives:**
+**Beyond optimizing performance and cost, our service fulfills three objectives:**
 
 <br />
 
@@ -25,7 +25,7 @@ Your applications and projects are no longer bottlenecked by the upkeep of indiv
 
 We provide packages for HTML/JS, Node.js, and Python. None of these packages are required and Easybase can be integrated with any language. We even have an integration builder with instructions for your preferred language.
 
-<img src="/assets/images/posts_images/customize_4.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox" />
+<img data-src="/assets/images/posts_images/customize_4.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 
 Take a look at [this video](https://youtube.com) for a walkthrough on how to integrate EasyBase into a react project.
 
@@ -37,7 +37,7 @@ Each integration will automatically track usage information including MB's trans
 The ability to observe live analytic data is a requirement for many users and we deliver an easy-to-use and effective way to sort through individual integration statistics.
 
 
-<img src="/assets/images/posts_images/about_1.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox" />
+<img data-src="/assets/images/posts_images/about_1.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 
 
 <br />
@@ -46,7 +46,7 @@ The ability to observe live analytic data is a requirement for many users and we
 Without formal DBMS training and specification on database query language, it can be difficult, especially from your project. Our approach to querying the database makes this process **significantly** easier than manually database syntax.
 
 First, create a query with static values and import it into an integration.
-<img src="/assets/images/posts_images/customize_2.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox" />
+<img data-src="/assets/images/posts_images/customize_2.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 
 
 Second, when calling this integration in your project, pass a custom query object.
