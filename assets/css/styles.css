@@ -1519,6 +1519,14 @@ header {
     transition: opacity .1s linear;
 }
 
+
+#hero-video-raw {
+    position: relative;
+    opacity: 0;
+    right: 0%;
+    transition: opacity .1s linear;
+}
+
 .spin-once {
     animation: spin 0.75s ease-in-out;
 }

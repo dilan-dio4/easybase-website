@@ -128,7 +128,7 @@
                                     {% endfor %}
                                     <img id="hero-video-raw-replay-icon" alt="replay icon" src="/assets/images/noun_replay.svg" style="cursor: pointer; height: 89px; width: 89;" />
                                 </div>
-                                <video id="hero-video-raw" style="position: relative; right: 0%;" class="lazyload hero-video-width" data-autoplay="" preload="none" muted="" src="https://pitt.box.com/shared/static/hhxlwlnles3jl32wbax5m9bu8i2xhai7.mp4"></video>
+                                <video id="hero-video-raw" class="lazyload hero-video-width" data-autoplay="" preload="none" muted="" src="https://pitt.box.com/shared/static/hhxlwlnles3jl32wbax5m9bu8i2xhai7.mp4"></video>
                             </div>
                         </div>
                     </div>
@@ -505,30 +505,40 @@
             }, { threshold: 0, rootMargin: '100px' });
 
             io2.observe(document.getElementById("jsFiddleRoot"));
-        
-            document.getElementById('hero-video-raw-replay').onclick = function () {
-                document.getElementById('hero-video-raw-replay').style.opacity = "0";
-                document.getElementById('hero-video-raw-replay-icon').classList.remove('spin-once');
-                setTimeout(function () {
-                    document.getElementById('hero-video-raw-replay').style.visibility = "hidden";
-                    document.getElementById('hero-video-raw').style.visibility = "visible";
-                    document.getElementById('hero-video-raw').play();
-                }, 750);
-            }
-
-            document.getElementById('hero-video-raw').onended = function () {
-                setTimeout(function () {
-                    document.getElementById('hero-video-raw-replay').style.visibility = "visible";
-                    document.getElementById('hero-video-raw-replay').style.opacity = "1";
-                }, 750);
-
-                setTimeout(function () {
-                    document.getElementById('hero-video-raw-replay-icon').classList.add('spin-once');
-                }, 1100)
-
-                document.getElementById('hero-video-raw').style.visibility = "hidden";
-            }
         });
+
+
+        function fadeVideoInAndPlay() {
+            const vid_ele = document.getElementById('hero-video-raw');
+            vid_ele.style.visibility = "visible";
+            vid_ele.style.opacity = "1";
+            vid_ele.play();
+        }
+
+        document.getElementById('hero-video-raw-replay').onclick = function () {
+            document.getElementById('hero-video-raw-replay').style.opacity = "0";
+            document.getElementById('hero-video-raw-replay-icon').classList.remove('spin-once');
+            setTimeout(function () {
+                document.getElementById('hero-video-raw-replay').style.visibility = "hidden";
+                fadeVideoInAndPlay();
+            }, 750);
+        }
+
+        document.getElementById('hero-video-raw').onended = function () {
+            setTimeout(function () {
+                document.getElementById('hero-video-raw-replay').style.visibility = "visible";
+                document.getElementById('hero-video-raw-replay').style.opacity = "1";
+                document.getElementById('hero-video-raw').style.visibility = "hidden";
+            }, 750);
+
+            setTimeout(function () {
+                document.getElementById('hero-video-raw-replay-icon').classList.add('spin-once');
+            }, 1100)
+
+            document.getElementById('hero-video-raw').style.opacity = "0";
+        }
+
+        document.getElementById('hero-video-raw').oncanplay = fadeVideoInAndPlay;
 
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
