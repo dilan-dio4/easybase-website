@@ -540,12 +540,16 @@
         document.getElementById('hero-video-raw').oncanplay = fadeVideoInAndPlay;
 
         var captureLinkClick = function(url, eventCategory) {
-            gtag('event', 'click', {
-                'event_category':  eventCategory,
-                'event_label': "https://" + url,
-                'transport_type': 'beacon',
-                'event_callback': function(){ document.location = "https://" + url; }
-            });
+            if (!!window.google_tag_manager) {
+                gtag('event', 'click', {
+                    'event_category':  eventCategory,
+                    'event_label': "https://" + url,
+                    'transport_type': 'beacon',
+                    'event_callback': function(){ document.location = "https://" + url; }
+                });
+            } else {
+                document.location = "https://" + url;
+            }
         }
 
     </script>
