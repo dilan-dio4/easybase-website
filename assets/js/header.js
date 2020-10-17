@@ -1,7 +1,9 @@
 var captureLinkClick = function(url, eventCategory) {
-    ga('send', 'event', eventCategory, 'click', "https://" + url, {
-        'transport': 'beacon',
-        'hitCallback': function(){document.location = "https://" + url;}
+    gtag('event', 'click', {
+        'event_category':  eventCategory,
+        'event_label': "https://" + url,
+        'transport_type': 'beacon',
+        'event_callback': function(){ document.location = "https://" + url; }
     });
 }
 
