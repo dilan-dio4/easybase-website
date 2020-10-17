@@ -1,12 +1,3 @@
-var captureLinkClick = function(url, eventCategory) {
-    gtag('event', 'click', {
-        'event_category':  eventCategory,
-        'event_label': "https://" + url,
-        'transport_type': 'beacon',
-        'event_callback': function(){ document.location = "https://" + url; }
-    });
-}
-
 window.addEventListener("load", function () {
 
     document.getElementById('banner_close').addEventListener('click', function () {
