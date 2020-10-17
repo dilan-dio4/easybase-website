@@ -68,7 +68,7 @@
                         <a class="nav-regular-link" href="/blog">Blog</a>
                     </li>
                     <li>
-                        <a class="btn btn-raised btn-success nav-login-button" href="https://app.easybase.io">Login</a>
+                        <a class="btn btn-raised btn-success nav-login-button" href="https://app.easybase.io" onclick="captureLinkClick('app.easybase.io', 'signIn');">Login</a>
                     </li>
                 </ul>
             </nav>
@@ -147,7 +147,7 @@
                                 </span>
                             </div>
                             <div class="splash-buttons">
-                                <a class="a-button" href="https://app.easybase.io/?view=signup">
+                                <a class="a-button" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;">
                                     <button type="button" class="btn btn-raised btn-success splash-button-try">Try Free</button>
                                 </a>
                                 <a class="a-button" href="/">
@@ -170,7 +170,7 @@
                                 <iframe width="340" height="205" class="lazyload" data-src="{{ page.sidebar_video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="splash-buttons mb-4">
-                                <a class="a-button" href="https://app.easybase.io/?view=signup">
+                                <a class="a-button" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;">
                                     <button type="button" class="btn btn-raised btn-success splash-button-try">Try Free</button>
                                 </a>
                                 <a class="a-button" href="/">
@@ -337,6 +337,12 @@
             });
         });
 
+        var captureLinkClick = function(url, eventCategory) {
+            ga('send', 'event', eventCategory, 'click', "https://" + url, {
+                'transport': 'beacon',
+                'hitCallback': function(){document.location = "https://" + url;}
+            });
+        }
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
 

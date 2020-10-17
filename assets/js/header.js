@@ -1,3 +1,10 @@
+var captureLinkClick = function(url, eventCategory) {
+    ga('send', 'event', eventCategory, 'click', "https://" + url, {
+        'transport': 'beacon',
+        'hitCallback': function(){document.location = "https://" + url;}
+    });
+}
+
 window.addEventListener("load", function () {
 
     document.getElementById('banner_close').addEventListener('click', function () {
