@@ -128,7 +128,10 @@
                                     {% endfor %}
                                     <img id="hero-video-raw-replay-icon" alt="replay icon" src="/assets/images/noun_replay.svg" style="cursor: pointer; height: 89px; width: 89;" />
                                 </div>
+                                
                                 <video id="hero-video-raw" class="lazyload hero-video-width" data-autoplay="" preload="none" muted="" src="https://pitt.box.com/shared/static/hhxlwlnles3jl32wbax5m9bu8i2xhai7.mp4"></video>
+
+                                <div id="lds-dual-ring"></div>
                             </div>
                         </div>
                     </div>
@@ -466,7 +469,13 @@
 
     <script>
 
+        var loading_ele = document.getElementById('lds-dual-ring');
+        var vid_ele = document.getElementById('hero-video-raw');
+        var hero_video_raw_replay_ele = document.getElementById('hero-video-raw-replay');
+        var hero_video_raw_replay_icon_ele = document.getElementById('hero-video-raw-replay-icon');
+
         window.addEventListener("load", function () {
+
             var io = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting)
@@ -508,36 +517,38 @@
 
 
         function fadeVideoInAndPlay() {
-            const vid_ele = document.getElementById('hero-video-raw');
             vid_ele.style.visibility = "visible";
             vid_ele.style.opacity = "1";
             vid_ele.play();
         }
 
-        document.getElementById('hero-video-raw-replay').onclick = function () {
-            document.getElementById('hero-video-raw-replay').style.opacity = "0";
-            document.getElementById('hero-video-raw-replay-icon').classList.remove('spin-once');
+        hero_video_raw_replay_ele.onclick = function () {
+            hero_video_raw_replay_ele.style.opacity = "0";
+            hero_video_raw_replay_icon_ele.classList.remove('spin-once');
             setTimeout(function () {
-                document.getElementById('hero-video-raw-replay').style.visibility = "hidden";
+                hero_video_raw_replay_ele.style.visibility = "hidden";
                 fadeVideoInAndPlay();
             }, 750);
         }
 
-        document.getElementById('hero-video-raw').onended = function () {
+        vid_ele.onended = function () {
             setTimeout(function () {
-                document.getElementById('hero-video-raw-replay').style.visibility = "visible";
-                document.getElementById('hero-video-raw-replay').style.opacity = "1";
-                document.getElementById('hero-video-raw').style.visibility = "hidden";
+                hero_video_raw_replay_ele.style.visibility = "visible";
+                hero_video_raw_replay_ele.style.opacity = "1";
+                vid_ele.style.visibility = "hidden";
             }, 750);
 
             setTimeout(function () {
-                document.getElementById('hero-video-raw-replay-icon').classList.add('spin-once');
+                hero_video_raw_replay_icon_ele.classList.add('spin-once');
             }, 1100)
 
-            document.getElementById('hero-video-raw').style.opacity = "0";
+            vid_ele.style.opacity = "0";
         }
 
-        document.getElementById('hero-video-raw').oncanplay = fadeVideoInAndPlay;
+        vid_ele.oncanplay = function() {
+            loading_ele.style.opacity = 0;
+            setTimeout(fadeVideoInAndPlay, 500);
+        }
 
         var captureLinkClick = function(url, eventCategory) {
             if (!!window.google_tag_manager) {
@@ -551,6 +562,8 @@
                 document.location = "https://" + url;
             }
         }
+
+        loading_ele.style.opacity = 1;
 
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>

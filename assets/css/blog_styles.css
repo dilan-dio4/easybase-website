@@ -176,9 +176,8 @@ body {
 }
 
 .post-title {
-    font-weight: 700;
-    font-size: 43px;
-    letter-spacing: 0.75px;
+    font-weight: 800;
+    font-size: 46px;
     font-family: 'Nunito Sans', sans-serif;
     padding-bottom: 20px;
 }
@@ -617,7 +616,7 @@ a:hover {
 /* Footer -------------------------------- */
 
 .main-content p {
-    font-size: 18px;
+    font-size: 19px;
 }
 
 /* code CSS ++++++++++++++++++++++++  https://github.com/jwarby/jekyll-pygments-themes/blob/master/monokai.css */
@@ -653,6 +652,7 @@ a:hover {
 .highlight .ld { color: #e6db74 } /* Literal.Date */
 .highlight .m { color: #ae81ff } /* Literal.Number */
 .highlight .s { color: #e6db74 } /* Literal.String */
+.highlight .dl { color: #e6db74 } /* Literal.String */
 .highlight .na { color: #a6e22e } /* Name.Attribute */
 .highlight .nb { color: #f8f8f2 } /* Name.Builtin */
 .highlight .nc { color: #a6e22e } /* Name.Class */
