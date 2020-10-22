@@ -484,14 +484,8 @@ nav ul li ul li a {
     margin-left: auto;
 }
 
-a {
-    transition: border linear 40ms;
-}
-
 a:hover {
     text-decoration: none;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
 }
 
 .a-button {

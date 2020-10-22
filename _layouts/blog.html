@@ -17,7 +17,10 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Nunito+Sans:300,400,500,600,800">
     <link rel="stylesheet" href="/assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="/assets/css/custom_bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/bootstrap-material-design.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> -->
+
     <link rel="stylesheet" href="/assets/css/blog_styles.css" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
@@ -113,17 +116,17 @@
                         <h3 style="font-weight: 600;">Share</h3>
                         <div class="socials-content-footer-buttons">
                             <a class="a-button" href="http://twitter.com/share/?url=https://easybase.io{{ page.url }}&text={{ page.title | url_encode  }}&via=easybase_io" target="_blank">
-                                <button class="btn btn-raised btn-success" style="background-color: #29c5f6;">
+                                <button class="btn btn-raised" style="background-color: #29c5f6;">
                                     <ion-icon name="logo-twitter" size="large" style="color:white; vertical-align: middle;"></ion-icon>
                                 </button>
                             </a>
                             <a class="a-button" href="https://www.facebook.com/sharer/sharer.php?u=https://easybase.io{{ page.url }}{{ page.title | url_encode }}" target="_blank">
-                                <button class="btn btn-raised btn-success" style="background-color: #6788ce;">
+                                <button class="btn btn-raised" style="background-color: #6788ce;">
                                     <ion-icon name="logo-facebook" size="large" style="color:white; vertical-align: middle;"></ion-icon>
                                 </button>
                             </a>
                             <a class="a-button" href="https://www.linkedin.com/shareArticle?mini=true&url=https://easybase.io{{ page.url }}&title={{ page.title | url_encode }}&summary={{ page.excerpt | url_encode }}&source=EasyBase.io" target="_blank">
-                                <button class="btn btn-raised btn-success" style="background-color: #3a9bdc;">
+                                <button class="btn btn-raised" style="background-color: #3a9bdc;">
                                     <ion-icon name="logo-linkedin" size="large" style="color:white; vertical-align: middle;"></ion-icon>
                                 </button>
                             </a>
