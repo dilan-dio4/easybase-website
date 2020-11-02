@@ -27,8 +27,8 @@
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://easybase.io/about/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/</loc>
-        <lastmod>2020-10-21T23:15:03+00:00</lastmod>
+        <loc>https://easybase.io/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/</loc>
+        <lastmod>2020-11-02T23:15:03+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
@@ -55,6 +55,11 @@
         <loc>https://easybase.io/about/2020/07/08/About-EasyBase/</loc>
         <lastmod>2020-10-21T23:15:03+00:00</lastmod>
         <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://easybase.io/react/2020/11/02/Going-Serverless-With-The-Easiest-React-Database-Tutorial/</loc>
+        <lastmod>2020-11-02T10:15:03+00:00</lastmod>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>https://easybase.io/login/</loc>
