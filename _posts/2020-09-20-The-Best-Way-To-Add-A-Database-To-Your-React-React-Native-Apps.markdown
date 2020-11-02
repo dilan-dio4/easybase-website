@@ -18,7 +18,7 @@ meta_description: EasyBase is a fantastic serverless solution for React & React 
 
 Cloud databases are all-the-rage nowadays, especially with this new wave of wildly popular front-end frameworks including [Vue](https://vuejs.org/), [Angular](https://angular.io/), and [React](https://reactjs.org/). These modules have allowed beginners and exports turn their ideas into reality. Furthermore, they can deploy their applications on all kinds of devices.
 
-Furthormore, serverless computing have empowered developers with the ability to be exteremly agile in their technology stack. These services make it easy to deploy cloud-native applications in a scalable and cost-effective manner. 
+Furthermore, serverless computing have empowered developers with the ability to be extremely agile in their technology stack. These services make it easy to deploy cloud-native applications in a scalable and cost-effective manner. 
 
 Let's take a look at Easybase's React library which creates a stateful and editable 'database array' in your React projects. This package works on both React and React Native.
 
