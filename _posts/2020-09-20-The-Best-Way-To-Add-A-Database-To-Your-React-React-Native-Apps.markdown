@@ -140,7 +140,7 @@ useFrameEffect() runs
 
 <br />
 
-[Walkthrough building a working example with easybase-react](/react/2020/11/02/Going-Serverless-With-The-Easiest-React-Database-Tutorial/)
+<!-- [Walkthrough building a working example with easybase-react](/react/2020/11/02/Going-Serverless-With-The-Easiest-React-Database-Tutorial/) -->
 
 [Learn more about EasyBase's mission here](/about)
 
