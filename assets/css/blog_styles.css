@@ -61,7 +61,7 @@
 }
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .author-image {
@@ -100,7 +100,7 @@ body {
 .author-name {
     text-align: center;
     margin: 30px 0;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .author-name a {
@@ -136,17 +136,22 @@ body {
     border-radius: 5px;
 }
 
+.about-easybase-card-root h2 {
+    font-weight: 400;
+    font-size: 29px;
+}
+
+.about-easybase-card-root h5 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
 .author-card-root {
     padding: 15px 18px !important;
 }
 
 .author-card-root {
     margin-top: 85px;
-}
-
-.about-easybase-card-title {
-    font-weight: 500;
-    font-size: 29px;
 }
 
 .about-easybase-card-content {
@@ -183,7 +188,8 @@ body {
 }
 
 .content-text {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: sans-serif;
+
 }
 
 nav {
@@ -510,7 +516,7 @@ a:hover {
 }
 
 .sticky-card-title {
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
 }
 
