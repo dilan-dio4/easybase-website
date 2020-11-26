@@ -142,7 +142,7 @@ useFrameEffect() runs
 
 <!-- [Walkthrough building a working example with easybase-react](/react/2020/11/02/Going-Serverless-With-The-Easiest-React-Database-Tutorial/) -->
 
-[Learn more about EasyBase's mission here](/about)
+*Learn more about React user authentication [here](/react/2020/11/25/The-Easiest-Way-To-Add-User-Authentication-To-Your-React-Project/).*
 
 A database is an integral part of almost all production applications and services. At some point, a developer is going to need to be able to asynchronously access their data from a fast & reliable source. [Easybase](https://easybase.io) is a cloud-service that makes developer's lives easier through a serverless framework and scalable database.
 
