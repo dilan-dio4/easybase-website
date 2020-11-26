@@ -43,7 +43,7 @@ npm i easybase-react
 
 <br />
 
-**3. Place ebconfig.json in project root**
+**3. Place ebconfig.js in project root**
 
 Open up your newly created REACT integration and navigate to the 'React Token' section of the drawer. 
 
@@ -60,7 +60,7 @@ Download the file and place it in the root of your react project, next to App.js
 ```jsx
 import React, { useEffect } from "react";
 import { EasybaseProvider, useEasybase } from "easybase-react";
-import ebconfig from "./ebconfig.json";
+import ebconfig from "./ebconfig";
 
 function App() {
   return (
