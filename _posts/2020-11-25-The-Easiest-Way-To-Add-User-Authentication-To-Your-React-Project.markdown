@@ -97,7 +97,7 @@ export default function ProjectUser() {
     if (isUserSignedIn()) {
         return (
             <div>
-              <h2>Your signed in!</h2>
+              <h2>You're signed in!</h2>
               <button className="btn" onClick={_ => getUserAttributes().then(console.log)}>
                 Click me only works if your authenticated!
               </button>
