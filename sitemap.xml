@@ -3,7 +3,7 @@
     <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
     <url>
         <loc>https://easybase.io/</loc>
-        <lastmod>2020-11-25T18:10:14+00:00</lastmod>
+        <lastmod>2020-12-05T22:51:04+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
@@ -13,12 +13,12 @@
     </url>
     <url>
         <loc>https://easybase.io/pricing/</loc>
-        <lastmod>2020-11-16T23:15:03+00:00</lastmod>
+        <lastmod>2020-12-05T22:51:04+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://easybase.io/blog/</loc>
-        <lastmod>2020-11-16T23:15:03+00:00</lastmod>
+        <lastmod>2020-12-05T22:51:04+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
@@ -52,33 +52,28 @@
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://easybase.io/about/2020/07/08/About-EasyBase/</loc>
-        <lastmod>2020-10-21T23:15:03+00:00</lastmod>
-        <priority>0.64</priority>
-    </url>
-    <url>
         <loc>https://easybase.io/react/2020/11/02/Going-Serverless-With-The-Easiest-React-Database-Tutorial/</loc>
         <lastmod>2020-11-02T10:15:03+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://easybase.io/react/2020/11/25/The-Easiest-Way-To-Add-User-Authentication-To-Your-React-Project/</loc>
-        <lastmod>2020-11-25T10:20:03+00:00</lastmod>
+        <lastmod>2020-12-05T22:51:04+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://easybase.io/login</loc>
-        <lastmod>2020-10-21T23:15:03+00:00</lastmod>
+        <lastmod>2020-12-05T22:51:04+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://easybase.io/signup</loc>
-        <lastmod>2020-11-12T23:15:03+00:00</lastmod>
+        <lastmod>2020-12-05T22:51:04+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://easybase.io/react/2020/12/05/5-Great-React-Libraries-to-Look-Out-for-in-2021/</loc>
-        <lastmod>2020-12-05T10:01:03+00:00</lastmod>
+        <lastmod>2020-12-05T22:51:04+00:00</lastmod>
         <priority>0.80</priority>
     </url>
 </urlset>
