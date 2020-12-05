@@ -1667,4 +1667,5 @@ header {
 .carbon-picture {
     position: relative;
     top: -40px;
+    max-width: 100%;
 }
