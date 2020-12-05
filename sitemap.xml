@@ -71,9 +71,14 @@
         <lastmod>2020-10-21T23:15:03+00:00</lastmod>
         <priority>0.80</priority>
     </url>
-        <url>
+    <url>
         <loc>https://easybase.io/signup</loc>
         <lastmod>2020-11-12T23:15:03+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://easybase.io/react/2020/12/05/5-Great-React-Libraries-to-Look-Out-for-in-2021/</loc>
+        <lastmod>2020-12-05T10:01:03+00:00</lastmod>
         <priority>0.80</priority>
     </url>
 </urlset>
