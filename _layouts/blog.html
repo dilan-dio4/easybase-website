@@ -199,25 +199,39 @@
     
     <footer class="py-2 footer-bg">
         <div class="container footer-content-container">
-            <div class="row py-4 hide-mobile">
-                <div class="col-md-3 footer-content-section-root">
-                    <div class="footer-content-section mt-3">
-                        <ion-icon name="pin-outline" size="large" style="margin-left: -9px;"></ion-icon>
-                        <p class="footer-content-text contact-text pb-3 pl-1 mt-4">4120 Schenley Drive</p>
-                        <p class="footer-content-text contact-text pb-3 pl-1">Pittsburgh, PA</p>
-                        <p class="footer-content-text contact-text pb-3 pl-1">15260</p>
-                    </div>
+            <div class="row py-4">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <img class="lazyload mb-2" data-src="/assets/images/blog_banner.png" width="200px" style="filter: brightness(0) invert(1);"/>
+                    <p class="footer-content-text contact-text m-0 pl-3">4120 Schenley Drive</p>
+                    <p class="footer-content-text contact-text m-0 pl-3">Pittsburgh, PA</p>
+                    <p class="footer-content-text contact-text m-0 pl-3">15260</p>
+                    <hr />
+                    <p class="footer-content-text m-0 pl-3 mb-1"><b>Contact Us</b></p>
+                    <p class="footer-content-text m-0 pl-3"><a href="mailto:hello@easybase.io" class="contact-text">hello@easybase.io</a></p>
+                    <p class="footer-content-text m-0 pl-3"><a href="tel:4129450510" class="contact-text">412-945-0510</a></p>
                 </div>
-                <div class="col-md-3 footer-content-section-root">
-                    <div class="footer-content-section mt-3">
-                        <ion-icon name="chatbubbles-outline" size="large"></ion-icon>
-                        <p class="footer-content-text pb-3 pl-1 mt-4"><a href="mailto:hello@easybase.io"
-                                class="contact-text">hello@easybase.io</a></p>
-                        <p class="footer-content-text pb-3 pl-1"><a href="tel:4129450510"
-                                class="contact-text">412-945-0510</a></p>
-                    </div>
+                <div class="col-md-4 footer-content-section-root my-4 my-md-0">
+                    <form id="message" action="https://formcarry.com/s/9OdMhO2UJo" method="POST" accept-charset="UTF-8">
+                        <h5 class="footer-content-text mt-1 mb-3 pl-1"><b>Leave a message</b></h5>
+                        <fieldset>
+                            <input placeholder="First Name" type="text" name="name" tabindex="1" required>
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="Email address" type="email" name="email" tabindex="2" required>
+                        </fieldset>
+                        <fieldset>
+                            <textarea placeholder="Type your message here...." name="message" tabindex="3" required></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <button name="submit" type="submit" data-submit="...Sending" class="btn btn-raised btn-success splash-button-try w-100">
+                                <span class="custom-button-right sign-up-button-right text">Submit</span>
+                            </button>
+                        </fieldset>
+                        <input name="_gotcha" style="display:none">
+                        <input name="type" style="display:none" value="footer-contact">
+                    </form>
                 </div>
-                <div class="col-md-3 footer-content-section-root">
+                <div class="col-md-3 footer-content-section-root my-4 my-md-0">
                     <div class="footer-content-section mt-3">
                         <ion-icon class="mb-4" name="newspaper-outline" size="large"></ion-icon>
                         {% for post in site.posts limit:4 %}
@@ -226,53 +240,13 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="col-md-3 footer-content-section-root">
+                <div class="col-md-2 footer-content-section-root my-4 my-md-0 hide-mobile">
                     <div class="footer-content-section mt-3">
                         <ion-icon name="link-outline" size="large"></ion-icon>
                         <p class="footer-content-text pb-3 pl-1 mt-4"><a href="/" class="contact-text">Home</a></p>
                         <p class="footer-content-text pb-3 pl-1"><a href="/pricing" class="contact-text">Pricing</a></p>
                         <p class="footer-content-text pb-3 pl-1"><a href="/about" class="contact-text">About Us</a></p>
                         <p class="footer-content-text pb-3 pl-1"><a href="/blog" class="contact-text">Blog</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="show-mobile" style="display: block;">
-                <div class="row d-flex justify-content-center">
-                    <div class="footer-content-section-mobile mb-5">
-                        <div class="mr-4">
-                            <ion-icon name="pin-outline" style="font-size: 40px;"></ion-icon>
-                        </div>
-                        <div>
-                            <p class="footer-content-text contact-text pb-3 pl-1">4120 Schenley Drive</p>
-                            <p class="footer-content-text contact-text pb-3 pl-1">Pittsburgh, PA</p>
-                            <p class="footer-content-text contact-text pb-3 pl-1">15260</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="footer-content-section-mobile mb-5">
-                        <div class="mr-4">
-                            <ion-icon name="chatbubbles-outline" style="font-size: 40px;"></ion-icon>
-                        </div>
-                        <div>
-                            <p class="footer-content-text pb-3 pl-1"><a href="mailto:hello@easybase.io"
-                                    class="contact-text">hello@easybase.io</a></p>
-                            <p class="footer-content-text pb-3 pl-1"><a href="tel:4129450510"
-                                    class="contact-text">412-945-0510</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="footer-content-section-mobile mb-3">
-                        <div class="mr-4">
-                            <ion-icon name="newspaper-outline" style="font-size: 40px;"></ion-icon>
-                        </div>
-                        <div>
-                            {% for post in site.posts limit:4 %}
-                            <p class="footer-content-text pb-3 pl-1"><a href="{{ post.url }}"
-                                    class="contact-text">{{ post.title | truncate: 30 }}</a></p>
-                            {% endfor %}
-                        </div>
                     </div>
                 </div>
             </div>
@@ -301,7 +275,7 @@
                 </div>
     
                 <div class="footer-footer col-md-4 center-flex">
-                    <p style="color: #eee; margin: 0; font-family: 'Roboto', sans-serif;">© EasyBase 2016-2020</p>
+                    <p style="color: #eee; margin: 0; font-family: 'Roboto', sans-serif;">© EasyBase 2018-2020</p>
                 </div>
     
                 <div class="footer-footer col-md-4 right-flex">

@@ -511,8 +511,15 @@ layout: null
             }, { threshold: 0, rootMargin: '100px' });
 
             io2.observe(document.getElementById("jsFiddleRoot"));
-        });
 
+            let urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get("contact") !== null) {
+                setTimeout(function(){
+                    document.getElementById('footer-root').scrollIntoView(false)
+                }, 10);
+            }
+
+        });
 
         function fadeVideoInAndPlay() {
             vid_ele.style.visibility = "visible";

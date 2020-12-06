@@ -1,0 +1,156 @@
+---
+layout: main
+title: Report an Issue
+description: Report an Issues with Easybase's integration capabilities, system status, or frontend application.
+---
+
+<style>
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact input[type="tel"],
+    #contact input[type="url"],
+    #contact textarea,
+    #contact button[type="submit"] {
+        font-weight: 400;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    #contact {
+        background: #FDFDFD;
+        padding: 25px;
+        margin-top: 50px;
+        margin-bottom: 200px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+        width: 500px;
+        max-width: 500px;
+        border-radius: 5px;
+    }
+
+    #contact h3 {
+        display: block;
+        font-size: 38px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    #contact h4 {
+        margin: 5px 0 15px;
+        display: block;
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    fieldset {
+        border: medium none !important;
+        margin: 0 0 12px;
+        min-width: 100%;
+        padding: 0;
+        width: 100%;
+    }
+
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact input[type="tel"],
+    #contact input[type="url"],
+    #contact textarea {
+        width: 100%;
+        border: 1px solid #ccc;
+        background: #FFF;
+        margin: 0 0 5px;
+        padding: 12px;
+    }
+
+    #contact input[type="text"]:hover,
+    #contact input[type="email"]:hover,
+    #contact input[type="tel"]:hover,
+    #contact input[type="url"]:hover,
+    #contact textarea:hover {
+        -webkit-transition: border-color 0.3s ease-in-out;
+        -moz-transition: border-color 0.3s ease-in-out;
+        transition: border-color 0.3s ease-in-out;
+        border: 1px solid #aaa;
+    }
+
+    #contact textarea {
+        height: 175px;
+        max-width: 100%;
+    }
+
+    #contact button[type="submit"] {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        background-color: #0070f3;
+        color: #FFF;
+        margin: 0 0 5px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 700;
+        box-shadow: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #contact button[type="submit"]:hover {
+        background-color: #005cc4;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    }
+
+    #contact button[type="submit"]:active {
+        background-color: #0154b3;
+    }
+
+    #contact input:focus,
+    #contact textarea:focus {
+        outline: 0;
+        border: 1px solid #aaa;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #888;
+    }
+
+    :-moz-placeholder {
+        color: #888;
+    }
+
+    ::-moz-placeholder {
+        color: #888;
+    }
+
+    :-ms-input-placeholder {
+        color: #888;
+    }
+</style>
+
+<section class="section-grey">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <form id="contact" action="https://formcarry.com/s/9OdMhO2UJo" method="POST" accept-charset="UTF-8">
+                <h3>Report an Issue</h3>
+                <h4>Please make us aware of any problems or errors. Thanks!</h4>
+                <fieldset>
+                    <input placeholder="First Name" type="text" name="name" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Email address" type="email" name="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <textarea placeholder="Type your message here...." name="message" tabindex="3" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+                <input name="_gotcha" style="display:none"><!-- use this to prevent spam -->
+                <input name="type" style="display:none" value="report">
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+</script>

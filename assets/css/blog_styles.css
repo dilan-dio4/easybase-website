@@ -589,7 +589,7 @@ a:hover {
 }
 
 .footer-content-container {
-    color: #eee;
+    color: #fff;
     margin-top: 40px;
 }
 
@@ -903,4 +903,31 @@ a:hover {
     font-size: 85%;
     background-color: #1b1f230d;
     border-radius: 6px;
+}
+
+#message input[type="text"],
+#message input[type="email"],
+#message input[type="tel"],
+#message input[type="url"],
+#message textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 6px;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+#message {
+    padding: 10px;
+    width: 500px;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+#message textarea {
+    height: 75px;
+    max-width: 100%;
 }
