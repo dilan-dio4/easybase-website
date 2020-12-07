@@ -1701,3 +1701,53 @@ header {
     height: 75px;
     max-width: 100%;
 }
+
+
+.mini-article-card {
+    width: 280px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    text-align: left;
+    transition: all .2s ease-in-out;
+    border-radius: var(--mod-radius);
+    background: var(--mod-background);
+}
+
+.mini-article-card a {
+    color: inherit;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mini-article-card-content-root {
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-article-card-content {
+    padding: 10px 20px 15px;
+    color: var(--mod-foreground);
+}
+
+.mini-article-card-footer {
+    color: var(--mod-foreground);
+    padding: 15px;
+    border-top: 1px solid var(--accents-2);
+}
+
+.mini-article-card figure {
+    margin: 0;
+    height: 120px;
+    overflow: hidden;
+}
+
+.mini-article-card img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
