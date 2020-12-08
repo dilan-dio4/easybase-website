@@ -41,4 +41,6 @@ exclude:
   - integration-builder/package-lock.json/
   - integration-builder/README.md/
 include:
+  - docs/
+  - docs/easybase-react/
   - _*.html
