@@ -62,12 +62,12 @@
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://easybase.io/login</loc>
+        <loc>https://easybase.io/login/</loc>
         <lastmod>2020-12-05T22:51:04+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://easybase.io/signup</loc>
+        <loc>https://easybase.io/signup/</loc>
         <lastmod>2020-12-05T22:51:04+00:00</lastmod>
         <priority>0.80</priority>
     </url>

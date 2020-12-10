@@ -9,7 +9,7 @@ author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib
 author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for EasyBase. He has previously written and contributed to various tech-related publications.
 sidebar_video: https://www.youtube-nocookie.com/embed/-CbruClAFMY
-description: Learn about how EasyBase is the superior alternative to traditional DBMS infrastructures. EasyBase makes high-performance database administration and integration painless and cost-effective.
+meta_description: Learn about how EasyBase is the superior alternative to traditional DBMS infrastructures. EasyBase makes high-performance database administration and integration painless and cost-effective.
 ---
 ### EasyBase makes high-performance database administration and integration painless and cost-effective.
 
