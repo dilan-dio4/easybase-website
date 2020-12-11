@@ -44,6 +44,8 @@ npm i easybase-react
 
 <br />
 
+For more information on this package, take a look at it's [Github page](https://github.com/easybase/easybase-react).
+
 **3. Place ebconfig.js in project root**
 
 Expand your newly created project and click 'download' to access your ebconfig token.
@@ -74,7 +76,7 @@ function App() {
 
 <br />
 
-The EasybaseProvider gives all child elements valid access the useEasybase() hook. This hook contains all the stateful functions that are used to interface with your data.
+The EasybaseProvider gives all child elements valid access the `useEasybase()` hook. This hook contains all the stateful functions that are used to interface with your data. Take a look at the documentation [here](/docs/easybase-react/).
 
 <br />
 

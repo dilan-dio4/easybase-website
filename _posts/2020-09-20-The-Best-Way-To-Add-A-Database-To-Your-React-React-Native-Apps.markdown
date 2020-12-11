@@ -14,6 +14,8 @@ meta_description: EasyBase is a fantastic serverless solution for React & React 
 
 *Update 11/2/2020: easybase-react was recently upgraded to version 1.1.9 which brings performance and usability improvements*
 
+*[Click here](/react/2020/11/25/The-Easiest-Way-To-Add-User-Authentication-To-Your-React-Project/) to learn about using Easybase for user authentication.*
+
 <hr />
 
 Cloud databases are all-the-rage nowadays, especially with this new wave of wildly popular front-end frameworks including [Vue](https://vuejs.org/), [Angular](https://angular.io/), and [React](https://reactjs.org/). These modules have allowed beginners and exports turn their ideas into reality. Furthermore, they can deploy their applications on all kinds of devices.
@@ -40,6 +42,10 @@ The only extra dependency is the 'easybase-react' npm module. To install that, n
 ```cs
 npm i easybase-react
 ```
+
+<br />
+
+More information about this package is available on [Github](https://github.com/easybase/easybase-react).
 
 <br />
 
@@ -73,7 +79,7 @@ function App() {
 
 <br />
 
-The EasybaseProvider gives all child elements valid access the useEasybase() hook. This hook contains all the stateful functions that are used to interface with your data.
+The EasybaseProvider gives all child elements valid access the useEasybase() hook. This hook contains all the stateful functions that are used to interface with your data. Read the documentation [here](/docs/easybase-react/).
 
 <br />
 
