@@ -42,8 +42,6 @@ The only extra dependency is the 'easybase-react' npm module. To install that, n
 npm i easybase-react
 ```
 
-<br />
-
 For more information on this package, take a look at it's [Github page](https://github.com/easybase/easybase-react).
 
 **3. Place ebconfig.js in project root**
@@ -73,8 +71,6 @@ function App() {
   );
 }
 ```
-
-<br />
 
 The EasybaseProvider gives all child elements valid access the `useEasybase()` hook. This hook contains all the stateful functions that are used to interface with your data. Take a look at the documentation [here](/docs/easybase-react/).
 
@@ -125,9 +121,6 @@ export default function ProjectUser() {
 }
 ```
 
-<br />
-
-
 If a user has recently signed in, when navigating to this page on the same browser they will automatically be authenticated. Otherwise, once a user successfully signs in the components state will automatically be re-rendered and isUserSignedIn() will return *true*.
 
 An authenticated user will then be able to access administrative functions such as **setUserAttribute**. More importantly, they will be able to retrieve an editable data array via **Frame()**.
@@ -170,8 +163,6 @@ export default function FrameRenderer() {
 }
 ```
 
-<br />
-
 *Important: Functions that are only meant for authenticated users, such as **sync()** and **setUserAttribute**, only work when an instance is signed in and is not accessible via an unauthorized user or third party.*
 
 
@@ -189,8 +180,6 @@ useFrameEffect() runs
 <hr />
 
 ## **Conclusion**
-
-<br />
 
 [Learn more about EasyBase's mission here](/about/)
 

@@ -81,8 +81,6 @@ function App() {
 }
 ```
 
-<br />
-
 From there you can perform user authentication operations and access a stateful database array! Just for you, [it's free](https://app.easybase.io). Here's some more information if you want to [learn about Easybase and React](https://easybase.io/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/). Let's take a brief look at user authentication with `easybase-react`:
 
 ```jsx
@@ -169,7 +167,5 @@ const Card = ({ title, imageUrl, actions }) => (
   </Composition>
 )
 ```
-
-<br />
 
 The `Composition` element allows developers to contextualize their React components based on the size of the users device. This is much cleaner than conditionally rendering every attribute of the component. Take a look at a more [detailed example](https://codesandbox.io/s/responsive-props-8m14f?file=/src/components/Item.js) that shows the true power of this library.

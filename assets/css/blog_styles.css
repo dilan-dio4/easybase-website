@@ -220,7 +220,20 @@ body {
 }
 
 .content-text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 18px;
+}
+
+.content-text p {
+    line-height: 30px;
+}
+
+.content-text h1 {
+    margin-bottom: 1.4rem;
+}
+
+.content-text h2, h3, h4 {
+    margin-bottom: .9rem;
 }
 
 nav {
@@ -376,7 +389,6 @@ nav ul li ul li a {
         float: none;
     }
     .nav-regular-link {
-        font-family: 'Roboto', sans-serif;
         padding: 20px;
         line-height: 60px;
         font-size: 30px;
@@ -646,10 +658,6 @@ a:hover {
 
 /* Footer -------------------------------- */
 
-.main-content p {
-    font-size: 19px;
-}
-
 .main-content hr {
     margin: 2rem 0;
 }
@@ -660,7 +668,7 @@ a:hover {
     background-color: #272822;
     border: 0;
     margin-top: 0.25em;
-    margin-bottom: 0.25em;
+    margin-bottom: 1.75em;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.20);
@@ -937,8 +945,13 @@ a:hover {
     padding: .2em .4em;
     margin: 0;
     font-size: 85%;
-    background-color: #1b1f230d;
     border-radius: 6px;
+    background-color: #1b1f230d;
+}
+
+div.highlighter-rouge {
+    background-color: transparent !important;
+
 }
 
 #message input[type="text"], #message input[type="email"], #message input[type="tel"], #message input[type="url"], #message textarea {
@@ -962,4 +975,27 @@ a:hover {
 #message textarea {
     height: 75px;
     max-width: 100%;
+}
+
+table {
+    border-collapse: collapse !important;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
 }

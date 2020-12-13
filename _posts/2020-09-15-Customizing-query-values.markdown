@@ -29,7 +29,7 @@ Calling this integration with Python:
 ```python
 get("69BOMHaM4e23kVK9", None)
 ```
-<br />
+
 Result:
 ```json
 [
@@ -41,7 +41,6 @@ Result:
     { "first_name": "Kevin", "age": 21 }
 ]
 ```
-<br />
 
 This integration will by default filter your data through your query with the static value of _22_. 
 
@@ -55,7 +54,7 @@ In python, this would look like:
 ```python
 get("69BOMHaM4e23kVK9", customQuery={ "age": 25 })
 ```
-<br />
+
 Result:
 ```json
 [
@@ -70,7 +69,6 @@ Result:
     { "first_name": "Kevin", "age": 21 }
 ]
 ```
-<br />
 
 We can see that, even though our visual query looks for ages less than 22, we can overwrite that value to any other number. In this case, we used 25 to demonstrate that the query changed with our `customQuery` object.
 

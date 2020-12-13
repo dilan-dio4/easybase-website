@@ -43,11 +43,7 @@ The only extra dependency is the 'easybase-react' npm module. To install that, n
 npm i easybase-react
 ```
 
-<br />
-
 More information about this package is available on [Github](https://github.com/easybase/easybase-react).
-
-<br />
 
 **3. Place ebconfig.js in project root**
 
@@ -58,8 +54,6 @@ Open up your newly created REACT integration and navigate to the 'React Token' s
 Download the file and place it in the root of your react project, next to App.js.
 
 *Note: Within the integration drawer be sure to enable read and write. While developing your application on localhost enable testing within the drawer as well. Before deploying, whitelist IPs and web addresses that that are allowed to access the database.*
-
-<br />
 
 **4. Wrap root component in EasybaseProvider**
 
@@ -77,11 +71,7 @@ function App() {
 }
 ```
 
-<br />
-
 The EasybaseProvider gives all child elements valid access the useEasybase() hook. This hook contains all the stateful functions that are used to interface with your data. Read the documentation [here](/docs/easybase-react/).
-
-<br />
 
 **5. Map elements from Frame()**
 
@@ -119,8 +109,6 @@ function Container() {
 }
 ```
 
-<br />
-
 So let's walkthrough what is going on here. When our components first mounts in **useEffect()**, we configure our Frame size to be of length 10. This is the limit of documents that will be retrieved from your database. *limit* and *offset* are useful for adding pagination to your React project.
 
 In our return statement. We are mapping **Frame()** to some custom component called 'Card'. Remember, **Frame()** returns an array of objects, while **Frame(index)** will return a single object at that index. After manipulating any of the objects in your frame, calling **sync()** will push your changes to the cloud and pull down any changes from other sources.
@@ -143,8 +131,6 @@ useFrameEffect() runs
 <hr />
 
 ## **Conclusion**
-
-<br />
 
 <!-- [Walkthrough building a working example with easybase-react](/react/2020/11/02/Going-Serverless-With-The-Easiest-React-Database-Tutorial/) -->
 
