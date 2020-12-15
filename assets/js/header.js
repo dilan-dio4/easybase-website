@@ -6,10 +6,14 @@ window.addEventListener("load", function () {
     });
 
     async function pingTimeWorker() {
-        const ping_res = await fetch('https://api.easybase.io/pingResponseTime');
-        const num = await ping_res.text();
-        Array.from(document.getElementsByClassName("ping-time-text")).forEach(ele => ele.innerHTML = `${num}ms`);
-        setTimeout(pingTimeWorker, 4500);
+        try {
+            const ping_res = await fetch('https://api.easybase.io/pingResponseTime');
+            const num = await ping_res.text();
+            Array.from(document.getElementsByClassName("ping-time-text")).forEach(ele => ele.innerHTML = `${num}ms`);
+            setTimeout(pingTimeWorker, 4500);
+        } catch (error) {
+            console.log("Couldn't fetch pingResponseTime");
+        }
     }
     pingTimeWorker();
 
