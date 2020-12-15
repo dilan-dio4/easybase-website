@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://easybase.io/</loc>
-    <lastmod>2020-12-10</lastmod>
+    <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -16,7 +16,7 @@
     <loc>https://easybase.io/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://easybase.io/blog/</loc>
@@ -34,13 +34,13 @@
     <loc>https://easybase.io/about/2020/09/15/Customizing-query-values/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://easybase.io/about/2020/09/20/Announcing-Mobile-Application/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://easybase.io/about/</loc>
@@ -64,7 +64,7 @@
     <loc>https://easybase.io/react/2020/11/25/The-Easiest-Way-To-Add-User-Authentication-To-Your-React-Project/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://easybase.io/pricing/</loc>
@@ -106,12 +106,12 @@
     <loc>https://easybase.io/react/2020/12/05/5-Great-React-Libraries-to-Look-Out-for-in-2021/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://easybase.io/react/2020/12/12/How-And-Where-To-Fetch-Data-In-Your-React-Projects/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
