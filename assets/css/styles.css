@@ -314,15 +314,6 @@ div.header-contact-us {
     align-items: center;
 }
 
-.logged-out-profile_display {
-    opacity: 1;
-}
-
-.logged-out-profile_extra_items {
-    opacity: 0;
-    transition: opacity .2s ease-in-out;
-}
-
 .logged-out-profile_wrapper a {
     text-decoration: none;
     transition: color .2s ease-in-out;
@@ -331,6 +322,27 @@ div.header-contact-us {
     border: 0;
     font-size: 15px;
     padding: 10px;
+}
+
+.logged-out-profile_wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.logged-out-profile_wrapper ul li {
+    display: inline-block;
+}
+
+
+.logged-out-profile_display {
+    opacity: 1;
+}
+
+.logged-out-profile_extra_items {
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
 }
 
 .logged-out-profile_sign_up {

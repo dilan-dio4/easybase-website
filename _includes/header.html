@@ -4,7 +4,6 @@
             <span class="mod-hide-on-mobile" style="align-items: center;">EASYBASE adds support for user authentication in React<ion-icon name="chevron-forward-outline"></ion-icon></span>
             <span class="mod-show-on-mobile" style="align-items: center;">easybase-react adds user authentication<ion-icon name="chevron-forward-outline"></ion-icon></span>
         </span>
-        <!-- <span class="banner_link">Learn More →</span> -->
     </a>
     <span id="banner_close" class="banner_close">
         <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision" style="color:currentColor">
@@ -97,27 +96,26 @@
                     </div>
                 </div>
                 <div class="header_nav header_right">
-                    <span style="box-sizing: border-box;">
-                        <div class="logged-out-profile_wrapper">
-                            <a href="/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/">React</a>
-                            <!-- <div style="height: 25px; width: 1px; background-color: #CCC; margin: 0 9px;"></div> -->
-                            <a href="/pricing/">Pricing</a>
-                            <a href="/blog/">Blog</a>
-                            <a href="/about/">About</a>
-                            <a href="https://app.easybase.io" onclick="captureLinkClick('app.easybase.io', 'signIn'); return false;">Login</a>
-                            <div class="logged-out-profile_sign_up">
-                                <a role="button" type="text" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;" class="custom-button-right sign-up-button-right button medium icon-color mod-themed mod-success mod-success-fill">
-                                    <span class="custom-button-right sign-up-button-right text">Sign up</span>
-                                </a>
-                            </div>
-                            <span class="splash-ping-root mod-hide-on-mobile">
-                                <div class="ping-container">
-                                    <div class="green-flasher"></div>
-                                </div>
-                                <p class="ping-time-text"></p>
-                            </span>
+                    <nav class="logged-out-profile_wrapper">
+                        <ul itemscope itemtype="https://schema.org/SiteNavigationElement" role="menu">
+                            <li itemprop="name" role="menuitem"><a itemprop="url" title="React" href="/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/">React</a></li>
+                            <li itemprop="name" role="menuitem"><a itemprop="url" title="Pricing" href="/pricing/">Pricing</a></li>
+                            <li itemprop="name" role="menuitem"><a itemprop="url" title="Blog" href="/blog/">Blog</a></li>
+                            <li itemprop="name" role="menuitem"><a itemprop="url" title="About" href="/about/">About</a></li>
+                            <li itemprop="name" role="menuitem"><a itemprop="url" title="Sign In" href="https://app.easybase.io" onclick="captureLinkClick('app.easybase.io', 'signIn'); return false;">Login</a></li>
+                        </ul>
+                        <div class="logged-out-profile_sign_up">
+                            <a role="button" type="text" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;" class="custom-button-right sign-up-button-right button medium icon-color mod-themed mod-success mod-success-fill">
+                                <span class="custom-button-right sign-up-button-right text">Sign up</span>
+                            </a>
                         </div>
-                    </span>
+                        <span class="splash-ping-root mod-hide-on-mobile">
+                            <div class="ping-container">
+                                <div class="green-flasher"></div>
+                            </div>
+                            <p class="ping-time-text"></p>
+                        </span>
+                    </nav>
                 </div>
             </div>
         </aside>
@@ -163,4 +161,4 @@
 
 </nav>
 
-<script src="/assets/js/header.min.js"></script>
+<script src="/assets/js/header.min.js" async></script>
