@@ -169,8 +169,9 @@ body {
 }
 
 .about-easybase-card-root h2 {
-    font-weight: 400;
     font-size: 29px;
+    letter-spacing: -.001em;
+    font-weight: 400;
 }
 
 .about-easybase-card-root h3 {
@@ -184,12 +185,6 @@ body {
 
 .author-card-root {
     margin-top: 85px;
-}
-
-.about-easybase-card-content {
-    text-align: center;
-    margin: 30px 0;
-    font-size: 16px !important;
 }
 
 .inline-breadcrumb-root {
@@ -613,9 +608,9 @@ a:hover {
 }
 
 .footer-footlink {
-    margin-right: 8px;
     color: #27234b;
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
 
 .left-flex {
@@ -998,4 +993,13 @@ table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
+}
+
+.off-screen {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }

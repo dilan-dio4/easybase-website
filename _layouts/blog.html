@@ -138,10 +138,8 @@
                 <div class="col-lg-4 pl-sm-5">
                     <div class="sidebar-cards-root">
                         <div class="about-easybase-card-root">
-                            <h2>How EasyBase Helps</h2>
-                            <h3>$10 free quota, every month!</h3>
-                            <p class="about-easybase-card-content">EasyBase is a powerful, no-code database with a self-building API
-                            and visual query builder</p>
+                            <h2 class="text-center">Time to go <b>serverless</b></h2>
+                            <p class="about-easybase-card-content mb-4 mt-3 text-center">Try deploying your next project with Easybase's premier serverless platform.</p>
                             <div class="about-easybase-checks">
                                 <span>
                                     <ion-icon name="checkmark" style="color: #4caf50; font-size: 20px;"></ion-icon>
@@ -158,7 +156,7 @@
                             </div>
                             <div class="splash-buttons">
                                 <a class="a-button" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;">
-                                    <button type="button" class="btn btn-raised btn-success splash-button-try">Try Free</button>
+                                    <button type="button" class="btn btn-raised btn-success splash-button-try">Sign Up</button>
                                 </a>
                                 <a class="a-button" href="/">
                                     <button type="button" class="btn btn-outline-secondary">Learn More</button>
@@ -181,7 +179,7 @@
                             </div>
                             <div class="splash-buttons mb-4">
                                 <a class="a-button" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;">
-                                    <button type="button" class="btn btn-raised btn-success splash-button-try">Try Free</button>
+                                    <button type="button" class="btn btn-raised btn-success splash-button-try">Sign Up</button>
                                 </a>
                                 <a class="a-button" href="/">
                                     <button type="button" class="btn btn-outline-secondary">Request Demo</button>
@@ -210,25 +208,7 @@
                     <p class="footer-content-text m-0 pl-3"><a href="tel:4129450510" class="contact-text">412-945-0510</a></p>
                 </div>
                 <div class="col-md-4 footer-content-section-root my-4 my-md-0">
-                    <form id="message" action="https://formcarry.com/s/9OdMhO2UJo" method="POST" accept-charset="UTF-8">
-                        <p class="footer-content-text mt-1 mb-3 pl-1" style="font-size: 1.25rem;"><b>Leave a message</b></p>
-                        <fieldset>
-                            <input placeholder="First Name" type="text" name="name" required>
-                        </fieldset>
-                        <fieldset>
-                            <input placeholder="Email address" type="email" name="email" required>
-                        </fieldset>
-                        <fieldset>
-                            <textarea placeholder="Type your message here...." name="message" required></textarea>
-                        </fieldset>
-                        <fieldset>
-                            <button name="submit" type="submit" data-submit="...Sending" class="btn btn-raised btn-success splash-button-try w-100">
-                                <span class="custom-button-right sign-up-button-right text">Submit</span>
-                            </button>
-                        </fieldset>
-                        <input name="_gotcha" style="display:none">
-                        <input name="type" style="display:none" value="footer-contact">
-                    </form>
+                    {% include footer-message.html %}
                 </div>
                 <div class="col-md-3 footer-content-section-root my-4 my-md-0">
                     <div class="footer-content-section mt-3">
@@ -242,10 +222,10 @@
                 <div class="col-md-2 footer-content-section-root my-4 my-md-0 hide-mobile">
                     <div class="footer-content-section mt-3">
                         <ion-icon name="link-outline" size="large"></ion-icon>
-                        <p class="footer-content-text pb-3 pl-1 mt-4"><a href="/" class="contact-text">Home</a></p>
-                        <p class="footer-content-text pb-3 pl-1"><a href="/pricing/" class="contact-text">Pricing</a></p>
-                        <p class="footer-content-text pb-3 pl-1"><a href="/about/" class="contact-text">About Us</a></p>
-                        <p class="footer-content-text pb-3 pl-1"><a href="/blog/" class="contact-text">Blog</a></p>
+                        <p class="footer-content-text pb-3 pl-1 mt-4"><a href="/report/" class="contact-text">Report an Issue</a></p>
+                        <p class="footer-content-text pb-3 pl-1"><a href="https://github.com/easybase" class="contact-text">Github</a></p>
+                        <p class="footer-content-text pb-3 pl-1"><a href="https://reddit.com/r/easybase" class="contact-text">r/easybase</a></p>
+                        <p class="footer-content-text pb-3 pl-1"><a href="https://app.easybase.io/" class="contact-text">Sign In</a></p>
                     </div>
                 </div>
             </div>
@@ -274,13 +254,13 @@
                 </div>
     
                 <div class="footer-footer col-md-4 center-flex">
-                    <p style="color: #eee; margin: 0; font-family: 'Roboto', sans-serif;">© EasyBase 2018-2020</p>
+                    <small class="footer-footlink m-0">© EasyBase 2018-2020</small>
                 </div>
     
                 <div class="footer-footer col-md-4 right-flex">
-                    <a class="footer-footlink " href="/sitemap.xml">Sitemap</a>
-                    <a class="footer-footlink " href="/terms/">Terms</a>
-                    <a class="footer-footlink " href="/privacy/">Privacy</a>
+                    <a class="footer-footlink m-0 mr-2" href="/sitemap.xml">Sitemap</a>
+                    <a class="footer-footlink m-0 mr-2" href="/terms/">Terms</a>
+                    <a class="footer-footlink m-0" href="/privacy/">Privacy</a>
                 </div>
     
             </div>

@@ -43,7 +43,7 @@ description: Report an Issues with Easybase's integration capabilities, system s
         margin-bottom: 40px;
     }
 
-    fieldset {
+    #contact fieldset {
         border: medium none !important;
         margin: 0 0 12px;
         min-width: 100%;
@@ -134,19 +134,25 @@ description: Report an Issues with Easybase's integration capabilities, system s
                 <h3>Report an Issue</h3>
                 <h4>Please make us aware of any problems or errors. Thanks!</h4>
                 <fieldset>
-                    <input placeholder="First Name" type="text" name="name" required autofocus>
+                    <label class="off-screen" for="message-name">First Name</label>
+                    <input placeholder="First Name" type="text" name="name" id="message-name" required autofocus>
                 </fieldset>
                 <fieldset>
-                    <input placeholder="Email address" type="email" name="email" required>
+                    <label class="off-screen" for="message-email">Email address</label>
+                    <input placeholder="Email address" type="email" name="email" id="message-email" required>
                 </fieldset>
                 <fieldset>
-                    <textarea placeholder="Type your message here...." name="message" required></textarea>
+                    <label class="off-screen" for="message-message">Type your message here</label>
+                    <textarea placeholder="Type your message here..." name="message" id="message-message" required></textarea>
                 </fieldset>
                 <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    <label class="off-screen" for="message-submit">Submit</label>
+                    <button name="submit" type="submit" id="message-submit" data-submit="...Sending">Submit</button>
                 </fieldset>
-                <input name="_gotcha" style="display:none"><!-- use this to prevent spam -->
-                <input name="type" style="display:none" value="report">
+                <label class="off-screen" for="message-gotcha">Gotcha</label>
+                <input name="_gotcha" style="display:none" id="message-gotcha">
+                <label class="off-screen" for="message-type">Type</label>
+                <input name="type" style="display:none" value="report" id="message-type">
             </form>
         </div>
     </div>

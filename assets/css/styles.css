@@ -752,7 +752,7 @@ div.header-contact-us {
 
 .cta-white-text {
     color: var(--mod-background);
-    letter-spacing: 0.55px;
+    letter-spacing: -.021em;
     font-weight: 700;
     font-size: 2.5rem;
 }
@@ -1144,11 +1144,6 @@ div.header-contact-us {
     margin-bottom: 100px;
 }
 
-.copyright-text {
-    margin: 0;
-    color: var(--accents-7);
-}
-
 .secondary-section-hero {
     margin-top: var(--header-height);
 }
@@ -1448,7 +1443,7 @@ header {
 }
 
 .footer-footlink {
-    margin-right: 8px;
+    font-size: 14px;
     color: var(--accents-7);
 }
 
@@ -1800,3 +1795,11 @@ header {
     object-fit: cover;
 }
 
+.off-screen {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
