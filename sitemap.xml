@@ -79,14 +79,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://easybase.io/login/</loc>
-    <lastmod>2020-12-10</lastmod>
+    <loc>https://easybase.io/login</loc>
+    <lastmod>2020-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://easybase.io/signup/</loc>
-    <lastmod>2020-12-10</lastmod>
+    <loc>https://easybase.io/signup</loc>
+    <lastmod>2020-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
