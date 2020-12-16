@@ -212,7 +212,9 @@ div.header-contact-us {
 }
 
 .mobile-menu_indicator ion-icon {
-    font-size: 32px;
+    font-size: 21px;
+    width: 21px;
+    height: 21px;
 }
 
 .header_desktop_only {
@@ -475,6 +477,12 @@ div.header-contact-us {
     font-size: 14px;
 }
 
+.banner_title ion-icon {
+    font-size: 14px;
+    height: 14px;
+    width: 14px;
+}
+
 .banner_close {
     display: inline-flex;
     color: var(--accents-5);
@@ -534,6 +542,8 @@ div.header-contact-us {
     color: var(--accents-6);
     vertical-align: middle;
     font-size: 18px;
+    height: 18px;
+    width: 18px;
     margin-right: 6px;
 }
 
@@ -672,7 +682,7 @@ div.header-contact-us {
 
 .hero-button-primary-white ion-icon {
     font-size: 20px;
-    padding-right: 4px;
+    padding-left: 4px;
 }
 
 .splash-ping-root {
@@ -801,7 +811,9 @@ div.header-contact-us {
 }
 
 .section-footer-button ion-icon {
-    margin-top: 1px;
+    font-size: 22px;
+    height: 22px;
+    width: 22px;
 }
 
 .section-footer-button {
@@ -823,11 +835,13 @@ div.header-contact-us {
 }
 
 .section-footer-button-hero {
-    font-size: 1.225rem;
+    font-size: 19px;
 }
 
 .section-footer-button-hero ion-icon {
-    margin-top: 2px !important;
+    font-size: 19px;
+    height: 19px;
+    width: 19px;
 }
 
 .pricing-card {
@@ -857,6 +871,8 @@ div.header-contact-us {
 
 .free-tier-card-list-root ion-icon {
     font-size: 32px;
+    width: 32px;
+    height: 32px;
     margin-right: 10px;
 }
 
@@ -964,7 +980,9 @@ div.header-contact-us {
 }
 
 .content-bullet-list-root article ion-icon {
-    font-size: 24px;
+    font-size: 21px;
+    height: 21px;
+    width: 21px;
     background-color: #000;
     border-radius: 50%;
     color: #fff;
@@ -973,8 +991,8 @@ div.header-contact-us {
 }
 
 .content-bullet-list-root article span {
-    width: 40px;
-    height: 40px;
+    width: 37px;
+    height: 37px;
 }
 
 .content-bullet-list-header-text {
@@ -1802,4 +1820,10 @@ header {
     width:1px;
     height:1px;
     overflow:hidden;
+}
+
+ion-icon[size="large"] {
+    width: 32px !important;
+    height: 32px !important;
+    overflow: visible;
 }
