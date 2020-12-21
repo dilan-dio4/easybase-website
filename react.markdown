@@ -483,7 +483,7 @@ Navigate to the starred route with a signed-in user and we can see we securely a
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react secure records" data-src="/assets/images/posts_images/react-11.png" />
 
-Note that `Frame()` acts just like a plain array, so manipulate it however is necessary, then just call `sync()` to have changes normalized in your remote database. For example, if you want to delete an element you could do `Frame().splice(index, 1)`, `Frame().pop()`, or `deleteRecord( record: Frame(2), tableName: "REACT DEMO" )`. Edit a table record just as you would a plain object with `Frame(2).product_name = "My Product"`.
+Note that `Frame()` acts just like a plain array, so manipulate it however is necessary, then just call `sync()` to have changes normalized in your remote React database. For example, if you want to delete an element you could do `Frame().splice(index, 1)`, `Frame().pop()`, or `deleteRecord( record: Frame(2), tableName: "REACT DEMO" )`. Edit a table record just as you would a plain object with `Frame(2).product_name = "My Product"`.
 
 <br />
 
