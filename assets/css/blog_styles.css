@@ -1003,3 +1003,21 @@ table th {
     height:1px;
     overflow:hidden;
 }
+
+.sectionBox {
+    background-color: #f5f8fa;
+    border: 1px solid #cbd6e2;
+    display: flex;
+    padding: 10px 18px;
+    align-items: center;
+    border-radius: 5px;
+    margin: 25px 0;
+}
+
+.sectionBox p {
+    margin: 0;
+}
+
+.content-text > :target {
+    scroll-margin-top: 3.2em;
+}
