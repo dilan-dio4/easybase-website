@@ -128,7 +128,7 @@ layout: null
                             </div>
                         
                         </div>
-                        <div class="col-md-7 mod-hide-on-mobile no-padding">
+                        <div class="col-md-7 mod-hide-on-mobile no-padding" style="max-width: none !important;">
                             <div class="hero-video-root mb-5" style="overflow: visible;">
                                 <div id="hero-video-raw-replay" style="visibility: hidden; opacity: 0;">
                                     {% assign posts-with-title-image = site.posts | where_exp:"item","item.title_image!=nil" %}
@@ -141,7 +141,7 @@ layout: null
                                     <img id="hero-video-raw-replay-icon" alt="replay icon" src="/assets/images/noun_replay.svg" style="cursor: pointer; height: 89px; width: 89;" />
                                 </div>
                                 
-                                <video id="hero-video-raw" class="lazyload hero-video-width" data-autoplay="" preload="none" muted="" src="https://pitt.box.com/shared/static/hhxlwlnles3jl32wbax5m9bu8i2xhai7.mp4"></video>
+                                <video id="hero-video-raw" class="lazyload" data-autoplay="" preload="none" muted="" src="https://pitt.box.com/shared/static/hhxlwlnles3jl32wbax5m9bu8i2xhai7.mp4"></video>
 
                                 <div id="lds-dual-ring"></div>
                             </div>

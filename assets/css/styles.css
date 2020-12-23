@@ -561,11 +561,13 @@ div.header-contact-us {
 .hero-video-root {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .hero-row-root {
     height: calc(100vh - var(--banner-height));
     align-items: center;
+    flex-wrap: nowrap !important;
 }
 
 .hero-primary-text {
@@ -1113,8 +1115,9 @@ div.header-contact-us {
     .wide-container {
         max-width: 900px;
     }
-    .hero-video-width {
+    .hero-video-root {
         width: 500px;
+        margin-left: 40px;
     }
 }
 
@@ -1122,8 +1125,14 @@ div.header-contact-us {
     .wide-container {
         max-width: 1000px;
     }
-    .hero-video-width {
-        width: 680px;
+    .hero-video-root {
+        width: 600px;
+    }
+}
+
+@media (min-width: 1050px) {
+    .hero-video-root {
+        width: 600px;
     }
 }
 
@@ -1131,20 +1140,28 @@ div.header-contact-us {
     .wide-container {
         max-width: 1250px;
     }
-    .hero-video-width {
-        width: 740px;
+    .hero-video-root {
+        width: 705px;
     }
 }
 
 @media (min-width: 1400px) {
-    .hero-video-width {
+    .hero-video-root {
+        width: 730px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero-video-root {
+        width: 770px;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .hero-video-root {
         width: 790px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .hero-video-width {
-        width: 860px;
+        margin-left: 25px;
     }
 }
 
@@ -1612,20 +1629,26 @@ header {
 }
 
 #hero-video-raw-replay {
-    position: absolute;
-    left: 32%;
-    top: 28%;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: opacity .1s linear;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 45px;
+    width: 100px;
 }
 
 #hero-video-raw {
     position: relative;
     opacity: 0;
-    right: 0%;
+    right: 0;
+    left: 0;
     transition: opacity .1s linear;
+    width: 100%;
 }
 
 .spin-once {
@@ -1686,10 +1709,12 @@ header {
     display: inline-block;
     width: 80px;
     height: 80px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100px;
     opacity: 0;
     transition: opacity .2s linear;
 }
