@@ -1,3 +1,4 @@
 Sitemap: https://easybase.io/sitemap.xml
 User-agent: *
-Disallow:
+Disallow: /unsupported-device
+Disallow: /unsupported-device/
