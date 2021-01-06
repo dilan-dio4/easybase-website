@@ -412,6 +412,7 @@ nav ul li ul li a {
     }
     .brand a {
         background-image: url("../images/logo2_transparent_md.png");
+        background-size: 150px;
     }
     .nav-list {
         background-color: #2c2e2d;
@@ -1024,4 +1025,8 @@ table th {
 
 .content-text > :target {
     scroll-margin-top: 3.2em;
+}
+
+footer {
+    overflow: hidden;
 }
