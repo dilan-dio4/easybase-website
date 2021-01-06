@@ -1852,3 +1852,7 @@ ion-icon[size="large"] {
     height: 32px !important;
     overflow: visible;
 }
+
+.overflow-hidden {
+    overflow: hidden !important;
+}

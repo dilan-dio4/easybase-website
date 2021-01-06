@@ -20,10 +20,12 @@ window.addEventListener("load", function () {
 
     document.getElementsByClassName("mobile-menu_indicator")[0].addEventListener('click', function () {
         document.getElementsByClassName("mobile-nav")[0].classList.toggle("visible");
+        document.body.classList.toggle("overflow-hidden");
     }, false);
 
     document.getElementById("icon-close-mobile").addEventListener('click', function () {
         document.getElementsByClassName("mobile-nav")[0].classList.toggle("visible");
+        document.body.classList.toggle("overflow-hidden");
     }, false);
 
 
