@@ -13,6 +13,10 @@ sidebar_video: https://www.youtube-nocookie.com/embed/-CbruClAFMY
 meta_description: React and React Native continue to be extremely popular frontend frameworks. Your projects will likely need a backend to fetch data from. Let's explore realtime serverless data stores in React.
 ---
 
+*1/5/2021 Update: Featured articles in conclusion.*
+
+<hr />
+
 # Introduction
 
 React is one of the most useful and mature frontend libraries available today. It has given developers the ability to spin-up production applications across a broad range of devices. At some point, developers will likely need to be able to fetch data from a secure, remote source. Manually setting up a backend for a react project can be difficult. You'll probably have to learn DBMS architecture and manually setup your stack. Plus you have to securely handle authentication between the frontend and backend. Furthermore, managing a full-stack platform can be extremely time-consuming and inefficient for teams of less than four developers.
@@ -128,5 +132,7 @@ The `useEasybase()` hook provides access to multiple useful functions. For examp
 # Conclusion
 
 Where to fetch data from in a React project is a common question, especially for people deploying their first production application. We covered how to use Easybase to instantly implement a serverless data platform that can be deployed for free. For more information about [React databases take a look here](/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/), or for information on [user authentication with Easybase head here](/react/2020/11/25/The-Easiest-Way-To-Add-User-Authentication-To-Your-React-Project/).
+
+Also, check out my recently published article in [Hackernoon about writing effective READMEs](https://hackernoon.com/using-reddit-and-twitter-to-make-your-readme-more-effective-ry1s34jw).
 
 For any other questions or concerns feel free to use the 'leave a message' form below! I'll be sure to get back to you. Thanks for reading and have a great day!
