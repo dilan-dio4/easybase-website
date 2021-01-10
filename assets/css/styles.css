@@ -687,54 +687,59 @@ div.header-contact-us {
     padding-left: 4px;
 }
 
-.splash-ping-root {
+.sys-status-root {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 90px;
+    border-radius: var(--mod-radius);
+    border: 1px solid var(--button-border);
+    width: 140px;
 }
 
-.splash-ping-root p {
-    font-family: monospace, monospace;
+.sys-status-root:hover {
+    border-color: var(--flash-container-bg) !important;
+}
+
+.sys-status-root p {
     margin: 0 !important;
-    color: var(--mod-cyan-darker);
-    letter-spacing: 1.15px;
-    font-weight: 100;
+    color: var(--flasher-bg);
+    font-weight: 400;
+    border: 0;
     font-size: 15px;
     position: relative;
-    left: -12px;
+    left: -4px;
 }
 
-.ping-container {
+.flash-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 6px;
+    margin-left: 5px;
 }
 
-.ping-container::after {
+.flash-container::after {
     display: flex;
-    background: #22e2298c;
+    background-color: var(--flash-container-bg);
     border-radius: 50%;
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
     animation: pulsate 2s ease-out;
     animation-iteration-count: infinite;
     opacity: 0.0;
     content: "";
-    z-index: -1;
+    z-index: 2;
     position: relative;
     top: 0;
-    left: -17px;
+    left: -15px;
     right: 0;
     bottom: 0;
 }
 
-.green-flasher {
+.flasher {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--mod-cyan-darker);
+    background-color: var(--flasher-bg);
 }
 
 .section-grey {
@@ -1434,6 +1439,8 @@ div.header-contact-us {
     --mod-form-height: var(--mod-space-medium);
     --highlight-color: #d1ebff;
     --banner-height: 40px;
+    --flash-container-bg: #22e2298c;
+    --flasher-bg: var(--mod-cyan-darker);
 }
 
 /* TABS */
@@ -1563,16 +1570,9 @@ header {
 }
 
 .mobile-nav__menu {
-    margin: 0;
-    padding: 0;
     list-style: none;
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
     list-style-type: none;
-    max-width: 312px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 59px;
-    padding-bottom: 160px;
     height: 100%;
 }
 
@@ -1591,7 +1591,6 @@ header {
     justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
-    height: 90%;
 }
 
 .mobile-nav__social a ion-icon {
