@@ -715,9 +715,13 @@ div.header-contact-us {
     justify-content: center;
     align-items: center;
     margin-left: 5px;
+    margin-right: 19px;
+    width: 20px;
+    height: 20px;
+    position: relative;
 }
 
-.flash-container::after {
+.flasher::after {
     display: flex;
     background-color: var(--flash-container-bg);
     border-radius: 50%;
@@ -728,11 +732,9 @@ div.header-contact-us {
     opacity: 0.0;
     content: "";
     z-index: 2;
-    position: relative;
+    position: absolute;
     top: 0;
-    left: -15px;
-    right: 0;
-    bottom: 0;
+    left: -5px;
 }
 
 .flasher {
