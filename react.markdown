@@ -7,7 +7,7 @@ author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for EasyBase. He has previously written and contributed to various tech-related publications.
 sidebar_video: https://www.youtube-nocookie.com/embed/-CbruClAFMY
 tags: React
-meta_description: Full walkthrough of React & React Native integration with Easybase, featuring user authentication, visual queries, and serverless database.
+meta_description: Comprehensive tutorial on using Easybase with React and React Native, featuring user authentication, visual queries, and serverless database.
 ---
 
 ### Table of Contents
@@ -25,9 +25,11 @@ meta_description: Full walkthrough of React & React Native integration with Easy
 
 ## Introduction
 
-Since Easybase launched back in 2018, the platform's integration with React and React Native has grown immensely. The piece will serve as a comprehensive walk through of how developers can use the product to implement serverless capabilities to their React and React Native projects. Let's walkthrough deploying an application from scratch with Easybase. The example app here will be a product view, with user authentication and a private user database. Authenticated users will be able to '⭐' products and view them privately.
+Since Easybase launched back in 2018, the platform's integration with React and React Native has grown immensely. This piece will serve as a comprehensive walkthrough of how developers can use Easybase to implement [serverless](https://hackernoon.com/what-is-serverless-architecture-what-are-its-pros-and-cons-cc4b804022e9) capabilities such as login authentication and a cloud database. These modules are not apart of vanilla React, but by using the `easybase-react` library you can create **scalable**, **production-ready** apps without worrying about security, session cache, and user token administration. The package will handle the annoying stuff for you!
 
-The full source code for this project is available on [Github](https://github.com/easybase/example-react-project). The code snippets below don't include styling for the sake of brevity, but the styling in the screenshots are available in [App.css](https://github.com/easybase/example-react-project/blob/master/src/App.css).
+Let's walk through creating an application from scratch with Easybase. The example app here will be a product view, with user authentication and a private user database. Authenticated users will be able to '⭐' products and view them privately.
+
+The **full source code** for this project is available on [Github](https://github.com/easybase/example-react-project). The code snippets below don't include styling for the sake of brevity, but the styling in the screenshots are available in [App.css](https://github.com/easybase/example-react-project/blob/master/src/App.css).
 
 <br />
 
@@ -37,11 +39,11 @@ After [creating an account](https://app.easybase.io/?view=signup), add a new tab
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react creating account" data-src="/assets/images/posts_images/react-1.png" />
 
-This will open up a blank table. Feel free to add some records now manually, but we'll also implement this from the front-end of our application. Here's a table for reference:
+This will open up a **blank** table. Feel free to add some records now manually, but we'll also implement this from the front-end of our application. Here's a table for reference:
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react blank table" data-src="/assets/images/posts_images/react-2.png" />
 
-Now, head to the projects tab (in the left-side drawer) and create a new project with a unique ID. It is in this menu that the permissions of the project can be configured. Created users and their corresponding attributes can be viewed in the 'Users' tab.
+Now, head to the projects tab (in the left-side drawer) and create a new project with a unique ID. It is in this menu that the *permissions* of the project can be configured. Created users and their corresponding attributes can be viewed in the 'Users' tab.
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react new project" data-src="/assets/images/posts_images/react-3.png" />
 
@@ -53,13 +55,13 @@ After this is complete, there are two more items to be completed on this page.
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybaee react ebconfig token" data-src="/assets/images/posts_images/react-4.png" />
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react project permissions" data-src="/assets/images/posts_images/react-5.png" />
 
-We'll get to fetching authenticated user-corresponding records later, but for now anyone can view **just** the products, **REACT DEMO**, table.
+We'll get to fetching authenticated user-corresponding records later, but for now, anyone can view **just** the products, **REACT DEMO**, table.
 
 <br />
 
 ## React Configuration
 
-Navigate to your React project. If you have do not have one, they are easy to setup. Don't worry if you're unfamiliar with creating react and react native projects. If you don't have Node and npm installed on your machine, [download and install them here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). From there, it's as simple as opening up your terminal and doing `npx create-react-app ProjectName` for React or `npx create-react-native-app NativeProjectName` for React Native. Let this run through (it might take a couple minutes). The output project structure should look something like this:
+Navigate to your React project. If you have do not have one, they are easy to setup. Don't worry if you're unfamiliar with creating React and React Native projects. If you don't have Node and npm installed on your machine, [download and install them here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). From there, it's as simple as **opening up your terminal** and doing `npx create-react-app ProjectName` for React or `npx create-react-native-app NativeProjectName` for React Native. Let this run through (it might take a couple of minutes). The output project structure should look something like this:
 
 ```
 ├── README.md
@@ -73,7 +75,7 @@ Navigate to your React project. If you have do not have one, they are easy to se
     └── index.js
 ```
 
-Open up terminal and navigate to your project root folder and install the `easybase-react` library:
+Open up a terminal and navigate to your project root folder and install the `easybase-react` library:
 
 ```zsh
 npm install easybase-react
@@ -128,7 +130,7 @@ function App() {
 export default App;
 ```
 
-Note that we passed the project's *ebconfig* token as a prop to the `EasybaseProvider`. Just like that, you can access full serverless functionality in a React-lifecycle friendly and stateful manner!
+Note that we passed the project's *ebconfig* token as a prop to the `EasybaseProvider`. Just like that, you can access **full serverless functionality** in a React-lifecycle friendly and stateful manner!
 
 <br />
 
@@ -176,7 +178,7 @@ function App() {
 export default App;
 ```
 
-For reference, here's a screenshot of the current application before we implement data fetching and user authentication:
+For reference, here's a screenshot of the current application **before** we implement data fetching and user authentication:
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react current application" data-src="/assets/images/posts_images/react-6.png" />
 
@@ -222,11 +224,11 @@ function Home() {
 
 When our Home component first mounts in `useEffect()`, the frame is configured to limit the returned documents to 10 with an offset of 0. This is the limit and offset of documents that will be retrieved from your database. *limit* and *offset* are useful for adding pagination to your React project. Also, we must specify which table we are accessing at any given point. In this case, we are accessing the database available to guests in **REACT DEMO**.
 
-We then map `Frame()` to a custom card-like component. For readability, I didn't include the CSS so this might not look too pretty but feel free to style this component yourself. This custom component features all of our table attributes, and clicking the image brings you to that product's page. The entire source for this project [including CSS] is available on [Github](https://github.com/easybase/example-react-project).
+We then map `Frame()` to a custom *card-like* component. For readability, I didn't include the CSS so this might not look too pretty but feel free to style this component yourself. This custom component features all of our table attributes, and clicking the image brings you to that product's page. The entire source for this project (including CSS) is available on [Github](https://github.com/easybase/example-react-project).
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react card components" data-src="/assets/images/posts_images/react-7.png" />
 
-`Frame()` returns an array of objects. You can also do `Frame(index)` to access specific elements. Calling `sync()` will pull down any changes from other sources and, if a user is authenticated with permissions, normalize any local changes made up to the cloud.
+`Frame()` returns an array of objects. You can also do `Frame(index)` to access specific elements. **Calling `sync()` will pull down any changes from other sources and, if a user is authenticated with permissions, normalize any local changes made up to the cloud**.
 
 The lifecycle of `Frame()` and related function:
 
@@ -257,10 +259,10 @@ useFrameEffect() runs
 
 Now that guests can view the **REACT DEMO** table. Let's implement a workflow for those same users to be able to sign up/sign in to your application. This will allow for a few things:
 
-1. Read/write permissions to tables detailed in 'Projects' menu
+1. Read/write permissions to tables detailed in the 'Projects' menu
 2. Writing records that are specifically assigned to that user, so when this user signs in we will automatically only retrieve records that correspond to that user when they navigate to `/starred`.
 
-Let's add a component called `<AuthButton />` to the root App. This component will have two features. One is a button in the top-right corner of the app that says 'Sign In' or 'Sign Out' based on the user's state. The other being a modal that will appear above our application when a user clicks 'Sign In'. The modal will feature a username and password text field and buttons to sign in or sign up. Use the `isUserSignedIn()` function to conditionally render components and check the user's current authentication status.
+Let's add a component called `<AuthButton />` to the root App. This component will have two features. One is a button in the top-right corner of the app that says 'Sign In' or 'Sign Out' based on the user's state. The other being a modal that will appear above our application when a user clicks 'Sign In'. The modal will feature a username and password text field and buttons to sign in or sign up. **Use the `isUserSignedIn()` function to conditionally render components and check the user's current authentication status**.
 
 Here's an implementation of this workflow:
 
@@ -350,7 +352,7 @@ function AuthButton() {
 }
 ```
 
-Just like that, your application supports a stateful user authentication workflow. The `signIn`, `signOut`, and `signUp` function are asynchronous, so you can use `await` or `.then` to handle the completion of these events.
+Just like that, your application supports a *stateful* user authentication workflow. The `signIn`, `signOut`, and `signUp` function are asynchronous, so you can use `await` or `.then` to handle the completion of these events.
 
 You can also assign user attributes which can be seen when navigating to the 'Users' tab in easybase.io and expanding one of the rows. These can be assigned in a couple of ways.
 
@@ -359,6 +361,8 @@ You can also assign user attributes which can be seen when navigating to the 'Us
 3. If a user is signed in, `setUserAttribute("emailAttribute", "bob@gmail.com")`
 
 You can then retrieve these objects programmatically with `getUserAttributes()`. **User attributes are not for storing user-corresponding application data**, rather use it for simple metadata such as *createdAt* or *firstName*.
+
+For more information on implementing login authentication in React Native, take a look at [Michael's article in freeCodeCamp](https://www.freecodecamp.org/news/build-react-native-app-user-authentication/).
 
 <br />
 
@@ -375,7 +379,7 @@ You can then retrieve these objects programmatically with `getUserAttributes()`.
 </p>
 </div>
 
-A common situation for applications is storing data that corresponds to the currently signed-in user. For our example app, users should be able to save products for later in the `/starred` route. Let's create a new table called 'USER STARS' that will have a similar structure, but with user correspondence.
+A common situation for applications is storing data that corresponds to the **currently signed-in user**. For our example app, users should be able to save products for later in the `/starred` route. Let's create a new table called 'USER STARS' that will have a similar structure, but with user correspondence.
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react user database" data-src="/assets/images/posts_images/react-8.png" />
 
@@ -383,7 +387,7 @@ Give your project permissions to read and write 'User associated records'. **Be 
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react read and write" data-src="/assets/images/posts_images/react-9.png" />
 
-Let's edit our card-like component to handle a user click. There's two ways to add a record to table with the `useEasybase()` hook. Pushing a new records to a configured `Frame()` followed by calling `sync()` or using the `addRecord()` function where we can specify the table on-site. Note that for uploading media, use either `updateRecordFile()`, `updateRecordImage()`, or `updateRecordVideo()`. Here's changes to our `Home` component using the `addRecord()` function so signed-in users can star products:
+Let's edit our card-like component to handle a user click. There's two ways to add a record to table with the `useEasybase()` hook. Pushing a new records to a configured `Frame()` followed by calling `sync()` or using the `addRecord()` function where we can specify the table *on-site*. Note that for uploading media, use either `updateRecordFile()`, `updateRecordImage()`, or `updateRecordVideo()`. Here's changes to our `Home` component using the `addRecord()` function so signed-in users can star products:
 
 ```jsx
 function Home() {
@@ -428,7 +432,7 @@ Now when a signed-in user stars a product, we can refresh our table and see a ne
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react associated users" data-src="/assets/images/posts_images/react-10.png" />
 
-Detailed in this section is the user that starred the item. Now let's see how easy it is to query for just these records in the `/starred` route. Remember we set permissions to only be able to read user-associated records from **USER STARS**. So, we just need to set up a standard `Frame()` configuration and map theme to some component. Make a new component called `Starred` that will go in the `/starred` route.
+Detailed in this section is the user that starred the item. Now let's see how easy it is to *query* for just these records in the `/starred` route. Remember we set permissions to only be able to read user-associated records from **USER STARS**. So, we just need to set up a standard `Frame()` configuration and map theme to some component. Make a new component called `Starred` that will go in the `/starred` route.
 
 ```jsx
 function App() {
@@ -479,7 +483,7 @@ function Starred() {
 }
 ```
 
-Navigate to the starred route with a signed-in user and we can see we securely and successfully display records that the user has starred.
+Navigate to the starred route with a signed-in user and we can see we **securely** and **successfully** display records that the user has starred.
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react secure records" data-src="/assets/images/posts_images/react-11.png" />
 
@@ -496,7 +500,7 @@ Note that `Frame()` acts just like a plain array, so manipulate it however is ne
 </p>
 </div>
 
-One of the most accessible features of Easybase is the ability to build queries visually, then call them by name in code. Open up your **REACT DEMO** table and navigate to the 'Query' tab. I'm going to build a simple query that filters for products with a price of over $100. Click the blue 'Save' button and save the query with the name "price filter".
+One of the most *accessible* features of Easybase is the ability to **build queries visually, then call them by name in code**. Open up your **REACT DEMO** table and navigate to the 'Query' tab. I'm going to build a simple query that filters for products with a price of over $100. Click the blue 'Save' button and save the query with the name "price filter".
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-12.png" />
 
@@ -530,21 +534,19 @@ function FilterExample() {
 }
 ```
 
-You can build the query visually, then call it by name in code!
-
-I'm using the same card-like component from our `Home` component. Here's a screenshot of my web app for reference ([full source available here](https://github.com/easybase/example-react-project)):
+I'm using the same *card-like* component from our `Home` component. Here's a screenshot of my web app for reference ([full source available here](https://github.com/easybase/example-react-project)):
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual component" data-src="/assets/images/posts_images/react-13.png" />
 
-Note that there are other optional parameters for the `Query()` function such as *sortBy* and *limit*. One of the most powerful options is the ability to add *customQuery* object to overwrite the values detailed in the visual query. The structure and function of the query stay the same, but you can edit the values that are queried by. For example, if we wanted to look for products with a price of over $12 rather than $100. We can set the *customQuery* parameter to `{ price:  12 }` programmatically. This is suited well for situations in which you have conditional options in your interface that affect the current query.
+Note that there are other *optional* parameters for the `Query()` function such as *sortBy* and *limit*. One of the most **powerful** options is the ability to add a *customQuery* object to overwrite the values detailed in the visual query. The structure and function of the query stay the same, but you can edit the values that are queried. For example, if we wanted to look for products with a price of over $12 rather than $100. We can set the *customQuery* parameter to `{ price:  12 }` programmatically. This is suited well for situations in which you have **conditional options in your interface that affect the current query**.
 
 <br />
 
 ## Conclusion
 
-Deploying a serverless React or React Native application is made accessible with Easybase.io + `easybase-react`. Take a look at the [Github repo](https://github.com/easybase/easybase-react) for some more information on usage and installation. We successfully created a web app that features a backend database, user authentication, sign in/sign up workflow, easy-to-use visual queries, and secure user-corresponding backend storage. 
+Deploying a serverless React or React Native application is made accessible with Easybase.io + `easybase-react`. Take a look at the [Github repo](https://github.com/easybase/easybase-react) for some more information on *usage* and *installation*. We **successfully created a web app** that features a backend database, user authentication, sign in/sign up workflow, easy-to-use visual queries, and secure user-corresponding backend storage. 
 
-Thanks a lot for reading! Please be sure to share this article using the social buttons below. Regarding any questions or concerns, feel free to use the 'Leave a message' form.
+Thanks a lot for reading! Please be sure to **share this article** using the social buttons below. Regarding any questions or concerns, feel free to use the 'Leave a message' form.
 
 **Read more**:
 
