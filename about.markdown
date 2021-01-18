@@ -1,6 +1,6 @@
 ---
 layout: blog
-title:  Our Mission
+title:  Our Mission - Goals, Achievements and Moving Forward
 date:   2020-07-08 10:39:03 -0400
 categories: about
 title_image: https://images.unsplash.com/photo-1577100078279-b3445eae827c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9

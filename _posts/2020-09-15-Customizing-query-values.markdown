@@ -1,6 +1,6 @@
 ---
 layout: blog
-title:  Customizing Query Values
+title:  Customizing Query Values Programmatically With Easybase
 date:   2020-09-15 01:39:03 -0400
 categories: about
 tags: Home Blog EasyBase
