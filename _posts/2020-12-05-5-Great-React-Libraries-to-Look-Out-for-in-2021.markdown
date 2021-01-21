@@ -5,10 +5,10 @@ date:   2020-12-05 11:25:15 -0400
 categories: react
 title_image: https://www.freecodecamp.org/news/content/images/2020/02/Ekran-Resmi-2019-11-18-18.08.13.png
 author_name: Ryan Parker
-tags: Home React EasyBase
+tags: Home React Easybase
 author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&q=80&fm=jpg&cs=tinysrgb&w=600&h=600&ixid=eyJhcHBfaWQiOjF9&fit=crop&crop=focalpoint&fp-x=0.51&fp-y=.375&fp-z=1.85
 author_name: Ryan Parker
-author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for EasyBase. He has previously written and contributed to various tech-related publications.
+author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 sidebar_video: https://www.youtube-nocookie.com/embed/-CbruClAFMY
 meta_description: React continues to be the most popular front-end framework, and for good reason. Let's take a look at 5 libraries that may just be the next big thing in 2021!
 ---

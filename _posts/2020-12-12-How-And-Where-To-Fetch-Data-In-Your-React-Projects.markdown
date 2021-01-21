@@ -5,10 +5,10 @@ date:   2020-12-12 01:20:00 -0400
 categories: react
 title_image: https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/15493/0712-Bad_Practices_in_Database_Design_-_Are_You_Making_These_Mistakes_Dan_Social-754bc73011e057dc76e55a44a954e0c3.png
 author_name: Ryan Parker
-tags: Home React EasyBase
+tags: Home React Easybase
 author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&q=80&fm=jpg&cs=tinysrgb&w=600&h=600&ixid=eyJhcHBfaWQiOjF9&fit=crop&crop=focalpoint&fp-x=0.51&fp-y=.375&fp-z=1.85
 author_name: Ryan Parker
-author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for EasyBase. He has previously written and contributed to various tech-related publications.
+author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 sidebar_video: https://www.youtube-nocookie.com/embed/-CbruClAFMY
 meta_description: React and React Native continue to be extremely popular frontend frameworks. Your projects will likely need a backend to fetch data from. Let's explore realtime serverless data stores in React.
 ---

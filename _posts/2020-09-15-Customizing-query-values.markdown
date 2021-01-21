@@ -3,27 +3,27 @@ layout: blog
 title:  Customizing Query Values Programmatically With Easybase
 date:   2020-09-15 01:39:03 -0400
 categories: about
-tags: Home Blog EasyBase
+tags: Home Blog Easybase
 author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&q=80&fm=jpg&cs=tinysrgb&w=600&h=600&ixid=eyJhcHBfaWQiOjF9&fit=crop&crop=focalpoint&fp-x=0.51&fp-y=.375&fp-z=1.85
 author_name: Ryan Parker
-author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for EasyBase.
+author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase.
 sidebar_video: https://www.youtube-nocookie.com/embed/-CbruClAFMY
 ---
-#### Customizing query values is a powerful way to combine EasyBase's Visual Query Building with production code.
+#### Customizing query values is a powerful way to combine Easybase's Visual Query Building with production code.
 <br />
 After creating an integration with a static query, developers will often want to be able to customize the values in that query. These variables will often be determined at runtime. Custom queries can be passed into integration requests to satisfy this requirement.
 
 Consider the collection 'Students':
-<img data-src="/assets/images/posts_images/customize_1.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
+<img data-src="/assets/images/posts_images/customize_1.png" alt="Customizing Easybase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 
 A developer has an application that features two text boxes and wants to be able to query collection by age and name, based on what users enter into the text boxes.
 
 Assume that you have a **"GET"** integration with the following query:
 
-<img data-src="/assets/images/posts_images/customize_2.png" alt="Customizing EasyBase Query Values 2" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
+<img data-src="/assets/images/posts_images/customize_2.png" alt="Customizing Easybase Query Values 2" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 <br />
 <br />
-<img data-src="/assets/images/posts_images/customize_3.png" alt="Customizing EasyBase Query Values 3" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
+<img data-src="/assets/images/posts_images/customize_3.png" alt="Customizing Easybase Query Values 3" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 
 Calling this integration with Python:
 ```python
@@ -76,10 +76,10 @@ Custom query parameters are supported by any integration that supports static qu
 
 **Remember, you can always use the integration popup to design your integration, including custom queries, in your preferred language.**
 
-<img data-src="/assets/images/posts_images/customize_4.png" alt="Customizing EasyBase Query Values 3" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
+<img data-src="/assets/images/posts_images/customize_4.png" alt="Customizing Easybase Query Values 3" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 <br />
 <br />
 <br />
 <br />
 
-#### **Note: the format of the values in the custom query object is quite flexible. More information can be found [here](/about/2020/09/15/EasyBase-data-types/)**
+#### **Note: the format of the values in the custom query object is quite flexible. More information can be found [here](/about/2020/09/15/Easybase-data-types/)**

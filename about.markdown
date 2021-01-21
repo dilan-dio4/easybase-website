@@ -7,28 +7,28 @@ title_image: https://images.unsplash.com/photo-1577100078279-b3445eae827c?ixlib=
 tags: About
 author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&q=80&fm=jpg&cs=tinysrgb&w=600&h=600&ixid=eyJhcHBfaWQiOjF9&fit=crop&crop=focalpoint&fp-x=0.51&fp-y=.375&fp-z=1.85
 author_name: Ryan Parker
-author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for EasyBase. He has previously written and contributed to various tech-related publications.
+author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 sidebar_video: https://www.youtube-nocookie.com/embed/-CbruClAFMY
-meta_description: Learn about how EasyBase is the superior alternative to traditional DBMS infrastructures. EasyBase makes high-performance database administration and integration painless and cost-effective.
+meta_description: Learn about how Easybase is the superior alternative to traditional DBMS infrastructures. Easybase makes high-performance database administration and integration painless and cost-effective.
 ---
-### EasyBase makes high-performance database administration and integration painless and cost-effective.
+### Easybase makes high-performance database administration and integration painless and cost-effective.
 
 <br />
 
-Cloud databases are all the rage nowadays. Unfortunately, many of the mainstream database services are hard to configure and maintain. Without experience in programming and training in DBMS, many people find it difficult to pick the right database service for their project. EasyBase makes it easy to integrate your database with your application/project and track analytics.
+Cloud databases are all the rage nowadays. Unfortunately, many of the mainstream database services are hard to configure and maintain. Without experience in programming and training in DBMS, many people find it difficult to pick the right database service for their project. Easybase makes it easy to integrate your database with your application/project and track analytics.
 
 **Beyond optimizing performance and cost, our service fulfills three objectives:**
 
 <br />
 
 # 1. Application Integration
-Your applications and projects are no longer bottlenecked by the upkeep of individual cloud instances and Database-as-a-service policies. EasyBase will make your experience connecting with your data much more pleasant. Simply create a table, add some data, and add an integration. Each integration has its own URL to connect to. Also, you have the option to add a password to any integration for extra security.
+Your applications and projects are no longer bottlenecked by the upkeep of individual cloud instances and Database-as-a-service policies. Easybase will make your experience connecting with your data much more pleasant. Simply create a table, add some data, and add an integration. Each integration has its own URL to connect to. Also, you have the option to add a password to any integration for extra security.
 
 We provide packages for HTML/JS, Node.js, and Python. None of these packages are required and Easybase can be integrated with any language. We even have an integration builder with instructions for your preferred language.
 
-<img data-src="/assets/images/posts_images/customize_4.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
+<img data-src="/assets/images/posts_images/customize_4.png" alt="Customizing Easybase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 
-Take a look at [this video](https://youtube.com) for a walkthrough on how to integrate EasyBase into a react project.
+Take a look at [this video](https://youtube.com) for a walkthrough on how to integrate Easybase into a react project.
 
 <br />
 
@@ -38,7 +38,7 @@ Each integration will automatically track usage information including MB's trans
 The ability to observe live analytic data is a requirement for many users and we deliver an easy-to-use and effective way to sort through individual integration statistics.
 
 
-<img data-src="/assets/images/posts_images/about_1.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
+<img data-src="/assets/images/posts_images/about_1.png" alt="Customizing Easybase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 
 
 <br />
@@ -47,7 +47,7 @@ The ability to observe live analytic data is a requirement for many users and we
 Without formal DBMS training and specification on database query language, it can be difficult, especially from your project. Our approach to querying the database makes this process **significantly** easier than manually database syntax.
 
 First, create a query with static values and import it into an integration.
-<img data-src="/assets/images/posts_images/customize_2.png" alt="Customizing EasyBase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
+<img data-src="/assets/images/posts_images/customize_2.png" alt="Customizing Easybase Query Values 1" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 
 
 Second, when calling this integration in your project, pass a custom query object.
@@ -68,7 +68,7 @@ Read more about custom query values **[here](/about/2020/09/15/Customizing-query
 
 ## **Try it free!**
 
-For more information on how EasyBase works or how it can apply to your projects, take a look at the video featured on the right or take a look at some of the other blog posts. EasyBase's free tier is a great way to give the service a try. *No payment method is required!*
+For more information on how Easybase works or how it can apply to your projects, take a look at the video featured on the right or take a look at some of the other blog posts. Easybase's free tier is a great way to give the service a try. *No payment method is required!*
 
 The free tier gives users a $10 monthly quota that resets at the end of each billing period.
 
