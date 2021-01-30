@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/assets/css/lightbox.min.css">
     <link rel="stylesheet" href="/assets/css/custom_bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/bootstrap-material-design.min.css">
-    <link rel="stylesheet" href="/assets/css/blog_styles.css" />
+    <link rel="stylesheet" href="/assets/css/blog_styles.min.css" />
     
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="alternate icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -140,23 +140,23 @@
                 </div>
                 <div class="col-lg-4 pl-sm-5">
                     <div class="sidebar-cards-root">
-                        <div class="card-root">
-                            <h4 class="text-center mb-3">Featured Articles</h4>
-                            {% for post in site.posts limit:5 %}
-                                {% if post.title_image %}
-                                <a href={{ post.url }} class="w-100">
-                                    <div class="d-flex w-100 featured-article my-2">
-                                        <img data-src="{{ post.title_image }}" class="lazyload" alt="{{ post.title }} featured article" />
-                                        <span>
-                                            <p>{{ post.title }}</p>
-                                            <small>{{ post.date | date_to_long_string }}</small>
-                                        </span>
-                                    </div>
-                                </a>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
                         {% if page.title != 404 and page.title != "Easybase Blog by Ryan Parker" %}
+                            <div class="card-root">
+                                <h4 class="text-center mb-3">Featured Articles</h4>
+                                {% for post in site.posts limit:6 %}
+                                    {% if post.title_image_sm and post.title != page.title %}
+                                    <a href={{ post.url }} class="w-100">
+                                        <div class="d-flex w-100 featured-article my-2">
+                                            <img data-src="{{ post.title_image_sm }}" class="lazyload" alt="{{ post.title }} featured article" width="90" height="45" />
+                                            <span>
+                                                <p>{{ post.title }}</p>
+                                                <small>{{ post.date | date_to_long_string }}</small>
+                                            </span>
+                                        </div>
+                                    </a>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
                             <div class="card-root d-none d-lg-block">
                                 <div class="author-root">
                                     <img class="lazyload author-image" data-src={{ page.author_image }} alt="Easybase blog page author image" />

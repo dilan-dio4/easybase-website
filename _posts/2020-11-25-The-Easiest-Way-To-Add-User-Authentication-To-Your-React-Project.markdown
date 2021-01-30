@@ -4,6 +4,7 @@ title:  The Easiest Way To Add User Authentication To Your React Project
 date:   2020-11-25 11:50:03 -0400
 categories: react
 title_image: https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-1.2.1&q=80&fm=jpg&cs=tinysrgb&w=750&h=550&fit=crop&crop=focalpoint&fp-x=0.6
+title_image_sm: https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-1.2.1&q=80&fm=jpg&cs=tinysrgb&w=90&fp-x=0.6
 author_name: Ryan Parker
 tags: Home React Easybase
 author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&q=80&fm=jpg&cs=tinysrgb&w=600&h=600&ixid=eyJhcHBfaWQiOjF9&fit=crop&crop=focalpoint&fp-x=0.51&fp-y=.375&fp-z=1.85

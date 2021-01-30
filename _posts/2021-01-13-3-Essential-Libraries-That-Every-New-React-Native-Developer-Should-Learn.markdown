@@ -4,6 +4,7 @@ title: 3 Libraries That Every New React Native Developer Should Learn
 date: 2021-01-13 12:00:15 -0400
 categories: react
 title_image: https://images.unsplash.com/photo-1531988042231-d39a9cc12a9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80
+title_image_sm: https://images.unsplash.com/photo-1531988042231-d39a9cc12a9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=90&q=80
 author_name: Ryan Parker
 tags: Home React Easybase
 author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&q=80&fm=jpg&cs=tinysrgb&w=600&h=600&ixid=eyJhcHBfaWQiOjF9&fit=crop&crop=focalpoint&fp-x=0.51&fp-y=.375&fp-z=1.85
