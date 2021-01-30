@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: How To Visually Query Your Databnase
+title: How To Visually Query Your Database
 date: 2021-01-21 08:00:15 -0400
 categories: about
 title_image: https://images.unsplash.com/photo-1531988042231-d39a9cc12a9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80

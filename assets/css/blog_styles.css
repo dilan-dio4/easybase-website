@@ -1,15 +1,6 @@
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 300;
-    src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4AMP6lQ.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
@@ -30,6 +21,60 @@
     font-style: normal;
     font-weight: 700;
     src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/ibmplexsans/v8/zYX-KVElMYYaJe8bpLHnCwDKhdTuF6ZJW9XjDg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/ibmplexsans/v8/zYX7KVElMYYaJe8bpLHnCwDKhdTmrINcdvfuJGl18Q.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/ibmplexsans/v8/zYXgKVElMYYaJe8bpLHnCwDKhdHeFaxOedc.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/ibmplexsans/v8/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdP3pBms.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/ibmplexsans/v8/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIFsdP3pBms.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: italic;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/ibmplexsans/v8/zYX7KVElMYYaJe8bpLHnCwDKhdTm5IVcdvfuJGl18Q.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     font-display: swap;
 }
@@ -144,12 +189,6 @@ body {
     height: 93%;
 }
 
-.splash-buttons {
-    display: flex;
-    flex-direction: row;
-    font-family: 'Roboto', sans-serif;
-}
-
 .splash-button-try {
     padding-left: 35px !important;
     padding-right: 35px !important;
@@ -158,23 +197,30 @@ body {
     margin-right: 30px;
 }
 
-.about-easybase-card-root, .author-card-root {
+.card-root {
     background-color: #f5f8fa;
     border: 1px solid #cbd6e2;
     display: flex;
     flex-direction: column;
-    padding: 40px 18px;
+    padding: 15px 18px;
     align-items: center;
     border-radius: 5px;
+    margin-bottom: 85px;
 }
 
-.about-easybase-card-root h2 {
+.sticky-sidebar {
+    padding: 40px 18px;
+    position: sticky;
+    top: 110px;
+}
+
+.sticky-sidebar h2 {
     font-size: 29px;
     letter-spacing: -.001em;
     font-weight: 400;
 }
 
-.about-easybase-card-root h3 {
+.sticky-sidebar h3 {
     font-weight: 400;
     font-size: 18px;
 }
@@ -210,17 +256,18 @@ body {
 .post-title {
     font-weight: 800;
     font-size: 46px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: sans-serif;
     padding-bottom: 20px;
 }
 
 .content-text {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 18px;
 }
 
 .content-text p {
-    line-height: 30px;
+    line-height: 29px;
+    margin-bottom: 1.9rem;
 }
 
 .content-text h1 {
@@ -536,27 +583,6 @@ a:hover {
 .a-button {
     border: none !important;
     display: flex;
-}
-
-.sticky-sidebar {
-    position: sticky;
-    top: 110px;
-    margin-top: 85px;
-    background-color: #f5f8fa;
-    border: 1px solid #cbd6e2;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.video-root {
-    padding: 30px 0;
-}
-
-.sticky-card-title {
-    font-weight: 400;
-    text-align: center;
 }
 
 .blog-highlight {
@@ -951,7 +977,6 @@ a:hover {
 
 div.highlighter-rouge {
     background-color: transparent !important;
-
 }
 
 #message input[type="text"], #message input[type="email"], #message input[type="tel"], #message input[type="url"], #message textarea {
@@ -1001,12 +1026,12 @@ table th {
 }
 
 .off-screen {
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .sectionBox {
@@ -1023,10 +1048,40 @@ table th {
     margin: 0;
 }
 
-.content-text > :target {
+.content-text> :target {
     scroll-margin-top: 3.2em;
 }
 
 footer {
     overflow: hidden;
+}
+
+.featured-article p {
+    font-size: 12px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    margin: 0 !important;
+}
+
+.featured-article span {
+    margin-left: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.featured-article small {
+    font-size: 10px;
+    color: black;
+}
+
+.featured-article img {
+    width: 90px;
+    height: 45px;
+    min-width: 90px;
+    min-height: 45px;
+    object-fit: cover;
+    border-radius: 2px;
 }

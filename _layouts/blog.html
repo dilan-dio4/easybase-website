@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/assets/css/custom_bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/bootstrap-material-design.min.css">
     <link rel="stylesheet" href="/assets/css/blog_styles.css" />
-
+    
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="alternate icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="alternate icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -140,7 +140,32 @@
                 </div>
                 <div class="col-lg-4 pl-sm-5">
                     <div class="sidebar-cards-root">
-                        <div class="about-easybase-card-root">
+                        <div class="card-root">
+                            <h4 class="text-center mb-3">Featured Articles</h4>
+                            {% for post in site.posts limit:5 %}
+                                {% if post.title_image %}
+                                <a href={{ post.url }} class="w-100">
+                                    <div class="d-flex w-100 featured-article my-2">
+                                        <img data-src="{{ post.title_image }}" class="lazyload" alt="{{ post.title }} featured article" />
+                                        <span>
+                                            <p>{{ post.title }}</p>
+                                            <small>{{ post.date | date_to_long_string }}</small>
+                                        </span>
+                                    </div>
+                                </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% if page.title != 404 and page.title != "Easybase Blog by Ryan Parker" %}
+                            <div class="card-root d-none d-lg-block">
+                                <div class="author-root">
+                                    <img class="lazyload author-image" data-src={{ page.author_image }} alt="Easybase blog page author image" />
+                                </div>
+                                <h4 class="author-name">Written By <a href="/blog/">{{ page.author_name }}</a></h4>
+                                <p class="author-description">{{page.author_description}}</p>
+                            </div>
+                        {% endif %}
+                        <div class="card-root sticky-sidebar mb-5">
                             <h2 class="text-center">Time to go <b>serverless</b></h2>
                             <p class="about-easybase-card-content mb-4 mt-3 text-center">Try deploying your next project with Easybase's premier serverless platform.</p>
                             <div class="about-easybase-checks">
@@ -157,35 +182,12 @@
                                     <p>Instant Setup</p>
                                 </span>
                             </div>
-                            <div class="splash-buttons">
+                            <div class="d-flex">
                                 <a class="a-button" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;">
                                     <button type="button" class="btn btn-raised btn-success splash-button-try">Sign Up</button>
                                 </a>
                                 <a class="a-button" href="/">
                                     <button type="button" class="btn btn-outline-secondary">Learn More</button>
-                                </a>
-                            </div>
-                        </div>
-                        {% if page.title != 404 and page.title != "Blog" %}
-                            <div class="author-card-root d-none d-lg-block">
-                                <div class="author-root">
-                                    <img class="lazyload author-image" data-src={{ page.author_image }} alt="Easybase blog page author image" />
-                                </div>
-                                <h4 class="author-name">Written By <a href="/blog/">{{ page.author_name }}</a></h4>
-                                <p class="author-description">{{page.author_description}}</p>
-                            </div>
-                        {% endif %}
-                        <div class="sticky-sidebar mb-5">
-                            <!-- <h4 class="sticky-card-title pt-4 px-3">Time to <span class="blog-highlight"><b>empower</b></span> your <b>apps</b></h4> -->
-                            <div class="video-root">
-                                <iframe title="Easybase youtube walkthrough" width="320" height="205" class="lazyload" data-src="{{ page.sidebar_video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <div class="splash-buttons mb-4">
-                                <a class="a-button" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;">
-                                    <button type="button" class="btn btn-raised btn-success splash-button-try">Sign Up</button>
-                                </a>
-                                <a class="a-button" href="/">
-                                    <button type="button" class="btn btn-outline-secondary">Request Demo</button>
                                 </a>
                             </div>
                         </div>
