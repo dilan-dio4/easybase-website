@@ -3,7 +3,7 @@ layout: blog
 title: What Is a Serverless Application? The Benefits of Going Serverless
 date: 2021-01-30 11:20:00 -0400
 categories: about
-title_image: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80
+title_image: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80
 title_image_sm: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=90&q=80
 author_name: Ryan Parker
 tags: Home Blog Easybase
@@ -35,7 +35,7 @@ The traditional architecture of a web or mobile application involves two main co
 
 All of these factors either cost **time or money**. Beyond that, sleight missteps in the manual implementation could lead to a system that is insecure, inefficient, or prone to outages.
 
-<img src="/assets/images/posts_images/serverless-1.png" alt="traditional application infrastructure diagram versus serverless infrastructure" class="custom-lightbox my-3" data-jslghtbx width="100%" />
+<img data-src="/assets/images/posts_images/serverless-1.png" alt="traditional application infrastructure diagram versus serverless infrastructure" class="lazyload custom-lightbox my-3" data-jslghtbx width="100%" />
 
 Serverless technology abstracts all of this overhead away to the *provider*. Your application uses code in the front end to interface with the *serverless* back end. Now, the truth is that there actually is a server being used, but it's the provider's server.
 
@@ -43,7 +43,7 @@ The provider deals with all the drawbacks stated above, instead of you. The deve
 
 Simply put, developers love serverless architecture because it saves them time and money. This results in a programming experience that is *efficient* and *productive*.
 
-<img src="/assets/images/posts_images/serverless-2.png" alt="serverless application infrastructure diagram" class="custom-lightbox my-3" data-jslghtbx width="100%" />
+<img data-src="/assets/images/posts_images/serverless-2.png" alt="serverless application infrastructure diagram" class="lazyload custom-lightbox my-3" data-jslghtbx width="100%" />
 
 One of the most attractive features of serverless and cloud computing, in general, is the **pricing structure**. This type of system generally operates on a pay-as-you-go model. During periods of low usage, you will be paying *significantly* less, but the serverless provider will be flexible during times of high volume. Be wary of the potential cost to your account if you sustain high volume for an extended period. Although, this is not the rule as much as it is the exception.
 
