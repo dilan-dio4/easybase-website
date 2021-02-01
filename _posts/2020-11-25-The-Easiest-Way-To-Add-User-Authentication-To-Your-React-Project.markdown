@@ -22,7 +22,7 @@ meta_description: Learn how to add serverless user authentication to your React 
 
 One of the primary features of many web-based projects is the ability to have user authentication in which only those with proper credentials can access certain data. Whether that data is specific to that user or should be available to any signed-in user will depend on the goal of the application. The standard user authentication pattern is to provide unauthenticated users with the ability to sign up/create an account and to those with an account, the ability to sign in. Once signed in, the proper authentication tokens should be provided to the users so they can then access protected data.
 
-Let's take a look at Easybase's 'Project' feature and React library. These will easily and securely fulfill the authentication pattern as stated above. Along with that, authenticated users can access specific data tables via a stateful and editable 'database array'. This package works on both React and React Native.
+Let's take a look at Easybase's 'Project' feature and React library. These will easily and securely fulfill the authentication pattern as stated above. Along with that, authenticated users can access specific data tables via a stateful and editable ['database array'](/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/). This package works on both React and React Native.
 
 <hr />
 
@@ -184,5 +184,5 @@ useFrameEffect() runs
 
 [Learn more about Easybase's mission here](/about/)
 
-User authentication and scalable database integration is an integral part of almost all production applications and services. At some point, a developer is going to need to be able to securely and asynchronously access their data from a fast & reliable source. [Easybase](https://easybase.io) is a cloud-service that makes developer's lives easier through a serverless framework and scalable database.
+User authentication and scalable database integration is an integral part of almost all production applications and services. At some point, a developer is going to need to be able to securely and asynchronously access their data from a fast & reliable source. [Easybase](https://easybase.io) is a cloud-service that makes developer's lives easier through a [serverless framework](/about/2021/01/30/What-Is-a-Serverless-Application/) and scalable database.
 

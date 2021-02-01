@@ -54,7 +54,7 @@ This pricing structure is a huge advantage to individuals and small teams lookin
 ## Common serverless functionalities
 
 #### 1. Database
-One of the most commonly used of the bunch, cloud database is especially effective because of the providers' ability to provide a scalable and available solution. When used in a serverless stack, the application will often query the backend database with dynamic parameters based on the state of the UI. Developers can ignore the underlying hardware without losing any of the features in a traditional backend database.
+One of the most commonly used of the bunch, cloud database is especially effective because of the providers' ability to provide a scalable and available solution. When used in a serverless stack, the application will often [query the backend database with dynamic parameters based on the state of the UI](/about/2020/09/15/Customizing-query-values/). Developers can ignore the underlying hardware without losing any of the features in a traditional backend database.
 
 #### 2. Functions
 Serverless functions are stateless code actions driven to execution by the front end app, on-demand. **When a serverless function isn't running, it isn't using server resources**. The function avoiding charges during these idle periods. This cloud computing functionality is particularly cost-effective.
@@ -64,7 +64,7 @@ The provider will create an *isolated* environment during the initialization of 
 #### 3. User Authentication
 One of the most tedious modules of modern app development is the handling of multiple users with 'sign up' capability. This is because there are so many security and cryptography requirements involved in properly handling users' credentials and data.
 
-Providers that have this functionality will greatly lower the overhead involved in creating your own user authentication system. For example, [here are some of the practices and factors to consider](https://cybersecurity.ieee.org/blog/2016/06/02/design-best-practices-for-an-authentication-system/) according to a blog post by the Institute of Electrical and Electronics Engineers. This is very time-intensive and will cause many headaches. Thankfully, modern serverless architecture can implement this functionality quickly and securely.
+Providers that have this functionality will greatly lower the overhead involved in creating your own user authentication system. For example, [here are some of the practices and factors to consider](https://cybersecurity.ieee.org/blog/2016/06/02/design-best-practices-for-an-authentication-system/) according to a blog post by the Institute of Electrical and Electronics Engineers. This is very time-intensive and will cause many headaches. Thankfully, [modern serverless architecture can implement this functionality quickly and securely](/react/2020/11/25/The-Easiest-Way-To-Add-User-Authentication-To-Your-React-Project/).
 
 <br />
 

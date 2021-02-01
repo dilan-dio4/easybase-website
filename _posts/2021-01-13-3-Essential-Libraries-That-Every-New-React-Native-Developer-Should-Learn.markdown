@@ -18,7 +18,7 @@ React Native is one of the best frameworks for writing mobile-friendly applicati
 
 Although the learning curve can be somewhat steep, there is no question that [React is the most popular application library](https://trends.google.com/trends/explore?cat=31&q=Vue.js,React,Angular), by far. This popularity helps its sister library, React Native, *dominate* the mobile scene as well.
 
-There are a couple of modules required for production-ready applications that are not included in vanilla React Native. This is because many of these modules need some sort of backend to handle storage, session cache, and token administration. Fortunately, [serverless programming](https://hackernoon.com/what-is-serverless-architecture-what-are-its-pros-and-cons-cc4b804022e9) has empowered the web and application developer by adding these capabilities to standalone frontend projects. These technologies *greatly lower the barrier-of-entry* to application development systems.
+There are a couple of modules required for production-ready applications that are not included in vanilla React Native. This is because many of these modules need some sort of backend to handle storage, session cache, and token administration. Fortunately, [serverless programming](/about/2021/01/30/What-Is-a-Serverless-Application/) has empowered the web and application developer by adding these capabilities to standalone frontend projects. These technologies *greatly lower the barrier-of-entry* to application development systems.
 
 We're going to take a look at 3 easy-to-use libraries that either **implement** these serverless features or **help** applications use them.
 
