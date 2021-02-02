@@ -159,9 +159,13 @@
                             </div>
                             <div class="card-root d-none d-lg-block">
                                 <div class="author-root">
-                                    <img class="lazyload author-image" data-src={{ page.author_image }} alt="Easybase blog page author image" />
+                                    <img class="lazyload author-image" data-src={{ page.author_image }} alt="Easybase blog page author image" width="193" height="193" />
                                 </div>
-                                <h4 class="author-name">Written By <a href="/blog/">{{ page.author_name }}</a></h4>
+
+                                <div class="d-flex align-items-center justify-content-center flex-column mt-4 pt-2">
+                                    <h4 class="d-flex align-items-center mb-0">By&nbsp;<a href="mailto:ryan@easybase.io">{{ page.author_name }}</a></h4>
+                                    <div class="my-3" style="width: 80px; height: 2px; background-color: #ff7a59;"></div>
+                                </div>
                                 <p class="author-description">{{page.author_description}}</p>
                             </div>
                         {% endif %}
