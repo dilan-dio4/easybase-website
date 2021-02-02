@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>easybase-react documentation | Easybase</title>
-	<meta name="description" content="Learn more about the easybase-react package. Detailed documentation is available for the modules included in the library, built for React and React Native.">
+	<title>easybase-react</title>
+	<meta name="description" content="Documentation for easybase-react">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -97,8 +97,8 @@
 					</li>
 					<li><a href="#usage">Usage</a></li>
 					<li><a href="https://easybase.io/docs/easybase-react/">Documentation</a></li>
-					<li><a href="#example">Example</a></li>
-					<li><a href="#contributing">Contributing</a></li>
+					<li><a href="#examples">Examples</a></li>
+					<li><a href="#troubleshoot">Troubleshoot</a></li>
 					<li><a href="#license">License</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
@@ -187,8 +187,8 @@
 					<br />
 					<img src="./assets/users-2.gif" width="80%" alt="react easybase integration 2">
 				</p>
-				<a href="#then-download-your-token-and-place-it-the-root-of-your-project" id="then-download-your-token-and-place-it-the-root-of-your-project" style="color: inherit; text-decoration: none;">
-					<h4>Then, download your token and place it the root of your project</h4>
+				<a href="#then-download-your-token-and-place-it-at-the-root-of-your-project" id="then-download-your-token-and-place-it-at-the-root-of-your-project" style="color: inherit; text-decoration: none;">
+					<h4>Then, download your token and place it at the root of your project</h4>
 				</a>
 				<pre>
 ├── src/
@@ -305,24 +305,39 @@ useFrameEffect() runs</code></pre>
 				</a>
 				<p>Documentation for this library <a href="https://easybase.io/docs/easybase-react/">is available here</a>.</p>
 				<!-- EXAMPLES -->
-				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
-					<h2>Example</h2>
+				<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
+					<h2>Examples</h2>
 				</a>
 				<p><a href="https://easybase.io/react/">Starting from scratch to serverless database + authentication</a></p>
 				<p><a href="https://easybase.io/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/">Stateful database array walkthrough</a></p>
-				<p><a href="https://easybase.io/react/2020/11/25/The-Easiest-Way-To-Add-User-Authentication-To-Your-React-Project/">User authentication walkthrough</a></p>
-				<p>For React Native users, this library will not work with <a href="https://expo.io/">expo</a> due to native dependencies. Instead, use <code>react-native run-ios</code>.</p>
-				<!-- CONTRIBUTING -->
-				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
-					<h2>Contributing</h2>
+				<p><a href="https://www.freecodecamp.org/news/build-react-native-app-user-authentication/">User authentication walkthrough</a></p>
+				<!-- TROUBLESHOOT -->
+				<a href="#troubleshoot" id="troubleshoot" style="color: inherit; text-decoration: none;">
+					<h2>Troubleshoot</h2>
 				</a>
-				<p>Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are <strong>greatly appreciated</strong>.</p>
+				<a href="#react-native" id="react-native" style="color: inherit; text-decoration: none;">
+					<h4>React Native</h4>
+				</a>
+				<p>For React Native users, this library will not work with <a href="https://expo.io/">expo</a> due to native dependencies. Instead, use <code>react-native run-ios</code>.</p>
+				<p>Errors can arise because this library depends on <a href="https://react-native-async-storage.github.io/async-storage/docs/install/">Async Storage</a> which requires <em>linking</em>. This package attempts to automatically handle this for you during postinstall (<code>scripts/postinstall.js</code>). If this script fails or you encounter an error along the lines of <code>Unable to resolve module &#39;@react-native-community/async-storage&#39;...</code>, here are two different methods to configure your React Native project.</p>
 				<ol>
-					<li>Fork the Project</li>
-					<li>Create your Feature Branch (<code>git checkout -b feature/EasybaseReactFeature</code>)</li>
-					<li>Commit your Changes (<code>git commit -m &#39;feature&#39;</code>)</li>
-					<li>Push to the Branch (<code>git push origin feature/EasybaseReactFeature</code>)</li>
-					<li>Open a Pull Request</li>
+					<li><p><code>npm start -- --reset-cache</code></p>
+					</li>
+					<li><p>Exit bundler, proceed as normal</p>
+						<p>Or</p>
+					</li>
+					<li><p><code>npm install @react-native-community/async-storage@1.12.1</code></p>
+					</li>
+					<li><p><a href="https://github.com/react-native-async-storage/async-storage/tree/9aad474ff7ca64d34ef94358a39205a609455aca#link">Link package via these instructions</a></p>
+					</li>
+				</ol>
+				<a href="#react" id="react" style="color: inherit; text-decoration: none;">
+					<h4>React</h4>
+				</a>
+				<p>No linking is required for React. If you encounter any errors during installation or runtime, simply reinstall the library.</p>
+				<ol>
+					<li>Delete <code>node_modules/</code> folder</li>
+					<li><code>npm install easybase-react</code></li>
 				</ol>
 				<!-- LICENSE -->
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
@@ -333,7 +348,7 @@ useFrameEffect() runs</code></pre>
 				<a href="#contact" id="contact" style="color: inherit; text-decoration: none;">
 					<h2>Contact</h2>
 				</a>
-				<p><a href="https://twitter.com/easybase_io">@easybase_io</a> - <a href="mailto:&#x68;&#101;&#108;&#108;&#x6f;&#x40;&#x65;&#x61;&#x73;&#121;&#x62;&#97;&#x73;&#x65;&#46;&#x69;&#x6f;">&#x68;&#101;&#108;&#108;&#x6f;&#x40;&#x65;&#x61;&#x73;&#121;&#x62;&#97;&#x73;&#x65;&#46;&#x69;&#x6f;</a></p>
+				<p><a href="https://twitter.com/easybase_io">@easybase_io</a> - <a href="mailto:&#104;&#x65;&#108;&#x6c;&#111;&#64;&#101;&#97;&#115;&#x79;&#x62;&#x61;&#x73;&#101;&#x2e;&#105;&#111;">&#104;&#x65;&#108;&#x6c;&#111;&#64;&#101;&#97;&#115;&#x79;&#x62;&#x61;&#x73;&#101;&#x2e;&#105;&#111;</a></p>
 				<p>Project Link: <a href="https://github.com/easybase/easybase-react">https://github.com/easybase/easybase-react</a></p>
 				<p><a href="https://www.producthunt.com/posts/easybase-io?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-easybase-io" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=278380&theme=dark" alt="Easybase.io - Serverless platform for apps and projects. React.js Focused. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a></p>
 			</div>
