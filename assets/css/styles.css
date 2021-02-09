@@ -1246,6 +1246,9 @@ div.header-contact-us {
         letter-spacing: -0.014em;
         line-height: 28px;
     }
+    .cta-text-root {
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 800px) {
