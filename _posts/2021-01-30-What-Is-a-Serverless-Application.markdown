@@ -93,4 +93,6 @@ The most popular of the group, AWS is one of the most mature cloud service provi
 
 ## Conclusion
 
-*Thank you for reading this article!* I'm excited to watch serverless application usage grow in the future. This technology has a lot of momentum and is democratizing access to enterprise backend systems. Click the **Blog** button on the top navigation bar to explore other pieces I've written regarding serverless, application development in 2021, and other various programming-related topics. If you found this piece useful or interesting please use the social buttons below to share it. Happy coding!
+*Thank you for reading this article!* I'm excited to watch serverless application usage grow in the future. This technology has a lot of momentum and is democratizing access to enterprise backend systems.
+
+Click the **Blog** button on the top navigation bar to explore other pieces I've written regarding serverless, application development in 2021, and other various programming-related topics. Also, check out [this piece to learn about using a serverless database with React](https://www.freecodecamp.org/news/how-to-add-a-serverless-database-to-react-projects-and-web-apps/). If you found this piece useful or interesting please use the social buttons below to share it. Happy coding!
