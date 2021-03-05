@@ -79,7 +79,7 @@ Azure can be quite complicated for beginners looking to get into serverless appl
 
 #### [Easybase](https://easybase.io/)
 
-As the name states, this provider best suited to those who are not experts in cloud computing functionality. Built for small teams and individuals, **Easybase is a great option for applications that require a database and user authentication**. You can check out a [video using this platform to implement user authentication in a mobile app here](https://youtu.be/anFHmjlr0YY).
+As the name states, this provider best suited for those who are looking for an easy and efficient way to implement cloud computing functionality. The newly released cloud functions are intuitive and great for deploying **Javascript functions**, which are callable by URL. Built for small teams and individuals, **Easybase is a great option for applications that require a database, user authentication, or serverless functions**. You can check out a [video using this platform to implement user authentication in a mobile app here](https://youtu.be/anFHmjlr0YY).
 
 React and React Native developers, take a look at [the Easybase React walkthrough](https://easybase.io/react/) to see how, in just a couple of minutes, you can implement serverless in your projects.
 
