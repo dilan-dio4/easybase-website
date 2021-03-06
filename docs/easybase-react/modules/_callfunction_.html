@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;reactTypes&quot; | easybase-react</title>
+	<title>&quot;callFunction&quot; | easybase-react</title>
 	<meta name="description" content="Documentation for easybase-react">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_reacttypes_.html">&quot;reactTypes&quot;</a>
+					<a href="_callfunction_.html">&quot;callFunction&quot;</a>
 				</li>
 			</ul>
-			<h1>Module &quot;reactTypes&quot;</h1>
+			<h1>Module &quot;callFunction&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -69,13 +69,40 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
+							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_reacttypes_.contextvalue.html" class="tsd-kind-icon">Context<wbr>Value</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_reacttypes_.easybaseproviderprops.html" class="tsd-kind-icon">Easybase<wbr>Provider<wbr>Props</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_reacttypes_.easybaseproviderpropsoptions.html" class="tsd-kind-icon">Easybase<wbr>Provider<wbr>Props<wbr>Options</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_callfunction_.html#callfunction" class="tsd-kind-icon">call<wbr>Function</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="callfunction" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> call<wbr>Function</h3>
+					<div class="tsd-signature tsd-kind-icon">call<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">callFunction</span><span class="tsd-signature-symbol"> = _callFunction</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/callFunction.tsx#L10">callFunction.tsx:10</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>async</dt>
+							<dd><p>Call a cloud function, created in Easybase interface.</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>Route as detailed in Easybase. Found under &#39;Deploy&#39;. Will be in the form of ####...####-function-name.</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>Optional object to pass as the body of the POST request. This object will available in your cloud function&#39;s event.body.</p>
+							</dd>
+							<dt>returns</dt>
+							<dd><p>Response from your cloud function. Detailed with a call to &#39;return context.succeed(&quot;RESPONSE&quot;)&#39;.</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 			</section>
@@ -89,10 +116,10 @@
 					<li class=" tsd-kind-module">
 						<a href="_easybasecontext_.html">&quot;<wbr>Easybase<wbr>Context&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="_callfunction_.html">&quot;call<wbr>Function&quot;</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="_reacttypes_.html">&quot;react<wbr>Types&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -105,14 +132,8 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_reacttypes_.contextvalue.html" class="tsd-kind-icon">Context<wbr>Value</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_reacttypes_.easybaseproviderprops.html" class="tsd-kind-icon">Easybase<wbr>Provider<wbr>Props</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_reacttypes_.easybaseproviderpropsoptions.html" class="tsd-kind-icon">Easybase<wbr>Provider<wbr>Props<wbr>Options</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_callfunction_.html#callfunction" class="tsd-kind-icon">call<wbr>Function</a>
 					</li>
 				</ul>
 			</nav>
