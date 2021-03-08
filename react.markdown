@@ -18,6 +18,7 @@ meta_description: Comprehensive tutorial on using Easybase with React and React 
 * [Sign In & Sign Up Workflow](#sign-in--sign-up-workflow)
 * [Authenticated Database](#authenticated-database)
 * [Visual Queries](#visual-queries)
+* [Cloud Functions](#cloud-functions)
 * [Conclusion](#conclusion)
 
 <hr />
@@ -537,13 +538,74 @@ I'm using the same *card-like* component from our `Home` component. Here's a scr
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual component" data-src="/assets/images/posts_images/react-13.png" />
 
-Note that there are other *optional* parameters for the `Query()` function such as *sortBy* and *limit*. One of the most **powerful** options is the ability to add a *customQuery* object to overwrite the values detailed in the visual query. The structure and function of the query stay the same, but you can edit the values that are queried. For example, if we wanted to look for products with a price of over $12 rather than $100. We can set the *customQuery* parameter to `{ price:  12 }` programmatically. This is suited well for situations in which you have **conditional options in your interface that affect the current query**.
+Note that there are other *optional* parameters for the `Query()` function such as *sortBy* and *limit*. One of the most **powerful** options is the ability to add a *customQuery* object to overwrite the values detailed in the visual query. The structure and function of the query stay the same, but you can edit the values that are queried. For example, if we wanted to look for products with a price of over $12 rather than $100. We can set the *customQuery* parameter to `{ price: 12 }` programmatically. This is suited well for situations in which you have **conditional options in your interface that affect the current query**.
+
+<br />
+
+## Cloud Functions
+
+<div class="sectionBox">
+<p>
+  <b>Related functions:</b> 
+  <a href="/docs/easybase-react/modules/_callfunction_.html#callfunction" target="_blank">callFunction</a>
+</p>
+</div>
+
+Easybase's serverless functions allow you to trigger code snippets running behind the cloud. These event-driven functions can be updated live in the Easybase code editor without changing your application code. You can deploy, edit and test functions effectively in the *Functions* interface.
+
+There are many benefits to using cloud functions for your application, including responsive scaling, lower cost, and the ability to hide processes from your front-end. Furthermore, developers don't have to manually track analytics or worry about the portability of their code. Here are some resources about [Functions-as-a-Service (FaaS)](https://www.redhat.com/en/topics/cloud-native-apps/what-is-faas) and [serverless applications](/about/2021/01/30/What-Is-a-Serverless-Application/).
+
+Use the **Create Dialog** to deploy a new function:
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-14.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-15.png" />
+
+I'll use the **Async** template. If we expand the **deploy** menu, we can use the **testing** tab to run this function and display the result. The template that I specifically selected will call an external API to get the most recent price of Bitcoin, in USD.
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-16.png" />
+
+If we add rows to the **Input** section, those values will be available in the function's `event.body`. **We'll see later that the same applies for calling our functions in code.** I'm going to edit the function to return the parameters that are sent in **Input**, save it, and show the output below. `context.succeed()` and `context.fail()` will return variables that are available as strings to your client-side application.
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-17.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-18.png" />
+
+Node is well-known for its iconic package management system. To **install dependencies** for your cloud function, simply add the package name and version to the `dependencies` section of the `package.json`. No need to deal with the `node_modules/` folder. Dependencies will automatically be installed every time you save your function based on your root `package.json`.
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-19.png" />
+
+Now you can import that module into your code. Once saved, use the **testing** tab to see the dependency is working properly.
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-21.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-22.png" />
+
+Packages, and their corresponding version, are available on [npmjs.com](https://www.npmjs.com/).
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-20.png" />
+
+To call your function in React or React Native, import `callFunction` as you would `EasybaseProvider`, then pass in the unique route found under the **Deploy** tab. It is under this tab you will also be able to find more information about calling your function in production. You can use either `await callFunction(...)` or `callFunction(...).then(res)` to get the response of the function as a string. Your code may look like the following:
+
+```jsx
+import { useEasybase, callFunction } from 'easybase-react';
+
+export default function() {
+    async function handleButtonClick() {
+        const response = await callFunction('d6f217bde0b6b4d-my-function', {
+            hello: "world",
+            message: "Find me in event.body"
+        });
+
+        console.log("Cloud function: " + response);
+    }
+
+    //...
+}
+```
 
 <br />
 
 ## Conclusion
 
-Deploying a serverless React or React Native application is made accessible with Easybase.io + `easybase-react`. Take a look at the [Github repo](https://github.com/easybase/easybase-react) for some more information on *usage* and *installation*. We **successfully created a web app** that features a backend database, user authentication, sign in/sign up workflow, easy-to-use visual queries, and secure user-corresponding backend storage. 
+Deploying a serverless React or React Native application is made accessible with Easybase.io + `easybase-react`. Take a look at the [Github repo](https://github.com/easybase/easybase-react) for some more information on *usage* and *installation*. We **successfully created a web app** that features a backend database, user authentication, sign in/sign up workflow, easy-to-use visual queries, and secure user-corresponding backend storage. Also, we demonstrated how to deploy cloud functions that can be called by name in your React and React Native code.
 
 Thanks a lot for reading! Please be sure to **share this article** using the social buttons below. Regarding any questions or concerns, feel free to use the 'Leave a message' form.
 
