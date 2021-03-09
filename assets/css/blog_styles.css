@@ -990,3 +990,15 @@ footer {
     object-fit: cover;
     border-radius: 2px;
 }
+
+.highlighter-rouge {
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    border-radius: 6px;
+    background-color: #1b1f230d;
+}
+
+div.highlighter-rouge {
+    background-color: transparent !important;
+}
