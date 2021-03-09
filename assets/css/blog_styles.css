@@ -98,13 +98,6 @@
     width: 205px;
 }
 
-.easybase-preview-root {
-    background-color: #f5f8fa;
-    border: 1px solid #cbd6e2;
-    display: flex;
-    border-radius: 5px;
-}
-
 .about-easybase-checks {
     display: inline-flex;
     justify-content: space-between;
@@ -215,14 +208,6 @@ body {
     font-size: 18px;
 }
 
-.author-card-root {
-    padding: 15px 18px !important;
-}
-
-.author-card-root {
-    margin-top: 85px;
-}
-
 .inline-breadcrumb-root {
     float: none !important;
     display: flex;
@@ -314,14 +299,6 @@ nav ul li ul li a {
 .nav-login-button {
     margin: 15px 20px;
     font-family: 'Roboto', sans-serif;
-}
-
-.nav-dropdown {
-    position: absolute;
-    display: none;
-    z-index: 1;
-    -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .nav-mobile {
@@ -435,9 +412,6 @@ nav ul li ul li a {
     }
     nav ul li ul li a {
         padding-left: 30px;
-    }
-    .nav-dropdown {
-        position: static;
     }
     .nav-container {
         display: block;
@@ -575,22 +549,6 @@ a:hover {
     display: flex;
 }
 
-.blog-highlight {
-    position: relative;
-    background: 0 0;
-}
-
-.blog-highlight::before {
-    content: '';
-    background: #d1ebff;
-    position: absolute;
-    left: 0;
-    right: -2px;
-    bottom: 0px;
-    height: 4px;
-    z-index: -1;
-}
-
 /* Footer ++++++++++++++++++++++++++++ */
 
 .footer-social-fab {
@@ -602,14 +560,6 @@ a:hover {
 .footer-content-section-root {
     display: flex;
     justify-content: center;
-}
-
-.footer-content-section-mobile {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 300px;
-    overflow: hidden;
 }
 
 .footer-bg {
@@ -957,18 +907,6 @@ a:hover {
     filter: brightness(80%) grayscale(20%);
 }
 
-.highlighter-rouge {
-    padding: .2em .4em;
-    margin: 0;
-    font-size: 85%;
-    border-radius: 6px;
-    background-color: #1b1f230d;
-}
-
-div.highlighter-rouge {
-    background-color: transparent !important;
-}
-
 #message input[type="text"], #message input[type="email"], #message input[type="tel"], #message input[type="url"], #message textarea {
     width: 100%;
     border: 1px solid #ccc;
@@ -990,29 +928,6 @@ div.highlighter-rouge {
 #message textarea {
     height: 75px;
     max-width: 100%;
-}
-
-table {
-    border-collapse: collapse !important;
-}
-
-table td, table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-table tr:hover {
-    background-color: #ddd;
-}
-
-table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
 }
 
 .off-screen {
