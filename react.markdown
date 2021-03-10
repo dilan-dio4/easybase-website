@@ -553,7 +553,7 @@ Note that there are other *optional* parameters for the `Query()` function such 
 
 Easybase's serverless functions allow you to trigger code snippets running behind the cloud. These event-driven functions can be updated live in the Easybase code editor without changing your application code. You can deploy, edit and test functions effectively in the *Functions* interface.
 
-There are many benefits to using cloud functions for your application, including responsive scaling, lower cost, and the ability to hide processes from your front-end. Furthermore, developers don't have to manually track analytics or worry about the portability of their code. Here are some resources about [Functions-as-a-Service (FaaS)](https://www.redhat.com/en/topics/cloud-native-apps/what-is-faas) and [serverless applications](/about/2021/01/30/What-Is-a-Serverless-Application/).
+There are many benefits to using cloud functions for your application, including responsive scaling, lower cost, and the ability to hide processes from your front-end. Furthermore, developers don't have to manually track analytics or worry about the portability of their code. For a deeper dive into cloud functions with React, [this resource will demonstrate how to easily deploy cloud functions](/react/2021/03/09/The-Easiest-Way-To-Deploy-Cloud-Functions-for-your-React-Projects/) with React and React Native.
 
 Use the **Create Dialog** to deploy a new function:
 
