@@ -43,14 +43,20 @@
         <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 155 }}" />
     {% endif %}
 
+    {% if page.title_image %}
+        <meta property="og:image" content="{{ page.title_image }}" />
+        <meta name="twitter:image" content="{{ page.title_image }}" />
+    {% else %}
+        <meta property="og:image" content="https://easybase.io/assets/images/og_image.png" />
+        <meta name="twitter:image" content="https://easybase.io/assets/images/og_image.png" />
+    {% endif %}
+
     <meta property="og:title" content="{{ page.title }} | Easybase" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://easybase.io{{ page.url }}" />
-    <meta property="og:image" content="https://easybase.io/assets/images/og_image.png" />
     <meta name="twitter:card" content="summary" /> 
     <meta name="twitter:site" content="@easybase_io" /> 
     <meta name="twitter:title" content="{{ page.title }} | Easybase" /> 
-    <meta name="twitter:image" content="https://easybase.io/assets/images/og_image.png" />
     <link rel="canonical" href="https://easybase.io{{ page.url }}" />
 </head>
 
