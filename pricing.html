@@ -15,82 +15,103 @@ description: Easybase's free tier and pricing model is built by developers, for 
     </div>
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-10">
-                <div class="pricing-card">
-                    <div class="card-contents-root pt-4 pb-5" style="background-color: #000; color: white;">
-                        <h2 style="font-size:48px;" class="mb-0 section-header-text">Premium</h2>
-                        <h2 style="font-size:43px; line-height: 1;" class="section-header-text mb-3">
-                            <span class="pricing-month-text">Usage-based pricing</span>
-                        </h2>
-
-                        <ul class="free-tier-card-list-root my-4">
-                            <li>
-                                <ion-icon name="checkmark-outline"></ion-icon>Multiple Users
-                            </li>
-                            <li>
-                                <ion-icon name="checkmark-outline"></ion-icon>$10 Free Monthly Quota
-                            </li>
-                            <li>
-                                <ion-icon name="checkmark-outline"></ion-icon>Unlimited Tables
-                            </li>
-                            <li>
-                                <ion-icon name="checkmark-outline"></ion-icon>Advanced Integrations
-                            </li>
-                            <li>
-                                <ion-icon name="checkmark-outline"></ion-icon>Instant Support
-                            </li>
-                            <li>
-                                <ion-icon name="checkmark-outline"></ion-icon>Enterprise Performance
-                            </li>
-                        </ul>
-
-                        <button
-                            onclick="document.getElementById('pricing-calculator-section-root').scrollIntoView({ behavior: 'smooth' })"
-                            style="background-color: #fff; border: 1px #fff solid;"
-                            class="hero-button hero-button-primary button shadow icon-color mod-themed mod-success mod-success-fill">
-                            <span class="hero-button hero-button-primary text"
-                                style="background-color: #fff; border: 1px #fff solid; color: #007bff;">try the pricing
-                                calculator</span>
-                        </button>
-                    </div>
-                    <div class="card-contents-root pt-4 pb-5">
+            <div class="col-md-4 pricing-palden">
+                <div class="pricing-item features-item ja-animate" data-animation="move-from-bottom" data-delay="item-0">
+                    <div class="pricing-deco">
+                        <svg class="pricing-deco-img" enable-background="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xml:space="preserve" y="0px">
+                            <path class="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
+                            <path class="deco-layer deco-layer--2" d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z" fill="#FFFFFF" opacity="0.6"></path>
+                            <path class="deco-layer deco-layer--4" d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z" fill="#FFFFFF"></path>
+                        </svg>
                         <h2 style="font-size:48px;" class="mb-0 section-header-text">Free Tier</h2>
                         <h2 style="font-size:43px; line-height: 1;" class="section-header-text mb-3">
                             $0<span class="pricing-month-text">/mo</span>
                         </h2>
-
-                        <ul class="free-tier-card-list-root my-4">
-                            <li>
-                                <ion-icon name="checkmark-outline"></ion-icon>Single User
-                            </li>
-                            <li>
-                                <ion-icon name="checkmark-outline"></ion-icon>$10 Free Monthly Quota
-                            </li>
-                            <li>
-                                <ion-icon name="checkmark-outline"></ion-icon>Unlimited Tables
-                            </li>
-                            <li>
-                                <ion-icon name="checkmark-outline"></ion-icon>Advanced Integrations
-                            </li>
-                            <li class="text-muted">
-                                <ion-icon name="close-outline"></ion-icon>Instant Support
-                            </li>
-                            <li class="text-muted">
-                                <ion-icon name="close-outline"></ion-icon>Enterprise Performance
-                            </li>
+                    </div>
+                    <div class="d-flex w-100 justify-content-center">
+                        <ul class="free-tier-card-list-root">
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>1 Integration/Project</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>1 Cloud Function</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Unlimited Tables</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Unlimited Users</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>10 GB Storage</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>75k Requests / mo</li>
                         </ul>
+                    </div>
 
-                        <a role="button" type="text" href="https://app.easybase.io/?view=signup"
-                            onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;"
-                            class="hero-button hero-button-primary button shadow icon-color mod-themed mod-success mod-success-fill">
+                    <div class="d-flex w-100 justify-content-center mb-5 mt-4">
+                        <a role="button" type="text" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;" class="hero-button hero-button-primary button shadow icon-color mod-themed mod-success mod-success-fill">
                             <span class="hero-button hero-button-primary text">Get Started for Free</span>
                         </a>
-                        <p class="text-muted mb-3" style="position: absolute; bottom: 0px; font-size: 17px;"><i>* no
-                                payment method required</i></p>
-
+                        <p class="text-muted mb-0" style="position: absolute; bottom: 10px; font-size: 17px;"><i>* no
+                            payment method required</i></p>
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-4 pricing-palden">
+                <div class="pricing-item features-item ja-animate pricing__item--featured" data-animation="move-from-bottom" data-delay="item-1">
+                    <div class="pricing-deco">
+                        <svg class="pricing-deco-img" enable-background="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xml:space="preserve" y="0px">
+                            <path class="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
+                            <path class="deco-layer deco-layer--2" d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z" fill="#FFFFFF" opacity="0.6"></path>
+                            <path class="deco-layer deco-layer--4" d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z" fill="#FFFFFF"></path>
+                        </svg>
+                        <h2 style="font-size:48px;" class="mb-0 section-header-text">Premium</h2>
+                        <h2 style="font-size:43px; line-height: 1;" class="section-header-text mb-3">
+                            $9<span class="pricing-month-text">/mo</span>
+                        </h2>
+                    </div>
+                    <div class="d-flex w-100 justify-content-center">
+                        <ul class="free-tier-card-list-root">
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Unlimited Projects</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Unlimited Cloud Function</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Unlimited Tables</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Unlimited Users</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>50 GB Storage</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>600k Requests / mo</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Instant Support</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex w-100 justify-content-center mb-5 mt-4">
+                        <a role="button" type="text" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;" class="hero-button hero-button-primary button shadow icon-color mod-themed mod-success mod-success-fill">
+                            <span class="hero-button hero-button-primary text">Get Started for Free</span>
+                        </a>
+                        <p class="text-muted mb-0" style="position: absolute; bottom: 10px; font-size: 17px;"><i>* no
+                            payment method required</i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 pricing-palden">
+                <div class="pricing-item features-item ja-animate" data-animation="move-from-bottom" data-delay="item-2">
+                    <div class="pricing-deco" style="background: black;">
+                        <svg class="pricing-deco-img" enable-background="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xml:space="preserve" y="0px">
+                            <path class="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
+                            <path class="deco-layer deco-layer--2" d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z" fill="#FFFFFF" opacity="0.6"></path>
+                            <path class="deco-layer deco-layer--4" d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z" fill="#FFFFFF"></path>
+                        </svg>
+                        <h2 style="font-size:48px;" class="mb-0 section-header-text">Enterprise</h2>
+                        <span class="pricing-month-text">Usage-based pricing</span>
+                    </div>
+                    <div class="d-flex w-100 justify-content-center">
+                        <ul class="free-tier-card-list-root">
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Unlimited Projects</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Unlimited Cloud Function</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Unlimited Requests & Storage</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Enterprise Performance</li>
+                            <li><ion-icon name="checkmark-outline" class="mr-2" style="font-size: 24px;"></ion-icon>Instant Support</li>
+                            <li style="margin-left: 35px;"><b>Packages Available</b></li>
+                        </ul>
+                    </div>
+                    <div class="d-flex w-100 justify-content-center mb-5 mt-4">
+                        <button onclick="document.getElementById('footer-root').scrollIntoView({ behavior: 'smooth' })" style="background-color: #fff; border: 1px #fff solid;" class="hero-button hero-button-primary button shadow icon-color mod-themed mod-success mod-success-fill">
+                            <span class="hero-button hero-button-primary text" style="background-color: #fff; border: 1px #fff solid; color: #007bff;">contact us below</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </section>
@@ -106,14 +127,10 @@ description: Easybase's free tier and pricing model is built by developers, for 
 
             <div class="col-md-4 px-4 py-3">
                 <form class="newsletter-input-form">
-                    <svg style="position: absolute; top: 16px; left: 16px;" width="20" height="16" viewBox="0 0 20 16"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M17.2692 1.00012H2.73077C1.77452 1.00012 1 1.78324 1 2.75011V13.25C1 14.2169 1.77452 15 2.73077 15H17.2692C18.2255 15 19 14.2169 19 13.25V2.75011C19 1.78324 18.2255 1.00012 17.2692 1.00012Z"
-                            stroke="#CED6E0" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                    <svg style="position: absolute; top: 16px; left: 16px;" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.2692 1.00012H2.73077C1.77452 1.00012 1 1.78324 1 2.75011V13.25C1 14.2169 1.77452 15 2.73077 15H17.2692C18.2255 15 19 14.2169 19 13.25V2.75011C19 1.78324 18.2255 1.00012 17.2692 1.00012Z" stroke="#CED6E0" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
                         </path>
-                        <path d="M3.76953 3.80005L10.0003 8.70002L16.2311 3.80005" stroke="#CED6E0"
-                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M3.76953 3.80005L10.0003 8.70002L16.2311 3.80005" stroke="#CED6E0" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                     <input class="" name="email" type="email" placeholder="Get our Notifications" required="">
                     <button class="default" type="submit">

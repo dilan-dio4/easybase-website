@@ -785,59 +785,6 @@ div.header-contact-us {
     width: 19px;
 }
 
-.pricing-card {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    border-radius: var(--mod-marketing-radius);
-    box-shadow: var(--shadow-large);
-    width: 100%;
-    background-color: #fff;
-    height: 100%;
-}
-
-.free-tier-card-list-root {
-    list-style-type: none;
-    margin-left: 0.5em;
-    padding-left: 0;
-}
-
-.free-tier-card-list-root li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 19px;
-}
-
-.free-tier-card-list-root ion-icon {
-    font-size: 32px;
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-}
-
-.card-contents-root {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex: 1 1 0%;
-    border-top-left-radius: var(--mod-marketing-radius);
-    border-bottom-left-radius: var(--mod-marketing-radius);
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.pricing-month-text {
-    font-size: 70%;
-    font-weight: 400;
-    color: var(--accents-5);
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
 .mod-shadow {
     box-shadow: var(--shadow-small);
     transition: box-shadow .2s ease;
@@ -1120,15 +1067,6 @@ div.header-contact-us {
     }
     .mod-show-on-mobile {
         display: flex;
-    }
-    .pricing-card {
-        flex-direction: column;
-    }
-    .card-contents-root {
-        border-top-left-radius: var(--mod-marketing-radius);
-        border-bottom-left-radius: 0;
-        border-top-right-radius: var(--mod-marketing-radius);
-        border-bottom-right-radius: 0;
     }
     .section-header-content-spacer {
         height: 70px;
@@ -1765,4 +1703,115 @@ ion-icon[size="large"] {
     height: var(--header-height-expanded);
     position: fixed !important;
     top: 0 !important;
+}
+
+/** PRICING STUFF */
+
+.pricing-month-text {
+    font-size: 70%;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+        
+.pricing-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    flex: 0 1 330px;
+    min-height: 670px;
+}
+
+.pricing-palden .pricing-item {
+    cursor: default;
+    color: #84697c;
+    background: #fff;
+    box-shadow: var(--shadow-large);
+    border-radius: 20px 20px 10px 10px;
+    margin: 1em;
+}
+
+@media screen and (min-width: 66.25em) {
+    .pricing-palden .pricing-item {
+        margin: 2em -0.5em;
+    }
+    .pricing-palden .pricing__item--featured {
+        margin: 0;
+        z-index: 10;
+        font-family: 'Open Sans',sans-serif;
+    }
+}
+
+.pricing-palden .pricing-deco {
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(190deg,#2386f7,#79c5f8);
+    padding: 4em 0 9em;
+    position: relative;
+    color: white;
+    height: 345px;
+}
+
+.pricing-palden .pricing-deco-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+}
+
+.pricing-palden .deco-layer {
+    transition: transform 0.70s ease-out;
+}
+
+.pricing-palden .pricing-item:hover .deco-layer--1 {
+    transform: translate3d(10px, 0, 0);
+}
+
+.pricing-palden .pricing-item:hover .deco-layer--2 {
+    transform: translate3d(-10px, 0, 0);
+}
+
+.pricing-palden .icon {
+    font-size: 2.5em;
+}
+
+.pricing-palden .pricing-currency {
+    font-size: 0.15em;
+    vertical-align: top;
+}
+
+.pricing-palden .pricing__sentence {
+    font-weight: bold;
+    margin: 0 0 1em 0;
+    padding: 0 0 0.5em;
+}
+
+.pricing-palden .pricing-item--featured .pricing-deco {
+    padding: 5em 0 8.885em 0;
+}
+
+.pricing-month-text {
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 3px;
+}
+
+.free-tier-card-list-root {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.free-tier-card-list-root li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    font-size: 17px;
+    margin-left: 2px;
 }
