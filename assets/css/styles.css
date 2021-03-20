@@ -1722,12 +1722,11 @@ ion-icon[size="large"] {
     align-items: stretch;
     text-align: center;
     flex: 0 1 330px;
-    min-height: 670px;
+    min-height: 500px;
 }
 
 .pricing-palden .pricing-item {
     cursor: default;
-    color: #84697c;
     background: #fff;
     box-shadow: var(--shadow-large);
     border-radius: 20px 20px 10px 10px;
@@ -1741,7 +1740,6 @@ ion-icon[size="large"] {
     .pricing-palden .pricing__item--featured {
         margin: 0;
         z-index: 10;
-        font-family: 'Open Sans',sans-serif;
     }
 }
 
@@ -1767,11 +1765,11 @@ ion-icon[size="large"] {
 }
 
 .pricing-palden .pricing-item:hover .deco-layer--1 {
-    transform: translate3d(10px, 0, 0);
+    transform: translate3d(20px, 0, 0);
 }
 
 .pricing-palden .pricing-item:hover .deco-layer--2 {
-    transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
 }
 
 .pricing-palden .icon {
@@ -1805,13 +1803,16 @@ ion-icon[size="large"] {
 .free-tier-card-list-root {
     list-style-type: none;
     padding-left: 0;
+    margin-top: -40px;
+    z-index: 100;
 }
 
 .free-tier-card-list-root li {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-size: 17px;
-    margin-left: 2px;
+    letter-spacing: -.014em;
+    color: #3d4d66;
 }
