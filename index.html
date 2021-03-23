@@ -515,14 +515,12 @@ layout: null
     {% include footer.html %}
 
     <script>
-
         var loading_ele = document.getElementById('lds-dual-ring');
         var vid_ele = document.getElementById('hero-video-raw');
         var hero_video_raw_replay_ele = document.getElementById('hero-video-raw-replay');
         var hero_video_raw_replay_icon_ele = document.getElementById('hero-video-raw-replay-icon');
 
         window.addEventListener("load", function () {
-
             var io = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -534,38 +532,12 @@ layout: null
 
             io.observe(document.getElementById('drawer-img-border'));
 
-            var io2 = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !document.getElementById('jsFiddleIframe')) {
-                        observer.unobserve(entry.target);
-                        var uriEmbedded = "https://jsfiddle.net/L9mewa5r/embedded/result,html/dark/"
-                        var currentSlug = "prywnzgd"
-                        var target = document.querySelector("div#jsFiddleRoot")
-                        var iframe = document.createElement("iframe")
-
-                        iframe.src = uriEmbedded;
-                        iframe.id = "jsFiddleIframe";
-                        iframe.width = "1100"
-                        iframe.height = "700"
-                        iframe.frameBorder = "0"
-                        iframe.allowtransparency = true
-                        iframe.sandbox = "allow-modals allow-forms allow-same-origin allow-scripts allow-popups allow-top-navigation-by-user-activation allow-downloads"
-                        iframe.allow = "midi; geolocation; microphone; camera; display-capture; encrypted-media;"
-
-                        target.appendChild(iframe);
-                    }
-                });
-            }, { threshold: 0, rootMargin: '100px' });
-
-            io2.observe(document.getElementById("jsFiddleRoot"));
-
             let urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get("contact") !== null) {
                 setTimeout(function () {
                     document.getElementById('footer-root').scrollIntoView(false)
                 }, 10);
             }
-
         });
 
         function fadeVideoInAndPlay() {
@@ -616,7 +588,6 @@ layout: null
         }
 
         loading_ele.style.opacity = 1;
-
     </script>
     <script type="module" src="/assets/ion-icons/ionicons.esm.js"></script>
     <script nomodule src="/assets/ion-icons/ionicons.js"></script>
