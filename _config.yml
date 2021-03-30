@@ -35,12 +35,6 @@ future: true
 theme: minima
 plugins:
   - jekyll-feed
-exclude:
-  - integration-builder/node_modules/
-  - integration-builder/src/
-  - integration-builder/package.json/
-  - integration-builder/package-lock.json/
-  - integration-builder/README.md/
 include:
   - docs/
   - docs/easybase-react/
