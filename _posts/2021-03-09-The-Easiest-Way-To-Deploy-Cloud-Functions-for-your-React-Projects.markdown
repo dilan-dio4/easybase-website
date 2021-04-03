@@ -168,7 +168,11 @@ If we run the project (`npm run start`), we should get a window that looks somet
 
 <img data-src="/assets/images/posts_images/deploy-function-12.png" alt="Easybase function-as-a-service diagram" class="lazyload custom-lightbox my-3" data-jslghtbx width="100%" />
 
-Now, to statefully make this request and update the UI, our button's `onClick` should trigger `callFunction` with the text boxes value as part of the request body. The response of `callFunction` will then be used to set the text in the final `<p></p>`. We'll track the value of the input and output using React's `useState` hook with `inputVal` and `outputVal`, respectively. The final code may look like the following:
+Now, to statefully make this request and update the UI, our button's `onClick` should trigger `callFunction` with the text boxes value as part of the request body. To call the function, you will need the automatically generated route which is available under the **Deploy** tab of the Easybase function interface.
+
+<img data-src="/assets/images/posts_images/deploy-function-14.png" alt="Easybase function-as-a-service diagram" class="lazyload custom-lightbox my-3" data-jslghtbx width="100%" />
+
+Pass this named route as the first parameter of `callFunction`. The response of `callFunction` will then be used to set the text in the final `<p></p>`. We'll track the value of the input and output using React's `useState` hook with `inputVal` and `outputVal`, respectively. The final code may look like the following:
 
 ```jsx
 import { callFunction } from 'easybase-react';
