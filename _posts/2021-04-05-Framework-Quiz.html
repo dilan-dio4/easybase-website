@@ -1,0 +1,446 @@
+---
+layout: blog
+title: "Quiz: Which JavaScript Front End Frameworks Is Right For You?"
+date: 2021-04-05 08:00:15 -0400
+categories: about
+title_image: /assets/images/posts_images/frameworks-quiz-header.png
+title_image_sm: /assets/images/posts_images/frameworks-quiz-header-sm.png
+tags: Home Blog
+author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&q=80&fm=jpg&cs=tinysrgb&w=193&h=193&fit=crop&crop=focalpoint&fp-x=0.51&fp-y=.375&fp-z=1.75
+author_name: Ryan Parker
+author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
+meta_description: React vs Angular vs Vue.js - which one is best for your next project or app? Take this quiz for a custom ranking of these JavaScript framework/libraries.
+permalink: best-javascript-framework-library-quiz/
+---
+
+Front-end frameworks have become <b>incredibly popular</b> over the last decade and don't appear to be slowing down any time soon. There are many options out there when it comes to choosing a framework/library for your next project. The differences between these frameworks may seem <em>subtle</em> at first glance, but they could have consequences later on. This is especially important if you plan on putting significant resources into your next project. You certainly want to set yourself up for success. <b>Choosing the proper method will absolutely pay off in the long term</b>.
+<br />
+<br />
+
+React, React Native, Angular, Vue.js, Ember.js and Backbone.js are all options that could be the perfect fit for you, depending on your specific use case. These libraries work fantastic with <a href="/about/2021/01/30/What-Is-a-Serverless-Application/">serverless architecture</a> which allows developers to implement production-ready modules into their applications, such as <a href="/react/2020/11/25/The-Easiest-Way-To-Add-User-Authentication-To-Your-React-Project/">user authentication</a>, <a href="/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/">database</a>, and <a href="/react/2021/03/09/The-Easiest-Way-To-Deploy-Cloud-Functions-for-your-React-Projects/">cloud functions</a>. <b>Take the quiz below</b> to find the best match for you.
+
+<br />
+<br />
+<hr />
+
+<h2 style="text-align: center;" class="m-0 mt-5 pt-4"><b>2021 JavaScript Framework Quiz</b></h2>
+
+<div id="frameworkTest"></div>
+<div id="result"></div>
+<br />
+<br />
+<script src="/assets/js/quizzer.js"></script>
+
+<script>
+    // weights go from -100 to 100.
+    var questionData = [
+        {
+            title: "1. Which platforms do you need to target (select all that apply)?",
+            multiple: true,
+            options: [
+                {
+                    title: "Mobile",
+                    weights: {
+                        "React": 15,
+                        "React Native": 100,
+                        "Angular": 40,
+                        "Vue.js": 0,
+                        "Ember.js": -10,
+                        "Backbone.js": -10
+                    }
+                },
+                {
+                    title: "Web Browser",
+                    weights: {
+                        "React": 55,
+                        "React Native": -100,
+                        "Angular": 55,
+                        "Vue.js": 55,
+                        "Ember.js": 55,
+                        "Backbone.js": 55
+                    }
+                },
+                {
+                    title: "Desktop Application",
+                    weights: {
+                        "React": 70,
+                        "React Native": -25,
+                        "Angular": 70,
+                        "Vue.js": 50,
+                        "Ember.js": 90,
+                        "Backbone.js": -30
+                    }
+                }
+            ]
+        },
+        {
+            title: "2. What describes your project goal better?",
+            multiple: false,
+            options: [
+                {
+                    title: "Building a full-fledged production application",
+                    weights: {
+                        "React": 0,
+                        "React Native": 0,
+                        "Angular": 20,
+                        "Vue.js": 0,
+                        "Ember.js": 0,
+                        "Backbone.js": 20
+                    }
+                },
+                {
+                    title: "Building stateful user interfaces",
+                    weights: {
+                        "React": 80,
+                        "React Native": 80,
+                        "Angular": 0,
+                        "Vue.js": 90,
+                        "Ember.js": 80,
+                        "Backbone.js": 0
+                    }
+                }
+            ]
+        },
+        {
+            title: "3. How experienced are you with JavaScript and application development?",
+            multiple: false,
+            options: [
+                {
+                    title: "Completely Unexperienced",
+                    weights: {
+                        "React": 45,
+                        "React Native": 45,
+                        "Angular": 40,
+                        "Vue.js": 100,
+                        "Ember.js": 55,
+                        "Backbone.js": 95
+                    }
+                },
+                {
+                    title: "Somewhat Experienced",
+                    weights: {
+                        "React": 85,
+                        "React Native": 85,
+                        "Angular": 60,
+                        "Vue.js": 90,
+                        "Ember.js": 65,
+                        "Backbone.js": 85
+                    }
+                },
+                {
+                    title: "Fairly Experienced",
+                    weights: {
+                        "React": 0,
+                        "React Native": 0,
+                        "Angular": 0,
+                        "Vue.js": 0,
+                        "Ember.js": 0,
+                        "Backbone.js": 0
+                    }
+                },
+                {
+                    title: "Expert",
+                    weights: {
+                        "React": 0,
+                        "React Native": 0,
+                        "Angular": 0,
+                        "Vue.js": 0,
+                        "Ember.js": 0,
+                        "Backbone.js": 0
+                    }
+                }
+            ]
+        },
+        {
+            title: "4. How important is that your framework has a thriving community & reliable documentation?",
+            multiple: false,
+            options: [
+                {
+                    title: "Very Important",
+                    weights: {
+                        "React": 100,
+                        "React Native": 70,
+                        "Angular": 100,
+                        "Vue.js": 40,
+                        "Ember.js": 0,
+                        "Backbone.js": -10
+                    }
+                },
+                {
+                    title: "Somewhat Important",
+                    weights: {
+                        "React": 80,
+                        "React Native": 70,
+                        "Angular": 85,
+                        "Vue.js": 45,
+                        "Ember.js": 10,
+                        "Backbone.js": 0
+                    }
+                },
+                {
+                    title: "Not Important",
+                    weights: {
+                        "React": 0,
+                        "React Native": 0,
+                        "Angular": 0,
+                        "Vue.js": 0,
+                        "Ember.js": 0,
+                        "Backbone.js": 0
+                    }
+                }
+            ]
+        },
+        {
+            title: "5. Will you be creating a Single Page Application?",
+            multiple: false,
+            options: [
+                {
+                    title: "Yes",
+                    weights: {
+                        "React": 70,
+                        "React Native": 70,
+                        "Angular": 0,
+                        "Vue.js": 20,
+                        "Ember.js": 100,
+                        "Backbone.js": 0
+                    }
+                },
+                {
+                    title: "No",
+                    weights: {
+                        "React": 80,
+                        "React Native": 80,
+                        "Angular": 100,
+                        "Vue.js": 100,
+                        "Ember.js": -10,
+                        "Backbone.js": 20
+                    }
+                },
+                {
+                    title: "Not sure",
+                    weights: {
+                        "React": 0,
+                        "React Native": 0,
+                        "Angular": 0,
+                        "Vue.js": 0,
+                        "Ember.js": 0,
+                        "Backbone.js": 0
+                    }
+                }
+            ]
+        },
+        {
+            title: "6. How important is it that all required framework features are included in-the-box, as opposed to installed manually via a package manager?",
+            multiple: false,
+            options: [
+                {
+                    title: "Very Important",
+                    weights: {
+                        "React": -40,
+                        "React Native": 0,
+                        "Angular": 100,
+                        "Vue.js": 60,
+                        "Ember.js": 0,
+                        "Backbone.js": 40
+                    }
+                },
+                {
+                    title: "Somewhat Important",
+                    weights: {
+                        "React": -20,
+                        "React Native": 0,
+                        "Angular": 80,
+                        "Vue.js": 45,
+                        "Ember.js": 0,
+                        "Backbone.js": 35
+                    }
+                },
+                {
+                    title: "Not Important",
+                    weights: {
+                        "React": 35,
+                        "React Native": 20,
+                        "Angular": -10,
+                        "Vue.js": -5,
+                        "Ember.js": 10,
+                        "Backbone.js": 0
+                    }
+                }
+            ]
+        },
+        {
+            title: "7. Do you care about the job market demand of the framework?",
+            multiple: false,
+            options: [
+                {
+                    title: "Yes",
+                    weights: {
+                        "React": 80,
+                        "React Native": 100,
+                        "Angular": 100,
+                        "Vue.js": 60,
+                        "Ember.js": -100,
+                        "Backbone.js": -100
+                    }
+                },
+                {
+                    title: "No",
+                    weights: {
+                        "React": 0,
+                        "React Native": 0,
+                        "Angular": 0,
+                        "Vue.js": 0,
+                        "Ember.js": 0,
+                        "Backbone.js": 0
+                    }
+                }
+            ]
+        },
+        {
+            title: "8. Are you familiar with any of the languages/syntax styles below (select all that apply)?",
+            multiple: true,
+            options: [
+                {
+                    title: "Liquid/HTML-template syntax",
+                    weights: {
+                        "React": -10,
+                        "React Native": -10,
+                        "Angular": 40,
+                        "Vue.js": 90,
+                        "Ember.js": 90,
+                        "Backbone.js": -10
+                    }
+                },
+                {
+                    title: "JSX",
+                    weights: {
+                        "React": 100,
+                        "React Native": 100,
+                        "Angular": -40,
+                        "Vue.js": -40,
+                        "Ember.js": -40,
+                        "Backbone.js": -40
+                    }
+                },
+                {
+                    title: "TypeScript",
+                    weights: {
+                        "React": 50,
+                        "React Native": 50,
+                        "Angular": 100,
+                        "Vue.js": 50,
+                        "Ember.js": 40,
+                        "Backbone.js": 10
+                    }
+                }
+            ]
+        },
+        {
+            title: "9. Will you be working in a team?",
+            multiple: false,
+            options: [
+                {
+                    title: "Yes",
+                    weights: {
+                        "React": 0,
+                        "React Native": 0,
+                        "Angular": 90,
+                        "Vue.js": 0,
+                        "Ember.js": 0,
+                        "Backbone.js": 0
+                    }
+                },
+                {
+                    title: "No",
+                    weights: {
+                        "React": 0,
+                        "React Native": 0,
+                        "Angular": -20,
+                        "Vue.js": 0,
+                        "Ember.js": 0,
+                        "Backbone.js": 0
+                    }
+                }
+            ]
+        },
+    ];
+
+    var link = document.createElement("link");
+    link.href = "/assets/css/quiz_styles.css";
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.media = "screen,print";
+    document.getElementsByTagName("head")[0].appendChild(link);
+
+    // https://mdbootstrap.com/docs/technology-comparison/
+    const startingWeights = {
+        "React": 50,
+        "React Native": 20,
+        "Angular": 50,
+        "Vue.js": 20,
+        "Ember.js": 0,
+        "Backbone.js": 0
+    }
+
+    function callback(res) {
+        let root = document.getElementById("result");
+        let sortable = Object.keys(res).map(ele => ([ele, res[ele]]));
+
+        sortable.sort((a, b) => b[1] - a[1]);
+
+        const backgroundColors = {
+            "React": "#357be2",
+            "React Native": "#357fbf",
+            "Angular": "#ee2630",
+            "Vue.js": "#009e34",
+            "Ember.js": "#e04e39",
+            "Backbone.js": "#012a41"
+        }
+
+        const textColors = {
+            "React": "#EEE",
+            "React Native": "#EEE",
+            "Angular": "#EEE",
+            "Vue.js": "#EEE",
+            "Ember.js": "#222",
+            "Backbone.js": "#EEE"
+        }
+
+        const imageSrc = {
+            "React": "quiz-React.png",
+            "React Native": "quiz-React.png",
+            "Angular": "quiz-Angular.png",
+            "Vue.js": "quiz-vuejs.png",
+            "Ember.js": "quiz-emberjs.png",
+            "Backbone.js": "quiz-backbonejs.png"
+        }
+
+        const href = {
+            "React": "/react/",
+            "React Native": "/react/",
+            "Angular": "https://angular.io/start",
+            "Vue.js": "https://vuejs.org/v2/guide/",
+            "Ember.js": "https://guides.emberjs.com/release/getting-started/quick-start/",
+            "Backbone.js": "https://auth0.com/blog/backbonejs-getting-started/"
+        }
+
+        let finalHTML = "<h4>Your Results:</h4><p>Click to learn more!</p>";
+
+        sortable.forEach((currentOption, index) => {
+            finalHTML += `
+            <a href="${href[currentOption[0]]}">
+                <div class="quizzer-resultRoot" style="background-color: ${backgroundColors[currentOption[0]]}; color: ${textColors[currentOption[0]]}">
+                    <h4>${index + 1}: <b>${currentOption[0]}</b></h4>
+                    <span class="d-flex align-items-center">
+                        <img src="/assets/images/posts_images/${imageSrc[currentOption[0]]}" />
+                        <h4 class="quizzer-resultScore">${currentOption[1]}</h4>
+                    </span>
+                </div>
+            </a>
+            `
+        });
+
+        root.innerHTML = finalHTML;
+    }
+    quizzer(document.getElementById("frameworkTest"), startingWeights, questionData, "Submit", callback);
+</script>

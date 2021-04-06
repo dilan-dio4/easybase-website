@@ -10,7 +10,7 @@
     <loc>https://easybase.io/privacy/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://easybase.io/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/</loc>
@@ -40,19 +40,19 @@
     <loc>https://easybase.io/about/2020/09/20/Announcing-Mobile-Application/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://easybase.io/about/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://easybase.io/terms/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://app.easybase.io/?view=signup</loc>
@@ -94,7 +94,7 @@
     <loc>https://easybase.io/report/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://easybase.io/docs/easybase-react/</loc>
@@ -112,7 +112,7 @@
     <loc>https://easybase.io/react/2020/12/12/How-And-Where-To-Fetch-Data-In-Your-React-Projects/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://easybase.io/react/</loc>
@@ -130,7 +130,7 @@
     <loc>https://easybase.io/react/2021/01/13/3-Essential-Libraries-That-Every-New-React-Native-Developer-Should-Learn/</loc>
     <lastmod>2021-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://easybase.io/about/2021/01/30/What-Is-a-Serverless-Application/</loc>
@@ -142,12 +142,18 @@
     <loc>https://easybase.io/about/2021/02/09/Function-as-a-Service-FaaS-Is-Coming-to-Easybase/</loc>
     <lastmod>2021-02-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://easybase.io/react/2021/03/09/The-Easiest-Way-To-Deploy-Cloud-Functions-for-your-React-Projects/</loc>
     <lastmod>2021-03-09</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://easybase.io/best-javascript-framework-library-quiz/</loc>
+    <lastmod>2021-04-05</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
