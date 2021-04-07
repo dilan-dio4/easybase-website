@@ -1002,3 +1002,8 @@ footer {
 div.highlighter-rouge {
     background-color: transparent !important;
 }
+
+.undraggable {
+    user-select: none;
+    pointer-events: none;
+}
