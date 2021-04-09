@@ -21,7 +21,10 @@ Embed this in your webpage:
 
 <hr />
 
-# 6 Javascript UI Frameworks
+Take the **[JavaScript Framework Quiz](/best-javascript-framework-library-quiz/)** to discover the best fitting library for your next app or project!
+
+<hr />
+
 ## Ranked from Best-to-Worst in 2021
 
 1. **React -** *Facebook*
