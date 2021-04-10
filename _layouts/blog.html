@@ -63,6 +63,97 @@
     <meta name="twitter:site" content="@easybase_io" /> 
     <meta name="twitter:title" content="{{ page.title }} | Easybase" /> 
     <link rel="canonical" href="https://easybase.io{{ page.url }}" />
+
+    {% if page.title_image %}
+        {% if page.title_image contains "https://" or page.title_image contains "http://" %}
+            <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Article",
+                  "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "url": "https://easybase.io{{ page.url }}"
+                  },
+                  "headline": "{{ page.title }}",
+                  "image": "{{ page.title_image }}",  
+                  "author": {
+                    "@type": "Person",
+                    "name": "Ryan Parker"
+                  },  
+                  "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://easybase.io/#organization",
+                    "name": "Easybase",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://easybase.io/assets/images/blog_banner.png"
+                    }
+                  },
+                  "datePublished": "{{ page.date | date_to_xmlschema }}",
+                  "dateModified": {% if page.dateModified %}"{{ page.dateModified }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
+                }
+            </script>
+        {% else %}
+            <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Article",
+                  "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "url": "https://easybase.io{{ page.url }}"
+                  },
+                  "headline": "{{ page.title }}",
+                  "image": "https://easybase.io{{ page.title_image }}",  
+                  "author": {
+                    "@type": "Person",
+                    "name": "Ryan Parker"
+                  },  
+                  "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://easybase.io/#organization",
+                    "name": "Easybase",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://easybase.io/assets/images/blog_banner.png"
+                    }
+                  },
+                  "datePublished": "{{ page.date | date_to_xmlschema }}",
+                  "dateModified": {% if page.dateModified %}"{{ page.dateModified | date_to_xmlschema }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
+                }
+            </script>
+        {% endif %}
+    {% else %}
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "url": "https://easybase.io{{ page.url }}"
+              },
+              "headline": "{{ page.title }}",
+              "image": "https://easybase.io/assets/images/og_image.png",  
+              "author": {
+                "@type": "Person",
+                "name": "Ryan Parker"
+              },  
+              "publisher": {
+                "@type": "Organization",
+                "@id": "https://easybase.io/#organization",
+                "name": "Easybase",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://easybase.io/assets/images/blog_banner.png"
+                }
+              },
+              "datePublished": "{{ page.date | date_to_xmlschema }}",
+              "dateModified": {% if page.dateModified %}"{{ page.dateModified }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
+            }
+        </script>
+    {% endif %}
+
+    
+
 </head>
 
 <body>
