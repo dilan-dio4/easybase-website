@@ -90,7 +90,7 @@
                     }
                   },
                   "datePublished": "{{ page.date | date_to_xmlschema }}",
-                  "dateModified": {% if page.dateModified %}"{{ page.dateModified }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
+                  "dateModified": {% if page.date_modified %}"{{ page.date_modified | date_to_xmlschema }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
                 }
             </script>
         {% else %}
@@ -118,7 +118,7 @@
                     }
                   },
                   "datePublished": "{{ page.date | date_to_xmlschema }}",
-                  "dateModified": {% if page.dateModified %}"{{ page.dateModified | date_to_xmlschema }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
+                  "dateModified": {% if page.date_modified %}"{{ page.date_modified | date_to_xmlschema }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
                 }
             </script>
         {% endif %}
@@ -147,7 +147,7 @@
                 }
               },
               "datePublished": "{{ page.date | date_to_xmlschema }}",
-              "dateModified": {% if page.dateModified %}"{{ page.dateModified }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
+              "dateModified": {% if page.date_modified %}"{{ page.date_modified | date_to_xmlschema }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
             }
         </script>
     {% endif %}

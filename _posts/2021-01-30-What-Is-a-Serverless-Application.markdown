@@ -2,7 +2,7 @@
 layout: blog
 title: What Is a Serverless Application? The Benefits of Going Serverless
 date: 2021-01-30 11:20:00 -0400
-dateModified: 2021-04-10 06:00:15 -0400
+date_modified: 2021-04-10 06:00:15 -0400
 categories: about
 title_image: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80
 title_image_sm: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=90&q=80
