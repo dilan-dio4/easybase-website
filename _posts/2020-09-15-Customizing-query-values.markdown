@@ -78,7 +78,5 @@ Custom query parameters are supported by any integration that supports static qu
 <img data-src="/assets/images/posts_images/customize_4.png" alt="Customizing Easybase Query Values 3" width="100%" data-jslghtbx class="custom-lightbox lazyload" />
 <br />
 <br />
-<br />
-<br />
 
-#### **Note: the format of the values in the custom query object is quite flexible. More information can be found [here](/about/2020/09/15/Easybase-data-types/)**
+#### **Note: the format of the values in the custom query object is quite flexible. More information can be found [here](/about/2020/09/15/EasyBase-data-types/)**
