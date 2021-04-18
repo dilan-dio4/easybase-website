@@ -1007,3 +1007,58 @@ div.highlighter-rouge {
     user-select: none;
     pointer-events: none;
 }
+
+.newsletter-input-form {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    border-collapse: separate;
+    width: 100%;
+    height: 48px;
+    border-radius: .2rem;
+    background: #fff;
+    border: 1px solid #e9edf3;
+    -webkit-transition: border-color .2s, background-color .2s;
+    transition: border-color .2s, background-color .2s;
+}
+
+.newsletter-input-form button {
+    background: transparent;
+    color: #7cabff;
+    font-size: 23px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    outline: none !important;
+}
+
+.newsletter-input-form input {
+    border: none;
+    background: hsla(0, 0%, 100%, .2);
+    border-radius: 4px 0 0 4px;
+    font-size: 13px;
+    color: #24282e;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    height: 100%;
+    outline: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0 16px 1px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    border-radius: 6px 0 0 6px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-left: 46px;
+}
+
+.newsletter-input-form:hover {
+    border: 1px solid #272822;
+}

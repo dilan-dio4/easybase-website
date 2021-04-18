@@ -21,8 +21,6 @@ In the next coming weeks, we will be rolling out Function-as-a-Service capabilit
 
 This third pillar of our platform will complete the infrastructure necessary for completely serverless/cloud-native applications. As we continue to finish designing and testing Easybase FaaS, our focus will be placed on **ease-of-use and availability**.
 
-We will be using custom [OpenFaaS](https://www.openfaas.com/) configuration to manage containers and code scalability. This fantastic function store was created by [Alex Ellis](https://twitter.com/alexellisuk) and the source is [available here](https://github.com/openfaas/faas), under the MIT License.
-
 Functions can be created/edited directly in Easybase's new '**Functions**' tab or users will have the ability to drag-and-drop existing node packages on their local machine to upload functions directly.
 
 You will be able to call your function by name in code, with or without authentication enabled. Plus, our implementation will allow users to test their functions right in the Easybase interface.

@@ -293,6 +293,10 @@
                                     <button type="button" class="btn btn-outline-secondary">Learn More</button>
                                 </a>
                             </div>
+                            <hr class="w-100" />
+                            <div class="col-md-12">
+                                {% include subscribe.html %}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -415,15 +419,15 @@
             });
         });
 
-        var captureLinkClick = function(url, eventCategory) {
+        var captureLinkClick = function(url, eventCategory, ignoreRedirect = false) {
             if (!!window.google_tag_manager) {
                 gtag('event', 'click', {
                     'event_category':  eventCategory,
                     'event_label': "https://" + url,
                     'transport_type': 'beacon',
-                    'event_callback': function(){ document.location = "https://" + url; }
+                    'event_callback': ignoreRedirect ? function(){} : function(){ document.location = "https://" + url; }
                 });
-            } else {
+            } else if (!ignoreRedirect) {
                 document.location = "https://" + url;
             }
         }
