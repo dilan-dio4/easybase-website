@@ -87,6 +87,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_reacttypes_.contextvalue.html#addrecord" class="tsd-kind-icon">add<wbr>Record</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_reacttypes_.contextvalue.html#configureframe" class="tsd-kind-icon">configure<wbr>Frame</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_reacttypes_.contextvalue.html#currentconfiguration" class="tsd-kind-icon">current<wbr>Configuration</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_reacttypes_.contextvalue.html#db" class="tsd-kind-icon">db</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_reacttypes_.contextvalue.html#dbeventlistener" class="tsd-kind-icon">db<wbr>Event<wbr>Listener</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_reacttypes_.contextvalue.html#deleterecord" class="tsd-kind-icon">delete<wbr>Record</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_reacttypes_.contextvalue.html#fulltablesize" class="tsd-kind-icon">full<wbr>Table<wbr>Size</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_reacttypes_.contextvalue.html#getuserattributes" class="tsd-kind-icon">get<wbr>User<wbr>Attributes</a></li>
@@ -120,14 +122,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L156">reactTypes.tsx:156</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L166">reactTypes.tsx:166</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>This function is how you access your current frame. This function does not get new data or push changes to Easybase. If you
-									want to syncronize your frame and Easybase, call sync() then Frame().</p>
+									<p><strong>DEPRECATED</strong>: Use <code>.db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
 								</div>
+								<p>This function is how you access your current frame. This function does not get new data or push changes to Easybase. If you
+								want to syncronize your frame and Easybase, call sync() then Frame().</p>
 								<dl class="tsd-comment-tags">
 									<dt>abstract</dt>
 									<dd></dd>
@@ -139,14 +142,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L165">reactTypes.tsx:165</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L177">reactTypes.tsx:177</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>This function is how you access a single object your current frame. This function does not get new data or push changes to Easybase. If you
-									want to syncronize your frame and Easybase, call sync() then Frame().</p>
+									<p><strong>DEPRECATED</strong>: Use <code>.db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
 								</div>
+								<p>This function is how you access a single object your current frame. This function does not get new data or push changes to Easybase. If you
+								want to syncronize your frame and Easybase, call sync() then Frame().</p>
 								<dl class="tsd-comment-tags">
 									<dt>abstract</dt>
 									<dd></dd>
@@ -173,7 +177,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L205">reactTypes.tsx:205</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L217">reactTypes.tsx:217</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -209,7 +213,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L103">reactTypes.tsx:103</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L109">reactTypes.tsx:109</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -247,14 +251,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L95">reactTypes.tsx:95</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L101">reactTypes.tsx:101</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Configure the current frame size. Set the offset and amount of records to retreive assume you don&#39;t want to receive
-									your entire collection. This is useful for paging.</p>
+									<p><strong>DEPRECATED</strong>: Use <code>.db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
 								</div>
+								<p>Configure the current frame size. Set the offset and amount of records to retreive assume you don&#39;t want to receive
+								your entire collection. This is useful for paging.</p>
 								<dl class="tsd-comment-tags">
 									<dt>abstract</dt>
 									<dd></dd>
@@ -284,7 +289,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L196">reactTypes.tsx:196</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L208">reactTypes.tsx:208</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -298,6 +303,103 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="db" class="tsd-anchor"></a>
+					<h3>db</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">db<span class="tsd-signature-symbol">(</span>tableName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, userAssociatedRecordsOnly<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SQW</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L224">reactTypes.tsx:224</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Instantiate EasyQB instance for dynamic CRUD query building: <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> tableName: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> userAssociatedRecordsOnly: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">SQW</span></h4>
+							<p>EasyQB object for dynamic querying: <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="dbeventlistener" class="tsd-anchor"></a>
+					<h3>db<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">db<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>status<span class="tsd-signature-symbol">?: </span><a href="../enums/_types_.db_status.html" class="tsd-signature-type">DB_STATUS</a>, queryType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, queryCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L230">reactTypes.tsx:230</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Subscribe to db events, invoked by calling <code>.all</code> or <code>.one</code>: <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>callback: <span class="tsd-signature-symbol">(</span>status<span class="tsd-signature-symbol">?: </span><a href="../enums/_types_.db_status.html" class="tsd-signature-type">DB_STATUS</a>, queryType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, queryCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>status<span class="tsd-signature-symbol">?: </span><a href="../enums/_types_.db_status.html" class="tsd-signature-type">DB_STATUS</a>, queryType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, queryCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5><span class="tsd-flag ts-flagOptional">Optional</span> status: <a href="../enums/_types_.db_status.html" class="tsd-signature-type">DB_STATUS</a></h5>
+														</li>
+														<li>
+															<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryType: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+														</li>
+														<li>
+															<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryCount: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h4>
+							<p>Calling this function unsubscribes your callback function from events.</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-signature">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="deleterecord" class="tsd-anchor"></a>
 					<h3>delete<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -307,7 +409,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L111">reactTypes.tsx:111</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L117">reactTypes.tsx:117</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -343,7 +445,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L171">reactTypes.tsx:171</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L183">reactTypes.tsx:183</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -361,7 +463,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L178">reactTypes.tsx:178</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L190">reactTypes.tsx:190</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -394,7 +496,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L51">reactTypes.tsx:51</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L53">reactTypes.tsx:53</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -421,7 +523,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L41">reactTypes.tsx:41</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L43">reactTypes.tsx:43</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -443,7 +545,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L37">reactTypes.tsx:37</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L39">reactTypes.tsx:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -488,7 +590,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L60">reactTypes.tsx:60</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L62">reactTypes.tsx:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -532,7 +634,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L71">reactTypes.tsx:71</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L73">reactTypes.tsx:73</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -578,7 +680,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L45">reactTypes.tsx:45</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L47">reactTypes.tsx:47</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -600,7 +702,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L81">reactTypes.tsx:81</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L83">reactTypes.tsx:83</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -650,14 +752,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L119">reactTypes.tsx:119</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L127">reactTypes.tsx:127</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Call this method to syncronize your current changes with your database. Delections, additions, and changes will all be reflected by your
-									backend after calling this method. Call Frame() after this to get a normalized array of the freshest data.</p>
+									<p><strong>DEPRECATED</strong>: Use <code>.db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
 								</div>
+								<p>Call this method to syncronize your current changes with your database. Delections, additions, and changes will all be reflected by your
+								backend after calling this method. Call Frame() after this to get a normalized array of the freshest data.</p>
 								<dl class="tsd-comment-tags">
 									<dt>abstract</dt>
 									<dd></dd>
@@ -681,7 +784,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L184">reactTypes.tsx:184</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L196">reactTypes.tsx:196</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -699,7 +802,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L191">reactTypes.tsx:191</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L203">reactTypes.tsx:203</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -732,7 +835,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L148">reactTypes.tsx:148</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L156">reactTypes.tsx:156</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -771,7 +874,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L129">reactTypes.tsx:129</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L137">reactTypes.tsx:137</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -811,7 +914,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L139">reactTypes.tsx:139</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L147">reactTypes.tsx:147</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -851,13 +954,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L87">reactTypes.tsx:87</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/reactTypes.tsx#L91">reactTypes.tsx:91</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>This hook runs when the Frame changes. This can be triggered by calling sync().</p>
+									<p><strong>DEPRECATED</strong>: Use <code>.db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
 								</div>
+								<p>This hook runs when the Frame changes. This can be triggered by calling sync().</p>
 								<dl class="tsd-comment-tags">
 									<dt>abstract</dt>
 									<dd></dd>
@@ -922,6 +1026,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_reacttypes_.contextvalue.html#currentconfiguration" class="tsd-kind-icon">current<wbr>Configuration</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_reacttypes_.contextvalue.html#db" class="tsd-kind-icon">db</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_reacttypes_.contextvalue.html#dbeventlistener" class="tsd-kind-icon">db<wbr>Event<wbr>Listener</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_reacttypes_.contextvalue.html#deleterecord" class="tsd-kind-icon">delete<wbr>Record</a>

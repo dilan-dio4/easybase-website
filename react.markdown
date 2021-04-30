@@ -8,6 +8,7 @@ author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 tags: React
 meta_description: Comprehensive tutorial on using Easybase with React and React Native, featuring user authentication, visual queries, and serverless database.
+skip_author: true
 ---
 
 ### Table of Contents
@@ -141,9 +142,8 @@ Note that we passed the project's *ebconfig* token as a prop to the `EasybasePro
 <p>
   <b>Related functions:</b>
   <a href="/docs/easybase-react/modules/_useeasybase_.html" target="_blank">useEasybase</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#frame" target="_blank">Frame</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#configureframe" target="_blank">configureFrame</a>,
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#sync" target="_blank">sync</a>
+  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#db" target="_blank">db</a>, 
+  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#dbeventlistener" target="_blank">dbEventListener</a>
 </p>
 </div>
 
@@ -185,32 +185,40 @@ For reference, here's a screenshot of the current application **before** we impl
 
 Clicking either of the navigation links should change the current page to that inside the corresponding `Route` component. **Make sure you include `exact` in the link for `/`**.
 
-Create a new component called `Home`. We will put this inside the `/` route. Since we are within an `EasybaseProvider` we can access the `useEasybase` hook. When this component mounts (`useEffect`), we want to use `configureFrame` to set `Frame()` to the **REACT DEMO** table. Call `sync()` to finalize these changes. Then, we can map the `Frame()` array to components for our products table. The objects within `Frame()` correspond to our table such that column names will be keys for our objects. Also, you can use `tableTypes()` in your code to view these programmatically.
+Create a new component called `Home`. We will put this inside the `/` route. Since we are within an `EasybaseProvider` we can access the `useEasybase` hook. This hook is how we can statefully interface with Easybase functions in our components.
+
+**To query the database we will [use a function called `.db`](https://easybase.github.io/EasyQB/) exported from the `useEasybase` hook**. This function is a query builder that allows your to create [**Select**,](https://easybase.github.io/EasyQB/docs/select_queries.html) [**Insert**](https://easybase.github.io/EasyQB/docs/select_queries.html), [**Update**](https://easybase.github.io/EasyQB/docs/update_queries.html), and [**Delete**](https://easybase.github.io/EasyQB/docs/update_queries.html) queries, in code.
+
+This walkthrough will demonstrate basic usage of the `.db` function, but this is a powerful query builder with many options and aggregators. You'll want to take a look at [the documentation for the query builder](https://easybase.github.io/EasyQB/) for advanced usage.
+
+Our `Home` components will have a stateful variable called `easybaseData`. When this component mounts (`useEffect`), we want to set this to the **REACT DEMO** table with the `.db` function. Then, we can map the `easybaseData` array to components for our products table. The objects within `easybaseData` correspond to our table such that column names will be keys for our objects. Also, you can use `tableTypes()` in your code to view these programmatically.
+
+Note that each record in the `easybaseData` will have an added attribute column called `_key`, which is a persistent, unique identifier that is useful for updating or deleting specific records.
 
 Here's an implementation of the `Home` component reflecting these instructions.
 
 ```jsx
 import { EasybaseProvider, useEasybase } from 'easybase-react';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 
 // ...
 
 function Home() {
-  const {
-    configureFrame,
-    sync,
-    Frame
-  } = useEasybase();
+  const [easybaseData, setEasybaseData] = useState([]);
+  const { db } = useEasybase();
 
   useEffect(() => {
-    configureFrame({ limit: 10, offset: 0, tableName: "REACT DEMO" });
-    sync();
+    const mounted = async() => {
+      const ebData = await db("REACT DEMO").return().limit(10).all();
+      setEasybaseData(ebData);
+    }
+    mounted();
   }, [])
 
   return (
     <div style={ { display: "flex" } }>
-      {Frame().map(ele => 
+      {easybaseData.map(ele => 
         <div>
           <a href={ele.amazon_link}><img src={ele.demo_image} /></a>
           <h4>{ele.product_name}</h4>
@@ -223,24 +231,26 @@ function Home() {
 }
 ```
 
-When our Home component first mounts in `useEffect()`, the frame is configured to limit the returned documents to 10 with an offset of 0. This is the limit and offset of documents that will be retrieved from your database. *limit* and *offset* are useful for adding pagination to your React project. Also, we must specify which table we are accessing at any given point. In this case, we are accessing the database available to guests in **REACT DEMO**.
+Here's what is happening when our component first mounts in `useEffect()`:
 
-We then map `Frame()` to a custom *card-like* component. For readability, I didn't include the CSS so this might not look too pretty but feel free to style this component yourself. This custom component features all of our table attributes, and clicking the image brings you to that product's page. The entire source for this project (including CSS) is available on [Github](https://github.com/easybase/example-react-project).
+1. Run an async function called `mounted` (allows us to use `await` keyword)
+2. Create a table instance with `db("TABLE NAME")`
+3. Use [`.return`](https://easybase.github.io/EasyQB/docs/select_queries.html#select) to perform a **Select** query
+4. Limit the query to 10
+5. Execute the query with `.all`, could use `.one` to execute queries as well
+6. Set `easybaseData` to the returned result
+
+**Note**: use [`.where`](https://easybase.github.io/EasyQB/docs/select_queries.html#where) to filter queries with [powerful operators](https://easybase.github.io/EasyQB/docs/operations.html).
+
+Remember, in this case we are accessing the table **REACT DEMO** which we made readable to guests, so users don't need to be signed in to execute this query.
+
+We then map our retrieved data to a custom *card-like* component. For sake of brevity, I didn't include the CSS so this might not look too pretty but feel free to style this component yourself. The entire source for this project (including CSS) is available on [Github](https://github.com/easybase/example-react-project).
+
+This custom component features all of our table attributes, and clicking the image brings you to that product's page.
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react card components" data-src="/assets/images/posts_images/react-7.png" />
 
-`Frame()` returns an array of objects. You can also do `Frame(index)` to access specific elements. **Calling `sync()` will pull down any changes from other sources and, if a user is authenticated with permissions, normalize any local changes made up to the cloud**.
-
-The lifecycle of `Frame()` and related function:
-
-```js
-Frame Is Synchronized -->
-useFrameEffect() runs -->
-Edit Frame() -->
-Call sync() -->
-Frame Is Synchronized -->
-useFrameEffect() runs
-```
+Executing a [`.return`](https://easybase.github.io/EasyQB/docs/select_queries.html#select) statement with `.all` returns an array of objects, whereas `.one` will return a single object. Use [aggregators](https://easybase.github.io/EasyQB/docs/select_queries.html#aggregate) in the [`.return`](https://easybase.github.io/EasyQB/docs/select_queries.html#select) function to perform arithmetic on returned columns.
 
 <br />
 
@@ -372,11 +382,8 @@ For more information on implementing login authentication in React Native, take 
 <div class="sectionBox">
 <p>
   <b>Related functions:</b> 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#frame" target="_blank">Frame</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#configureframe" target="_blank">configureFrame</a>,
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#sync" target="_blank">sync</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#addrecord" target="_blank">addRecord</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#deleterecord" target="_blank">deleteRecord</a>
+  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#db" target="_blank">db</a>, 
+  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#dbeventlistener" target="_blank">dbEventListener</a>
 </p>
 </div>
 
@@ -388,35 +395,39 @@ Give your project permissions to read and write 'User associated records'. **Be 
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react read and write" data-src="/assets/images/posts_images/react-9.png" />
 
-Let's edit our card-like component to handle a user click. There's two ways to add a record to table with the `useEasybase()` hook. Pushing a new records to a configured `Frame()` followed by calling `sync()` or using the `addRecord()` function where we can specify the table *on-site*. Note that for uploading media, use either `updateRecordFile()`, `updateRecordImage()`, or `updateRecordVideo()`. Here's changes to our `Home` component using the `addRecord()` function so signed-in users can star products:
+Let's edit our card component to handle a user click on the button element. Using [`.insert`](https://easybase.github.io/EasyQB/docs/insert_queries.html) on our [`.db`](https://easybase.github.io/EasyQB/) function allows us to insert records into our table via an object. From there, we can perform a [`.return`](https://easybase.github.io/EasyQB/docs/select_queries.html#select), similar to above, to display our new data. Note that for uploading media, use either `updateRecordFile()`, `updateRecordImage()`, or `updateRecordVideo()`. Here's changes to our `Home` component using `.db` so signed-in users can star products:
 
 ```jsx
 function Home() {
+  const [easybaseData, setEasybaseData] = useState([]);
+
   const {
-    configureFrame,
-    sync,
-    Frame,
-    isUserSignedIn,
-    addRecord
+    db,
+    isUserSignedIn
   } = useEasybase();
 
   useEffect(() => {
-    configureFrame({ limit: 10, offset: 0, tableName: "REACT DEMO" });
-    sync();
+    const mounted = async() => {
+      const ebData = await db("REACT DEMO").return().limit(10).all();
+      setEasybaseData(ebData);
+    }
+    mounted();
   }, [])
+
 
   const handleStarClick = (ele) => {
     if (isUserSignedIn()) {
-      addRecord({ tableName: "USER STARS", newRecord: {
+      db("USER STARS").insert({
         product_name: ele.product_name,
         amazon_link: ele.amazon_link
-      } })
+      }).one();
+      // Columns are set to null by default
     }
   }
 
   return (
     <div style={ { display: "flex" } }>
-      {Frame().map(ele => 
+      {easybaseData.map(ele => 
         <div>
           <a href={ele.amazon_link}><img src={ele.demo_image} /></a>
           <h4>{ele.product_name}</h4>
@@ -433,7 +444,9 @@ Now when a signed-in user stars a product, we can refresh our table and see a ne
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react associated users" data-src="/assets/images/posts_images/react-10.png" />
 
-Detailed in this section is the user that starred the item. Now let's see how easy it is to *query* for just these records in the `/starred` route. Remember we set permissions to only be able to read user-associated records from **USER STARS**. So, we just need to set up a standard `Frame()` configuration and map theme to some component. Make a new component called `Starred` that will go in the `/starred` route.
+Detailed in this section is the user that starred the item. Now let's see how easy it is to *query* for just these records in the `/starred` route. Remember we set permissions to only be able to read user-associated records from **USER STARS**. So, we just need to set up a standard [`.db`](https://easybase.github.io/EasyQB/) configuration and **pass `true` to to the second parameter: `db('USER STARS', true)`**.
+
+This second parameters is _userAssociatedRecordsOnly_ which will force operations to only to be performed on records associated to the currently signed-in user. Make a new component called `Starred` that will go in the `/starred` route.
 
 ```jsx
 function App() {
@@ -461,20 +474,18 @@ function App() {
 // ...
 
 function Starred() {
-  const {
-    configureFrame,
-    sync,
-    Frame,
-  } = useEasybase();
+  const [easybaseData, setEasybaseData] = useState([]);
+
+  const { db } = useEasybase();
 
   useEffect(() => {
-    configureFrame({ limit: 10, offset: 0, tableName: "USER STARS" });
-    sync();
+    db('USER STARS', true).return().limit(10).all()
+      .then(ebData => setEasybaseData(ebData));
   }, [])
 
   return (
     <div style={ { display: "flex" } }>
-      {Frame().map(ele => 
+      {easybaseData.map(ele => 
         <div className="cardRoot">
           <a href={ele.amazon_link}>{ele.product_name}</a>
         </div>
@@ -484,11 +495,22 @@ function Starred() {
 }
 ```
 
-Navigate to the starred route with a signed-in user and we can see we **securely** and **successfully** display records that the user has starred.
+Navigate to the starred route with a signed-in user; we **securely** and **successfully** display records that the user has starred.
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react secure records" data-src="/assets/images/posts_images/react-11.png" />
 
-Note that `Frame()` acts just like a plain array, so manipulate it however is necessary, then just call `sync()` to have changes normalized in your remote React database. For example, if you want to delete an element you could do `Frame().splice(index, 1)`, `Frame().pop()`, or `deleteRecord( record: Frame(2), tableName: "REACT DEMO" )`. Edit a table record just as you would a plain object with `Frame(2).product_name = "My Product"`.
+In a situation like this, an application may need manipulate specific records. For example, deleting a user's _starred_ items. Here's a simple way one could use the `_key` attribute to **delete or update specific records**:
+
+```js
+const singleRecord = await db('USER STARS', true).return().one();
+// {
+//   "product_name": "Dash Mini Maker",
+//   ...  
+//   "_key": 417f1f17acf86cd799439013
+// }
+
+await db('USER STARS', true).delete().where({ _key: singleRecord._key }).one();
+``` 
 
 <br />
 
@@ -614,4 +636,4 @@ Thanks a lot for reading! Please be sure to **share this article** using the soc
 
 * [Customizing Query Values](/about/2020/09/15/Customizing-query-values/)
 * [User Authentication](/react/2020/11/25/The-Easiest-Way-To-Add-User-Authentication-To-Your-React-Project/)
-* [Serverless Database](/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/)
+* [Cloud Functions](https://www.freecodecamp.org/news/cloud-functions-in-react-with-easybase/)
