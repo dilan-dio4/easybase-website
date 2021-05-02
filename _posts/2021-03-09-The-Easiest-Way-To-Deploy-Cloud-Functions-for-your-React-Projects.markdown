@@ -137,6 +137,7 @@ Import `{ callFunction }` from `easybase-react`. This is an asynchronous functio
 
 I've also done some basic styling. This not pretty by any means, but will work for this example. For reference, my `App.js` looks like the following:
 
+<!-- {% raw %} -->
 ```jsx
 import { callFunction } from 'easybase-react';
 
@@ -152,7 +153,7 @@ function App() {
   
   return (
     <div style={panelStyle}>
-      <div style={ { display: "flex" } }>
+      <div style={{ display: "flex" }}>
         <input type="text" placeholder="What city are you in?" />
         <button>Go</button>
       </div>
@@ -163,6 +164,7 @@ function App() {
 
 export default App;
 ```
+<!-- {% endraw %} -->
 
 If we run the project (`npm run start`), we should get a window that looks something like this:
 
@@ -174,6 +176,7 @@ Now, to statefully make this request and update the UI, our button's `onClick` s
 
 Pass this named route as the first parameter of `callFunction`. The response of `callFunction` will then be used to set the text in the final `<p></p>`. We'll track the value of the input and output using React's `useState` hook with `inputVal` and `outputVal`, respectively. The final code may look like the following:
 
+<!-- {% raw %} -->
 ```jsx
 import { callFunction } from 'easybase-react';
 import { useState } from 'react';
@@ -198,7 +201,7 @@ function App() {
   
   return (
     <div style={panelStyle}>
-      <div style={ { display: "flex" } }>
+      <div style={{ display: "flex" }}>
         <input type="text" placeholder="What city are you in?" value={inputVal} onChange={e => setInputVal(e.target.value)} />
         <button onClick={onButtonClick}>Go</button>
       </div>
@@ -209,6 +212,7 @@ function App() {
 
 export default App;
 ```
+<!-- {% endraw %} -->
 
 Clicking the **Go** button with an empty text box will return weather data from a random city as detailed in our cloud function's `cities.js`. Putting a city name in the text box will output the corresponding weather information as well.
 

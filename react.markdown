@@ -102,6 +102,7 @@ Next, put the `ebconfig.js` file that you downloaded in the `src/` folder of you
 
 The final step of this section is wrapping your root component in the `EasybaseProvider` component with your ebconfig token. Edit the `App.js` file with these changes:
 
+<!-- {% raw %} -->
 ```jsx
 import './App.css';
 import { EasybaseProvider } from 'easybase-react';
@@ -131,6 +132,7 @@ function App() {
 
 export default App;
 ```
+<!-- {% endraw %} -->
 
 Note that we passed the project's *ebconfig* token as a prop to the `EasybaseProvider`. Just like that, you can access **full serverless functionality** in a React-lifecycle friendly and stateful manner!
 
@@ -149,6 +151,7 @@ Note that we passed the project's *ebconfig* token as a prop to the `EasybasePro
 
 For now, the application will have two pages. One for anybody to view the products in the **React Demo** table, and one for users to view the products they have individually starred. We're going to use a package called `react-router-dom` to give our application dynamic routing. Install this package with `npm i react-router-dom`. This step is not essential, but will very much increase the usability of the web app. I'm going to create two routes, `/` and `/starred` like so:
 
+<!-- {% raw %} -->
 ```jsx
 import './App.css';
 import { EasybaseProvider } from 'easybase-react';
@@ -159,7 +162,7 @@ function App() {
   return (
     <EasybaseProvider ebconfig={ebconfig}>
       <HashRouter>
-        <div style={ { display: "flex", justifyContent: "space-evenly", borderBottom: "1px grey solid" } }>
+        <div style={{ display: "flex", justifyContent: "space-evenly", borderBottom: "1px grey solid" }}>
           <Link to="/"><h2>Home</h2></Link>
           <Link to="/starred"><h2>Starred</h2></Link>
         </div>
@@ -178,6 +181,7 @@ function App() {
 
 export default App;
 ```
+<!-- {% endraw %} -->
 
 For reference, here's a screenshot of the current application **before** we implement data fetching and user authentication:
 
@@ -197,6 +201,7 @@ Note that each record in the `easybaseData` will have an added attribute column 
 
 Here's an implementation of the `Home` component reflecting these instructions.
 
+<!-- {% raw %} -->
 ```jsx
 import { EasybaseProvider, useEasybase } from 'easybase-react';
 import { useEffect, useState } from "react";
@@ -217,7 +222,7 @@ function Home() {
   }, [])
 
   return (
-    <div style={ { display: "flex" } }>
+    <div style={{ display: "flex" }}>
       {easybaseData.map(ele => 
         <div>
           <a href={ele.amazon_link}><img src={ele.demo_image} /></a>
@@ -230,6 +235,7 @@ function Home() {
   )
 }
 ```
+<!-- {% endraw %} -->
 
 Here's what is happening when our component first mounts in `useEffect()`:
 
@@ -277,6 +283,7 @@ Let's add a component called `<AuthButton />` to the root App. This component wi
 
 Here's an implementation of this workflow:
 
+<!-- {% raw %} -->
 ```jsx
 function AuthButton() {
   const {
@@ -362,6 +369,7 @@ function AuthButton() {
   )
 }
 ```
+<!-- {% endraw %} -->
 
 Just like that, your application supports a *stateful* user authentication workflow. The `signIn`, `signOut`, and `signUp` function are asynchronous, so you can use `await` or `.then` to handle the completion of these events.
 
@@ -397,6 +405,7 @@ Give your project permissions to read and write 'User associated records'. **Be 
 
 Let's edit our card component to handle a user click on the button element. Using [`.insert`](https://easybase.github.io/EasyQB/docs/insert_queries.html) on our [`.db`](https://easybase.github.io/EasyQB/) function allows us to insert records into our table via an object. From there, we can perform a [`.return`](https://easybase.github.io/EasyQB/docs/select_queries.html#select), similar to above, to display our new data. Note that for uploading media, use either `updateRecordFile()`, `updateRecordImage()`, or `updateRecordVideo()`. Here's changes to our `Home` component using `.db` so signed-in users can star products:
 
+<!-- {% raw %} -->
 ```jsx
 function Home() {
   const [easybaseData, setEasybaseData] = useState([]);
@@ -426,7 +435,7 @@ function Home() {
   }
 
   return (
-    <div style={ { display: "flex" } }>
+    <div style={{ display: "flex" }}>
       {easybaseData.map(ele => 
         <div>
           <a href={ele.amazon_link}><img src={ele.demo_image} /></a>
@@ -439,6 +448,7 @@ function Home() {
   )
 }
 ```
+<!-- {% endraw %} -->
 
 Now when a signed-in user stars a product, we can refresh our table and see a new element. Notice in the drawer we can see a new section called **· Associated Users**.
 
@@ -448,6 +458,7 @@ Detailed in this section is the user that starred the item. Now let's see how ea
 
 This second parameters is _userAssociatedRecordsOnly_ which will force operations to only to be performed on records associated to the currently signed-in user. Make a new component called `Starred` that will go in the `/starred` route.
 
+<!-- {% raw %} -->
 ```jsx
 function App() {
   return (
@@ -484,7 +495,7 @@ function Starred() {
   }, [])
 
   return (
-    <div style={ { display: "flex" } }>
+    <div style={{ display: "flex" }}>
       {easybaseData.map(ele => 
         <div className="cardRoot">
           <a href={ele.amazon_link}>{ele.product_name}</a>
@@ -494,6 +505,7 @@ function Starred() {
   )  
 }
 ```
+<!-- {% endraw %} -->
 
 Navigate to the starred route with a signed-in user; we **securely** and **successfully** display records that the user has starred.
 
@@ -529,6 +541,7 @@ One of the most *accessible* features of Easybase is the ability to **build quer
 
 Add a route to your application called `/over100`. Create a new component, I'll call mine `FilterExample`. In your root `App` component, assign this component to the new route. Programmatically we can use the `Query()` function to access our saved queries. Here's my `FilterExample` component:
 
+<!-- {% raw %} -->
 ```jsx
 function FilterExample() {
   const {
@@ -544,7 +557,7 @@ function FilterExample() {
   }, [])
 
   return (
-    <div style={ { display: "flex" } }>
+    <div style={{ display: "flex" }}>
       {arr.map(ele =>
         <div className="cardRoot">
           <a href={ele.amazon_link}><img src={ele.demo_image} /></a>
@@ -556,6 +569,7 @@ function FilterExample() {
   )
 }
 ```
+<!-- {% endraw %} -->
 
 I'm using the same *card-like* component from our `Home` component. Here's a screenshot of my web app for reference ([full source available here](https://github.com/easybase/example-react-project)):
 
@@ -607,6 +621,7 @@ Packages, and their corresponding version, are available on [npmjs.com](https://
 
 To call your function in React or React Native, import `callFunction` as you would `EasybaseProvider`, then pass in the unique route found under the **Deploy** tab. It is under this tab you will also be able to find more information about calling your function in production. You can use either `await callFunction(...)` or `callFunction(...).then(res)` to get the response of the function as a string. Your code may look like the following:
 
+<!-- {% raw %} -->
 ```jsx
 import { useEasybase, callFunction } from 'easybase-react';
 
@@ -623,6 +638,7 @@ export default function() {
     //...
 }
 ```
+<!-- {% endraw %} -->
 
 <br />
 
