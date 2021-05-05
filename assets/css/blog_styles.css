@@ -245,6 +245,7 @@ body {
     font-size: 46px;
     font-family: sans-serif;
     padding-bottom: 20px;
+    color: #33475b;
 }
 
 .content-text {
@@ -259,10 +260,12 @@ body {
 
 .content-text h1 {
     margin-bottom: 1.4rem;
+    color: #33475b;
 }
 
 .content-text h2, h3, h4 {
     margin-bottom: .9rem;
+    color: #33475b;
 }
 
 nav {
@@ -282,8 +285,8 @@ nav ul li {
 
 .nav-regular-link {
     padding: 15px 20px;
-    color: rgb(63, 52, 52);
-    font-weight: 500;
+    color: rgb(52, 55, 63);
+    font-weight: 400;
     transition: border linear 75ms;
     text-decoration: none !important;
 }
@@ -1023,12 +1026,8 @@ div.highlighter-rouge {
     border: 1px solid #272822;
 }
 
-.toc-root {
-
-}
-
 .toc-root h4 {
-    font-size: 20px;
+    font-size: 22px;
     color: #33475b;
     padding-bottom: .25em;
     margin: 0;

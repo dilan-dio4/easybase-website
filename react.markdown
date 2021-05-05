@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-guide
 title: How to use Easybase with React & React Native — Full Walkthrough
 date:   2020-12-20 09:20:10 -0400
 date_modified: 2021-04-10 05:00:15 -0400
@@ -8,23 +8,9 @@ author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 tags: React
 meta_description: Comprehensive tutorial on using Easybase with React and React Native, featuring user authentication, visual queries, and serverless database.
-skip_author: true
+tocTitles: ["Introduction", "Setup", "React Configuration", "Unauthenticated Database", "useReturn", "Sign In & Sign Up Workflow", "Authenticated Database", "Visual Queries", "Cloud Functions", "Conclusion"]
+tocLinks: ["#introduction", "#setup", "#react-configuration", "#unauthenticated-database", "#usereturn", "#sign-in--sign-up-workflow", "#authenticated-database", "#visual-queries", "#cloud-functions", "#conclusion"]
 ---
-
-### Table of Contents
-
-* [Introduction](#introduction)
-* [Setup](#setup)
-* [React Configuration](#react-configuration)
-* [Unauthenticated Database](#unauthenticated-database)
-* [useReturn](#useReturn)
-* [Sign In & Sign Up Workflow](#sign-in--sign-up-workflow)
-* [Authenticated Database](#authenticated-database)
-* [Visual Queries](#visual-queries)
-* [Cloud Functions](#cloud-functions)
-* [Conclusion](#conclusion)
-
-<hr />
 
 ## Introduction
 

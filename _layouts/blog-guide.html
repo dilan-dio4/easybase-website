@@ -166,16 +166,16 @@
                 </div>
                 <ul class="nav-list">
                     <li>
-                        <a class="nav-regular-link" href="/">Home</a>
+                        <a class="nav-regular-link" href="/">HOME</a>
                     </li>
                     <li>
-                        <a class="nav-regular-link" href="/pricing/">Pricing</a>
+                        <a class="nav-regular-link" href="/pricing/">PRICING</a>
                     </li>
                     <li>
-                        <a class="nav-regular-link" href="/blog/">Blog</a>
+                        <a class="nav-regular-link" href="/blog/">BLOG</a>
                     </li>
                     <li>
-                        <a class="nav-regular-link" href="/react/">React</a>
+                        <a class="nav-regular-link" href="/react/">REACT</a>
                     </li>
                     <li>
                         <a class="btn btn-raised btn-success nav-login-button" href="https://app.easybase.io" onclick="captureLinkClick('app.easybase.io', 'signIn');">Login</a>
@@ -189,7 +189,10 @@
     <section class="main-content">
         <div class="wide-container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-9">
+                    <div class="my-3" style="width: 120px; height: 2px; background-color: #ff7a59;"></div>
+                    <h1 class="post-title">{{ page.title }}</h1>
+
                     {% if page.title_image %}
                     <div class="row mb-4 pb-3">
                         <div class="col-lg-12">
@@ -197,8 +200,8 @@
                         </div>
                     </div>
                     {% endif %}
-                    <h1 class="post-title">{{ page.title }}</h1>
                 </div>
+                <div class="col-lg-3"></div>
             </div>
             <div class="row">
                 <div class="col-lg-9">
@@ -206,37 +209,40 @@
                         {{ content }}
                     </div>
                     <hr />
-                    <div class="d-flex justify-content-between align-items-start">
-                        <div class="socials-content-footer">
-                            <h3 style="font-weight: 600;">Share</h3>
-                            <div class="socials-content-footer-buttons">
-                                <a class="a-button" rel="noreferrer" href="http://twitter.com/share/?url=https://easybase.io{{ page.url }}&text={{ page.title | url_encode  }}&via=easybase_io" target="_blank">
-                                    <button class="btn btn-raised" style="background-color: #29c5f6;">
-                                        <ion-icon name="logo-twitter" size="large" style="color:white; vertical-align: middle;"></ion-icon>
-                                    </button>
-                                </a>
-                                <a class="a-button" rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https://easybase.io{{ page.url }}{{ page.title | url_encode }}" target="_blank">
-                                    <button class="btn btn-raised" style="background-color: #6788ce;">
-                                        <ion-icon name="logo-facebook" size="large" style="color:white; vertical-align: middle;"></ion-icon>
-                                    </button>
-                                </a>
-                                <a class="a-button" rel="noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&url=https://easybase.io{{ page.url }}&title={{ page.title | url_encode }}&summary={{ page.excerpt | url_encode }}&source=Easybase.io" target="_blank">
-                                    <button class="btn btn-raised" style="background-color: #3a9bdc;">
-                                        <ion-icon name="logo-linkedin" size="large" style="color:white; vertical-align: middle;"></ion-icon>
-                                    </button>
-                                </a>
+                    <div class="row justify-content-between align-items-start">
+                        <div class="col-md-4">
+                            <div class="socials-content-footer">
+                                <h3 style="font-weight: 600;">Share</h3>
+                                <div class="socials-content-footer-buttons mb-5">
+                                    <a class="a-button" rel="noreferrer" href="http://twitter.com/share/?url=https://easybase.io{{ page.url }}&text={{ page.title | url_encode  }}&via=easybase_io" target="_blank">
+                                        <button class="btn btn-raised" style="background-color: #29c5f6;">
+                                            <ion-icon name="logo-twitter" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                                        </button>
+                                    </a>
+                                    <a class="a-button" rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https://easybase.io{{ page.url }}{{ page.title | url_encode }}" target="_blank">
+                                        <button class="btn btn-raised" style="background-color: #6788ce;">
+                                            <ion-icon name="logo-facebook" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                                        </button>
+                                    </a>
+                                    <a class="a-button" rel="noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&url=https://easybase.io{{ page.url }}&title={{ page.title | url_encode }}&summary={{ page.excerpt | url_encode }}&source=Easybase.io" target="_blank">
+                                        <button class="btn btn-raised" style="background-color: #3a9bdc;">
+                                            <ion-icon name="logo-linkedin" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                                        </button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="horizontal-card-root">
-                            <div class="author-root-sm">
-                                <img class="lazyload author-image-sm undraggable" data-src={{ page.author_image }} alt="Easybase blog page author image" width="193" height="193" />
+                        <div class="col-md-3"></div>
+                        <div class="col-md-5 d-flex justify-content-md-end">
+                            <div class="horizontal-card-root mb-5">
+                                <div class="author-root-sm">
+                                    <img class="lazyload author-image-sm undraggable" data-src={{ page.author_image }} alt="Easybase blog page author image" width="193" height="193" />
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center flex-column mt-4 pt-2 ml-4">
+                                    <h5 class="mb-0">By&nbsp;<a href="mailto:ryan@easybase.io">{{ page.author_name }}</a></h5>
+                                    <div class="my-3" style="width: 80px; height: 2px; background-color: #ff7a59;"></div>
+                                </div>
                             </div>
-                            <div class="d-flex align-items-center justify-content-center flex-column mt-4 pt-2 ml-4">
-                                <h5 class="mb-0">By&nbsp;<a href="mailto:ryan@easybase.io">{{ page.author_name }}</a></h5>
-                                <div class="my-3" style="width: 80px; height: 2px; background-color: #ff7a59;"></div>
-                            </div>
-                            <!-- <p class="author-description">{{page.author_description}}</p> -->
                         </div>
                     </div>
                 </div>
@@ -247,9 +253,9 @@
                                 <h4>Table of Contents</h4>
                                 <nav>
                                     <ul>
-                                        {% for link in page.toc %}
+                                        {% for link in page.tocTitles %}
                                         <li>
-                                            <a href="#{{ link | downcase | replace: ' ', '-' }}">{{ link }}</a>
+                                            <a href="{{ page.tocLinks[forloop.index0] }}">{{ link }}</a>
                                         </li>
                                         {% endfor %}
                                     </ul>
@@ -263,40 +269,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card-root">
-                        <h2 class="text-center">Ideas in the <b>Cloud</b></h2>
-                        <p class="about-easybase-card-content mb-4 mt-3 text-center">Deploy your next project with Easybase's developer-focused serverless platform.</p>
-                        <div class="about-easybase-checks">
-                            <span>
-                                <ion-icon name="checkmark" style="color: #4caf50; font-size: 20px;"></ion-icon>
-                                <p>99% Uptime*</p>
-                            </span>
-                            <span>
-                                <ion-icon name="checkmark" style="color: #4caf50; font-size: 20px;"></ion-icon>
-                                <p>Free Tier</p>
-                            </span>
-                            <span>
-                                <ion-icon name="checkmark" style="color: #4caf50; font-size: 20px;"></ion-icon>
-                                <p>Instant Setup</p>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <a class="a-button" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;">
-                                <button type="button" class="btn btn-raised btn-success splash-button-try">Sign Up</button>
-                            </a>
-                            <a class="a-button" href="/">
-                                <button type="button" class="btn btn-outline-secondary">Learn More</button>
-                            </a>
-                        </div>
-                        <hr class="w-100" />
-                        <div class="col-md-12">
-                            {% include subscribe.html %}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-5">
-                    <div class="card-root">
-                        <h4 class="text-center mb-3">Featured Articles</h4>
+                        <h4 class="text-center mb-3">Read More</h4>
                         {% for post in site.posts limit:6 %}
                         {% if post.title_image_sm and post.title != page.title %}
                         <a href={{ post.url }} class="w-100">

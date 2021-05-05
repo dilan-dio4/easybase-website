@@ -3,7 +3,7 @@ layout: blog-guide
 title: The Best Database for React in 2021
 date: 2021-03-03 11:20:00 -0400
 categories: react
-title_image: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80&h=500
+title_image: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80&h=300
 title_image_sm: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=90&q=80&h=45
 author_name: Ryan Parker
 tags: Home Blog React
@@ -11,7 +11,8 @@ author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib
 author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 meta_description: Easybase cloud functions are scalable, serverless code snippets that can be called directly from your React projects with built-in analytics tracking.
-toc: ["Introduction", "Project Setup", "Database", "useReturn"]
+tocTitles: ["Introduction", "Project Setup", "Database", "useReturn"]
+tocLinks: ["#introduction", "#project-setup", "#database", "#usereturn"]
 ---
 
 ## Introduction
