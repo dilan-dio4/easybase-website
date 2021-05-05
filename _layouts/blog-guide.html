@@ -190,13 +190,13 @@
         <div class="wide-container">
             <div class="row">
                 <div class="col-lg-12">
-                    <nav class="inline-breadcrumb-root" aria-label="breadcrumb">
-                        <ol class="breadcrumb inline-breadcrumb">
-                            {% for tag in page.tags %}
-                            <li class="breadcrumb-item"><a href="/blog/">{{ tag }}</a></li>
-                            {% endfor %}
-                        </ol>
-                    </nav>
+                    {% if page.title_image %}
+                    <div class="row mb-4 pb-3">
+                        <div class="col-lg-12">
+                            <img class="title-image" alt="easybase blog splash image" src={{ page.title_image }} />
+                        </div>
+                    </div>
+                    {% endif %}
                     <h1 class="post-title">{{ page.title }}</h1>
                 </div>
             </div>
@@ -206,24 +206,37 @@
                         {{ content }}
                     </div>
                     <hr />
-                    <div class="socials-content-footer">
-                        <h3 style="font-weight: 600;">Share</h3>
-                        <div class="socials-content-footer-buttons">
-                            <a class="a-button" rel="noreferrer" href="http://twitter.com/share/?url=https://easybase.io{{ page.url }}&text={{ page.title | url_encode  }}&via=easybase_io" target="_blank">
-                                <button class="btn btn-raised" style="background-color: #29c5f6;">
-                                    <ion-icon name="logo-twitter" size="large" style="color:white; vertical-align: middle;"></ion-icon>
-                                </button>
-                            </a>
-                            <a class="a-button" rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https://easybase.io{{ page.url }}{{ page.title | url_encode }}" target="_blank">
-                                <button class="btn btn-raised" style="background-color: #6788ce;">
-                                    <ion-icon name="logo-facebook" size="large" style="color:white; vertical-align: middle;"></ion-icon>
-                                </button>
-                            </a>
-                            <a class="a-button" rel="noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&url=https://easybase.io{{ page.url }}&title={{ page.title | url_encode }}&summary={{ page.excerpt | url_encode }}&source=Easybase.io" target="_blank">
-                                <button class="btn btn-raised" style="background-color: #3a9bdc;">
-                                    <ion-icon name="logo-linkedin" size="large" style="color:white; vertical-align: middle;"></ion-icon>
-                                </button>
-                            </a>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="socials-content-footer">
+                            <h3 style="font-weight: 600;">Share</h3>
+                            <div class="socials-content-footer-buttons">
+                                <a class="a-button" rel="noreferrer" href="http://twitter.com/share/?url=https://easybase.io{{ page.url }}&text={{ page.title | url_encode  }}&via=easybase_io" target="_blank">
+                                    <button class="btn btn-raised" style="background-color: #29c5f6;">
+                                        <ion-icon name="logo-twitter" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                                    </button>
+                                </a>
+                                <a class="a-button" rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https://easybase.io{{ page.url }}{{ page.title | url_encode }}" target="_blank">
+                                    <button class="btn btn-raised" style="background-color: #6788ce;">
+                                        <ion-icon name="logo-facebook" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                                    </button>
+                                </a>
+                                <a class="a-button" rel="noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&url=https://easybase.io{{ page.url }}&title={{ page.title | url_encode }}&summary={{ page.excerpt | url_encode }}&source=Easybase.io" target="_blank">
+                                    <button class="btn btn-raised" style="background-color: #3a9bdc;">
+                                        <ion-icon name="logo-linkedin" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="horizontal-card-root">
+                            <div class="author-root-sm">
+                                <img class="lazyload author-image-sm undraggable" data-src={{ page.author_image }} alt="Easybase blog page author image" width="193" height="193" />
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center flex-column mt-4 pt-2 ml-4">
+                                <h5 class="mb-0">By&nbsp;<a href="mailto:ryan@easybase.io">{{ page.author_name }}</a></h5>
+                                <div class="my-3" style="width: 80px; height: 2px; background-color: #ff7a59;"></div>
+                            </div>
+                            <!-- <p class="author-description">{{page.author_description}}</p> -->
                         </div>
                     </div>
                 </div>
@@ -235,16 +248,16 @@
                                 <nav>
                                     <ul>
                                         {% for link in page.toc %}
-                                            <li>
-                                                <a href="#{{ link | downcase | replace: ' ', '-' }}">{{ link }}</a>
-                                            </li>
+                                        <li>
+                                            <a href="#{{ link | downcase | replace: ' ', '-' }}">{{ link }}</a>
+                                        </li>
                                         {% endfor %}
                                     </ul>
                                 </nav>
                             </aside>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="row">
@@ -285,17 +298,17 @@
                     <div class="card-root">
                         <h4 class="text-center mb-3">Featured Articles</h4>
                         {% for post in site.posts limit:6 %}
-                            {% if post.title_image_sm and post.title != page.title %}
-                            <a href={{ post.url }} class="w-100">
-                                <div class="d-flex w-100 featured-article my-2">
-                                    <img data-src="{{ post.title_image_sm }}" class="lazyload" alt="{{ post.title }} featured article" width="90" height="45" />
-                                    <span>
-                                        <p>{{ post.title }}</p>
-                                        <small>{{ post.date | date_to_long_string }}</small>
-                                    </span>
-                                </div>
-                            </a>
-                            {% endif %}
+                        {% if post.title_image_sm and post.title != page.title %}
+                        <a href={{ post.url }} class="w-100">
+                            <div class="d-flex w-100 featured-article my-2">
+                                <img data-src="{{ post.title_image_sm }}" class="lazyload" alt="{{ post.title }} featured article" width="90" height="45" />
+                                <span>
+                                    <p>{{ post.title }}</p>
+                                    <small>{{ post.date | date_to_long_string }}</small>
+                                </span>
+                            </div>
+                        </a>
+                        {% endif %}
                         {% endfor %}
                     </div>
                 </div>
