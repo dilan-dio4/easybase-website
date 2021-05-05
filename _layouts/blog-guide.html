@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180320774-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180320774-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="/assets/css/custom_bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="/assets/css/blog_styles.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="alternate icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="alternate icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/favicon.svg" color="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="application-name" content="Easybase.io" />
+
+    <script src="/assets/js/lazysizes.min.js"></script>
+
+    {% if page.meta_description %}
+    <meta name="description" content="{{ page.meta_description | truncate: 155 }}" />
+    <meta name="twitter:description" content="{{ page.meta_description | truncate: 155 }}" />
+    <meta property="og:description" content="{{ page.meta_description | truncate: 155 }}" />
+    {% else %}
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 155 }}" />
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 155 }}" />
+    <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 155 }}" />
+    {% endif %}
+
+    {% if page.title_image %}
+    {% if page.title_image contains "https://" or page.title_image contains "http://" %}
+    <meta property="og:image" content="{{ page.title_image }}" />
+    <meta name="twitter:image" content="{{ page.title_image }}" />
+    {% else %}
+    <meta property="og:image" content="https://easybase.io{{ page.title_image }}" />
+    <meta name="twitter:image" content="https://easybase.io{{ page.title_image }}" />
+    {% endif %}
+    {% else %}
+    <meta property="og:image" content="https://easybase.io/assets/images/og_image.png" />
+    <meta name="twitter:image" content="https://easybase.io/assets/images/og_image.png" />
+    {% endif %}
+
+    <meta property="og:title" content="{{ page.title }} | Easybase" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://easybase.io{{ page.url }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@easybase_io" />
+    <meta name="twitter:title" content="{{ page.title }} | Easybase" />
+    <link rel="canonical" href="https://easybase.io{{ page.url }}" />
+
+    {% if page.title_image %}
+    {% if page.title_image contains "https://" or page.title_image contains "http://" %}
+    <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Article",
+                  "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "url": "https://easybase.io{{ page.url }}"
+                  },
+                  "headline": "{{ page.title }}",
+                  "image": "{{ page.title_image }}",  
+                  "author": {
+                    "@type": "Person",
+                    "name": "Ryan Parker"
+                  },  
+                  "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://easybase.io/#organization",
+                    "name": "Easybase",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://easybase.io/assets/images/blog_banner.png"
+                    }
+                  },
+                  "datePublished": "{{ page.date | date_to_xmlschema }}",
+                  "dateModified": {% if page.date_modified %}"{{ page.date_modified | date_to_xmlschema }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
+                }
+            </script>
+    {% else %}
+    <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Article",
+                  "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "url": "https://easybase.io{{ page.url }}"
+                  },
+                  "headline": "{{ page.title }}",
+                  "image": "https://easybase.io{{ page.title_image }}",  
+                  "author": {
+                    "@type": "Person",
+                    "name": "Ryan Parker"
+                  },  
+                  "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://easybase.io/#organization",
+                    "name": "Easybase",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://easybase.io/assets/images/blog_banner.png"
+                    }
+                  },
+                  "datePublished": "{{ page.date | date_to_xmlschema }}",
+                  "dateModified": {% if page.date_modified %}"{{ page.date_modified | date_to_xmlschema }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
+                }
+            </script>
+    {% endif %}
+    {% else %}
+    <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "url": "https://easybase.io{{ page.url }}"
+              },
+              "headline": "{{ page.title }}",
+              "image": "https://easybase.io/assets/images/og_image.png",  
+              "author": {
+                "@type": "Person",
+                "name": "Ryan Parker"
+              },  
+              "publisher": {
+                "@type": "Organization",
+                "@id": "https://easybase.io/#organization",
+                "name": "Easybase",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://easybase.io/assets/images/blog_banner.png"
+                }
+              },
+              "datePublished": "{{ page.date | date_to_xmlschema }}",
+              "dateModified": {% if page.date_modified %}"{{ page.date_modified | date_to_xmlschema }}"{% else %}"{{ page.date | date_to_xmlschema }}"{% endif %}
+            }
+        </script>
+    {% endif %}
+</head>
+
+<body>
+
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="/" title="Easybase">logo</a>
+            </div>
+            <nav style="display: flex; flex-grow: 1; justify-content: center;">
+                <div class="nav-mobile">
+                    <a id="nav-toggle"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a class="nav-regular-link" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-regular-link" href="/pricing/">Pricing</a>
+                    </li>
+                    <li>
+                        <a class="nav-regular-link" href="/blog/">Blog</a>
+                    </li>
+                    <li>
+                        <a class="nav-regular-link" href="/react/">React</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-raised btn-success nav-login-button" href="https://app.easybase.io" onclick="captureLinkClick('app.easybase.io', 'signIn');">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <section class="main-content">
+        <div class="wide-container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="inline-breadcrumb-root" aria-label="breadcrumb">
+                        <ol class="breadcrumb inline-breadcrumb">
+                            {% for tag in page.tags %}
+                            <li class="breadcrumb-item"><a href="/blog/">{{ tag }}</a></li>
+                            {% endfor %}
+                        </ol>
+                    </nav>
+                    <h1 class="post-title">{{ page.title }}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="content-text">
+                        {{ content }}
+                    </div>
+                    <hr />
+                    <div class="socials-content-footer">
+                        <h3 style="font-weight: 600;">Share</h3>
+                        <div class="socials-content-footer-buttons">
+                            <a class="a-button" rel="noreferrer" href="http://twitter.com/share/?url=https://easybase.io{{ page.url }}&text={{ page.title | url_encode  }}&via=easybase_io" target="_blank">
+                                <button class="btn btn-raised" style="background-color: #29c5f6;">
+                                    <ion-icon name="logo-twitter" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                                </button>
+                            </a>
+                            <a class="a-button" rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https://easybase.io{{ page.url }}{{ page.title | url_encode }}" target="_blank">
+                                <button class="btn btn-raised" style="background-color: #6788ce;">
+                                    <ion-icon name="logo-facebook" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                                </button>
+                            </a>
+                            <a class="a-button" rel="noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&url=https://easybase.io{{ page.url }}&title={{ page.title | url_encode }}&summary={{ page.excerpt | url_encode }}&source=Easybase.io" target="_blank">
+                                <button class="btn btn-raised" style="background-color: #3a9bdc;">
+                                    <ion-icon name="logo-linkedin" size="large" style="color:white; vertical-align: middle;"></ion-icon>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 hide-mobile">
+                    <div class="sidebar-cards-root">
+                        <div class="sticky-sidebar mb-5 p-0">
+                            <aside class="toc-root d-flex flex-column">
+                                <h4>Table of Contents</h4>
+                                <nav>
+                                    <ul>
+                                        {% for link in page.toc %}
+                                            <li>
+                                                <a href="#{{ link | downcase | replace: ' ', '-' }}">{{ link }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </nav>
+                            </aside>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card-root">
+                        <h2 class="text-center">Ideas in the <b>Cloud</b></h2>
+                        <p class="about-easybase-card-content mb-4 mt-3 text-center">Deploy your next project with Easybase's developer-focused serverless platform.</p>
+                        <div class="about-easybase-checks">
+                            <span>
+                                <ion-icon name="checkmark" style="color: #4caf50; font-size: 20px;"></ion-icon>
+                                <p>99% Uptime*</p>
+                            </span>
+                            <span>
+                                <ion-icon name="checkmark" style="color: #4caf50; font-size: 20px;"></ion-icon>
+                                <p>Free Tier</p>
+                            </span>
+                            <span>
+                                <ion-icon name="checkmark" style="color: #4caf50; font-size: 20px;"></ion-icon>
+                                <p>Instant Setup</p>
+                            </span>
+                        </div>
+                        <div class="d-flex">
+                            <a class="a-button" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;">
+                                <button type="button" class="btn btn-raised btn-success splash-button-try">Sign Up</button>
+                            </a>
+                            <a class="a-button" href="/">
+                                <button type="button" class="btn btn-outline-secondary">Learn More</button>
+                            </a>
+                        </div>
+                        <hr class="w-100" />
+                        <div class="col-md-12">
+                            {% include subscribe.html %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-5">
+                    <div class="card-root">
+                        <h4 class="text-center mb-3">Featured Articles</h4>
+                        {% for post in site.posts limit:6 %}
+                            {% if post.title_image_sm and post.title != page.title %}
+                            <a href={{ post.url }} class="w-100">
+                                <div class="d-flex w-100 featured-article my-2">
+                                    <img data-src="{{ post.title_image_sm }}" class="lazyload" alt="{{ post.title }} featured article" width="90" height="45" />
+                                    <span>
+                                        <p>{{ post.title }}</p>
+                                        <small>{{ post.date | date_to_long_string }}</small>
+                                    </span>
+                                </div>
+                            </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="py-2 footer-bg">
+        <div class="container footer-content-container">
+            <div class="row py-4">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <img class="lazyload mb-2" data-src="/assets/images/blog_banner.png" width="200px" style="filter: brightness(0) invert(1);" alt="easybase alternate blog banner" />
+                    <p class="footer-content-text contact-text m-0 pl-3">4120 Schenley Drive</p>
+                    <p class="footer-content-text contact-text m-0 pl-3">Pittsburgh, PA</p>
+                    <p class="footer-content-text contact-text m-0 pl-3">15260</p>
+                    <hr />
+                    <p class="footer-content-text m-0 mb-3 mb-md-1 pl-3 "><b>Contact Us</b></p>
+                    <p class="footer-content-text m-0 mb-4 mb-md-0 pl-3"><a href="mailto:hello@easybase.io" class="contact-text">hello@easybase.io</a></p>
+                    <p class="footer-content-text m-0 pl-3"><a href="tel:4129450510" class="contact-text">412-945-0510</a></p>
+                </div>
+                <div class="col-md-4 footer-content-section-root my-4 my-md-0">
+                    {% include footer-message.html %}
+                </div>
+                <div class="col-md-3 footer-content-section-root my-4 my-md-0">
+                    <div class="footer-content-section mt-3">
+                        <ion-icon class="mb-4" name="newspaper-outline" size="large"></ion-icon>
+                        {% for post in site.posts limit:4 %}
+                        <p class="footer-content-text pb-3 pl-1"><a href="{{ post.url }}" class="contact-text">{{ post.title | truncate: 30 }}</a></p>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-2 footer-content-section-root my-4 my-md-0 hide-mobile">
+                    <div class="footer-content-section mt-3">
+                        <ion-icon name="link-outline" size="large"></ion-icon>
+                        <p class="footer-content-text pb-3 pl-1 mt-4"><a href="/report/" class="contact-text">Report an Issue</a></p>
+                        <p class="footer-content-text pb-3 pl-1"><a href="https://github.com/easybase" class="contact-text">Github</a></p>
+                        <p class="footer-content-text pb-3 pl-1"><a href="/pricing/" class="contact-text">Pricing</a></p>
+                        <p class="footer-content-text pb-3 pl-1"><a href="https://app.easybase.io/" class="contact-text">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="container">
+            <div class="row footer-button-root">
+
+                <div class="footer-footer col-md-4 left-flex">
+                    <a href="https://www.twitter.com/easybase_io" style="border: none;">
+                        <button class="btn bmd-btn-fab bmd-btn-fab-sm mr-2 footer-social-fab">
+                            <ion-icon name="logo-twitter" size="small"></ion-icon>
+                        </button>
+                    </a>
+                    <a href="https://stackoverflow.com/search?q=easybase" style="border: none;">
+                        <button class="btn bmd-btn-fab bmd-btn-fab-sm mr-2 footer-social-fab">
+                            <ion-icon name="logo-stackoverflow" size="small"></ion-icon>
+                        </button>
+                    </a>
+                    <a href="https://www.linkedin.com/company/easybase" style="border: none;">
+                        <button class="btn bmd-btn-fab bmd-btn-fab-sm mr-2 footer-social-fab">
+                            <ion-icon name="logo-linkedin" size="small"></ion-icon>
+                        </button>
+                    </a>
+                    <a href="https://www.github.com/easybase" style="border: none;">
+                        <button class="btn bmd-btn-fab bmd-btn-fab-sm mr-2 footer-social-fab">
+                            <ion-icon name="logo-github" size="small"></ion-icon>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="footer-footer col-md-4 center-flex">
+                    <small class="footer-footlink m-0">© Easybase 2018-2021</small>
+                </div>
+
+                <div class="footer-footer col-md-4 right-flex">
+                    {% if page.url == "/blog/" %} <a class="footer-footlink m-0 mr-2" href="https://www.wikidata.org/wiki/Q106211728">Wikidata</a> {% endif %}
+                    <a class="footer-footlink m-0 mr-2" href="/sitemap.xml">Sitemap</a>
+                    <a class="footer-footlink m-0 mr-2" href="/terms/">Terms</a>
+                    <a class="footer-footlink m-0" href="/privacy/">Privacy</a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+
+            var getScrollY = function () { return (window.pageYOffset || window.document.documentElement.scrollTop) - (window.document.documentElement.clientTop || 0); };
+            var getWindowWidth = function () { return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; };
+
+            function checkNavHeight() {
+                if (getWindowWidth() > 800) {
+                    var scroll_pos = getScrollY();
+                    if (scroll_pos > 50) document.querySelector(".navigation").classList.add("navigation-scrolled");
+                    else document.querySelector(".navigation").classList.remove("navigation-scrolled");
+                }
+            }
+
+            checkNavHeight();
+
+            window.addEventListener("scroll", checkNavHeight);
+
+            var jqueryToggle = function (ele) {
+                if (getComputedStyle(ele, null).display == "none") {
+                    ele.style.display = "block";
+                } else {
+                    ele.style.display = "none";
+                }
+            }
+
+            document.getElementById('nav-toggle').addEventListener("click", function () {
+                document.getElementById('nav-toggle').classList.toggle('active');
+                jqueryToggle(document.querySelector('nav ul'));
+
+            });
+        });
+
+        var captureLinkClick = function (url, eventCategory, ignoreRedirect = false) {
+            if (!!window.google_tag_manager) {
+                gtag('event', 'click', {
+                    'event_category': eventCategory,
+                    'event_label': "https://" + url,
+                    'transport_type': 'beacon',
+                    'event_callback': ignoreRedirect ? function () { } : function () { document.location = "https://" + url; }
+                });
+            } else if (!ignoreRedirect) {
+                document.location = "https://" + url;
+            }
+        }
+
+    </script>
+    <script type="module" src="/assets/ion-icons/ionicons.esm.js"></script>
+    <script nomodule src="/assets/ion-icons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/felixhagspiel/jsonlylightbox/js/lightbox.min.js" type="text/javascript"></script>
+    <script>
+        Array.from(document.getElementsByTagName('img')).forEach(function (ele) {
+            if (ele.hasAttribute('data-jslghtbx')) {
+                if (ele.hasAttribute('data-src'))
+                    ele.setAttribute('data-jslghtbx', ele.getAttribute('data-src'));
+                else
+                    ele.setAttribute('data-jslghtbx', ele.getAttribute('src'));
+            }
+        });
+        var lightbox = new Lightbox();
+        lightbox.load();
+    </script>
+</body>
+
+</html>

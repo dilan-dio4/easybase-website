@@ -17,6 +17,7 @@ skip_author: true
 * [Setup](#setup)
 * [React Configuration](#react-configuration)
 * [Unauthenticated Database](#unauthenticated-database)
+* [useReturn](#useReturn)
 * [Sign In & Sign Up Workflow](#sign-in--sign-up-workflow)
 * [Authenticated Database](#authenticated-database)
 * [Visual Queries](#visual-queries)
@@ -189,11 +190,13 @@ For reference, here's a screenshot of the current application **before** we impl
 
 Clicking either of the navigation links should change the current page to that inside the corresponding `Route` component. **Make sure you include `exact` in the link for `/`**.
 
-Create a new component called `Home`. We will put this inside the `/` route. Since we are within an `EasybaseProvider` we can access the `useEasybase` hook. This hook is how we can statefully interface with Easybase functions in our components.
+Create a new component called `Home`. We will put this inside the `/` route. Since we are within an `EasybaseProvider` we can access the `useEasybase` hook. This hook is how we can statefully interface with Easybase functions within our components.
 
-**To query the database we will [use a function called `.db`](https://easybase.github.io/EasyQB/) exported from the `useEasybase` hook**. This function is a query builder that allows your to create [**Select**,](https://easybase.github.io/EasyQB/docs/select_queries.html) [**Insert**](https://easybase.github.io/EasyQB/docs/select_queries.html), [**Update**](https://easybase.github.io/EasyQB/docs/update_queries.html), and [**Delete**](https://easybase.github.io/EasyQB/docs/update_queries.html) queries, in code.
+### Return
 
-This walkthrough will demonstrate basic usage of the `.db` function, but this is a powerful query builder with many options and aggregators. You'll want to take a look at [the documentation for the query builder](https://easybase.github.io/EasyQB/) for advanced usage.
+**To query the database we will [use a function called `db()`](https://easybase.github.io/EasyQB/) exported from the `useEasybase` hook**. This function is a query builder that allows your to create [**Select**,](https://easybase.github.io/EasyQB/docs/select_queries.html) [**Insert**](https://easybase.github.io/EasyQB/docs/select_queries.html), [**Update**](https://easybase.github.io/EasyQB/docs/update_queries.html), and [**Delete**](https://easybase.github.io/EasyQB/docs/update_queries.html) queries, in code.
+
+This walkthrough will demonstrate basic usage of the `db()` function, but this is a powerful query builder with many options and aggregators. You'll want to take a look at [the documentation for the query builder](https://easybase.github.io/EasyQB/) for advanced usage.
 
 Our `Home` components will have a stateful variable called `easybaseData`. When this component mounts (`useEffect`), we want to set this to the **REACT DEMO** table with the `.db` function. Then, we can map the `easybaseData` array to components for our products table. The objects within `easybaseData` correspond to our table such that column names will be keys for our objects. Also, you can use `tableTypes()` in your code to view these programmatically.
 
@@ -213,16 +216,17 @@ function Home() {
   const [easybaseData, setEasybaseData] = useState([]);
   const { db } = useEasybase();
 
+  const mounted = async() => {
+    const ebData = await db("REACT DEMO").return().limit(10).all();
+    setEasybaseData(ebData);
+  }
+
   useEffect(() => {
-    const mounted = async() => {
-      const ebData = await db("REACT DEMO").return().limit(10).all();
-      setEasybaseData(ebData);
-    }
     mounted();
   }, [])
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", flexWrap: "wrap" }}>
       {easybaseData.map(ele => 
         <div>
           <a href={ele.amazon_link}><img src={ele.demo_image} /></a>
@@ -258,7 +262,95 @@ This custom component features all of our table attributes, and clicking the ima
 
 Executing a [`.return`](https://easybase.github.io/EasyQB/docs/select_queries.html#select) statement with `.all` returns an array of objects, whereas `.one` will return a single object. Use [aggregators](https://easybase.github.io/EasyQB/docs/select_queries.html#aggregate) in the [`.return`](https://easybase.github.io/EasyQB/docs/select_queries.html#select) function to perform arithmetic on returned columns.
 
+### Insert
+
+Let's create a button that will insert data into our table. There are many different ways to capture user input on a website (dialogs, text boxes, etc.), but in this example I'll use the [`prompt()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt) function that is built-in web browsers.
+
+Start with a new component called **AddCardButton**. We'll use a callback from **Home** to alert to re-mount `data` after the insertion.
+
+Clicking our button calls prompt three times for each attribute except for `demo_image` which could be passed in as a url. Attributes that are not passed into `db().insert` are automatically cast to null. followed by the callback [which we will not need with [**useReturn**](#useReturn), as shown below].
+
+Here's an implementation of this new **AddCardButton** component. Remember to add the component to **Home**:
+
+<!-- {% raw %} -->
+```jsx
+function AddCardButton({ callback }) {
+  const { db } = useEasybase();
+
+  const handleAddCardClick = async () => {
+    try {
+      const inLink = prompt("Please enter an Amazon link", "https://...");
+      if (!inLink) return;
+      const inName = prompt("Please enter a product name", "");
+      if (!inName) return;
+      const inPrice = prompt("Please enter a price as a number", "14.24");
+      if (!inPrice) return;
+
+      await db().insert({
+        amazon_link: inLink,
+        product_name: inName,
+        price: Number(inPrice)
+      }).one();
+      callback();
+    } catch (_) {
+      alert("Error on input format")
+    }
+  }
+
+  return (
+    <button
+      onClick={handleAddCardClick}
+      className="insertCardButton"
+    >
+      + Add Card
+    </button>
+  )
+}
+
+function Home() {
+  
+  // ...
+
+  return (
+    <div style={{ display: "flex", flexWrap: "wrap" }}>
+      {easybaseData.map(ele => 
+        <div>
+          <a href={ele.amazon_link}><img src={ele.demo_image} /></a>
+          <h4>{ele.product_name}</h4>
+          <p>${ele.price}</p>
+          <button onClick={() => {}}>⭐ Save for later ⭐</button>
+        </div>
+      )}
+      <AddCardButton callback={mounted} /> {/* <--- */}
+    </div>
+  )
+}
+```
+<!-- {% endraw %} -->
+
+
+
 <br />
+
+## useReturn
+
+<div class="sectionBox">
+<p>
+  <b>Related functions:</b>
+  <a href="/docs/easybase-react/modules/_useeasybase_.html" target="_blank">useEasybase</a>, 
+  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#db" target="_blank">db</a>, 
+  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#dbeventlistener" target="_blank">dbEventListener</a>
+</p>
+</div>
+
+The **useReturn** function is an alternate, lifecycle-friendly, hook to our `db().return` statements that subscribes to changes across your components. This is the preferred way to get data in your project. The method demonstrated in the above section forces the developer to constantly re-fetch `easybaseData` whenever changes are made with `db().insert`, `db().set`, `db().delete`.
+
+In React we have access to *hooks*. This is a programming pattern that allows components to natively bind to state changes across the project. The `useReturn` hook automatically re-fetch the data of given query, similar to how the `useEffect` hook runs a function when certain variables change.
+
+<!-- {% raw %} -->
+```js
+```
+<!-- {% endraw %} -->
 
 ## Sign In & Sign Up Workflow
 
