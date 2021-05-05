@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/assets/css/lightbox.min.css">
     <link rel="stylesheet" href="/assets/css/custom_bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/bootstrap-material-design.min.css">
-    <link rel="stylesheet" href="/assets/css/blog_styles.css" />
+    <link rel="stylesheet" href="/assets/css/blog_styles.min.css" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="alternate icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -192,17 +192,16 @@
                 <div class="col-lg-9">
                     <div class="my-3" style="width: 120px; height: 2px; background-color: #ff7a59;"></div>
                     <h1 class="post-title">{{ page.title }}</h1>
-
-                    {% if page.title_image %}
-                    <div class="row mb-4 pb-3">
-                        <div class="col-lg-12">
-                            <img class="title-image" alt="easybase blog splash image" src={{ page.title_image }} />
-                        </div>
-                    </div>
-                    {% endif %}
                 </div>
                 <div class="col-lg-3"></div>
             </div>
+            {% if page.title_image %}
+            <div class="row mb-4 pb-3">
+                <div class="col-lg-12">
+                    <img class="title-image" alt="easybase blog splash image" src={{ page.title_image }} />
+                </div>
+            </div>
+            {% endif %}
             <div class="row">
                 <div class="col-lg-9">
                     <div class="content-text">
@@ -246,9 +245,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 hide-mobile">
-                    <div class="sidebar-cards-root">
-                        <div class="sticky-sidebar mb-5 p-0">
+                <div class="col-lg-3 d-flex flex-column justify-content-between">
+                    <div class="sidebar-cards-root h-100">
+                        <div class="sticky-sidebar mb-5 p-0 hide-mobile">
                             <aside class="toc-root d-flex flex-column">
                                 <h4>Table of Contents</h4>
                                 <nav>
@@ -263,13 +262,8 @@
                             </aside>
                         </div>
                     </div>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card-root">
-                        <h4 class="text-center mb-3">Read More</h4>
+                    <div class="card-root" style="margin-bottom: 205px;">
+                        <h4 class="text-center mb-3">Read more</h4>
                         {% for post in site.posts limit:6 %}
                         {% if post.title_image_sm and post.title != page.title %}
                         <a href={{ post.url }} class="w-100">

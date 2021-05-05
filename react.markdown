@@ -250,11 +250,13 @@ Executing a [`.return`](https://easybase.github.io/EasyQB/docs/select_queries.ht
 
 ### Insert
 
-Let's create a button that will insert data into our table. There are many different ways to capture user input on a website (dialogs, text boxes, etc.), but in this example I'll use the [`prompt()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt) function that is built-in web browsers.
+Let's create a button that will insert data into our table. There are many different ways to capture user input on a website (dialogs, text boxes, etc.), but in this example I'll use the [`prompt()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt) function that is built in web browsers.
 
 Start with a new component called **AddCardButton**. We'll use a callback from **Home** to alert to re-mount `data` after the insertion.
 
-Clicking our button calls prompt three times for each attribute except for `demo_image` which could be passed in as a url. Attributes that are not passed into `db().insert` are automatically cast to null. followed by the callback [which we will not need with [**useReturn**](#useReturn), as shown below].
+Clicking our button calls prompt three times for each attribute, except for `demo_image` which could have been passed in as a url. Attributes that are not passed into `db().insert` are automatically cast to *null*.
+
+We then use those three prompted inputs in a `db().insert` call, followed by the callback [which we will not need with [**useReturn**](#useReturn), as shown below].
 
 Here's an implementation of this new **AddCardButton** component. Remember to add the component to **Home**:
 
@@ -315,10 +317,13 @@ function Home() {
 <!-- {% endraw %} -->
 
 
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react insert card components" data-src="/assets/images/posts_images/react-insert-1.png" />
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react insert card components" data-src="/assets/images/posts_images/react-insert-2.png" />
 
 <br />
 
-## useReturn
+<!-- ## useReturn
 
 <div class="sectionBox">
 <p>
@@ -331,12 +336,7 @@ function Home() {
 
 The **useReturn** function is an alternate, lifecycle-friendly, hook to our `db().return` statements that subscribes to changes across your components. This is the preferred way to get data in your project. The method demonstrated in the above section forces the developer to constantly re-fetch `easybaseData` whenever changes are made with `db().insert`, `db().set`, `db().delete`.
 
-In React we have access to *hooks*. This is a programming pattern that allows components to natively bind to state changes across the project. The `useReturn` hook automatically re-fetch the data of given query, similar to how the `useEffect` hook runs a function when certain variables change.
-
-<!-- {% raw %} -->
-```js
-```
-<!-- {% endraw %} -->
+In React we have access to *hooks*. This is a programming pattern that allows components to natively bind to state changes across the project. The `useReturn` hook automatically re-fetch the data of given query, similar to how the `useEffect` hook runs a function when certain variables change. -->
 
 ## Sign In & Sign Up Workflow
 
