@@ -366,6 +366,25 @@
     <script>
         window.addEventListener("DOMContentLoaded", function () {
 
+            var forcedLoadedImages = false;
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (!forcedLoadedImages) {
+                        Array.from(document.getElementsByTagName('img')).forEach(function (ele) {
+                            if (!ele.hasAttribute('src') && ele.hasAttribute('data-src')) {
+                                ele.setAttribute('src', ele.getAttribute('data-src'));
+                            }
+                        });
+                        forcedLoadedImages = true;
+                    }
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
             var getScrollY = function () { return (window.pageYOffset || window.document.documentElement.scrollTop) - (window.document.documentElement.clientTop || 0); };
             var getWindowWidth = function () { return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; };
 
