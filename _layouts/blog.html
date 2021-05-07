@@ -43,7 +43,15 @@
         <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 155 }}" />
     {% endif %}
 
-    {% if page.title_image %}
+    {% if page.og_image %}
+        {% if page.og_image contains "https://" or page.og_image contains "http://" %}
+            <meta property="og:image" content="{{ page.og_image }}" />
+            <meta name="twitter:image" content="{{ page.og_image }}" />
+        {% else %}
+            <meta property="og:image" content="https://easybase.io{{ page.og_image }}" />
+            <meta name="twitter:image" content="https://easybase.io{{ page.og_image }}" />
+        {% endif %}
+    {% elsif page.title_image %}
         {% if page.title_image contains "https://" or page.title_image contains "http://" %}
             <meta property="og:image" content="{{ page.title_image }}" />
             <meta name="twitter:image" content="{{ page.title_image }}" />
