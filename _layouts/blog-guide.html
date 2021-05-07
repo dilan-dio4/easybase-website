@@ -208,6 +208,9 @@
                     <div class="content-text">
                         {{ content }}
                     </div>
+                    {% if page.date_modified %}
+                        <p class="mt-4"><em>Last Updated: {{ page.date_modified | date: "%b %d, %Y" }}</em></p>
+                    {% endif %}
                     <hr />
                     <div class="row justify-content-between align-items-start">
                         <div class="col-md-4">
