@@ -218,6 +218,8 @@
                     </div>
                     {% if page.date_modified %}
                         <p class="mt-4"><em>Last Updated: {{ page.date_modified | date: "%b %d, %Y" }}</em></p>
+                    {% elsif page.date %}
+                        <p class="mt-4"><em>Published: {{ page.date | date: "%b %d, %Y" }}</em></p>
                     {% endif %}
                     <hr />
                     <div class="row justify-content-between align-items-start">
