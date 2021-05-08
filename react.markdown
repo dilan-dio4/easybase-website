@@ -134,9 +134,9 @@ Note that we passed the project's *ebconfig* token as a prop to the `EasybasePro
 <div class="sectionBox">
 <p>
   <b>Related functions:</b>
-  <a href="/docs/easybase-react/modules/_useeasybase_.html" target="_blank">useEasybase</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#db" target="_blank">db</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#dbeventlistener" target="_blank">dbEventListener</a>
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html" target="_blank">useEasybase</a>, 
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#db" target="_blank">db</a>, 
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#usereturn" target="_blank">useReturn</a>
 </p>
 </div>
 
@@ -341,9 +341,9 @@ Try out the new button with proper inputs. The record will appear in the web app
 <div class="sectionBox">
 <p>
   <b>Related functions:</b>
-  <a href="/docs/easybase-react/modules/_useeasybase_.html" target="_blank">useEasybase</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#db" target="_blank">db</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#dbeventlistener" target="_blank">dbEventListener</a>
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html" target="_blank">useEasybase</a>, 
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#usereturn" target="_blank">useReturn</a>,
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#db" target="_blank">db</a>
 </p>
 </div>
 
@@ -499,12 +499,12 @@ Now, changing the `minPrice` keeps the data in `frame` fresh!
 <div class="sectionBox">
 <p>
   <b>Related functions:</b> 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#signin" target="_blank">signIn</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#signout" target="_blank">signOut</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#signup" target="_blank">signUp</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#isusersignedIn" target="_blank">isUserSignedIn</a>,
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#setuserattribute" target="_blank">setUserAttribute</a>,
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#getuserattributes" target="_blank">getUserAttributes</a>
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#signin" target="_blank">signIn</a>, 
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#signout" target="_blank">signOut</a>, 
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#signup" target="_blank">signUp</a>, 
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#isusersignedin" target="_blank">isUserSignedIn</a>,
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#setuserattribute" target="_blank">setUserAttribute</a>,
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#getuserattributes" target="_blank">getUserAttributes</a>
 </p>
 </div>
 
@@ -624,8 +624,8 @@ For more information on implementing login authentication in React Native, take 
 <div class="sectionBox">
 <p>
   <b>Related functions:</b> 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#db" target="_blank">db</a>, 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#dbeventlistener" target="_blank">dbEventListener</a>
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#db" target="_blank">db</a>, 
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#dbeventlistener" target="_blank">dbEventListener</a>
 </p>
 </div>
 
@@ -777,7 +777,7 @@ Read more about [**Update**](https://easybase.github.io/EasyQB/docs/update_queri
 <div class="sectionBox">
 <p>
   <b>Related functions:</b> 
-  <a href="/docs/easybase-react/interfaces/_reacttypes_.contextvalue.html#query" target="_blank">Query</a>
+  <a href="/docs/easybase-react/interfaces/types.contextvalue.html#query" target="_blank">Query</a>
 </p>
 </div>
 
@@ -830,7 +830,7 @@ Note that there are other *optional* parameters for the `Query()` function such 
 <div class="sectionBox">
 <p>
   <b>Related functions:</b> 
-  <a href="/docs/easybase-react/modules/_callfunction_.html#callfunction" target="_blank">callFunction</a>
+  <a href="/docs/easybase-react/modules/callfunction.html" target="_blank">callFunction</a>
 </p>
 </div>
 
