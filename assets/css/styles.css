@@ -1317,6 +1317,10 @@ header {
     align-items: center;
 }
 
+.languages-tabs-card iframe {
+    border-radius: var(--mod-marketing-radius);
+}
+
 /* Footer ++++++++++++++++++++++++++++ */
 
 .footer-social-fab {

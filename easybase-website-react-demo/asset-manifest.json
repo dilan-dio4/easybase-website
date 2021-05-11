@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/easybase-website-react-demo/static/css/main.170a9584.chunk.css",
+    "main.js": "/easybase-website-react-demo/static/js/main.2f05dd09.chunk.js",
+    "main.js.map": "/easybase-website-react-demo/static/js/main.2f05dd09.chunk.js.map",
+    "runtime-main.js": "/easybase-website-react-demo/static/js/runtime-main.dc34edce.js",
+    "runtime-main.js.map": "/easybase-website-react-demo/static/js/runtime-main.dc34edce.js.map",
+    "static/css/2.78856dc9.chunk.css": "/easybase-website-react-demo/static/css/2.78856dc9.chunk.css",
+    "static/js/2.0d716c7b.chunk.js": "/easybase-website-react-demo/static/js/2.0d716c7b.chunk.js",
+    "static/js/2.0d716c7b.chunk.js.map": "/easybase-website-react-demo/static/js/2.0d716c7b.chunk.js.map",
+    "static/js/3.90460377.chunk.js": "/easybase-website-react-demo/static/js/3.90460377.chunk.js",
+    "static/js/3.90460377.chunk.js.map": "/easybase-website-react-demo/static/js/3.90460377.chunk.js.map",
+    "index.html": "/easybase-website-react-demo/index.html",
+    "static/css/2.78856dc9.chunk.css.map": "/easybase-website-react-demo/static/css/2.78856dc9.chunk.css.map",
+    "static/css/main.170a9584.chunk.css.map": "/easybase-website-react-demo/static/css/main.170a9584.chunk.css.map",
+    "static/js/2.0d716c7b.chunk.js.LICENSE.txt": "/easybase-website-react-demo/static/js/2.0d716c7b.chunk.js.LICENSE.txt",
+    "static/media/blueprint-icons.css": "/easybase-website-react-demo/static/media/icons-20.cde033c5.eot",
+    "static/media/logo.6ce24c58.svg": "/easybase-website-react-demo/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dc34edce.js",
+    "static/css/2.78856dc9.chunk.css",
+    "static/js/2.0d716c7b.chunk.js",
+    "static/css/main.170a9584.chunk.css",
+    "static/js/main.2f05dd09.chunk.js"
+  ]
+}
