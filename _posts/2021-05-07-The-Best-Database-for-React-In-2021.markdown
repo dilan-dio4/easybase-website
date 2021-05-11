@@ -284,7 +284,6 @@ function DbExample() {
       </div>
     </div>
   )
-  )
 }
 ```
 <!-- {% endraw %} -->
