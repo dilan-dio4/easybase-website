@@ -52,6 +52,10 @@ body, html {
     margin: 0;
 }
 
+iframe {
+    border: 0;
+}
+
 * {
     box-sizing: inherit;
 }
@@ -1319,6 +1323,19 @@ header {
 
 .languages-tabs-card iframe {
     border-radius: var(--mod-marketing-radius);
+}
+
+.react-demo-root {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 800px;
+}
+
+.react-demo-root div {
+    max-width: 1230px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 /* Footer ++++++++++++++++++++++++++++ */
