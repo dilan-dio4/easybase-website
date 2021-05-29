@@ -16,7 +16,7 @@ tocLinks: ["#introduction", "#setup", "#react-configuration", "#database", "#use
 
 ## Introduction
 
-Since Easybase launched back in 2018, the platform's integration with React and React Native has grown immensely. This piece will serve as a comprehensive walkthrough of how developers can use Easybase to implement [serverless](https://hackernoon.com/what-is-serverless-architecture-what-are-its-pros-and-cons-cc4b804022e9) capabilities such as login authentication and a cloud database. These modules are not apart of vanilla React, but by using the `easybase-react` library you can create **scalable**, **production-ready** apps without worrying about security, session cache, and user token administration.
+Since Easybase launched a few years back, the platform's integration with React and React Native has grown immensely. This piece will serve as a comprehensive walkthrough of how developers can use Easybase to implement [serverless](https://hackernoon.com/what-is-serverless-architecture-what-are-its-pros-and-cons-cc4b804022e9) capabilities such as login authentication and a cloud database. These modules are not apart of vanilla React, but by using the `easybase-react` library you can create **scalable**, **production-ready** apps without worrying about security, session cache, and user token administration.
 
 Let's walk through creating an application from scratch with Easybase. The example app here will be a product view, with user authentication and a private user database. Authenticated users will be able to '⭐' products and view them privately.
 
