@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EXECUTE_COUNT | easybase-react</title>
+	<title>DB_STATUS | easybase-react</title>
 	<meta name="description" content="Documentation for easybase-react">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">easybase-react</a>
 				</li>
 				<li>
-					<a href="../modules/types.html">types</a>
+					<a href="../modules/types_jstypes.html">types/jsTypes</a>
 				</li>
 				<li>
-					<a href="types.execute_count.html">EXECUTE_COUNT</a>
+					<a href="types_jstypes.db_status.html">DB_STATUS</a>
 				</li>
 			</ul>
-			<h1>Enumeration EXECUTE_COUNT</h1>
+			<h1>Enumeration DB_STATUS</h1>
 		</div>
 	</div>
 </header>
@@ -75,8 +75,9 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external"><a href="types.execute_count.html#all" class="tsd-kind-icon">ALL</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external"><a href="types.execute_count.html#one" class="tsd-kind-icon">ONE</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external"><a href="types_jstypes.db_status.html#error" class="tsd-kind-icon">ERROR</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external"><a href="types_jstypes.db_status.html#pending" class="tsd-kind-icon">PENDING</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external"><a href="types_jstypes.db_status.html#success" class="tsd-kind-icon">SUCCESS</a></li>
 							</ul>
 						</section>
 					</div>
@@ -85,22 +86,32 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
-					<a name="all" class="tsd-anchor"></a>
-					<h3>ALL</h3>
-					<div class="tsd-signature tsd-kind-icon">ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;all&quot;</span></div>
+					<a name="error" class="tsd-anchor"></a>
+					<h3>ERROR</h3>
+					<div class="tsd-signature tsd-kind-icon">ERROR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;error&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/easybasejs/src/EasybaseProvider/types.ts:131</li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/jsTypes.ts#L134">types/jsTypes.ts:134</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
-					<a name="one" class="tsd-anchor"></a>
-					<h3>ONE</h3>
-					<div class="tsd-signature tsd-kind-icon">ONE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;one&quot;</span></div>
+					<a name="pending" class="tsd-anchor"></a>
+					<h3>PENDING</h3>
+					<div class="tsd-signature tsd-kind-icon">PENDING<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;pending&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/easybasejs/src/EasybaseProvider/types.ts:132</li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/jsTypes.ts#L135">types/jsTypes.ts:135</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
+					<a name="success" class="tsd-anchor"></a>
+					<h3>SUCCESS</h3>
+					<div class="tsd-signature tsd-kind-icon">SUCCESS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;success&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/jsTypes.ts#L136">types/jsTypes.ts:136</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -112,84 +123,96 @@
 					<li class=" ">
 						<a href="../modules.html">Exports</a>
 					</li>
+					<li class="label tsd-is-external">
+						<span>Internals</span>
+					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/easybasecontext.html">Easybase<wbr>Context</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/callfunction.html">call<wbr>Function</a>
 					</li>
-					<li class="current tsd-kind-module">
-						<a href="../modules/types.html">types</a>
-					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/useeasybase.html">use<wbr>Easybase</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class="current tsd-kind-module tsd-is-external">
+						<a href="../modules/types_jstypes.html">types/js<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="../modules/types_types.html">types/types</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-external">
-						<a href="types.db_status.html" class="tsd-kind-icon">DB_<wbr>STATUS</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-module tsd-is-external">
-						<a href="types.execute_count.html" class="tsd-kind-icon">EXECUTE_<wbr>COUNT</a>
+						<a href="types_jstypes.db_status.html" class="tsd-kind-icon">DB_<wbr>STATUS</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
-								<a href="types.execute_count.html#all" class="tsd-kind-icon">ALL</a>
+								<a href="types_jstypes.db_status.html#error" class="tsd-kind-icon">ERROR</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
-								<a href="types.execute_count.html#one" class="tsd-kind-icon">ONE</a>
+								<a href="types_jstypes.db_status.html#pending" class="tsd-kind-icon">PENDING</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
+								<a href="types_jstypes.db_status.html#success" class="tsd-kind-icon">SUCCESS</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-external">
-						<a href="types.post_types.html" class="tsd-kind-icon">POST_<wbr>TYPES</a>
+						<a href="types_jstypes.execute_count.html" class="tsd-kind-icon">EXECUTE_<wbr>COUNT</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-external">
+						<a href="types_jstypes.post_types.html" class="tsd-kind-icon">POST_<wbr>TYPES</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="../interfaces/types.addrecordoptions.html" class="tsd-kind-icon">Add<wbr>Record<wbr>Options</a>
+						<a href="../interfaces/types_jstypes.addrecordoptions.html" class="tsd-kind-icon">Add<wbr>Record<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="../interfaces/types.configureframeoptions.html" class="tsd-kind-icon">Configure<wbr>Frame<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/types.contextvalue.html" class="tsd-kind-icon">Context<wbr>Value</a>
+						<a href="../interfaces/types_jstypes.authpostresponse.html" class="tsd-kind-icon">Auth<wbr>Post<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="../interfaces/types.deleterecordoptions.html" class="tsd-kind-icon">Delete<wbr>Record<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/types.easybaseproviderprops.html" class="tsd-kind-icon">Easybase<wbr>Provider<wbr>Props</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/types.easybaseproviderpropsoptions.html" class="tsd-kind-icon">Easybase<wbr>Provider<wbr>Props<wbr>Options</a>
+						<a href="../interfaces/types_jstypes.configureframeoptions.html" class="tsd-kind-icon">Configure<wbr>Frame<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="../interfaces/types.ebconfig.html" class="tsd-kind-icon">Ebconfig</a>
+						<a href="../interfaces/types_jstypes.deleterecordoptions.html" class="tsd-kind-icon">Delete<wbr>Record<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="../interfaces/types.filefromuri.html" class="tsd-kind-icon">File<wbr>FromURI</a>
+						<a href="../interfaces/types_jstypes.easybaseproviderprops.html" class="tsd-kind-icon">Easybase<wbr>Provider<wbr>Props</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="../interfaces/types.frameconfiguration.html" class="tsd-kind-icon">Frame<wbr>Configuration</a>
+						<a href="../interfaces/types_jstypes.easybaseproviderpropsoptions.html" class="tsd-kind-icon">Easybase<wbr>Provider<wbr>Props<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="../interfaces/types.globals.html" class="tsd-kind-icon">Globals</a>
+						<a href="../interfaces/types_jstypes.ebconfig.html" class="tsd-kind-icon">Ebconfig</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="../interfaces/types.queryoptions.html" class="tsd-kind-icon">Query<wbr>Options</a>
+						<a href="../interfaces/types_jstypes.emailtemplate.html" class="tsd-kind-icon">Email<wbr>Template</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="../interfaces/types.statusresponse.html" class="tsd-kind-icon">Status<wbr>Response</a>
+						<a href="../interfaces/types_jstypes.filefromuri.html" class="tsd-kind-icon">File<wbr>FromURI</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="../interfaces/types.updaterecordattachmentoptions.html" class="tsd-kind-icon">Update<wbr>Record<wbr>Attachment<wbr>Options</a>
+						<a href="../interfaces/types_jstypes.frameconfiguration.html" class="tsd-kind-icon">Frame<wbr>Configuration</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/types.usereturnvalue.html" class="tsd-kind-icon">Use<wbr>Return<wbr>Value</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
+						<a href="../interfaces/types_jstypes.globals.html" class="tsd-kind-icon">Globals</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
+						<a href="../interfaces/types_jstypes.queryoptions.html" class="tsd-kind-icon">Query<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
+						<a href="../interfaces/types_jstypes.statusresponse.html" class="tsd-kind-icon">Status<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
+						<a href="../interfaces/types_jstypes.updaterecordattachmentoptions.html" class="tsd-kind-icon">Update<wbr>Record<wbr>Attachment<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
@@ -202,9 +225,6 @@
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 			</ul>
 		</div>
 	</div>
