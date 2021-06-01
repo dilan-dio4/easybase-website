@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>callFunction | easybase-react</title>
+	<title>IPage | easybase-react</title>
 	<meta name="description" content="Documentation for easybase-react">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,70 +55,62 @@
 					<a href="../modules.html">easybase-react</a>
 				</li>
 				<li>
-					<a href="callfunction.html">callFunction</a>
+					<a href="../modules/ui_auth_uitypes.html">ui/Auth/uiTypes</a>
+				</li>
+				<li>
+					<a href="ui_auth_uitypes.ipage.html">IPage</a>
 				</li>
 			</ul>
-			<h1>Module callFunction</h1>
+			<h1>Interface IPage</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IPage</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Functions</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="callfunction.html#callfunction-1" class="tsd-kind-icon">call<wbr>Function</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_auth_uitypes.ipage.html#dictionary" class="tsd-kind-icon">dictionary</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_auth_uitypes.ipage.html#setcurrentpage" class="tsd-kind-icon">set<wbr>Current<wbr>Page</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="callfunction-1" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> call<wbr>Function</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">call<wbr>Function<span class="tsd-signature-symbol">(</span>route<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, postBody<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/callFunction.tsx#L10">callFunction.tsx:10</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>async</dt>
-									<dd><p>Call a cloud function, created in Easybase interface.</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>route: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Route as detailed in Easybase. Found under &#39;Deploy&#39;. Will be in the form of ####...####-function-name.</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> postBody: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Optional object to pass as the body of the POST request. This object will available in your cloud function&#39;s event.body.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>Response from your cloud function. Detailed with a call to &#39;return context.succeed(&quot;RESPONSE&quot;)&#39;.</p>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="dictionary" class="tsd-anchor"></a>
+					<h3>dictionary</h3>
+					<div class="tsd-signature tsd-kind-icon">dictionary<span class="tsd-signature-symbol">:</span> <a href="ui_auth_uitypes.idictionary.html" class="tsd-signature-type" data-tsd-kind="Interface">IDictionary</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/Auth/uiTypes.ts#L5">ui/Auth/uiTypes.ts:5</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="setcurrentpage" class="tsd-anchor"></a>
+					<h3>set<wbr>Current<wbr>Page</h3>
+					<div class="tsd-signature tsd-kind-icon">set<wbr>Current<wbr>Page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Dispatch</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/Auth/uiTypes.ts#L4">ui/Auth/uiTypes.ts:4</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -132,32 +124,53 @@
 						<span>Internals</span>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="easybasecontext.html">Easybase<wbr>Context</a>
+						<a href="../modules/easybasecontext.html">Easybase<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/callfunction.html">call<wbr>Function</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ui_auth.html">ui/<wbr>Auth</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="callfunction.html">call<wbr>Function</a>
+						<a href="../modules/ui_auth_uitypes.html">ui/<wbr>Auth/ui<wbr>Types</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="ui_auth.html">ui/<wbr>Auth</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="ui_auth_uitypes.html">ui/<wbr>Auth/ui<wbr>Types</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="useeasybase.html">use<wbr>Easybase</a>
+						<a href="../modules/useeasybase.html">use<wbr>Easybase</a>
 					</li>
 					<li class="label tsd-is-external">
 						<span>Externals</span>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
-						<a href="types_types.html">types/types</a>
+						<a href="../modules/types_types.html">types/types</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="callfunction.html#callfunction-1" class="tsd-kind-icon">call<wbr>Function</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="ui_auth_uitypes.iauth.html" class="tsd-kind-icon">IAuth</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="ui_auth_uitypes.idictionary.html" class="tsd-kind-icon">IDictionary</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="ui_auth_uitypes.ipage.html" class="tsd-kind-icon">IPage</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ui_auth_uitypes.ipage.html#dictionary" class="tsd-kind-icon">dictionary</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ui_auth_uitypes.ipage.html#setcurrentpage" class="tsd-kind-icon">set<wbr>Current<wbr>Page</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="ui_auth_uitypes.istyles.html" class="tsd-kind-icon">IStyles</a>
 					</li>
 				</ul>
 			</nav>
@@ -169,10 +182,11 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 			</ul>
 		</div>
 	</div>
