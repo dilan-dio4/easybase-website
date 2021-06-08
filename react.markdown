@@ -10,8 +10,8 @@ author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 tags: React
 meta_description: Comprehensive tutorial on using Easybase with React and React Native, featuring user authentication, visual queries, and serverless database.
-tocTitles: ["Introduction", "Setup", "React Configuration", "Database", "useReturn", "Sign In & Sign Up Workflow", "Authenticated Database", "Visual Queries", "Cloud Functions", "Conclusion"]
-tocLinks: ["#introduction", "#setup", "#react-configuration", "#database", "#usereturn", "#sign-in--sign-up-workflow", "#authenticated-database", "#visual-queries", "#cloud-functions", "#conclusion"]
+tocTitles: ["Introduction", "Setup", "React Configuration", "Database", "useReturn", "Sign In & Sign Up Authentication", "Authenticated Database", "Visual Queries", "Cloud Functions", "Conclusion"]
+tocLinks: ["#introduction", "#setup", "#react-configuration", "#database", "#usereturn", "#sign-in--sign-up-authentication", "#authenticated-database", "#visual-queries", "#cloud-functions", "#conclusion"]
 ---
 
 ## Introduction
@@ -494,128 +494,17 @@ Now, changing the `minPrice` keeps the data in `frame` fresh!
 
 <br />
 
-## Sign In & Sign Up Workflow
+## [Sign In & Sign Up Authentication](/react-and-react-native-user-authentication/)
 
 <div class="sectionBox">
-<p>
-  <b>Related functions:</b> 
-  <a href="/docs/easybase-react/interfaces/types_types.contextvalue.html#signin" target="_blank">signIn</a>, 
-  <a href="/docs/easybase-react/interfaces/types_types.contextvalue.html#signout" target="_blank">signOut</a>, 
-  <a href="/docs/easybase-react/interfaces/types_types.contextvalue.html#signup" target="_blank">signUp</a>, 
-  <a href="/docs/easybase-react/interfaces/types_types.contextvalue.html#isusersignedin" target="_blank">isUserSignedIn</a>,
-  <a href="/docs/easybase-react/interfaces/types_types.contextvalue.html#setuserattribute" target="_blank">setUserAttribute</a>,
-  <a href="/docs/easybase-react/interfaces/types_types.contextvalue.html#getuserattributes" target="_blank">getUserAttributes</a>
-</p>
+  <p>
+    <b>The user authentication section has <a target="_blank" href="/react-and-react-native-user-authentication/">moved to its own page</a></b>.
+  </p>
 </div>
 
-Now that guests can view the **REACT DEMO** table. Let's implement a workflow for those same users to be able to sign up/sign in to your application. This will allow for a few things:
+The [`<Auth />`](/react-and-react-native-user-authentication/) and [`<NativeAuth />`](/react-and-react-native-user-authentication/) components allow developers to quickly implement a functional sign-in/sign-up workflow. For those looking for more control over this interface, the `useEasybase` hook can be used to manually create these components.
 
-1. Read/write permissions to tables detailed in the 'Projects' menu
-2. Writing records that are specifically assigned to that user, so when this user signs in we will automatically only retrieve records that correspond to that user when they navigate to `/starred`.
-
-Let's add a component called `<AuthButton />` to the root App. This component will have two features. One is a button in the top-right corner of the app that says 'Sign In' or 'Sign Out' based on the user's state. The other being a modal that will appear above our application when a user clicks 'Sign In'. The modal will feature a username and password text field and buttons to sign in or sign up. **Use the `isUserSignedIn()` function to conditionally render components and check the user's current authentication status**.
-
-Here's an implementation of this workflow:
-
-<!-- {% raw %} -->
-```jsx
-function AuthButton() {
-  const {
-    isUserSignedIn,
-    signIn,
-    signOut,
-    signUp
-  } = useEasybase();
-
-  const [dialogOpen, setDialogOpen] = useState(false);
-  const [usernameValue, setUsernameValue] = useState("");
-  const [passwordValue, setPasswordValue] = useState("");
-
-  const onAuthButtonClick = () => {
-    if (isUserSignedIn()) {
-      signOut();
-    } else {
-      setDialogOpen(true);
-    }
-  }
-
-  const onSignInClick = async () => {
-    const res = await signIn(usernameValue, passwordValue);
-    if (res.success) {
-      setDialogOpen(false);
-      setUsernameValue("");
-      setPasswordValue("");
-    }
-  }
-
-  const onSignUpClick = async () => {
-    const res = await signUp(usernameValue, passwordValue);
-    if (res.success) {
-      await signIn(usernameValue, passwordValue);
-      setDialogOpen("");
-      setUsernameValue("");
-      setPasswordValue("");
-    }
-  }
-
-  /*
-    .authButton {
-      position: absolute;
-      top: 10px;
-      right: 50px;
-      width: 100px;
-      height: 50px;
-      font-size: 15px;
-    }
-
-    .authDialog {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.7);
-      transition: opacity 500ms;
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    .authDialogOpen {
-      visibility: visible;
-      opacity: 1;
-    }
-  */
-
-  return (
-    <>
-      <button onClick={onAuthButtonClick} className="authButton">{isUserSignedIn() ? "Sign Out" : "Sign In"}</button>
-      <div className={dialogOpen ? "authDialog authDialogOpen" : "authDialog"}>
-        <div>
-            <input type="text" placeholder="Username" value={usernameValue} onChange={e => setUsernameValue(e.target.value)} />
-            <input type="password" placeholder="Password" value={passwordValue} onChange={e => setPasswordValue(e.target.value)} />
-            <div>
-              <button onClick={onSignInClick}>Sign In</button>
-              <button onClick={onSignUpClick}>Sign Up</button>
-            </div>
-        </div>
-      </div>
-    </>
-  )
-}
-```
-<!-- {% endraw %} -->
-
-Just like that, your application supports a *stateful* user authentication workflow. The `signIn`, `signOut`, and `signUp` function are asynchronous, so you can use `await` or `.then` to handle the completion of these events.
-
-You can also assign user attributes which can be seen when navigating to the 'Users' tab in easybase.io and expanding one of the rows. These can be assigned in a couple of ways.
-
-1. Manually, in one of the rows under the 'Users' tab in Easybase.
-2. Pass an object in `signUp(newUserID, password, { emailAttr: "bob@gmail.com" })`. 
-3. If a user is signed in, `setUserAttribute("emailAttr", "bob@gmail.com")`
-
-You can then retrieve these objects programmatically with `getUserAttributes()`. **User attributes are not for storing user-corresponding application data**, rather use it for simple metadata such as *createdAt* or *firstName*.
-
-For more information on implementing login authentication in React Native, take a look at [Michael's article in freeCodeCamp](https://www.freecodecamp.org/news/build-react-native-app-user-authentication/).
+This allows for writing records that are specifically assigned to the active user, so when this user signs in we will automatically only retrieve records that correspond to that user when they navigate to `/starred`.
 
 <br />
 

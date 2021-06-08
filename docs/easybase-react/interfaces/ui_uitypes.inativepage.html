@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IPage | easybase-react</title>
+	<title>INativePage | easybase-react</title>
 	<meta name="description" content="Documentation for easybase-react">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">easybase-react</a>
 				</li>
 				<li>
-					<a href="../modules/ui_auth_uitypes.html">ui/Auth/uiTypes</a>
+					<a href="../modules/ui_uitypes.html">ui/uiTypes</a>
 				</li>
 				<li>
-					<a href="ui_auth_uitypes.ipage.html">IPage</a>
+					<a href="ui_uitypes.inativepage.html">INativePage</a>
 				</li>
 			</ul>
-			<h1>Interface IPage</h1>
+			<h1>Interface INativePage</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IPage</span>
+						<span class="target">INativePage</span>
 					</li>
 				</ul>
 			</section>
@@ -83,8 +83,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_auth_uitypes.ipage.html#dictionary" class="tsd-kind-icon">dictionary</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_auth_uitypes.ipage.html#setcurrentpage" class="tsd-kind-icon">set<wbr>Current<wbr>Page</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_uitypes.inativepage.html#dictionary" class="tsd-kind-icon">dictionary</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_uitypes.inativepage.html#emailtemplate" class="tsd-kind-icon">email<wbr>Template</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_uitypes.inativepage.html#setcurrentpage" class="tsd-kind-icon">set<wbr>Current<wbr>Page</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_uitypes.inativepage.html#toast" class="tsd-kind-icon">toast</a></li>
 							</ul>
 						</section>
 					</div>
@@ -95,10 +97,20 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="dictionary" class="tsd-anchor"></a>
 					<h3>dictionary</h3>
-					<div class="tsd-signature tsd-kind-icon">dictionary<span class="tsd-signature-symbol">:</span> <a href="ui_auth_uitypes.idictionary.html" class="tsd-signature-type" data-tsd-kind="Interface">IDictionary</a></div>
+					<div class="tsd-signature tsd-kind-icon">dictionary<span class="tsd-signature-symbol">:</span> <a href="ui_uitypes.idictionary.html" class="tsd-signature-type" data-tsd-kind="Interface">IDictionary</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/Auth/uiTypes.ts#L5">ui/Auth/uiTypes.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/uiTypes.ts#L63">ui/uiTypes.ts:63</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="emailtemplate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> email<wbr>Template</h3>
+					<div class="tsd-signature tsd-kind-icon">email<wbr>Template<span class="tsd-signature-symbol">:</span> <a href="types_types.emailtemplate.html" class="tsd-signature-type" data-tsd-kind="Interface">EmailTemplate</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/uiTypes.ts#L65">ui/uiTypes.ts:65</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -108,9 +120,40 @@
 					<div class="tsd-signature tsd-kind-icon">set<wbr>Current<wbr>Page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Dispatch</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/Auth/uiTypes.ts#L4">ui/Auth/uiTypes.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/uiTypes.ts#L62">ui/uiTypes.ts:62</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="toast" class="tsd-anchor"></a>
+					<h3>toast</h3>
+					<div class="tsd-signature tsd-kind-icon">toast<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/uiTypes.ts#L64">ui/uiTypes.ts:64</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>message: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -132,8 +175,11 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/ui_auth.html">ui/<wbr>Auth</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ui_reactnative.html">ui/<wbr>React<wbr>Native</a>
+					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/ui_auth_uitypes.html">ui/<wbr>Auth/ui<wbr>Types</a>
+						<a href="../modules/ui_uitypes.html">ui/ui<wbr>Types</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/useeasybase.html">use<wbr>Easybase</a>
@@ -149,28 +195,49 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_auth_uitypes.iauth.html" class="tsd-kind-icon">IAuth</a>
+						<a href="ui_uitypes.iauth.html" class="tsd-kind-icon">IAuth</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_auth_uitypes.idictionary.html" class="tsd-kind-icon">IDictionary</a>
+						<a href="ui_uitypes.idictionary.html" class="tsd-kind-icon">IDictionary</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="ui_uitypes.inativeauth.html" class="tsd-kind-icon">INative<wbr>Auth</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_auth_uitypes.ipage.html" class="tsd-kind-icon">IPage</a>
+						<a href="ui_uitypes.inativepage.html" class="tsd-kind-icon">INative<wbr>Page</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ui_auth_uitypes.ipage.html#dictionary" class="tsd-kind-icon">dictionary</a>
+								<a href="ui_uitypes.inativepage.html#dictionary" class="tsd-kind-icon">dictionary</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ui_auth_uitypes.ipage.html#setcurrentpage" class="tsd-kind-icon">set<wbr>Current<wbr>Page</a>
+								<a href="ui_uitypes.inativepage.html#emailtemplate" class="tsd-kind-icon">email<wbr>Template</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ui_uitypes.inativepage.html#setcurrentpage" class="tsd-kind-icon">set<wbr>Current<wbr>Page</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ui_uitypes.inativepage.html#toast" class="tsd-kind-icon">toast</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_auth_uitypes.istyles.html" class="tsd-kind-icon">IStyles</a>
+						<a href="ui_uitypes.inativestyles.html" class="tsd-kind-icon">INative<wbr>Styles</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="ui_uitypes.ipage.html" class="tsd-kind-icon">IPage</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="ui_uitypes.isignupfieldvalidators.html" class="tsd-kind-icon">ISign<wbr>UpField<wbr>Validators</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="ui_uitypes.isignupfields.html" class="tsd-kind-icon">ISign<wbr>UpFields</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="ui_uitypes.istyles.html" class="tsd-kind-icon">IStyles</a>
 					</li>
 				</ul>
 			</nav>
