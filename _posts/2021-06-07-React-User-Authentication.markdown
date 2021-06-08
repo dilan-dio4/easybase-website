@@ -4,7 +4,7 @@ title: User Authentication in React & React Native with Easybase
 date: 2021-06-07 05:20:00 -0400
 categories: react
 title_image: /assets/images/posts_images/user-authentication-header.png
-title_image_sm: https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=90&q=80&h=45
+title_image_sm: https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=90&q=80&h=45
 og_image: /assets/images/posts_images/new-react-auth-2.png
 author_name: Ryan Parker
 tags: Home Blog React
