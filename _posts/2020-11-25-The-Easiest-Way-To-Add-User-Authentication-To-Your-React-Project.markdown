@@ -13,7 +13,7 @@ author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer f
 meta_description: Learn how to add serverless user authentication to your React and React Native projects! The 'easybase-react' library makes it easy to provide unauthenticated users with the ability to sign up/create an account to your apps!
 ---
 
-*Update 11/25/2020: easybase-react was recently upgraded to version 1.2.11 which brings performance improvements*
+**This page is deprecated. [The June 2021 updated tutorial is available here](/react-and-react-native-user-authentication/).**
 
 <hr />
 
