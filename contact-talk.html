@@ -1,7 +1,7 @@
 ---
 layout: main
-title: Report an Issue
-description: Report an Issues with Easybase's integration capabilities, system status, or frontend application.
+title: Contact Sales
+description: Get in touch with an expert at Easybase!
 ---
 
 <style>
@@ -18,11 +18,9 @@ description: Report an Issues with Easybase's integration capabilities, system s
     }
 
     #contact {
-        background: #FDFDFD;
         padding: 25px;
         margin-top: 50px;
         margin-bottom: 200px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
         width: 500px;
         max-width: 500px;
         border-radius: 5px;
@@ -31,16 +29,17 @@ description: Report an Issues with Easybase's integration capabilities, system s
     #contact h1 {
         display: block;
         font-size: 38px;
-        font-weight: 500;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        font-weight: 700;
     }
 
     #contact h2 {
         margin: 5px 0 15px;
         display: block;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 400;
         margin-bottom: 40px;
+        line-height: 1.5;
     }
 
     #contact fieldset {
@@ -49,6 +48,7 @@ description: Report an Issues with Easybase's integration capabilities, system s
         min-width: 100%;
         padding: 0;
         width: 100%;
+        display: flex;
     }
 
     #contact input[type="text"],
@@ -75,7 +75,7 @@ description: Report an Issues with Easybase's integration capabilities, system s
     }
 
     #contact textarea {
-        height: 175px;
+        height: 116px;
         max-width: 100%;
     }
 
@@ -127,23 +127,38 @@ description: Report an Issues with Easybase's integration capabilities, system s
     }
 </style>
 
-<section class="section-grey">
+<section class="section-blue py-5 mt-3 px-2">
+    <h1 class="cta-white-text text-center m-0" style="color: #fff; font-weight: 700;">Let's get in touch!</h1>
+</section>
+
+<section class="section-grey p-0">
     <div class="container">
         <div class="d-flex justify-content-center">
-            <form id="contact" action="https://formcarry.com/s/9OdMhO2UJo" method="POST" accept-charset="UTF-8">
-                <h1>Report an Issue</h1>
-                <h2>Please make us aware of any problems or errors. Thanks!</h2>
+            <form id="contact" onsubmit="return sendReq()" accept-charset="UTF-8" action="#" method="POST">
+                <h2>Tell us about yourself and we'll connect you with an expert who will be happy to give you a personalized demo and answer any questions you have.
+                </h2>
                 <fieldset>
-                    <label class="off-screen" for="message-name">First Name</label>
-                    <input placeholder="First Name" type="text" name="name" id="message-name" required autofocus>
+                    <label class="off-screen" for="message-first-name">First name</label>
+                    <input placeholder="First name" type="text" name="first-name" id="message-first-name" required autofocus class="mr-2">
+
+                    <label class="off-screen" for="message-last-name">Last name</label>
+                    <input placeholder="Last name" type="text" name="last-name" id="message-last-name" required class="ml-2">
                 </fieldset>
                 <fieldset>
                     <label class="off-screen" for="message-email">Email address</label>
                     <input placeholder="Email address" type="email" name="email" id="message-email" required>
                 </fieldset>
                 <fieldset>
-                    <label class="off-screen" for="message-message">Type your message here</label>
-                    <textarea placeholder="Type your message here..." name="message" id="message-message" required></textarea>
+                    <label class="off-screen" for="message-company">Company name</label>
+                    <input placeholder="Company name" type="text" name="company" id="message-company" required>
+                </fieldset>
+                <fieldset>
+                    <label class="off-screen" for="message-company">Phone number</label>
+                    <input placeholder="Phone number" type="tel" name="phone" id="message-phone" required>
+                </fieldset>
+                <fieldset>
+                    <label class="off-screen" for="message-message">What are you hoping to accomplish with Easybase?</label>
+                    <textarea placeholder="What are you hoping to accomplish with Easybase?" name="message" id="message-message" required></textarea>
                 </fieldset>
                 <fieldset>
                     <label class="off-screen" for="message-submit">Submit</label>
@@ -152,8 +167,38 @@ description: Report an Issues with Easybase's integration capabilities, system s
                 <label class="off-screen" for="message-gotcha">Gotcha</label>
                 <input name="_gotcha" style="display:none" id="message-gotcha">
                 <label class="off-screen" for="message-type">Type</label>
-                <input name="type" style="display:none" value="report" id="message-type">
+                <input name="type" style="display:none" value="talk" id="message-type">
             </form>
         </div>
     </div>
 </section>
+
+<script>
+    function disableForm() {
+        Array.from(document.getElementById("contact").getElementsByTagName("button")).forEach(e => {
+            e.setAttribute("disabled", true);
+        })
+    }
+
+    function enableForm() {
+        Array.from(document.getElementById("contact").getElementsByTagName("button")).forEach(e => {
+            e.removeAttribute("disabled");
+        })
+    }
+
+    function sendReq() {
+        const url = "https://formcarry.com/s/9OdMhO2UJo";
+        disableForm();
+
+        fetch(url, {
+            method: "POST",
+            body: new FormData(document.getElementById("contact")),
+        }).then(() => {
+            enableForm();
+            document.location = "https://easybase.io/contact-talk-thank/";
+        }).catch(() => {
+            enableForm();
+        });
+        return false;
+    }
+</script>

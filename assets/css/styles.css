@@ -212,12 +212,12 @@ div.header-contact-us {
     --button-border: var(--accents-2);
 }
 
-.button.medium.custom-button {
+.button.medium.custom-button, .button.medium.sign-up-button-right {
     min-width: auto;
-    height: 32px;
+    height: 36px;
     line-height: 0;
     font-size: 15px;
-    padding: 6px 12px 6px 12px;
+    padding: 6px 18px;
 }
 
 .button.button-muted {
@@ -226,7 +226,7 @@ div.header-contact-us {
     --button-border: #666;
 }
 
-.button.custom-button {
+.button.custom-button, .button.sign-up-button-right {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -296,7 +296,6 @@ div.header-contact-us {
 .logged-out-profile_wrapper a {
     text-decoration: none;
     transition: color .2s ease-in-out;
-    text-transform: capitalize;
     color: var(--accents-5);
     border: 0;
     font-size: 15px;
@@ -319,68 +318,20 @@ div.header-contact-us {
     margin-right: 15px;
 }
 
-.button.medium.sign-up-button-right {
-    min-width: auto;
-    height: 32px;
-    line-height: 0;
-    font-size: 15px;
-    padding: 6px 12px 6px 12px;
-}
-
 .button.sign-up-button-right {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: relative;
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    text-align: center;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    line-height: 38px;
-    white-space: nowrap;
     font-weight: 700;
-    font-family: var(--font-sans);
-    min-width: 200px;
-    height: 40px;
-    padding: 0 25px 0 25px;
-    border-radius: var(--mod-radius);
-    font-size: 0.875rem;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    margin: 0;
     color: var(--button-bg);
     background-color: var(--mod-success);
-    border: 1px solid var(--button-border);
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-}
-
-.button.custom-button-right {
     --button-fg: var(--themed-fg);
     --button-bg: var(--themed-bg);
     --button-border: var(--themed-border);
+}
+
+.button.expert-button-right {
+    font-weight: 500;
+    color: var(--mod-success);
+    background-color: var(--themed-fg);
+    --button-border: var(--mod-success);
 }
 
 .mod-themed.mod-success-fill {
@@ -393,18 +344,6 @@ div.header-contact-us {
     --themed-fg: var(--mod-success);
     --themed-bg: var(--mod-background);
     --themed-border: var(--themed-fg);
-}
-
-.button.sign-up-button-right, .text.sign-up-button-right {
-    position: relative;
-    z-index: 1;
-    margin-left: 0;
-}
-
-.button.custom-button:hover, .button.custom-button:focus, .button.custom-button:active, .button.custom-button:focus-within {
-    color: var(--button-fg-hover);
-    background-color: var(--button-bg-hover);
-    border-color: var(--button-border-hover);
 }
 
 .banner_banner {
@@ -545,6 +484,7 @@ div.header-contact-us {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .mod-container {
@@ -635,7 +575,8 @@ div.header-contact-us {
     align-items: center;
     border-radius: var(--mod-radius);
     border: 1px solid var(--button-border);
-    width: 140px;
+    width: 138px;
+    height: 32px !important;
 }
 
 .sys-status-root:hover {
@@ -762,7 +703,6 @@ div.header-contact-us {
 }
 
 .section-footer-button {
-    text-transform: uppercase;
     padding: .5rem 1rem;
     font-size: 1.425rem;
     border-radius: .3rem;
@@ -1058,6 +998,10 @@ div.header-contact-us {
     margin-bottom: 100px;
 }
 
+.no-margin-mobile {
+    margin-right: 1rem;
+}
+
 @media screen and (max-width: 800px) {
     .hero-primary-text {
         font-size: 55px;
@@ -1065,6 +1009,10 @@ div.header-contact-us {
     }
     .hero-buttons-root {
         justify-content: center;
+        height: 114px;
+    }
+    .no-margin-mobile {
+        margin-right: 0px !important;
     }
     .footer-footer {
         justify-content: center !important;
@@ -1173,6 +1121,11 @@ div.header-contact-us {
     .button.sign-up-button-right:hover, .button.sign-up-button-right:focus, .button.sign-up-button-right:active, .button.sign-up-button-right:focus-within {
         color: var(--mod-success);
         background-color: var(--button-bg-hover);
+        border-color: var(--mod-success);
+    }
+    .button.expert-button-right:hover, .button.expert-button-right:focus, .button.expert-button-right:active, .button.expert-button-right:focus-within {
+        color: var(--mod-success);
+        background-color: var(--highlight-color);
         border-color: var(--mod-success);
     }
     .button.hero-button:hover, .button.hero-button:focus, .button.hero-button:active, .video-replay-article-root:hover, .mini-article-card:hover {

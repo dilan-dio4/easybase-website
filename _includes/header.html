@@ -105,13 +105,13 @@
                             </li>
                         </ul>
                         <div class="logged-out-profile_sign_up">
-                            <a role="button" type="text" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;" class="custom-button-right sign-up-button-right button medium icon-color mod-themed mod-success mod-success-fill">
-                                <span class="custom-button-right sign-up-button-right text">Sign up</span>
+                            <a role="button" type="text" href="https://app.easybase.io/?view=signup" onclick="captureLinkClick('app.easybase.io/?view=signup', 'signUp'); return false;" class="sign-up-button-right button medium icon-color mod-themed mod-success mod-success-fill">
+                                <span class="sign-up-button-right text">Sign up</span>
                             </a>
                         </div>
-                        <button onclick="document.getElementById('footer-root').scrollIntoView({ behavior: 'smooth', block: 'start' })" class="button-muted custom-button button medium icon-color mod-themed mod-secondary mod-secondary-fill" style="font-weight: 400; text-transform: none;">
-                            <span class="button-muted custom-button text">Contact Us</span>
-                        </button>
+                        <a class="custom-button button medium expert-button-right" href="/contact-talk/">
+                            <span class="custom-button text">Talk to an expert</span>
+                        </a>
                     </nav>
                 </div>
             </div>
@@ -156,10 +156,10 @@
                 </a>
             </li>
 
-            <div style="position: absolute; bottom: 20px; right: 20px; display: grid;">
-                <button onclick="toggleMobileNav(); document.getElementById('footer-root').scrollIntoView({ behavior: 'smooth', block: 'start' })" class="button-muted custom-button button medium icon-color mod-themed mod-secondary mod-secondary-fill mb-3" style="font-weight: 400; text-transform: none;">
-                    <span class="button-muted custom-button text">Contact Us</span>
-                </button>
+            <div class="d-flex flex-column align-items-center" style="position: absolute; bottom: 20px; right: 20px;">
+                <a href="/contact-talk/" class="button-muted custom-button button medium icon-color mod-themed mod-secondary mod-secondary-fill mb-3">
+                    <span class="button-muted custom-button text">Talk to an expert</span>
+                </a>
                 {% include system-status.html %}
             </div>
         </ul>
