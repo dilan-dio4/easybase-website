@@ -487,6 +487,21 @@ div.header-contact-us {
     flex-wrap: wrap;
 }
 
+.hero-buttons-root::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.01);
+    left: -25px;
+    height: 82px;
+    right: 0px;
+    overflow: visible;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 5px;
+    /* background-clip: content-box; */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .mod-container {
     display: flex;
     flex-direction: column;
@@ -548,6 +563,7 @@ div.header-contact-us {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     text-transform: uppercase;
+    z-index: 2;
 }
 
 .hero-button-primary {
@@ -717,6 +733,7 @@ div.header-contact-us {
     white-space: nowrap;
     user-select: none;
     color: var(--mod-success);
+    z-index: 2;
 }
 
 .section-footer-button-hero {
