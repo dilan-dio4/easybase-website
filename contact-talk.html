@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Contact Sales
+title: Let's Connect
 description: Get in touch with an expert at Easybase!
 ---
 
@@ -57,21 +57,18 @@ description: Get in touch with an expert at Easybase!
     #contact input[type="url"],
     #contact textarea {
         width: 100%;
-        border: 1px solid #ccc;
+        box-shadow: rgb(60 66 87 / 16%) 0px 0px 0px 1px;
         background: #FFF;
         margin: 0 0 5px;
         padding: 12px;
+        transition: color .24s, background-color .24s, box-shadow .24s;
+        border: none;
+        outline: none;
     }
 
-    #contact input[type="text"]:hover,
-    #contact input[type="email"]:hover,
-    #contact input[type="tel"]:hover,
-    #contact input[type="url"]:hover,
-    #contact textarea:hover {
-        -webkit-transition: border-color 0.3s ease-in-out;
-        -moz-transition: border-color 0.3s ease-in-out;
-        transition: border-color 0.3s ease-in-out;
-        border: 1px solid #aaa;
+    #contact input:focus,
+    #contact textarea:focus {
+        box-shadow: rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(60 66 87 / 16%) 0px 0px 0px 1px;
     }
 
     #contact textarea {
@@ -106,8 +103,7 @@ description: Get in touch with an expert at Easybase!
 
     #contact input:focus,
     #contact textarea:focus {
-        outline: 0;
-        border: 1px solid #aaa;
+        box-shadow: rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(60 66 87 / 16%) 0px 0px 0px 1px;
     }
 
     ::-webkit-input-placeholder {
@@ -125,10 +121,28 @@ description: Get in touch with an expert at Easybase!
     :-ms-input-placeholder {
         color: #888;
     }
+
+    .section-margin {
+        margin-top: 1rem;
+        overflow: hidden;
+        position: relative;
+    }
+
+    @media screen and (max-width: 800px) {
+        .section-margin {
+            margin-top: 0px;
+        }
+    }
+
+    .ball {
+        position: absolute;
+        border-radius: 100%;
+        opacity: 0.7;
+    }
 </style>
 
-<section class="section-blue py-5 mt-3 px-2">
-    <h1 class="cta-white-text text-center m-0" style="color: #fff; font-weight: 700;">Let's get in touch!</h1>
+<section class="section-blue py-5 section-margin px-2">
+    <h1 class="text-center m-0" style="color: #fff; font-weight: 700; font-size: 34px; z-index: 2; position: relative;">We want to hear from you!</h1>
 </section>
 
 <section class="section-grey p-0">
@@ -174,6 +188,51 @@ description: Get in touch with an expert at Easybase!
 </section>
 
 <script>
+    // Some random colors
+    const sectionRoot = document.getElementsByClassName("section-blue")[0];
+    const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+    const numBalls = 20;
+    const balls = [];
+
+    for (let i = 0; i < numBalls; i++) {
+        let ball = document.createElement("div");
+        ball.classList.add("ball");
+        ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+        ball.style.left = `${Math.floor(Math.random() * 100)}%`;
+        ball.style.top = `${Math.floor(Math.random() * 100)}%`;
+        ball.style.transform = `scale(${Math.random()})`;
+        ball.style.width = `${Math.random()}em`;
+        ball.style.height = ball.style.width;
+        ball.style.opacity = Math.random();
+        ball.style.zIndex = 1;
+
+        balls.push(ball);
+        sectionRoot.appendChild(ball);
+    }
+
+    // Keyframes
+    balls.forEach((el, i, ra) => {
+        let to = {
+            x: Math.random() * (i % 2 === 0 ? -11 : 11),
+            y: Math.random() * 12
+        };
+
+        let anim = el.animate(
+            [
+                { transform: "translate(0, 0)" },
+                { transform: `translate(${to.x}rem, ${to.y}rem)` }
+            ],
+            {
+                duration: (Math.random() + 1) * 2000, // random duration
+                direction: "alternate",
+                fill: "both",
+                iterations: Infinity,
+                easing: "ease-in-out"
+            }
+        );
+    });
+
     function disableForm() {
         Array.from(document.getElementById("contact").getElementsByTagName("button")).forEach(e => {
             e.setAttribute("disabled", true);
