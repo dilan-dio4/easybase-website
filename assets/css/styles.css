@@ -1051,6 +1051,12 @@ div.header-contact-us {
     .mod-show-on-mobile {
         display: flex;
     }
+    .block-hide-on-mobile {
+        display: none !important;
+    }
+    .block-show-on-mobile {
+        display: block;
+    }
     .section-header-content-spacer {
         height: 70px;
         width: 100%;
@@ -1123,6 +1129,12 @@ div.header-contact-us {
     }
     .mod-hide-on-mobile {
         display: flex;
+    }
+    .block-hide-on-mobile {
+        display: block;
+    }
+    .block-show-on-mobile {
+        display: none !important;
     }
     .section-header-content-spacer {
         height: 100px;
@@ -1531,7 +1543,6 @@ header {
 .material-input-filled {
     border: none;
     border-bottom: 0.125rem solid rgba(19, 19, 21, 0.6);
-    width: 100%;
     height: 2rem;
     font-size: 1.0625rem;
     padding-left: 0.875rem;
@@ -1539,7 +1550,7 @@ header {
     padding-top: 22px;
     padding-bottom: 18px;
     width: 90px;
-    font-size: 20px;
+    font-size: 17px;
     transition: background-color .03s linear;
     background-color: #f1f3f4;
 }
