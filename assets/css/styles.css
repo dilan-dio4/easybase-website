@@ -488,7 +488,6 @@ div.header-contact-us {
     padding-right: 72px;
     margin-top: 2rem;
     margin-bottom: 10px;
-    padding-bottom: 0px;
 }
 
 .hero-buttons-root::after {
@@ -1031,7 +1030,9 @@ div.header-contact-us {
         padding-right: 0px;
         margin-top: 0px;
         margin-bottom: 18%;
-        padding-bottom: env(safe-area-inset-bottom, 0px);
+        @supports (margin-bottom: env(safe-area-inset-bottom)) {
+            margin-bottom: calc(18% + env(safe-area-inset-bottom, 0px));
+        }
     }
     .hero-buttons-root::after {
         left: 60px;
@@ -1324,8 +1325,8 @@ header {
 
 .react-demo-root div {
     max-width: 1230px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Footer ++++++++++++++++++++++++++++ */
