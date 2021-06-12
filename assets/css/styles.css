@@ -1030,10 +1030,6 @@ div.header-contact-us {
         padding-right: 0px;
         margin-top: 0px;
         margin-bottom: 18%;
-        @supports (-webkit-touch-callout: none) {
-            /* iOS only */
-            margin-bottom: 43%;
-         }
     }
     .hero-buttons-root::after {
         left: 60px;
@@ -1088,6 +1084,18 @@ div.header-contact-us {
     }
     .center-text-sm {
         text-align: center;
+    }
+    @supports (margin-bottom: constant(safe-area-inset-bottom)) {
+        .hero-buttons-root {
+            --safe-area-inset-bottom: constant(safe-area-inset-bottom);
+            margin-bottom: calc(18% + var(--safe-area-inset-top)) !important;
+        }
+    }
+    @supports (margin-bottom: env(safe-area-inset-bottom)) {
+        .hero-buttons-root {
+            --safe-area-inset-bottom: env(safe-area-inset-bottom);
+            margin-bottom: calc(18% + var(--safe-area-inset-top)) !important;
+        }
     }
 }
 
