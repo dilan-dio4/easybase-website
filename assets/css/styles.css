@@ -1744,12 +1744,12 @@ ion-icon[size="large"] {
 .pricing-header-text {
     color: inherit;
     text-align: center;
-    line-height: 78px;
+    line-height: 85px;
     font-weight: 700;
     letter-spacing: -0.0222894em;
     text-transform: none;
     margin: 0px;
-    font-size:48px;
+    font-size: 43px;
 }
 
 .pricing-item {
@@ -1783,7 +1783,7 @@ ion-icon[size="large"] {
 .pricing-palden .pricing-deco {
     border-radius: 10px 10px 0 0;
     background: linear-gradient(190deg, #2386f7, #79c5f8);
-    padding: 3.5em 0 0;
+    padding: 2.5em 0 0;
     position: relative;
     color: white;
     height: 345px;
