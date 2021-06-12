@@ -1085,16 +1085,10 @@ div.header-contact-us {
     .center-text-sm {
         text-align: center;
     }
-    @supports (margin-bottom: constant(safe-area-inset-bottom)) {
+    @supports (-webkit-touch-callout: none) {
+        /* CSS specific to iOS devices */
         .hero-buttons-root {
-            --safe-area-inset-bottom: constant(safe-area-inset-bottom);
-            margin-bottom: calc(18% + var(--safe-area-inset-top)) !important;
-        }
-    }
-    @supports (margin-bottom: env(safe-area-inset-bottom)) {
-        .hero-buttons-root {
-            --safe-area-inset-bottom: env(safe-area-inset-bottom);
-            margin-bottom: calc(18% + var(--safe-area-inset-top)) !important;
+            margin-bottom: 43% !important;
         }
     }
 }
