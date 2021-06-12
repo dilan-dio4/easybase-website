@@ -1741,6 +1741,17 @@ ion-icon[size="large"] {
     margin-top: 0;
 }
 
+.pricing-header-text {
+    color: inherit;
+    text-align: center;
+    line-height: 78px;
+    font-weight: 700;
+    letter-spacing: -0.0222894em;
+    text-transform: none;
+    margin: 0px;
+    font-size:48px;
+}
+
 .pricing-item {
     position: relative;
     display: flex;
@@ -1772,10 +1783,11 @@ ion-icon[size="large"] {
 .pricing-palden .pricing-deco {
     border-radius: 10px 10px 0 0;
     background: linear-gradient(190deg, #2386f7, #79c5f8);
-    padding: 4em 0 9em;
+    padding: 3.5em 0 0;
     position: relative;
     color: white;
     height: 345px;
+    overflow: hidden;
 }
 
 .pricing-palden .pricing-deco-img {
@@ -1829,7 +1841,7 @@ ion-icon[size="large"] {
 .free-tier-card-list-root {
     list-style-type: none;
     padding-left: 0;
-    margin-top: -40px;
+    margin-top: -33px;
     z-index: 100;
 }
 
