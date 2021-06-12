@@ -488,6 +488,7 @@ div.header-contact-us {
     padding-right: 72px;
     margin-top: 2rem;
     margin-bottom: 10px;
+    padding-bottom: 0px;
 }
 
 .hero-buttons-root::after {
@@ -1029,7 +1030,8 @@ div.header-contact-us {
         height: 124px;
         padding-right: 0px;
         margin-top: 0px;
-        margin-bottom: 100px;
+        margin-bottom: 18%;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
     }
     .hero-buttons-root::after {
         left: 60px;
