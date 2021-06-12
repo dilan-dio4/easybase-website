@@ -53,7 +53,7 @@ import ebconfig from './ebconfig'
 
 `EasybaseProvider` will grant access to the functions necessary to perform user operations in the front-end code. The `Auth` component handles these functions automatically, with a customizable interface. Lastly, `ebconfig` is the unique token that connects your front-end to Easybase, downloaded from the **Projects** tab. Be sure to set and **save** the proper table permissions:
 
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase best react database firebase alternative 6" data-src="/assets/images/posts_images/new-react-auth-9.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase user authentication 1" data-src="/assets/images/posts_images/new-react-auth-9.png" />
 
 
 The components in `Auth` will **only** be accessible to users who are signed in. Wrap all of that in `EasybaseProvider` (with `ebconfig`) like so:
@@ -74,13 +74,13 @@ export default function App() {
 
 Save that and run your application by executing `npm run start` in your project directory.
 
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase best react database firebase alternative 6" data-src="/assets/images/posts_images/new-react-auth-1.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase user authentication 2" data-src="/assets/images/posts_images/new-react-auth-1.png" />
 
 Navigate to the sign-up page by clicking the secondary button under 'Continue'. Fill out that form and click 'Continue'.
 
 *Note: a real email should be used for the **Forgot Password** workflow to work properly*
 
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase best react database firebase alternative 6" data-src="/assets/images/posts_images/new-react-auth-2.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase user authentication 3" data-src="/assets/images/posts_images/new-react-auth-2.png" />
 
 **Congrats!** You're application is successfully using user authentication using [JWTs](https://auth0.com/docs/tokens/json-web-tokens) with local caching.
 
@@ -133,7 +133,7 @@ export default function App() {
 }
 ```
 
-<img data-jslghtbx class="custom-lightbox lazyload" style="max-height: 700px;margin: auto;display: block;" alt="Easybase best react database firebase alternative 6" data-src="/assets/images/posts_images/new-react-auth-4.png" />
+<img data-jslghtbx class="custom-lightbox lazyload" style="max-height: 700px;margin: auto;display: block;max-width:100%" alt="Easybase user authentication 4" data-src="/assets/images/posts_images/new-react-auth-4.png" />
 
 Although the rest of this article will demonstrate the `<Auth />` component, understand that these two components work almost identically. Furthermore, they have the same props that perform the same functions, respectively. For more technical information, [check out the source on GitHub](https://github.com/easybase/easybase-react/blob/master/src/ui/NativeAuth/NativeAuth.tsx).
 
@@ -202,7 +202,7 @@ export default function App() {
 ```
 <!-- {% endraw %} -->
 
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase best react database firebase alternative 6" data-src="/assets/images/posts_images/new-react-auth-3.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase user authentication 5" data-src="/assets/images/posts_images/new-react-auth-3.png" />
 
 Various fields are available and the types of constraints allowed can be seen in [React Hook Form's Register documentation](https://react-hook-form.com/api/useform/register) (be sure to enable 'Register with validation and error message' under 'Register Options').
 
@@ -225,7 +225,7 @@ export default function App() {
 
 These extra fields will appear as 'User Attributes' under the **Users** tab in Easybase
 
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase best react database firebase alternative 6" data-src="/assets/images/posts_images/new-react-auth-6.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase user authentication 6" data-src="/assets/images/posts_images/new-react-auth-6.png" />
 
 ## Theming
 
@@ -268,7 +268,7 @@ export default function App() {
 ```
 <!-- {% endraw %} -->
 
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase best react database firebase alternative 6" data-src="/assets/images/posts_images/new-react-auth-5.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase user authentication 7" data-src="/assets/images/posts_images/new-react-auth-5.png" />
 
 All custom styling options can be seen in [the Easybase documentation for IStyles](/docs/easybase-react/interfaces/ui_uitypes.istyles.html). Themes are unavailable for React Native, but **[use INativeStyles](/docs/easybase-react/interfaces/ui_uitypes.inativestyles.html)** for Native `customStyles` options.
 
@@ -302,7 +302,7 @@ export default function App() {
 
 Utilizing this feature, along with the styling options demonstrated above, give developers **great control** over their application's sign-in/sign-up interface.
 
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase best react database firebase alternative 6" data-src="/assets/images/posts_images/new-react-auth-7.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase user authentication 8" data-src="/assets/images/posts_images/new-react-auth-7.png" />
 
 These dictionary changes are available throughout the interface. Take a look at the [IDictionary type for all options](/docs/easybase-react/interfaces/ui_uitypes.idictionary.html).
 
@@ -438,7 +438,7 @@ Just like that, your application supports a *stateful* user authentication workf
 
 Note that the [`signIn`](/docs/easybase-react/interfaces/types_types.contextvalue.html#signin), [`signOut`](/docs/easybase-react/interfaces/types_types.contextvalue.html#signout), and [`signUp`](/docs/easybase-react/interfaces/types_types.contextvalue.html#signup) functions are asynchronous, so you can use `await` or `.then` to handle the completion of these events.
 
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase best react database firebase alternative 6" data-src="/assets/images/posts_images/new-react-auth-8.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase user authentication 9" data-src="/assets/images/posts_images/new-react-auth-8.png" />
 
 This example doesn't add any user attributes, but these can be assigned in a couple of different ways:
 
