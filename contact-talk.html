@@ -5,10 +5,7 @@ description: Get in touch with an expert at Easybase!
 ---
 
 <style>
-    #contact input[type="text"],
-    #contact input[type="email"],
-    #contact input[type="tel"],
-    #contact input[type="url"],
+    #contact input,
     #contact textarea,
     #contact button[type="submit"] {
         font-weight: 400;
@@ -52,23 +49,24 @@ description: Get in touch with an expert at Easybase!
         display: flex;
     }
 
-    #contact input[type="text"],
-    #contact input[type="email"],
-    #contact input[type="tel"],
-    #contact input[type="url"],
+    #contact input,
     #contact textarea {
         width: 100%;
         box-shadow: rgb(60 66 87 / 16%) 0px 0px 0px 1px;
+        -webkit-box-shadow: rgb(60 66 87 / 16%) 0px 0px 0px 1px;
         background: #FFF;
         margin: 0 0 5px;
         padding: 12px;
         transition: color .24s, background-color .24s, box-shadow .24s;
         border: none;
         outline: none;
+        -webkit-appearance: none;
     }
 
     #contact input:focus,
-    #contact textarea:focus {
+    #contact textarea:focus,
+    #contact input:active,
+    #contact textarea:active {
         box-shadow: rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(60 66 87 / 16%) 0px 0px 0px 1px;
         -webkit-box-shadow: rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(60 66 87 / 16%) 0px 0px 0px 1px;
     }
@@ -101,12 +99,6 @@ description: Get in touch with an expert at Easybase!
 
     #contact button[type="submit"]:active {
         background-color: #0154b3;
-    }
-
-    #contact input:focus,
-    #contact textarea:focus {
-        box-shadow: rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(60 66 87 / 16%) 0px 0px 0px 1px;
-        -webkit-box-shadow: rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(60 66 87 / 16%) 0px 0px 0px 1px;
     }
 
     ::-webkit-input-placeholder {
