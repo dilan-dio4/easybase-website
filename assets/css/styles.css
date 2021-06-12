@@ -1030,9 +1030,10 @@ div.header-contact-us {
         padding-right: 0px;
         margin-top: 0px;
         margin-bottom: 18%;
-        @supports (margin-bottom: env(safe-area-inset-bottom)) {
-            margin-bottom: calc(18% + env(safe-area-inset-bottom, 0px));
-        }
+        @supports (-webkit-touch-callout: none) {
+            /* iOS only */
+            margin-bottom: 43%;
+         }
     }
     .hero-buttons-root::after {
         left: 60px;
