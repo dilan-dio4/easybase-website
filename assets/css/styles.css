@@ -412,8 +412,6 @@ div.header-contact-us {
 
 .hero-checks {
     display: flex;
-    width: 100%;
-    flex-wrap: wrap;
 }
 
 .hero-checks span {
@@ -437,7 +435,8 @@ div.header-contact-us {
     margin: 0;
     margin-right: 13px;
     word-wrap: normal;
-    letter-spacing: 0.4px;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
     font-weight: 300;
     display: inline-block;
     vertical-align: middle;
@@ -488,6 +487,7 @@ div.header-contact-us {
     padding-right: 72px;
     margin-top: 2rem;
     margin-bottom: 10px;
+    min-width: 458px;
 }
 
 .hero-buttons-root::after {
@@ -503,6 +503,7 @@ div.header-contact-us {
     padding: 5px;
     /* background-clip: content-box; */
     border: 1px solid #eaeaea;
+    min-width: 416px;
 }
 
 .mod-container {
@@ -1030,12 +1031,14 @@ div.header-contact-us {
         padding-right: 0px;
         margin-top: 0px;
         margin-bottom: 18%;
+        min-width: initial;
     }
     .hero-buttons-root::after {
         left: 60px;
         height: 187px;
         right: 60px;
         margin-top: -31px;
+        min-width: initial;
     }
     .footer-footer {
         justify-content: center !important;
