@@ -10,8 +10,8 @@ author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 tags: React
 meta_description: Comprehensive tutorial on using Easybase with React and React Native, featuring user authentication, visual queries, and serverless database.
-tocTitles: ["Introduction", "Setup", "React Configuration", "Database", "useReturn", "Sign In & Sign Up Authentication", "Authenticated Database", "Visual Queries", "Cloud Functions", "Conclusion"]
-tocLinks: ["#introduction", "#setup", "#react-configuration", "#database", "#usereturn", "#sign-in--sign-up-authentication", "#authenticated-database", "#visual-queries", "#cloud-functions", "#conclusion"]
+tocTitles: ["Introduction", "Setup", "React Configuration", "Database", "useReturn", "Sign In & Sign Up Authentication", "Authenticated Database", "Visual Queries", "Google Analytics Integration", "Cloud Functions", "Conclusion"]
+tocLinks: ["#introduction", "#setup", "#react-configuration", "#database", "#usereturn", "#sign-in--sign-up-authentication", "#authenticated-database", "#visual-queries", "#google-analytics-integration", "#cloud-functions", "#conclusion"]
 ---
 
 ## Introduction
@@ -711,6 +711,119 @@ I'm using the same *card-like* component from our `Home` component. Here's a scr
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual component" data-src="/assets/images/posts_images/react-13.png" />
 
 Note that there are other *optional* parameters for the `Query()` function such as *sortBy* and *limit*. One of the most **powerful** options is the ability to add a *customQuery* object to overwrite the values detailed in the visual query. The structure and function of the query stay the same, but you can edit the values that are queried. For example, if we wanted to look for products with a price of over $12 rather than $100. We can set the *customQuery* parameter to `{ price: 12 }` programmatically. This is suited well for situations in which you have **conditional options in your interface that affect the current query**.
+
+<br />
+
+## Google Analytics Integration
+
+The `easybase-react` package has built-in support for advanced Google Analytics tracking. The only configuration needed in your React project is the `googleAnalyticsId` parameter of EasybaseProvider's options [and `googleAnalyticsSecret` for **React Native**]. This feature is optimized for the latest version of Analytics – **Google Analytics 4**. *Note that the previous version of GA, Universal Analytics, is not supported*.
+
+To get started, [log in to Google Analytics](https://analytics.google.com/analytics/web/).
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react Google Analytics 1" data-src="/assets/images/posts_images/react-23.png" />
+
+Proceed through the account creation form. **You do not need to change any of the default settings.**
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react Google Analytics 2" data-src="/assets/images/posts_images/react-24.png" />
+
+Next, create a **Web** Data Stream. **The Website URL field does not have to be a real URL** – if you do not have a domain name, input some placeholder URL.
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react Google Analytics 3" data-src="/assets/images/posts_images/react-25.png" />
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react Google Analytics 4" data-src="/assets/images/posts_images/react-26.png" />
+
+Create the stream. Copy the "Measurement ID" and paste in the `googleAnalyticsId` option of EasybaseProvider:
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react Google Analytics 5" data-src="/assets/images/posts_images/react-27.png" />
+
+<!-- {% raw %} -->
+```jsx
+import './App.css';
+import { EasybaseProvider } from 'easybase-react';
+import ebconfig from './ebconfig';
+
+function App() {
+  return (
+    <EasybaseProvider ebconfig={ebconfig} options={{ googleAnalyticsId: "G-J75H1NPBQY" }}>
+      <MyApp />
+    </EasybaseProvider>
+  );
+}
+
+export default App;
+```
+<!-- {% endraw %} -->
+
+Fire up your application with `npm run start` and head to the 'Realtime' tab in GA. Wait a second and a new event will appear! **Note that adblockers will stop Google Analytics functionality client-side.**
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react Google Analytics 6" data-src="/assets/images/posts_images/react-28.png" />
+
+### React Native Only
+
+Since React Native applications cannot hook into the standard Google Analytics browser script, the `easybase-react` library will use [the Google Analytics 4 Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/ga4) as an alternative. This requires one more configuration step – an API Secret. In the **Data Stream** Menu, go to the Measurement Protocol API secrets view and create a new secret.
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react Google Analytics 7" data-src="/assets/images/posts_images/react-29.png" />
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react Google Analytics 8" data-src="/assets/images/posts_images/react-30.png" />
+
+Copy the "Secret value" and paste in the EasybaseProvider option `googleAnalyticsSecret`:
+
+<!-- {% raw %} -->
+```jsx
+import './App.css';
+import { EasybaseProvider } from 'easybase-react';
+import ebconfig from './ebconfig';
+
+function App() {
+  return (
+    <EasybaseProvider 
+      ebconfig={ebconfig}
+      options={{
+          googleAnalyticsId: "G-J75H1NPBQY",
+          googleAnalyticsSecret: "kVtlPpOZQf6T62SWwvRIbA",
+      }}>
+      <MyApp />
+    </EasybaseProvider>
+  );
+}
+
+export default App;
+```
+<!-- {% endraw %} -->
+
+Your React Native app analytics are ready to go!
+
+Certain events will be tracked by default; page mounts, `login`, `sign_up`, etc. You can specify which events are logged, such as `db` executions, with the `googleAnalyticsEventTracking` object in EasybaseProvider's options:
+
+<!-- {% raw %} -->
+```jsx
+import './App.css';
+import { EasybaseProvider } from 'easybase-react';
+import ebconfig from './ebconfig';
+
+function App() {
+  return (
+    <EasybaseProvider 
+      ebconfig={ebconfig}
+      options={{
+          googleAnalyticsId: "G-J75H1NPBQY",
+          googleAnalyticsEventTracking: {
+            get_user_attributes: true,
+            db_one: true,
+            db_all: true
+          }
+      }}>
+      <MyApp />
+    </EasybaseProvider>
+  );
+}
+
+export default App;
+```
+<!-- {% endraw %} -->
+
+Events and their associated parameters can be seen in the "Realtime" tab and *eventually* in the "Events" tab. If your application features [User Authentication](/react-and-react-native-user-authentication/), the package will **automatically** associate events with a [salted + hashed user ID](https://support.google.com/analytics/answer/6366371?hl=en#hashed) for source identification.
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react Google Analytics 9" data-src="/assets/images/posts_images/react-31.png" />
 
 <br />
 
