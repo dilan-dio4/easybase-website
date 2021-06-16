@@ -252,7 +252,7 @@ div.header-contact-us {
     font-family: var(--font-sans);
     min-width: 200px;
     height: 40px;
-    padding: 0 25px 0 25px;
+    padding: 0 25px;
     border-radius: var(--mod-radius);
     font-size: 0.875rem;
     -webkit-flex-shrink: 0;
@@ -547,7 +547,7 @@ div.header-contact-us {
     font-family: var(--font-sans);
     min-width: 170px;
     height: 50px;
-    padding: 0 25px 0 25px;
+    padding: 0 25px;
     border-radius: var(--mod-radius);
     font-size: 1rem;
     -webkit-flex-shrink: 0;
@@ -1093,6 +1093,9 @@ div.header-contact-us {
         .hero-buttons-root {
             margin-bottom: 43% !important;
         }
+    }
+    .pricing-palden .pricing-item {
+        margin: 2em 1em !important;
     }
 }
 
@@ -1768,19 +1771,9 @@ ion-icon[size="large"] {
 .pricing-palden .pricing-item {
     cursor: default;
     background: #fff;
-    box-shadow: var(--shadow-large);
+    box-shadow: var(--shadow-small);
     border-radius: 20px 20px 10px 10px;
-    margin: 1em;
-}
-
-@media screen and (min-width: 66.25em) {
-    .pricing-palden .pricing-item {
-        margin: 2em -0.5em;
-    }
-    .pricing-palden .pricing__item--featured {
-        margin: 0;
-        z-index: 10;
-    }
+    margin: 2em 0;
 }
 
 .pricing-palden .pricing-deco {
@@ -1833,7 +1826,7 @@ ion-icon[size="large"] {
 }
 
 .pricing-month-text {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 400;
     color: white;
     margin-bottom: 0;
@@ -1846,6 +1839,7 @@ ion-icon[size="large"] {
     padding-left: 0;
     margin-top: -33px;
     z-index: 100;
+    margin-left: 19%;
 }
 
 .free-tier-card-list-root li {
