@@ -756,7 +756,7 @@ div.header-contact-us {
     transform: translate3d(0px, 0px, 0px);
     user-select: none;
     transition: all .2s ease-in-out;
-    filter: drop-shadow(var(--shadow-small))
+    filter: drop-shadow(0px 0px 1px rgba(60, 66, 87, 0.22))
 }
 
 .step-card-content {
@@ -767,7 +767,7 @@ div.header-contact-us {
     width: 280px;
     height: 250px;
     background: white;
-    background: linear-gradient(197deg, rgb(230, 242, 255) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    /* background: linear-gradient(197deg, rgb(230, 242, 255) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%); */
     clip-path: polygon(0% 0%, calc(100% - 39px) -1px, 100% 39px, 100% 44px, calc(100% + 6px) 49px, calc(100% + 6px) calc(100% + 6px), 0% calc(100% + 6px));
 }
 
@@ -778,7 +778,7 @@ div.header-contact-us {
     right: -2px;
     border-width: 0 20px 20px 0;
     border-style: solid;
-    border-color: rgb(248, 252, 255);
+    border-color: #FFF;
     border-width: 19px;
     border-radius: 0 0 0 6px;
     box-shadow: -1px 3px 5px rgb(0, 0, 0, 0.1);
