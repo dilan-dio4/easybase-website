@@ -1836,10 +1836,9 @@ ion-icon[size="large"] {
 
 .free-tier-card-list-root {
     list-style-type: none;
-    padding-left: 0;
     margin-top: -33px;
     z-index: 100;
-    margin-left: 19%;
+    padding-left: calc(29% - 52px);
 }
 
 .free-tier-card-list-root li {
@@ -1849,7 +1848,20 @@ ion-icon[size="large"] {
     margin-bottom: 12px;
     font-size: 16px;
     letter-spacing: -.014em;
+}
+
+.free-tier-card-list-root li.support{
     color: var(--accents-6);
+}
+
+.free-tier-card-list-root li.unsupport{
+    color: var(--accents-3);
+}
+
+.free-tier-card-list-root li ion-icon{
+    font-size: 26px;
+    margin-right: 20px;
+    color: inherit;
 }
 
 /** End pricing */
