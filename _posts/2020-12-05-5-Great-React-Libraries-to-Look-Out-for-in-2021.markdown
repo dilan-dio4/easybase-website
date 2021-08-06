@@ -1,7 +1,8 @@
 ---
 layout: blog
 title:  5 Great React Libraries to Look Out for in 2021
-date:   2020-12-05 11:25:15 -0400
+date: 2020-12-05 11:25:15 -0400
+date_modified: 2021-08-05 10:51:00 -0400
 categories: react
 title_image: /assets/images/posts_images/5-great-react-libraries-1.png
 title_image_sm: https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=90&q=80
@@ -12,6 +13,10 @@ author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 meta_description: React continues to be the most popular front-end framework, and for good reason. Let's take a look at 5 libraries that may just be the next big thing in 2021!
 ---
+
+*Update 8/5/2021* – Use the **[new interactive framework quiz](/best-javascript-framework-library-quiz/)** to discover which method is best for your development environment.
+
+<hr />
 
 Front-end JavaScript frameworks have become incredibly popular over the last five years, including [Vue](https://vuejs.org/), [Angular](https://angular.io/), and [React](https://reactjs.org/). These modules have allowed beginners and exports turn their ideas into reality. Furthermore, they can deploy their applications on all kinds of devices.
 
@@ -66,7 +71,7 @@ To use this library, simply initiate a ref your React element and a state for yo
 ## [Github](https://github.com/easybase/easybase-react)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/easybase-react?style=social)
 
-You know we had to plug our own! This library makes user authentication and database integration easier than ever before. It works with both Easybase projects or REACT integrations. The `useEasybase()` hook gives developers access to the functions needed for a scalable project. Just wrap your root component in a custom `ebconfig.js`:
+This library makes user authentication and database integration easier than ever before. It works with both Easybase projects or REACT integrations. The `useEasybase()` hook gives developers access to the functions needed for a scalable project. Just wrap your root component in a custom `ebconfig.js`:
 
 ```jsx
 import { EasybaseProvider, useEasybase } from "easybase-react";   
@@ -81,7 +86,7 @@ function App() {
 }
 ```
 
-From there you can perform user authentication operations and access a stateful database array! Just for you, [it's free](https://app.easybase.io). Here's some more information if you want to [learn about Easybase and React](https://easybase.io/react/2020/09/20/The-Best-Way-To-Add-A-Database-To-Your-React-React-Native-Apps/). Let's take a brief look at user authentication with `easybase-react`:
+From there you can perform user authentication operations and access a stateful database array! Just for you, [it's free](https://app.easybase.io). Here's some more information if you want to [learn about Easybase and React](/react-database-app-tutorial/). Let's take a brief look at user authentication with `easybase-react`:
 
 ```jsx
 function ProjectUser() {
