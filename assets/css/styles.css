@@ -1118,7 +1118,7 @@ div.header-contact-us {
     @supports (-webkit-touch-callout: none) {
         /* CSS specific to iOS devices */
         .hero-buttons-root {
-            margin-bottom: 43% !important;
+            margin-bottom: 25% !important;
         }
     }
     .pricing-palden .pricing-item {
