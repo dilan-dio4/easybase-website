@@ -393,7 +393,7 @@ div.header-contact-us {
 }
 
 .home_hero {
-    background-image: linear-gradient(#fbfbfb 90%, #ececec 100%);
+    background-image: linear-gradient(#fbfbfb 92%, #ececec 100%);
     height: calc(100vh - var(--banner-height) - var(--header-height));
     display: flex;
     justify-content: center;
@@ -779,6 +779,7 @@ div.header-contact-us {
     border-radius: 4px;
     font-size: 14px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .step-card-text {
@@ -803,15 +804,15 @@ div.header-contact-us {
     border-radius: 15px;
     box-shadow: var(--shadow-small);
     flex-wrap: wrap;
-    padding: 0px 16px;
-    margin-top: -159px;
+    padding: 16px;
+    margin-top: calc(-20vh - 15px);
 }
 
 .content-article {
     display: flex;
     flex-direction: column;
-    margin-top: 26px;
-    margin-bottom: 26px;
+    margin-top: 13px;
+    margin-bottom: 13px;
     margin-right: 13px;
     margin-left: 13px;
     padding: 26px;
@@ -948,7 +949,7 @@ div.header-contact-us {
         max-width: 900px;
     }
     .hero-video-root {
-        width: 500px;
+        width: 480px;
         margin-left: 40px;
     }
 }
@@ -958,14 +959,11 @@ div.header-contact-us {
         max-width: 1000px;
     }
     .hero-video-root {
-        width: 600px;
+        width: 580px;
     }
 }
 
 @media (min-width: 1050px) {
-    .hero-video-root {
-        width: 600px;
-    }
     .steps-container {
         flex-direction: row !important;
     }
@@ -985,7 +983,7 @@ div.header-contact-us {
         max-width: 1350px !important;
     }
     .hero-video-root {
-        width: 705px;
+        width: 685px;
     }
 }
 
@@ -998,14 +996,14 @@ div.header-contact-us {
 
 @media (min-width: 1400px) {
     .hero-video-root {
-        width: 770px;
+        width: 750px;
         margin-left: 10px;
     }
 }
 
 @media (min-width: 1500px) {
     .hero-video-root {
-        width: 790px;
+        width: 760px;
         margin-left: 25px;
     }
 }
@@ -1126,6 +1124,9 @@ div.header-contact-us {
     .pricing-palden .pricing-item {
         margin: 2em 1em !important;
     }
+    .main-section-card {
+        margin-top: -150px;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -1161,7 +1162,7 @@ div.header-contact-us {
         font-weight: 600;
     }
     .home_hero {
-        height: calc(92vh - var(--banner-height));
+        height: calc(100vh - var(--banner-height));
     }
     .grow-on-mobile {
         height: initial;
@@ -1878,4 +1879,47 @@ ion-icon[size="large"] {
 .undraggable {
     user-select: none;
     pointer-events: none;
+}
+
+.small-point {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 280px;
+    min-width: 220px;
+}
+
+.small-point h6 {
+    padding: 0;
+    margin: 0;
+    color: var(--accents-7);
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.small-point p {
+    color: var(--accents-5);
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.small-point > ion-icon {
+    font-size: 24px;
+    color: var(--mod-success);
+    background-color: var(--highlight-color);
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.small-point > a > ion-icon {
+    font-size: 14px;
+    margin-bottom: -2px;
+    margin-left: 3px;
+}
+
+
+.flex-wrap {
+    flex-wrap: wrap !important;
 }
