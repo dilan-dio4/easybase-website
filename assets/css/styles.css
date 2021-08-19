@@ -1039,6 +1039,11 @@ div.header-contact-us {
     margin-bottom: 100px;
 }
 
+.packages-for-mobile {
+    position: absolute;
+    bottom: 80px;
+}
+
 @media screen and (max-width: 800px) {
     .steps-container {
         flex-direction: column !important;
@@ -1119,6 +1124,9 @@ div.header-contact-us {
         /* CSS specific to iOS devices */
         .hero-buttons-root {
             margin-bottom: 22% !important;
+        }
+        .packages-for-mobile {
+            bottom: 10px !important;
         }
     }
     .pricing-palden .pricing-item {
