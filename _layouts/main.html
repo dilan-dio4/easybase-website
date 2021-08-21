@@ -53,21 +53,8 @@
     </div>
 
     {% include footer.html %}
+    {% include capture-link.html %}
 
-    <script>
-        var captureLinkClick = function(url, eventCategory, ignoreRedirect = false) {
-            if (!!window.google_tag_manager) {
-                gtag('event', 'click', {
-                    'event_category':  eventCategory,
-                    'event_label': "https://" + url,
-                    'transport_type': 'beacon',
-                    'event_callback': ignoreRedirect ? function(){} : function(){ document.location = "https://" + url; }
-                });
-            } else if (!ignoreRedirect) {
-                document.location = "https://" + url;
-            }
-        }
-    </script>
     <script type="module" src="/assets/ion-icons/ionicons.esm.js"></script>
     <script nomodule src="/assets/ion-icons/ionicons.js"></script>
 </body>

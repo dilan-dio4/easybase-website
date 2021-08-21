@@ -137,7 +137,7 @@ description: Get in touch with an expert at Easybase!
 </style>
 
 <section class="section-blue py-5 section-margin px-2">
-    <h1 class="text-center m-0" style="color: #fff; font-weight: 700; font-size: 34px; z-index: 2; position: relative;">We want to hear from you!</h1>
+    <h1 class="text-center m-0" style="color: #fff; font-weight: 700; font-size: 34px; z-index: 2; position: relative;">Your turn to ask the questions!</h1>
 </section>
 
 <section class="section-grey p-0">
@@ -249,7 +249,7 @@ description: Get in touch with an expert at Easybase!
             body: new FormData(document.getElementById("contact")),
         }).then(() => {
             enableForm();
-            document.location = "https://easybase.io/contact-talk-thank/";
+            window.location = "https://easybase.io/contact-talk-thank/";
         }).catch(() => {
             enableForm();
         });

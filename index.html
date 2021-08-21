@@ -21,7 +21,7 @@ layout: null
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Easybase is a visual, collaborative database that allows your apps to run back-end processes directly from the web browser, mobile device, or framework.">
     <title>Easybase | Serverless Tools That Bring Your Team Together</title>
-    <link href="/assets/css/styles.min.css" rel="stylesheet" />
+    <link href="/assets/css/styles.css" rel="stylesheet" />
     <link href="/assets/css/custom_bootstrap.min.css" rel="stylesheet" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
@@ -42,7 +42,7 @@ layout: null
     <meta property="og:description" content="Easybase is a visual, collaborative database that allows your apps to run back-end processes directly from the web browser, mobile device, or framework." />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@easybase_io" />
-    <meta name="twitter:title" content="Easybase | The low-code cloud platform for apps and websites" />
+    <meta name="twitter:title" content="Easybase | Serverless Tools That Bring Your Team Together" />
     <meta name="twitter:description" content="Easybase is a visual, collaborative database that allows your apps to run back-end processes directly from the web browser, mobile device, or framework." />
     <meta name="twitter:image" content="https://easybase.io/assets/images/og_white_black_square.png" />
     <link rel="canonical" href="https://easybase.io/" />
@@ -91,8 +91,8 @@ layout: null
                         <div class="col-md-5 grow-on-mobile">
 
                             <div class="hero-left-root">
-                                <h2 class="hero-primary-text">Your Data. Empowered.</h2>
-                                <h1 class="hero-secondary-text mb-3 center-text-sm">Create and scale serverless applications with Easybase</h1>
+                                <h2 class="hero-primary-text">Your Data, Empowered.</h2>
+                                <h1 class="hero-secondary-text mb-3 center-text-sm">Create and scale serverless applications with a platform that boosts collaboration and brings people together</h1>
                                 <div class="hero-buttons-root">
 
                                     <div class="mod-container">
@@ -102,34 +102,24 @@ layout: null
                                     </div>
 
                                     <div class="mod-container">
-                                        <a class="section-footer-button section-footer-button-hero" href="/contact-talk/">
+                                        <a class="section-footer-button section-footer-button-hero" href="/contact-talk/" onclick="captureLinkClick('easybase.io/contact-talk/', 'talkToAnExpert'); return false;">
                                             Talk to an expert
                                             <ion-icon name="chevron-forward-outline" style="margin-bottom: 1px; margin-left: 2px;"></ion-icon>
                                         </a>
                                     </div>
 
                                 </div>
-                                <div class="hero-checks my-5 mod-hide-on-mobile">
-                                    <div class="mod-hide-on-mobile">
-                                        <span>
-                                            <ion-icon name="checkmark"></ion-icon>
-                                            <h6>Visual query builder</h6>
-                                        </span>
-                                        <span>
-                                            <ion-icon name="checkmark"></ion-icon>
-                                            <h6>Google Analytics</h6>
-                                        </span>
-                                        <span>
-                                            <ion-icon name="checkmark"></ion-icon>
-                                            <h6 class="mr-0">99.9% uptime*</h6>
-                                        </span>
-                                    </div>
+                                <div class="mod-hide-on-mobile align-items-center mt-4 pt-3">
+                                    <p style="font-weight: 700; font-size: 15px; margin: 0px;">Packages available for</p>
+                                    <ion-icon size="large" class="mr-3 ml-2" name="logo-react"></ion-icon>
+                                    <ion-icon size="large" class="mr-3" name="logo-html5"></ion-icon>
+                                    <ion-icon size="large" class="mr-2" name="logo-javascript"></ion-icon>
+                                    <p style="font-weight: 700; font-size: 15px; margin: 0px;">and more.</p>
                                 </div>
-
                             </div>
 
                         </div>
-                        <div class="col-md-7 mod-hide-on-mobile no-padding" style="max-width: none !important;">
+                        <div class="col-md-7 mod-hide-on-mobile p-0" style="max-width: none !important;">
                             <div class="hero-video-root mb-5" style="overflow: visible;">
                                 <div id="hero-video-raw-replay" style="visibility: hidden; opacity: 0;">
                                     {% assign posts-with-title-image = site.posts | where_exp:"item","item.title_image!=nil" %}
@@ -148,33 +138,87 @@ layout: null
                             </div>
                         </div>
                     </div>
-                    <div class="row d-flex justify-content-center w-100 mod-hide-on-mobile" style="position: relative; bottom: 60px;">
-                        <div class="d-flex align-items-center">
-                            <p style="font-weight: 700; font-size: 15px; margin: 0px;">Packages available for</p>
-                            <ion-icon size="large" class="mr-3 ml-2" name="logo-react"></ion-icon>
-                            <ion-icon size="large" class="mr-3" name="logo-html5"></ion-icon>
-                            <!-- <ion-icon size="large" class="mr-3" name="logo-python"></ion-icon> -->
-                            <ion-icon size="large" class="mr-2" name="logo-javascript"></ion-icon>
-                            <p style="font-weight: 700; font-size: 15px; margin: 0px;">and more.</p>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center w-100 mod-show-on-mobile" style="position: absolute; bottom: 15px;">
-                        <div class="d-flex align-items-center">
-                            <p style="font-weight: 600; font-size: 12px; margin: 0px;">Packages available for</p>
-                            <ion-icon size="large" class="mr-2 ml-1" name="logo-react"></ion-icon>
-                            <ion-icon size="large" class="mr-2" name="logo-html5"></ion-icon>
-                            <!-- <ion-icon size="large" class="mr-2" name="logo-python"></ion-icon> -->
-                            <ion-icon size="large" class="mr-1" name="logo-javascript"></ion-icon>
-                            <p style="font-weight: 600; font-size: 12px; margin: 0px;">and more.</p>
-                        </div>
+                    <div class="row mod-show-on-mobile align-items-center justify-content-center w-100 packages-for-mobile">
+                        <p style="font-weight: 600; font-size: 12px; margin: 0px;">Packages available for</p>
+                        <ion-icon size="large" class="mr-2 ml-1" name="logo-react"></ion-icon>
+                        <ion-icon size="large" class="mr-2" name="logo-html5"></ion-icon>
+                        <ion-icon size="large" class="mr-2" name="logo-javascript"></ion-icon>
+                        <p style="font-weight: 600; font-size: 12px; margin: 0px;">and more.</p>
                     </div>
                 </div>
             </div>
 
             <section class="section-grey">
                 <div class="wide-container">
+                    <div class="main-section-card d-flex">
+                        <article class="content-article ca1">
+                            <span class="d-flex justify-content-between">
+                                <h4>Visual</h4>
+                                <ion-icon name="code"></ion-icon>
+                            </span>
+                            <p class="mt-3">The visual query builder and self-building API make database integration extremely accessible. Avoid hassling with complicated query language and managing API functionality by adding Easybase to your tech stack. The platform handles the complex parts and lets you get to work.</p>
+                        </article>
+
+                        <article class="content-article ca2">
+                            <span class="d-flex justify-content-between">
+                                <h4>Collaborative</h4>
+                                <ion-icon name="people"></ion-icon>
+                            </span>
+                            <p class="mt-3">Remotely work with others on your application database, in real-time. Changes made from your apps or collaborators are always synchronized with your Easybase data table. From developers to project managers to clients, visual collaboration allows teams and businesses to thrive with efficient engagement.</p>
+                        </article>
+
+                        <article class="content-article ca3">
+                            <span class="d-flex justify-content-between">
+                                <h4>Scalable</h4>
+                                <ion-icon name="flash"></ion-icon>
+                            </span>
+                            <p class="mt-3">Whether you need to fetch 100 records or 100 GBs, your API is responsive to traffic. Deploy with our single-dependency framework and if your app or project demands high volume transfers, you get it. Serverless integrations are updated in realtime, such that changes are instantly accessible from your applications.</p>
+                        </article>
+                    </div>
+                    <div class="section-header-content-spacer"></div>
+
                     <h2 class="section-header-text block-hide-on-mobile">Building <span class="highlight"><span>the right backend</span></span> is hard</h2>
                     <h2 class="section-header-text block-show-on-mobile">Building the right <span class="highlight"><span>backend</span></span> is hard</h2>
+                    <div class="mod-container">
+                        <h3 class="section-secondary-text">Easybase enables you to execute and manage backend processes without code straight from the web browser, mobile device, or frontend framework.</h3>
+                        <!-- <h3 class="section-secondary-text">Easybase allows you to query data without code, manage users, and execute cloud functions straight from the web browser, mobile device, or frontend framework.</h3> -->
+                    </div>
+
+                    <div class="section-header-content-spacer"></div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-around flex-wrap">
+                                <div class="small-point mb-5 mb-md-0 ml-2">
+                                    <ion-icon name="lock-closed-outline"></ion-icon>
+                                    <h6 class="mb-3 mt-4">Integrated Directly</h6>
+                                    <p>Data tables are administered with the Easybase interface and integrated into your apps with framework-specific packages. The <a href="https://github.com/easybase/easybase-react">easybase-react</a> package allows you to securely and statefully query your data within your application code.</p>
+                                    <a class="d-flex align-items-center mb-1" href="https://easybase.github.io/EasyQB/">In-code query builder <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                                    <a class="d-flex align-items-center mb-1" href="/about/2021/01/30/What-Is-a-Serverless-Application/">Serverless architecture<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                                </div>
+                                <div class="small-point mb-5 mb-md-0 ml-2">
+                                    <ion-icon name="analytics-sharp"></ion-icon>
+                                    <h6 class="mb-3 mt-4">Analytics</h6>
+                                    <p>MBs transferred, compute time in milliseconds, and request volume are tracked in real-time, useful for monitoring project activity. Easybase client packages integrate directly into Google Analytics 4 with high precision user tracking.</p>
+                                    <a class="d-flex align-items-center mb-1" href="/react-and-react-native-user-authentication/">User authentication <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                                    <a class="d-flex align-items-center mb-1" href="/react/#google-analytics-integration">Google Analytics <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                                </div>
+                                <div class="small-point mb-5 mb-md-0 ml-2">
+                                    <ion-icon name="share-outline"></ion-icon>
+                                    <h6 class="mb-3 mt-4">Share</h6>
+                                    <p>Tables can be shared both via link or directly to your team members. Using mutable permissions, viewers can optionally have editing access along with the ability to observe the table. This allows teams to collaborate remotely in real-time.</p>
+                                    <a class="d-flex align-items-center mb-1" href="/pricing">About features <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-white">
+                <div class="wide-container">
+                    <h2 class="section-header-text block-hide-on-mobile">Less work = <span class="highlight"><span>time saved</span></span></h2>
+                    <h2 class="section-header-text block-show-on-mobile">Less work = time <span class="highlight"><span>saved</span></span></h2>
                     <div class="mod-container">
                         <h3 class="section-secondary-text">Focus on designing your application and less time worrying about backend maintenance, allocation, and scaling. Easybase handles the hard part.</h3>
                     </div>
@@ -183,7 +227,6 @@ layout: null
                 </div>
 
                 <div class="steps-container">
-
                     <span>
                         <div class="step-card">
                             <ion-icon name="arrow-forward-outline" class="mod-hide-on-mobile"></ion-icon>
@@ -232,65 +275,6 @@ layout: null
                 </div>
             </section>
 
-            <section class="section-white" id="start-of-content-section">
-                <div class="container">
-                    <h2 class="section-header-text block-hide-on-mobile">Less work = <span class="highlight"><span>time saved</span></span></h2>
-                    <h2 class="section-header-text block-show-on-mobile">Less work = time <span class="highlight"><span>saved</span></span></h2>
-                    <div class="mod-container">
-                        <h3 class="section-secondary-text">Easybase enables you to execute and manage backend processes without code straight from the web browser, mobile device, or frontend framework.</h3>
-                        <!-- <h3 class="section-secondary-text">Easybase allows you to query data without code, manage users, and execute cloud functions straight from the web browser, mobile device, or frontend framework.</h3> -->
-                    </div>
-
-                    <div class="section-header-content-spacer"></div>
-
-                    <div class="row">
-                        <div class="col-md-6 d-flex justify-content-md-start justify-content-center">
-                            <div class="d-flex" style="overflow-x: hidden;">
-                                <div style="overflow: hidden; width: 291px;">
-                                    <img id="drawer-img" alt="easybase drawer" class="drawer-img lazyload undraggable" data-src="/assets/images/drawer.png" />
-                                </div>
-                                <div id="drawer-img-border" class="drawer-img-border"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 d-flex align-items-center order-first order-md-last">
-                            <div class="content-bullet-list-root">
-                                <article>
-                                    <span>
-                                        <ion-icon name="code"></ion-icon>
-                                    </span>
-                                    <div class="ml-4 pl-3">
-                                        <h4 class="content-bullet-list-header-text">Visual</h4>
-                                        <p class="section-content-text mt-3">The visual query builder and self-building API makes database integration extremely accessible. Avoid hassling with complicated query language and managing API functionality by adding Easybase to your tech stack. The platform handles the complex parts and lets you get to work.</p>
-                                    </div>
-                                </article>
-
-                                <article>
-                                    <span>
-                                        <ion-icon name="lock-closed"></ion-icon>
-                                    </span>
-                                    <div class="ml-4 pl-3">
-                                        <h4 class="content-bullet-list-header-text">Secure</h4>
-                                        <p class="section-content-text mt-3">Our team takes privacy and security very seriously. All data is always stored and transferred with the highest standards via modern backend security technologies. Proper maintenance keeps our processes up-to-date with the best practices in the ever-evolving world of cybersecurity.</p>
-                                    </div>
-                                </article>
-
-                                <article>
-                                    <span>
-                                        <ion-icon name="flash"></ion-icon>
-                                    </span>
-                                    <div class="ml-4 pl-3">
-                                        <h4 class="content-bullet-list-header-text">Scalable</h4>
-                                        <p class="section-content-text mt-3">Serverless integrations are updated in realtime, such that changes are instantly accessible from your programs. Whether you need to fetch 100 records or 100 GBs, your API is responsive to traffic. Deploy with our single-dependency framework and if your app or project demands high volume transfers, you get it.</p>
-                                    </div>
-                                </article>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
             <section class="section-grey">
                 <div class="container">
                     <div class="row d-flex justify-content-center mb-5 pb-1">
@@ -325,36 +309,6 @@ layout: null
             </section>
 
             <section class="section-white">
-                <div class="container">
-                    <h2 class="section-header-text">Cloud functions for modern apps</h2>
-                    <div class="mod-container">
-                        <h3 class="section-secondary-text" style="padding: 0 10px;">Easybase's Function-as-a-Service platform will readily deploy responsive code snippets in <b>Node.js</b> that can be called by name, in code. External packages can be specified in your serverless functions to install dependencies from <a href="https://npmjs.com/">npm</a>.</h3>
-                    </div>
-                    <div class="section-header-content-spacer"></div>
-                    <div class="row d-flex justify-content-around">
-                        <div class="languages-tabs-card">
-                            <iframe class="mod-hide-on-mobile lazyload" title="Easybase cloud function builder example" frameborder="0" allowfullscreen="" data-src="/easybase-website-react-frames/" height="850" width="1050"></iframe>
-                        </div>
-                    </div>
-                    <div class="section-header-content-spacer mod-hide-on-mobile"></div>
-                    <div class="row d-md-flex justify-content-center mt-5 pt-2">
-                        <div>
-                            <h2 class="small-content-header text-center">Live analytics tracking</h2>
-                            <h3 class="section-secondary-text">Both function and table metrics are tracked in real-time, useful for monitoring project activity. Metadata includes MBs transferred, compute time in milliseconds, and request volume.</h3>
-                            <p class="small-arrow-down mt-3">↓</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img class="lazyload undraggable d-block" data-src="/assets/images/analytics.png" alt="Easybase analytics demo" style="max-width: 100%; margin: 0 auto;" />
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </section>
-            <section class="section-grey">
                 <div class="container">
                     <h2 class="section-header-text"><span class="highlight"><span>Powerful</span></span> low-code interface</h2>
                     <div class="section-header-content-spacer"></div>
@@ -456,7 +410,7 @@ layout: null
 
             </section>
 
-            <section class="section-white" style="background-image: linear-gradient(#ffffff 90%,#ececec 100%);">
+            <section class="section-white" style="background-image: linear-gradient(#fbfbfb 90%, #ececec 100%);">
                 <div class="wide-container">
                     <div class="row d-flex justify-content-around">
                         <div class="mini-article-card my-4 my-md-0">
@@ -548,17 +502,6 @@ layout: null
         var hero_video_raw_replay_icon_ele = document.getElementById('hero-video-raw-replay-icon');
 
         window.addEventListener("load", function () {
-            var io = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        document.getElementById('drawer-img').classList.add("drawer-img-slide");
-                        io.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3, rootMargin: "0px" });
-
-            io.observe(document.getElementById('drawer-img-border'));
-
             let urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get("contact") !== null) {
                 setTimeout(function () {
@@ -601,21 +544,9 @@ layout: null
             setTimeout(fadeVideoInAndPlay, 500);
         }
 
-        var captureLinkClick = function (url, eventCategory) {
-            if (!!window.google_tag_manager) {
-                gtag('event', 'click', {
-                    'event_category': eventCategory,
-                    'event_label': "https://" + url,
-                    'transport_type': 'beacon',
-                    'event_callback': function () { document.location = "https://" + url; }
-                });
-            } else {
-                document.location = "https://" + url;
-            }
-        }
-
         loading_ele.style.opacity = 1;
     </script>
+    {% include capture-link.html %}
     <script type="module" src="/assets/ion-icons/ionicons.esm.js"></script>
     <script nomodule src="/assets/ion-icons/ionicons.js"></script>
 </body>

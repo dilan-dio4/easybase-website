@@ -1,0 +1,14 @@
+<script>
+    var captureLinkClick = function(url, eventCategory, ignoreRedirect = false) {
+        if (!!window.google_tag_manager) {
+            gtag('event', 'click', {
+                'event_category':  eventCategory,
+                'event_label': "https://" + url,
+                'transport_type': 'beacon',
+                'event_callback': ignoreRedirect ? function(){} : function(){ window.location = "https://" + url; }
+            });
+        } else if (!ignoreRedirect) {
+            window.location = "https://" + url;
+        }
+    }
+</script>
