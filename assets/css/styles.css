@@ -1035,13 +1035,13 @@ div.header-contact-us {
 }
 
 .grow-on-mobile {
-    height: 76%;
-    margin-bottom: 100px;
+    height: 70vh;
+    margin-bottom: 7vh;
 }
 
 .packages-for-mobile {
     position: absolute;
-    bottom: 80px;
+    bottom: 10px;
 }
 
 @media screen and (max-width: 800px) {
@@ -1126,7 +1126,11 @@ div.header-contact-us {
             margin-bottom: 22% !important;
         }
         .packages-for-mobile {
-            bottom: 10px !important;
+            bottom: 7px !important;
+        }
+        .grow-on-mobile {
+            height: 66vh !important;
+            margin-bottom: 13vh !important;
         }
     }
     .pricing-palden .pricing-item {
