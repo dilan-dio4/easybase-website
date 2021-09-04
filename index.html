@@ -17,6 +17,7 @@ layout: null
     </script>
     <script src="/assets/js/lazysizes.min.js"></script>
     <script src="/assets/js/ls.unveilhooks.min.js"></script>
+    <script src="/assets/js/lottie.min.js" type="text/javascript"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Easybase is a visual, collaborative database that allows your apps to run back-end processes directly from the web browser, mobile device, or framework.">
@@ -120,8 +121,8 @@ layout: null
 
                         </div>
                         <div class="col-md-7 mod-hide-on-mobile p-0" style="max-width: none !important;">
-                            <div class="hero-video-root mb-5" style="overflow: visible;">
-                                <div id="hero-video-raw-replay" style="visibility: hidden; opacity: 0;">
+                            <div class="hero-anim-root mb-5" style="overflow: visible;">
+                                <div id="hero-anim-raw-replay" style="visibility: hidden; opacity: 0;">
                                     {% assign posts-with-title-image = site.posts | where_exp:"item","item.title_image!=nil" %}
                                     {% for post in posts-with-title-image limit:2 %}
                                     <div class="video-replay-article-root mb-4">
@@ -129,10 +130,10 @@ layout: null
                                         <a href="{{ post.url }}">{{ post.title }}</a>
                                     </div>
                                     {% endfor %}
-                                    <img id="hero-video-raw-replay-icon" draggable="false" alt="replay icon" src="/assets/images/noun_replay.svg" style="cursor: pointer; height: 89px; width: 89px;" />
+                                    <img id="hero-anim-raw-replay-icon" draggable="false" alt="replay icon" src="/assets/images/noun_replay.svg" style="cursor: pointer; height: 89px; width: 89px;" />
                                 </div>
 
-                                <video id="hero-video-raw" class="lazyload" data-autoplay="" preload="none" muted="" src="/assets/hero/MASTER_1.mp4"></video>
+                                <div id="hero-anim"></div>
 
                                 <div id="lds-dual-ring"></div>
                             </div>
@@ -497,9 +498,10 @@ layout: null
 
     <script>
         var loading_ele = document.getElementById('lds-dual-ring');
-        var vid_ele = document.getElementById('hero-video-raw');
-        var hero_video_raw_replay_ele = document.getElementById('hero-video-raw-replay');
-        var hero_video_raw_replay_icon_ele = document.getElementById('hero-video-raw-replay-icon');
+        var animation_ele = document.getElementById('hero-anim');
+
+        var hero_video_raw_replay_ele = document.getElementById('hero-anim-raw-replay');
+        var hero_video_raw_replay_icon_ele = document.getElementById('hero-anim-raw-replay-icon');
 
         window.addEventListener("load", function () {
             let urlParams = new URLSearchParams(window.location.search);
@@ -508,43 +510,52 @@ layout: null
                     document.getElementById('footer-root').scrollIntoView(false)
                 }, 10);
             }
+
+            // https://github.com/airbnb/lottie-web
+
+            var anim = bodymovin.loadAnimation({
+                container: animation_ele,
+                renderer: 'svg',
+                autoplay: false,
+                loop: false,
+                path: '/assets/animation/demo.json'
+            });
+
+            loading_ele.style.opacity = 1;
+            anim.addEventListener('data_ready', function () {
+                loading_ele.style.opacity = 0;
+                setTimeout(fadeVideoInAndPlay, 500);
+            });
+
+            anim.addEventListener('complete', function () {
+                setTimeout(function () {
+                    hero_video_raw_replay_ele.style.visibility = "visible";
+                    hero_video_raw_replay_ele.style.opacity = "1";
+                    animation_ele.style.visibility = "hidden";
+                }, 750);
+
+                setTimeout(function () {
+                    hero_video_raw_replay_icon_ele.classList.add('spin-once');
+                }, 1100)
+
+                animation_ele.style.opacity = "0";
+            });
+
+            function fadeVideoInAndPlay() {
+                animation_ele.style.visibility = "visible";
+                animation_ele.style.opacity = "1";
+                anim.goToAndPlay(0);
+            }
+
+            hero_video_raw_replay_ele.onclick = function () {
+                hero_video_raw_replay_ele.style.opacity = "0";
+                hero_video_raw_replay_icon_ele.classList.remove('spin-once');
+                setTimeout(function () {
+                    hero_video_raw_replay_ele.style.visibility = "hidden";
+                    fadeVideoInAndPlay();
+                }, 750);
+            }
         });
-
-        function fadeVideoInAndPlay() {
-            vid_ele.style.visibility = "visible";
-            vid_ele.style.opacity = "1";
-            vid_ele.play();
-        }
-
-        hero_video_raw_replay_ele.onclick = function () {
-            hero_video_raw_replay_ele.style.opacity = "0";
-            hero_video_raw_replay_icon_ele.classList.remove('spin-once');
-            setTimeout(function () {
-                hero_video_raw_replay_ele.style.visibility = "hidden";
-                fadeVideoInAndPlay();
-            }, 750);
-        }
-
-        vid_ele.onended = function () {
-            setTimeout(function () {
-                hero_video_raw_replay_ele.style.visibility = "visible";
-                hero_video_raw_replay_ele.style.opacity = "1";
-                vid_ele.style.visibility = "hidden";
-            }, 750);
-
-            setTimeout(function () {
-                hero_video_raw_replay_icon_ele.classList.add('spin-once');
-            }, 1100)
-
-            vid_ele.style.opacity = "0";
-        }
-
-        vid_ele.oncanplay = function () {
-            loading_ele.style.opacity = 0;
-            setTimeout(fadeVideoInAndPlay, 500);
-        }
-
-        loading_ele.style.opacity = 1;
     </script>
     {% include capture-link.html %}
     <script type="module" src="/assets/ion-icons/ionicons.esm.js"></script>
