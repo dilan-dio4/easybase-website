@@ -952,6 +952,10 @@ div.header-contact-us {
         width: 480px;
         margin-left: 40px;
     }
+    .hero-animation-root {
+        width: 35vw;
+        right: calc(20vw - 200px);
+    }
 }
 
 @media (min-width: 992px) {
@@ -973,6 +977,10 @@ div.header-contact-us {
     .step-card {
         padding: 0px !important;
     }
+    .hero-animation-root {
+        width: 40vw;
+        right: calc(20vw - 200px);
+    }
 }
 
 @media (min-width: 1200px) {
@@ -984,6 +992,10 @@ div.header-contact-us {
     }
     .hero-anim-root {
         width: 685px;
+    }
+    .hero-animation-root {
+        width: 39vw;
+        right: calc(18vw - 200px);
     }
 }
 
@@ -1138,6 +1150,15 @@ div.header-contact-us {
     }
     .main-section-card {
         margin-top: -150px;
+    }
+    .hero-animation-root {
+        position: relative !important;
+        bottom: initial !important;
+        width: 96%;
+        margin: auto;
+        min-width: initial !important;
+        margin-bottom: 50px;
+        margin-top: -20px;
     }
 }
 
@@ -1857,4 +1878,18 @@ ion-icon[size="large"] {
 
 .flex-wrap {
     flex-wrap: wrap !important;
+}
+
+.hero-animation-root {
+    max-width: 640px;
+    min-width: 400px;
+    min-height: 1px;
+    position: absolute;
+    bottom: calc(-8vw + 180px);
+    overflow: hidden;
+}
+
+.hero-animation-root > #body-anim {
+    opacity: 0;
+    transition: opacity .1s linear;
 }
