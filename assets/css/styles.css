@@ -1217,7 +1217,7 @@ div.header-contact-us {
         background-color: var(--highlight-color);
         border-color: var(--mod-success);
     }
-    .button.hero-button:hover, .button.hero-button:focus, .button.hero-button:active, .video-replay-article-root:hover, .mini-article-card:hover {
+    .button.hero-button:hover, .button.hero-button:focus, .button.hero-button:active, .mini-article-card:hover {
         box-shadow: var(--shadow-medium);
         -webkit-transform: translate3d(0px, -2px, 0px);
         -ms-transform: translate3d(0px, -2px, 0px);
@@ -1518,48 +1518,6 @@ header {
     color: #007bff6b;
 }
 
-.video-replay-article-root {
-    width: 375px;
-    height: 75px;
-    background-color: var(--accents-1);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 5px;
-    box-shadow: var(--shadow-small);
-    transition: all .2s ease-in-out;
-}
-
-.video-replay-article-root img {
-    width: 125px;
-    height: 75px;
-    object-fit: cover;
-    margin-right: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.video-replay-article-root a {
-    color: black;
-    font-size: 15px;
-    text-decoration: underline !important;
-}
-
-#hero-anim-raw-replay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: opacity .1s linear;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 45px;
-    width: 100px;
-}
-
 #hero-anim {
     position: relative;
     opacity: 0;
@@ -1599,41 +1557,6 @@ header {
     outline: none;
     border-color: #1e4bd1;
 } */
-
-#lds-dual-ring {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-    opacity: 0;
-    transition: opacity .2s linear;
-}
-
-#lds-dual-ring:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid var(--accents-3);
-    border-color: var(--accents-3) transparent var(--accents-3) transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-}
-
-@keyframes lds-dual-ring {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 .carbon-picture {
     position: relative;

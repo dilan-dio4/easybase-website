@@ -122,20 +122,7 @@ layout: null
                         </div>
                         <div class="col-md-7 mod-hide-on-mobile p-0" style="max-width: none !important;">
                             <div class="hero-anim-root mb-5" style="overflow: visible;">
-                                <div id="hero-anim-raw-replay" style="visibility: hidden; opacity: 0;">
-                                    {% assign posts-with-title-image = site.posts | where_exp:"item","item.title_image!=nil" %}
-                                    {% for post in posts-with-title-image limit:2 %}
-                                    <div class="video-replay-article-root mb-4">
-                                        <img class="lazyload" data-src="{{ post.title_image }}" alt="{{ post.title }} article" />
-                                        <a href="{{ post.url }}">{{ post.title }}</a>
-                                    </div>
-                                    {% endfor %}
-                                    <img id="hero-anim-raw-replay-icon" draggable="false" alt="replay icon" src="/assets/images/noun_replay.svg" style="cursor: pointer; height: 89px; width: 89px;" />
-                                </div>
-
                                 <div id="hero-anim"></div>
-
-                                <div id="lds-dual-ring"></div>
                             </div>
                         </div>
                     </div>
@@ -204,15 +191,21 @@ layout: null
                                     <a class="d-flex align-items-center mb-2" href="/react-and-react-native-user-authentication/">User authentication <ion-icon name="chevron-forward-outline"></ion-icon></a>
                                     <a class="d-flex align-items-center mb-2" href="/react/#google-analytics-integration">Google Analytics <ion-icon name="chevron-forward-outline"></ion-icon></a>
                                 </div>
-                                <div class="small-point mb-5 mb-md-0 ml-2">
+                                <!-- <div class="small-point mb-5 mb-md-0 ml-2">
                                     <ion-icon name="share-outline"></ion-icon>
                                     <h6 class="mb-3 mt-4">Share</h6>
                                     <p>Tables can be shared both via link or directly to your team members. Using mutable permissions, viewers can optionally have editing access along with the ability to observe the table. This allows teams to collaborate remotely in real-time.</p>
                                     <a class="d-flex align-items-center mb-2" href="/pricing">About features <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                                </div> -->
+                                <div class="small-point">
+                                    <div style="width: 220%; margin-left: -50%; margin-top: -80px">
+                                        <div id="body-anim"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
 
@@ -497,11 +490,45 @@ layout: null
     {% include footer.html %}
 
     <script>
-        var loading_ele = document.getElementById('lds-dual-ring');
         var animation_ele = document.getElementById('hero-anim');
+        var body_anim_ele = document.getElementById('body-anim');
 
-        var hero_video_raw_replay_ele = document.getElementById('hero-anim-raw-replay');
-        var hero_video_raw_replay_icon_ele = document.getElementById('hero-anim-raw-replay-icon');
+        function startAnimation(params) {
+            const { path, container, startFrame, endFrame, speed } = params;
+
+            const currAnim = bodymovin.loadAnimation({
+                container,
+                renderer: 'svg',
+                autoplay: false,
+                loop: false,
+                path
+            });
+
+            let playedForward = true;
+
+            if (speed !== 1) {
+                currAnim.setSpeed(speed);
+            }
+
+            currAnim.addEventListener('data_ready', function () {
+                container.style.visibility = "visible";
+                container.style.opacity = "1";
+                currAnim.playSegments([startFrame, endFrame], true);
+            });
+
+
+            currAnim.addEventListener('complete', function () {
+                console.log(playedForward, "playedForward")
+                if (playedForward) {
+                    currAnim.setDirection(-1);
+                    currAnim.playSegments([endFrame, startFrame], true);
+                } else {
+                    currAnim.setDirection(1);
+                    currAnim.playSegments([startFrame, endFrame], true);
+                }
+                playedForward = !playedForward;
+            });
+        }
 
         window.addEventListener("load", function () {
             let urlParams = new URLSearchParams(window.location.search);
@@ -512,49 +539,21 @@ layout: null
             }
 
             // https://github.com/airbnb/lottie-web
-
-            var anim = bodymovin.loadAnimation({
+            startAnimation({
+                path: '/assets/animation/final-nopan.json',
                 container: animation_ele,
-                renderer: 'svg',
-                autoplay: false,
-                loop: false,
-                path: '/assets/animation/demo.json'
+                startFrame: 0,
+                endFrame: 183,
+                speed: 0.84
             });
 
-            loading_ele.style.opacity = 1;
-            anim.addEventListener('data_ready', function () {
-                loading_ele.style.opacity = 0;
-                setTimeout(fadeVideoInAndPlay, 500);
+            startAnimation({
+                path: '/assets/animation/final-vertical.json',
+                container: body_anim_ele,
+                startFrame: 200,
+                endFrame: 280,
+                speed: 1
             });
-
-            anim.addEventListener('complete', function () {
-                setTimeout(function () {
-                    hero_video_raw_replay_ele.style.visibility = "visible";
-                    hero_video_raw_replay_ele.style.opacity = "1";
-                    animation_ele.style.visibility = "hidden";
-                }, 750);
-
-                setTimeout(function () {
-                    hero_video_raw_replay_icon_ele.classList.add('spin-once');
-                }, 1100)
-
-                animation_ele.style.opacity = "0";
-            });
-
-            function fadeVideoInAndPlay() {
-                animation_ele.style.visibility = "visible";
-                animation_ele.style.opacity = "1";
-                anim.goToAndPlay(0);
-            }
-
-            hero_video_raw_replay_ele.onclick = function () {
-                hero_video_raw_replay_ele.style.opacity = "0";
-                hero_video_raw_replay_icon_ele.classList.remove('spin-once');
-                setTimeout(function () {
-                    hero_video_raw_replay_ele.style.visibility = "hidden";
-                    fadeVideoInAndPlay();
-                }, 750);
-            }
         });
     </script>
     {% include capture-link.html %}
