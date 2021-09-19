@@ -104,7 +104,10 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#isusersignedin" class="tsd-kind-icon">is<wbr>User<wbr>Signed<wbr>In</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#onsignin" class="tsd-kind-icon">on<wbr>Sign<wbr>In</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#resetuserpassword" class="tsd-kind-icon">reset<wbr>User<wbr>Password</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#setfile" class="tsd-kind-icon">set<wbr>File</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#setimage" class="tsd-kind-icon">set<wbr>Image</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#setuserattribute" class="tsd-kind-icon">set<wbr>User<wbr>Attribute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#setvideo" class="tsd-kind-icon">set<wbr>Video</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#signin" class="tsd-kind-icon">sign<wbr>In</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#signout" class="tsd-kind-icon">sign<wbr>Out</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#signup" class="tsd-kind-icon">sign<wbr>Up</a></li>
@@ -114,7 +117,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#updaterecordimage" class="tsd-kind-icon">update<wbr>Record<wbr>Image</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#updaterecordvideo" class="tsd-kind-icon">update<wbr>Record<wbr>Video</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#useframeeffect" class="tsd-kind-icon">use<wbr>Frame<wbr>Effect</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#usereturn" class="tsd-kind-icon">use<wbr>Return</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter tsd-is-external"><a href="types_types.contextvalue.html#usereturn" class="tsd-kind-icon">use<wbr>Return</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="types_types.contextvalue.html#userid" class="tsd-kind-icon">userID</a></li>
 							</ul>
 						</section>
@@ -129,7 +132,7 @@
 					<div class="tsd-signature tsd-kind-icon">e<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">NewExpression</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L248">types/types.tsx:248</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L290">src/types/types.tsx:290</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -152,18 +155,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L180">types/types.tsx:180</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L226">src/types/types.tsx:226</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p><strong>DEPRECATED</strong>: Use <code>.db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+									<p><strong>DEPRECATED</strong>: Use <code>db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
 								</div>
-								<p>This function is how you access your current frame. This function does not get new data or push changes to Easybase. If you
-								want to synchronize your frame and Easybase, call sync() then Frame().</p>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
+									<dt>deprecated</dt>
+									<dd><p>Use <code>db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -172,18 +174,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L191">types/types.tsx:191</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L233">src/types/types.tsx:233</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p><strong>DEPRECATED</strong>: Use <code>.db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+									<p><strong>DEPRECATED</strong>: Use <code>db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
 								</div>
-								<p>This function is how you access a single object your current frame. This function does not get new data or push changes to Easybase. If you
-								want to synchronize your frame and Easybase, call sync() then Frame().</p>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
+									<dt>deprecated</dt>
+									<dd><p>Use <code>db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -207,7 +208,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L231">types/types.tsx:231</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L273">src/types/types.tsx:273</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -243,16 +244,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L123">types/types.tsx:123</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L149">src/types/types.tsx:149</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Manually add a record to your collection regardless of your current frame. You must call sync() after this to see updated response.</p>
+									<p><strong>DEPRECATED</strong>: Use <code>db().insert()</code> instead - <a href="https://easybase.github.io/EasyQB/docs/insert_queries.html">https://easybase.github.io/EasyQB/docs/insert_queries.html</a></p>
 								</div>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
+									<dt>deprecated</dt>
+									<dd><p>Use <code>db().insert()</code> instead - <a href="https://easybase.github.io/EasyQB/docs/insert_queries.html">https://easybase.github.io/EasyQB/docs/insert_queries.html</a></p>
+									</dd>
 									<dt>async</dt>
 									<dd></dd>
 								</dl>
@@ -281,18 +283,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L115">types/types.tsx:115</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L141">src/types/types.tsx:141</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p><strong>DEPRECATED</strong>: Use <code>.db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+									<p><strong>DEPRECATED</strong>: Use <code>db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
 								</div>
-								<p>Configure the current frame size. Set the offset and amount of records to retrieve assume you don&#39;t want to receive
-								your entire collection. This is useful for paging.</p>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
+									<dt>deprecated</dt>
+									<dd><p>Use <code>db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -319,7 +320,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L222">types/types.tsx:222</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L264">src/types/types.tsx:264</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -342,7 +343,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L238">types/types.tsx:238</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L280">src/types/types.tsx:280</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -374,7 +375,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L244">types/types.tsx:244</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L286">src/types/types.tsx:286</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -445,16 +446,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L131">types/types.tsx:131</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L157">src/types/types.tsx:157</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Manually delete a record from your collection regardless of your current frame. You must call sync() after this to see updated response.</p>
+									<p><strong>DEPRECATED</strong>: Use <code>db().delete()</code> instead - <a href="https://easybase.github.io/EasyQB/docs/delete_queries.html">https://easybase.github.io/EasyQB/docs/delete_queries.html</a></p>
 								</div>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
+									<dt>deprecated</dt>
+									<dd><p>Use <code>db().delete()</code> instead - <a href="https://easybase.github.io/EasyQB/docs/delete_queries.html">https://easybase.github.io/EasyQB/docs/delete_queries.html</a></p>
+									</dd>
 									<dt>async</dt>
 									<dd></dd>
 								</dl>
@@ -480,7 +482,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L275">types/types.tsx:275</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L317">src/types/types.tsx:317</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -521,7 +523,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L286">types/types.tsx:286</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L328">src/types/types.tsx:328</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -570,7 +572,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L197">types/types.tsx:197</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L239">src/types/types.tsx:239</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -588,7 +590,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L204">types/types.tsx:204</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L246">src/types/types.tsx:246</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -621,7 +623,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L59">types/types.tsx:59</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L92">src/types/types.tsx:92</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -648,7 +650,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L49">types/types.tsx:49</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L82">src/types/types.tsx:82</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -671,7 +673,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L44">types/types.tsx:44</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L77">src/types/types.tsx:77</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -716,7 +718,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L76">types/types.tsx:76</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L108">src/types/types.tsx:108</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -749,6 +751,109 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="setfile" class="tsd-anchor"></a>
+					<h3>set<wbr>File</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>File<span class="tsd-signature-symbol">(</span>recordKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, columnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">File</span><span class="tsd-signature-symbol"> | </span><a href="types_types.filefromuri.html" class="tsd-signature-type" data-tsd-kind="Interface">FileFromURI</a>, tableName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types_types.statusresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">StatusResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L220">src/types/types.tsx:220</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Upload a file to your backend and attach it to a specific record. columnName must reference a column of type &#39;file&#39;.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>async</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>recordKey: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The &#39;_key&#39; of the record to attach this image to. Can be retrieved like: <code>db().return(&quot;_key&quot;).where({ title: &quot;The Lion King&quot; }).one()</code></p>
+									</div>
+								</li>
+								<li>
+									<h5>columnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the column that is of type file to attach.</p>
+									</div>
+								</li>
+								<li>
+									<h5>file: <span class="tsd-signature-type">File</span><span class="tsd-signature-symbol"> | </span><a href="types_types.filefromuri.html" class="tsd-signature-type" data-tsd-kind="Interface">FileFromURI</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Either an HTML File element or a FileFromURI object for React Native instances. For React Native, use libraries such as react-native-image-picker and react-native-document-picker.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> tableName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types_types.statusresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">StatusResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Promise<StatusResponse></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="setimage" class="tsd-anchor"></a>
+					<h3>set<wbr>Image</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Image<span class="tsd-signature-symbol">(</span>recordKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, columnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, image<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">File</span><span class="tsd-signature-symbol"> | </span><a href="types_types.filefromuri.html" class="tsd-signature-type" data-tsd-kind="Interface">FileFromURI</a>, tableName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types_types.statusresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">StatusResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L199">src/types/types.tsx:199</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Upload an image to your backend and attach it to a specific record. columnName must reference a column of type &#39;image&#39;.
+									The file must have a valid image extension (png, jpg, heic, etc).</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>async</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>recordKey: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The &#39;_key&#39; of the record to attach this image to. Can be retrieved like: <code>db().return(&quot;_key&quot;).where({ title: &quot;The Lion King&quot; }).one()</code></p>
+									</div>
+								</li>
+								<li>
+									<h5>columnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the column that is of type image to attach.</p>
+									</div>
+								</li>
+								<li>
+									<h5>image: <span class="tsd-signature-type">File</span><span class="tsd-signature-symbol"> | </span><a href="types_types.filefromuri.html" class="tsd-signature-type" data-tsd-kind="Interface">FileFromURI</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Either an HTML File element or a FileFromURI object for React Native instances. For React Native, use libraries such as react-native-image-picker and react-native-document-picker. The file name must have a valid image file extension.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> tableName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types_types.statusresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">StatusResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Promise<StatusResponse></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 					<a name="setuserattribute" class="tsd-anchor"></a>
 					<h3>set<wbr>User<wbr>Attribute</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
@@ -758,7 +863,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L68">types/types.tsx:68</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L100">src/types/types.tsx:100</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -767,8 +872,6 @@
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>async</dt>
-									<dd></dd>
-									<dt>abstract</dt>
 									<dd></dd>
 								</dl>
 							</div>
@@ -793,6 +896,58 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="setvideo" class="tsd-anchor"></a>
+					<h3>set<wbr>Video</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Video<span class="tsd-signature-symbol">(</span>recordKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, columnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, video<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">File</span><span class="tsd-signature-symbol"> | </span><a href="types_types.filefromuri.html" class="tsd-signature-type" data-tsd-kind="Interface">FileFromURI</a>, tableName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types_types.statusresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">StatusResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L210">src/types/types.tsx:210</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Upload a video to your backend and attach it to a specific record. columnName must reference a column of type &#39;video&#39;.
+									The file must have a valid video extension (webm, mp4, mov, etc).</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>async</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>recordKey: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The &#39;_key&#39; of the record to attach this image to. Can be retrieved like: <code>db().return(&quot;_key&quot;).where({ title: &quot;The Lion King&quot; }).one()</code></p>
+									</div>
+								</li>
+								<li>
+									<h5>columnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the column that is of type video to attach.</p>
+									</div>
+								</li>
+								<li>
+									<h5>video: <span class="tsd-signature-type">File</span><span class="tsd-signature-symbol"> | </span><a href="types_types.filefromuri.html" class="tsd-signature-type" data-tsd-kind="Interface">FileFromURI</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Either an HTML File element or a FileFromURI object for React Native instances. For React Native, use libraries such as react-native-image-picker and react-native-document-picker. The file name must have a valid video file extension.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> tableName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types_types.statusresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">StatusResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Promise<StatusResponse></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 					<a name="signin" class="tsd-anchor"></a>
 					<h3>sign<wbr>In</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
@@ -802,7 +957,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L87">types/types.tsx:87</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L118">src/types/types.tsx:118</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -812,8 +967,6 @@
 									when a user signs out or after 24 hours.</p>
 								</div>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
 									<dt>async</dt>
 									<dd></dd>
 								</dl>
@@ -848,7 +1001,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L53">types/types.tsx:53</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L86">src/types/types.tsx:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -870,7 +1023,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L97">types/types.tsx:97</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L127">src/types/types.tsx:127</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -878,8 +1031,6 @@
 									<p>Create a new user for your project. You must still call signIn() after signing up.</p>
 								</div>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
 									<dt>async</dt>
 									<dd></dd>
 								</dl>
@@ -920,18 +1071,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L141">types/types.tsx:141</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L164">src/types/types.tsx:164</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p><strong>DEPRECATED</strong>: Use <code>.db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+									<p><strong>DEPRECATED</strong>: Use <code>db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
 								</div>
-								<p>Call this method to synchronize your current changes with your database. Deletions, additions, and changes will all be reflected by your
-								backend after calling this method. Call Frame() after this to get a normalized array of the freshest data.</p>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
+									<dt>deprecated</dt>
+									<dd><p>Use <code>db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+									</dd>
 									<dt>async</dt>
 									<dd></dd>
 								</dl>
@@ -952,7 +1102,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L210">types/types.tsx:210</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L252">src/types/types.tsx:252</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -970,7 +1120,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L217">types/types.tsx:217</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L259">src/types/types.tsx:259</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1003,17 +1153,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L170">types/types.tsx:170</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L188">src/types/types.tsx:188</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Upload a file to your backend and attach it to a specific record. columnName must reference a column of type &#39;file&#39;.
-									Call sync() for fresh data with proper attachment links to cloud hosting.</p>
+									<p><strong>DEPRECATED</strong>: Use the <code>setFile</code> function instead.</p>
 								</div>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
+									<dt>deprecated</dt>
+									<dd><p>Use the <code>setFile</code> function instead.</p>
+									</dd>
 									<dt>async</dt>
 									<dd></dd>
 								</dl>
@@ -1042,18 +1192,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L151">types/types.tsx:151</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L172">src/types/types.tsx:172</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Upload an image to your backend and attach it to a specific record. columnName must reference a column of type &#39;image&#39;.
-										The file must have an extension of an image.
-									Call sync() for fresh data with proper attachment links to cloud hosting.</p>
+									<p><strong>DEPRECATED</strong>: Use the <code>setImage</code> function instead.</p>
 								</div>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
+									<dt>deprecated</dt>
+									<dd><p>Use the <code>setImage</code> function instead.</p>
+									</dd>
 									<dt>async</dt>
 									<dd></dd>
 								</dl>
@@ -1082,18 +1231,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L161">types/types.tsx:161</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L180">src/types/types.tsx:180</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Upload a video to your backend and attach it to a specific record. columnName must reference a column of type &#39;video&#39;.
-										The file must have an extension of a video.
-									Call sync() for fresh data with proper attachment links to cloud hosting.</p>
+									<p><strong>DEPRECATED</strong>: Use the <code>setVideo</code> function instead.</p>
 								</div>
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
+									<dt>deprecated</dt>
+									<dd><p>Use the <code>setVideo</code> function instead.</p>
+									</dd>
 									<dt>async</dt>
 									<dd></dd>
 								</dl>
@@ -1122,18 +1270,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L105">types/types.tsx:105</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L134">src/types/types.tsx:134</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p><strong>DEPRECATED</strong>: Use <code>.db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
+									<p><strong>DEPRECATED</strong>: Use <code>db</code> instead - <a href="https://easybase.github.io/EasyQB/">https://easybase.github.io/EasyQB/</a></p>
 								</div>
 								<p>This hook runs when the Frame changes. This can be triggered by calling sync().</p>
-								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
-								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1148,17 +1292,17 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter tsd-is-external">
 					<a name="usereturn" class="tsd-anchor"></a>
 					<h3>use<wbr>Return</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">use<wbr>Return<span class="tsd-signature-symbol">(</span>dbInstance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">SQW</span>, deps<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">DependencyList</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="types_types.usereturnvalue.html" class="tsd-signature-type" data-tsd-kind="Interface">UseReturnValue</a></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">use<wbr>Return&lt;T&gt;<span class="tsd-signature-symbol">(</span>dbInstance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">SQW</span>, deps<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">DependencyList</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="types_types.usereturnvalue.html" class="tsd-signature-type" data-tsd-kind="Interface">UseReturnValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L266">types/types.tsx:266</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L308">src/types/types.tsx:308</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1166,7 +1310,7 @@
 									<p>Custom stateful hook to an instance of <code>db().return</code>. Other local changes will automatically re-fetch the query
 									as detailed in the passed-in db.</p>
 									<p>```jsx
-									const { frame } = useReturn(db(&#39;MYTABLE&#39;).return().where(e.gt(&#39;rating&#39;, 15)).limit(10))</p>
+									const { frame } = useReturn(() =&gt; db(&#39;MYTABLE&#39;).return().where(e.gt(&#39;rating&#39;, ratingState)).limit(10), [ratingState])</p>
 								</div>
 								<p>const onButtonClick = (_key) =&gt; {
 									db(&#39;MYTABLE&#39;).delete().where({ _key }).all();
@@ -1175,6 +1319,12 @@
 									return (<div>{ frame.map(ele =&gt; &lt;Card {...ele} /&gt;) }</div>)
 								```</p>
 							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T = <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -1202,7 +1352,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="types_types.usereturnvalue.html" class="tsd-signature-type" data-tsd-kind="Interface">UseReturnValue</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="types_types.usereturnvalue.html" class="tsd-signature-type" data-tsd-kind="Interface">UseReturnValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>Object with the required values to statefully access an array that is subscribed to local executions to the corresponding db instance.</p>
 						</li>
 					</ul>
@@ -1217,7 +1367,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L291">types/types.tsx:291</a></li>
+									<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L333">src/types/types.tsx:333</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1245,7 +1395,22 @@
 						<a href="../modules/easybasecontext.html">Easybase<wbr>Context</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/cache.html">cache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/cache_native.html">cache.native</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/callfunction.html">call<wbr>Function</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/storage.html">storage</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/storage.html">storage</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/storage_error.html">storage/error</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/ui_auth.html">ui/<wbr>Auth</a>
@@ -1341,7 +1506,16 @@
 								<a href="types_types.contextvalue.html#resetuserpassword" class="tsd-kind-icon">reset<wbr>User<wbr>Password</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.contextvalue.html#setfile" class="tsd-kind-icon">set<wbr>File</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.contextvalue.html#setimage" class="tsd-kind-icon">set<wbr>Image</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 								<a href="types_types.contextvalue.html#setuserattribute" class="tsd-kind-icon">set<wbr>User<wbr>Attribute</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.contextvalue.html#setvideo" class="tsd-kind-icon">set<wbr>Video</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 								<a href="types_types.contextvalue.html#signin" class="tsd-kind-icon">sign<wbr>In</a>
@@ -1370,7 +1544,7 @@
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 								<a href="types_types.contextvalue.html#useframeeffect" class="tsd-kind-icon">use<wbr>Frame<wbr>Effect</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter tsd-is-external">
 								<a href="types_types.contextvalue.html#usereturn" class="tsd-kind-icon">use<wbr>Return</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
@@ -1405,6 +1579,9 @@
 						<a href="types_types.globals.html" class="tsd-kind-icon">Globals</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
+						<a href="types_types.googleanalyticsevents.html" class="tsd-kind-icon">Google<wbr>Analytics<wbr>Events</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
 						<a href="types_types.queryoptions.html" class="tsd-kind-icon">Query<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
@@ -1413,7 +1590,7 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
 						<a href="types_types.updaterecordattachmentoptions.html" class="tsd-kind-icon">Update<wbr>Record<wbr>Attachment<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
 						<a href="types_types.usereturnvalue.html" class="tsd-kind-icon">Use<wbr>Return<wbr>Value</a>
 					</li>
 				</ul>
@@ -1430,6 +1607,9 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 			</ul>
 		</div>
 	</div>

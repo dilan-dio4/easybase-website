@@ -84,6 +84,9 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.easybaseproviderpropsoptions.html#authentication" class="tsd-kind-icon">authentication</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.easybaseproviderpropsoptions.html#googleanalyticseventtracking" class="tsd-kind-icon">google<wbr>Analytics<wbr>Event<wbr>Tracking</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.easybaseproviderpropsoptions.html#googleanalyticsid" class="tsd-kind-icon">google<wbr>Analytics<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.easybaseproviderpropsoptions.html#googleanalyticssecret" class="tsd-kind-icon">google<wbr>Analytics<wbr>Secret</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.easybaseproviderpropsoptions.html#logging" class="tsd-kind-icon">logging</a></li>
 							</ul>
 						</section>
@@ -98,7 +101,7 @@
 					<div class="tsd-signature tsd-kind-icon">authentication<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L7">types/types.tsx:7</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L23">src/types/types.tsx:23</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -108,12 +111,66 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="googleanalyticseventtracking" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> google<wbr>Analytics<wbr>Event<wbr>Tracking</h3>
+					<div class="tsd-signature tsd-kind-icon">google<wbr>Analytics<wbr>Event<wbr>Tracking<span class="tsd-signature-symbol">:</span> <a href="types_types.googleanalyticsevents.html" class="tsd-signature-type" data-tsd-kind="Interface">GoogleAnalyticsEvents</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L42">src/types/types.tsx:42</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specify which extra events are tracked in Google Analytics</p>
+						</div>
+						<p><strong>default</strong>:</p>
+						<ul>
+							<li>Page Mount</li>
+							<li>login</li>
+							<li>sign_up</li>
+							<li>forgot_password</li>
+							<li>forgot_password_confirm</li>
+							<li>reset_user_password</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="googleanalyticsid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> google<wbr>Analytics<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">google<wbr>Analytics<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L27">src/types/types.tsx:27</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Google Analytics 4 Measurement ID for activity reporting</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="googleanalyticssecret" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> google<wbr>Analytics<wbr>Secret</h3>
+					<div class="tsd-signature tsd-kind-icon">google<wbr>Analytics<wbr>Secret<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L29">src/types/types.tsx:29</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><em>Only Required for React Native</em>* – Google Analytics 4 Measurement Protocol Secret ID for activity reporting. To create a new secret, navigate in the Google Analytics UI to: Admin &gt; Data Streams &gt; choose your stream &gt; Measurement Protocol &gt; Create</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="logging" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> logging</h3>
 					<div class="tsd-signature tsd-kind-icon">logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L9">types/types.tsx:9</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L25">src/types/types.tsx:25</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -137,7 +194,22 @@
 						<a href="../modules/easybasecontext.html">Easybase<wbr>Context</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/cache.html">cache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/cache_native.html">cache.native</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/callfunction.html">call<wbr>Function</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/storage.html">storage</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/storage.html">storage</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/storage_error.html">storage/error</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/ui_auth.html">ui/<wbr>Auth</a>
@@ -197,6 +269,15 @@
 								<a href="types_types.easybaseproviderpropsoptions.html#authentication" class="tsd-kind-icon">authentication</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.easybaseproviderpropsoptions.html#googleanalyticseventtracking" class="tsd-kind-icon">google<wbr>Analytics<wbr>Event<wbr>Tracking</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.easybaseproviderpropsoptions.html#googleanalyticsid" class="tsd-kind-icon">google<wbr>Analytics<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.easybaseproviderpropsoptions.html#googleanalyticssecret" class="tsd-kind-icon">google<wbr>Analytics<wbr>Secret</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="types_types.easybaseproviderpropsoptions.html#logging" class="tsd-kind-icon">logging</a>
 							</li>
 						</ul>
@@ -219,6 +300,9 @@
 						<a href="types_types.globals.html" class="tsd-kind-icon">Globals</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
+						<a href="types_types.googleanalyticsevents.html" class="tsd-kind-icon">Google<wbr>Analytics<wbr>Events</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
 						<a href="types_types.queryoptions.html" class="tsd-kind-icon">Query<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
@@ -227,7 +311,7 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
 						<a href="types_types.updaterecordattachmentoptions.html" class="tsd-kind-icon">Update<wbr>Record<wbr>Attachment<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
 						<a href="types_types.usereturnvalue.html" class="tsd-kind-icon">Use<wbr>Return<wbr>Value</a>
 					</li>
 				</ul>
@@ -244,6 +328,9 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 			</ul>
 		</div>
 	</div>

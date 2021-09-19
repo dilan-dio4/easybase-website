@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>QueryOptions | easybase-react</title>
+	<title>GoogleAnalyticsEvents | easybase-react</title>
 	<meta name="description" content="Documentation for easybase-react">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -58,10 +58,10 @@
 					<a href="../modules/types_types.html">types/types</a>
 				</li>
 				<li>
-					<a href="types_types.queryoptions.html">QueryOptions</a>
+					<a href="types_types.googleanalyticsevents.html">GoogleAnalyticsEvents</a>
 				</li>
 			</ul>
-			<h1>Interface QueryOptions</h1>
+			<h1>Interface GoogleAnalyticsEvents</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">QueryOptions</span>
+						<span class="target">GoogleAnalyticsEvents</span>
 					</li>
 				</ul>
 			</section>
@@ -83,13 +83,18 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.queryoptions.html#customquery" class="tsd-kind-icon">custom<wbr>Query</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.queryoptions.html#descending" class="tsd-kind-icon">descending</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.queryoptions.html#limit" class="tsd-kind-icon">limit</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.queryoptions.html#offset" class="tsd-kind-icon">offset</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.queryoptions.html#queryname" class="tsd-kind-icon">query<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.queryoptions.html#sortby" class="tsd-kind-icon">sort<wbr>By</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.queryoptions.html#tablename" class="tsd-kind-icon">table<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#db_all" class="tsd-kind-icon">db_<wbr>all</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#db_one" class="tsd-kind-icon">db_<wbr>one</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#forgot_password" class="tsd-kind-icon">forgot_<wbr>password</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#forgot_password_confirm" class="tsd-kind-icon">forgot_<wbr>password_<wbr>confirm</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#full_table_size" class="tsd-kind-icon">full_<wbr>table_<wbr>size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#get_user_attributes" class="tsd-kind-icon">get_<wbr>user_<wbr>attributes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#login" class="tsd-kind-icon">login</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#query" class="tsd-kind-icon">query</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#reset_user_password" class="tsd-kind-icon">reset_<wbr>user_<wbr>password</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#set_user_attribute" class="tsd-kind-icon">set_<wbr>user_<wbr>attribute</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#sign_up" class="tsd-kind-icon">sign_<wbr>up</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="types_types.googleanalyticsevents.html#table_types" class="tsd-kind-icon">table_<wbr>types</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,109 +103,124 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="customquery" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> custom<wbr>Query</h3>
-					<div class="tsd-signature tsd-kind-icon">custom<wbr>Query<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="db_all" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> db_<wbr>all</h3>
+					<div class="tsd-signature tsd-kind-icon">db_<wbr>all<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L391">src/types/types.tsx:391</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L18">src/types/types.tsx:18</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>This object can be set to overwrite the query values as set in the integration menu. If your query is setup to find records where &#39;age&#39; &gt;= 0, passing in { age: 50 } will query where &#39;age&#39; &gt;= 50. Read more: <a href="https://easybase.io/about/2020/09/15/Customizing-query-values/">https://easybase.io/about/2020/09/15/Customizing-query-values/</a></p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="descending" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> descending</h3>
-					<div class="tsd-signature tsd-kind-icon">descending<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="db_one" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> db_<wbr>one</h3>
+					<div class="tsd-signature tsd-kind-icon">db_<wbr>one<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L385">src/types/types.tsx:385</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L17">src/types/types.tsx:17</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>By default, columnToSortBy will sort your query by ascending value (1, 2, 3...). To sort by descending set this to true</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="limit" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> limit</h3>
-					<div class="tsd-signature tsd-kind-icon">limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="forgot_password" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> forgot_<wbr>password</h3>
+					<div class="tsd-signature tsd-kind-icon">forgot_<wbr>password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L389">src/types/types.tsx:389</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L9">src/types/types.tsx:9</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Limit the amount of records to be retrieved. Can be used in combination with offset.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="offset" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> offset</h3>
-					<div class="tsd-signature tsd-kind-icon">offset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="forgot_password_confirm" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> forgot_<wbr>password_<wbr>confirm</h3>
+					<div class="tsd-signature tsd-kind-icon">forgot_<wbr>password_<wbr>confirm<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L387">src/types/types.tsx:387</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L10">src/types/types.tsx:10</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Edit starting index from which records will be retrieved from. Useful for paging.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="queryname" class="tsd-anchor"></a>
-					<h3>query<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">query<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="full_table_size" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> full_<wbr>table_<wbr>size</h3>
+					<div class="tsd-signature tsd-kind-icon">full_<wbr>table_<wbr>size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L381">src/types/types.tsx:381</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L15">src/types/types.tsx:15</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Name of the query saved in Easybase&#39;s Visual Query Builder</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="sortby" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> sort<wbr>By</h3>
-					<div class="tsd-signature tsd-kind-icon">sort<wbr>By<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="get_user_attributes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> get_<wbr>user_<wbr>attributes</h3>
+					<div class="tsd-signature tsd-kind-icon">get_<wbr>user_<wbr>attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L383">src/types/types.tsx:383</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L12">src/types/types.tsx:12</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>If you would like to sort the order of your query by a column. Pass the name of that column here</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="tablename" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> table<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">table<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="login" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> login</h3>
+					<div class="tsd-signature tsd-kind-icon">login<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L393">src/types/types.tsx:393</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L7">src/types/types.tsx:7</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Table to query. (Projects only)</p>
-						</div>
-					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="query" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> query</h3>
+					<div class="tsd-signature tsd-kind-icon">query<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L14">src/types/types.tsx:14</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="reset_user_password" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> reset_<wbr>user_<wbr>password</h3>
+					<div class="tsd-signature tsd-kind-icon">reset_<wbr>user_<wbr>password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L11">src/types/types.tsx:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="set_user_attribute" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> set_<wbr>user_<wbr>attribute</h3>
+					<div class="tsd-signature tsd-kind-icon">set_<wbr>user_<wbr>attribute<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L13">src/types/types.tsx:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="sign_up" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> sign_<wbr>up</h3>
+					<div class="tsd-signature tsd-kind-icon">sign_<wbr>up<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L8">src/types/types.tsx:8</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="table_types" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> table_<wbr>types</h3>
+					<div class="tsd-signature tsd-kind-icon">table_<wbr>types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/types/types.tsx#L16">src/types/types.tsx:16</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -301,39 +321,54 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
 						<a href="types_types.globals.html" class="tsd-kind-icon">Globals</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="types_types.googleanalyticsevents.html" class="tsd-kind-icon">Google<wbr>Analytics<wbr>Events</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-is-external">
-						<a href="types_types.queryoptions.html" class="tsd-kind-icon">Query<wbr>Options</a>
+						<a href="types_types.googleanalyticsevents.html" class="tsd-kind-icon">Google<wbr>Analytics<wbr>Events</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="types_types.queryoptions.html#customquery" class="tsd-kind-icon">custom<wbr>Query</a>
+								<a href="types_types.googleanalyticsevents.html#db_all" class="tsd-kind-icon">db_<wbr>all</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="types_types.queryoptions.html#descending" class="tsd-kind-icon">descending</a>
+								<a href="types_types.googleanalyticsevents.html#db_one" class="tsd-kind-icon">db_<wbr>one</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="types_types.queryoptions.html#limit" class="tsd-kind-icon">limit</a>
+								<a href="types_types.googleanalyticsevents.html#forgot_password" class="tsd-kind-icon">forgot_<wbr>password</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="types_types.queryoptions.html#offset" class="tsd-kind-icon">offset</a>
+								<a href="types_types.googleanalyticsevents.html#forgot_password_confirm" class="tsd-kind-icon">forgot_<wbr>password_<wbr>confirm</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="types_types.queryoptions.html#queryname" class="tsd-kind-icon">query<wbr>Name</a>
+								<a href="types_types.googleanalyticsevents.html#full_table_size" class="tsd-kind-icon">full_<wbr>table_<wbr>size</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="types_types.queryoptions.html#sortby" class="tsd-kind-icon">sort<wbr>By</a>
+								<a href="types_types.googleanalyticsevents.html#get_user_attributes" class="tsd-kind-icon">get_<wbr>user_<wbr>attributes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="types_types.queryoptions.html#tablename" class="tsd-kind-icon">table<wbr>Name</a>
+								<a href="types_types.googleanalyticsevents.html#login" class="tsd-kind-icon">login</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.googleanalyticsevents.html#query" class="tsd-kind-icon">query</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.googleanalyticsevents.html#reset_user_password" class="tsd-kind-icon">reset_<wbr>user_<wbr>password</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.googleanalyticsevents.html#set_user_attribute" class="tsd-kind-icon">set_<wbr>user_<wbr>attribute</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.googleanalyticsevents.html#sign_up" class="tsd-kind-icon">sign_<wbr>up</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="types_types.googleanalyticsevents.html#table_types" class="tsd-kind-icon">table_<wbr>types</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
+						<a href="types_types.queryoptions.html" class="tsd-kind-icon">Query<wbr>Options</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external">
 						<a href="types_types.statusresponse.html" class="tsd-kind-icon">Status<wbr>Response</a>
 					</li>

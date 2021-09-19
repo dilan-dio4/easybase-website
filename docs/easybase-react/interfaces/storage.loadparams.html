@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IPage | easybase-react</title>
+	<title>LoadParams | easybase-react</title>
 	<meta name="description" content="Documentation for easybase-react">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,24 +55,32 @@
 					<a href="../modules.html">easybase-react</a>
 				</li>
 				<li>
-					<a href="../modules/ui_uitypes.html">ui/uiTypes</a>
+					<a href="../modules/storage.html">storage</a>
 				</li>
 				<li>
-					<a href="ui_uitypes.ipage.html">IPage</a>
+					<a href="storage.loadparams.html">LoadParams</a>
 				</li>
 			</ul>
-			<h1>Interface IPage</h1>
+			<h1>Interface LoadParams</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Ported from <a href="https://github.com/sunnylqm/react-native-storage">https://github.com/sunnylqm/react-native-storage</a>
+						Credit: Sunny Luo /sunnylqm</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IPage</span>
+						<span class="target">LoadParams</span>
 					</li>
 				</ul>
 			</section>
@@ -83,9 +91,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_uitypes.ipage.html#dictionary" class="tsd-kind-icon">dictionary</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_uitypes.ipage.html#emailtemplate" class="tsd-kind-icon">email<wbr>Template</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ui_uitypes.ipage.html#setcurrentpage" class="tsd-kind-icon">set<wbr>Current<wbr>Page</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="storage.loadparams.html#autosync" class="tsd-kind-icon">auto<wbr>Sync</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="storage.loadparams.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="storage.loadparams.html#key" class="tsd-kind-icon">key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="storage.loadparams.html#syncinbackground" class="tsd-kind-icon">sync<wbr>InBackground</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="storage.loadparams.html#syncparams" class="tsd-kind-icon">sync<wbr>Params</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,32 +104,52 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="dictionary" class="tsd-anchor"></a>
-					<h3>dictionary</h3>
-					<div class="tsd-signature tsd-kind-icon">dictionary<span class="tsd-signature-symbol">:</span> <a href="ui_uitypes.idictionary.html" class="tsd-signature-type" data-tsd-kind="Interface">IDictionary</a></div>
+					<a name="autosync" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> auto<wbr>Sync</h3>
+					<div class="tsd-signature tsd-kind-icon">auto<wbr>Sync<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/uiTypes.ts#L57">src/ui/uiTypes.ts:57</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/storage/index.d.ts#L9">src/storage/index.d.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="emailtemplate" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> email<wbr>Template</h3>
-					<div class="tsd-signature tsd-kind-icon">email<wbr>Template<span class="tsd-signature-symbol">:</span> <a href="types_types.emailtemplate.html" class="tsd-signature-type" data-tsd-kind="Interface">EmailTemplate</a></div>
+					<a name="id" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/uiTypes.ts#L58">src/ui/uiTypes.ts:58</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/storage/index.d.ts#L8">src/storage/index.d.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="setcurrentpage" class="tsd-anchor"></a>
-					<h3>set<wbr>Current<wbr>Page</h3>
-					<div class="tsd-signature tsd-kind-icon">set<wbr>Current<wbr>Page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Dispatch</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="key" class="tsd-anchor"></a>
+					<h3>key</h3>
+					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/ui/uiTypes.ts#L56">src/ui/uiTypes.ts:56</a></li>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/storage/index.d.ts#L7">src/storage/index.d.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="syncinbackground" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> sync<wbr>InBackground</h3>
+					<div class="tsd-signature tsd-kind-icon">sync<wbr>InBackground<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/storage/index.d.ts#L10">src/storage/index.d.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="syncparams" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> sync<wbr>Params</h3>
+					<div class="tsd-signature tsd-kind-icon">sync<wbr>Params<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/easybase/easybase-react/blob/dev/src/storage/index.d.ts#L11">src/storage/index.d.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -146,7 +176,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/callfunction.html">call<wbr>Function</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/storage.html">storage</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -161,7 +191,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/ui_reactnative.html">ui/<wbr>React<wbr>Native</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/ui_uitypes.html">ui/ui<wbr>Types</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -177,48 +207,39 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_uitypes.iauth.html" class="tsd-kind-icon">IAuth</a>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/storage.expirederror.html" class="tsd-kind-icon">Expired<wbr>Error</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_uitypes.idictionary.html" class="tsd-kind-icon">IDictionary</a>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/storage.notfounderror.html" class="tsd-kind-icon">Not<wbr>Found<wbr>Error</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_uitypes.inativeauth.html" class="tsd-kind-icon">INative<wbr>Auth</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_uitypes.inativepage.html" class="tsd-kind-icon">INative<wbr>Page</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_uitypes.inativestyles.html" class="tsd-kind-icon">INative<wbr>Styles</a>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/storage.default.html" class="tsd-kind-icon">default</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_uitypes.ipage.html" class="tsd-kind-icon">IPage</a>
+						<a href="storage.loadparams.html" class="tsd-kind-icon">Load<wbr>Params</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ui_uitypes.ipage.html#dictionary" class="tsd-kind-icon">dictionary</a>
+								<a href="storage.loadparams.html#autosync" class="tsd-kind-icon">auto<wbr>Sync</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ui_uitypes.ipage.html#emailtemplate" class="tsd-kind-icon">email<wbr>Template</a>
+								<a href="storage.loadparams.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ui_uitypes.ipage.html#setcurrentpage" class="tsd-kind-icon">set<wbr>Current<wbr>Page</a>
+								<a href="storage.loadparams.html#key" class="tsd-kind-icon">key</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="storage.loadparams.html#syncinbackground" class="tsd-kind-icon">sync<wbr>InBackground</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="storage.loadparams.html#syncparams" class="tsd-kind-icon">sync<wbr>Params</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_uitypes.isignupfieldvalidators.html" class="tsd-kind-icon">ISign<wbr>UpField<wbr>Validators</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_uitypes.isignupfields.html" class="tsd-kind-icon">ISign<wbr>UpFields</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="ui_uitypes.istyles.html" class="tsd-kind-icon">IStyles</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

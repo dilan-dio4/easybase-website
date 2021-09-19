@@ -58,10 +58,7 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<!-- PROJECT LOGO -->
-				<p align="center">
-					<img src="./assets/carbon.png" width="100%" alt="easybase code example">
-				</p>
+				<br />
 				<br />
 				<p align="center">
 					<a href="https://easybase.io">
@@ -75,325 +72,68 @@
 					<img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/easybase-react">
 					<img alt="npm" src="https://img.shields.io/npm/v/easybase-react">
 				</p>
+				<h3 align="center">
+					<b>
+						<a href="https://easybase.io/react/">
+							Check out the full React & React Native walkthrough 📗📘
+						</a>
+					</b>
+				</h3>
 				<br />
-				<!-- TABLE OF CONTENTS -->
-				<a href="#table-of-contents" id="table-of-contents" style="color: inherit; text-decoration: none;">
-					<h2>Table of Contents</h2>
-				</a>
-				<ul>
-					<li><a href="#about-the-project">About the Project</a><ul>
-							<li><a href="#purpose">Purpose</a></li>
-							<li><a href="#built-with">Built With</a></li>
-						</ul>
-					</li>
-					<li><a href="#getting-started">Getting Started</a><ul>
-							<li><a href="#prerequisites">Prerequisites</a></li>
-							<li><a href="#installation">Installation</a></li>
-						</ul>
-					</li>
-					<li><a href="#usage">Usage</a></li>
-					<li><a href="https://easybase.io/docs/easybase-react/">Documentation</a></li>
-					<li><a href="#examples">Examples</a></li>
-					<li><a href="#troubleshoot">Troubleshoot</a></li>
-					<li><a href="#license">License</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-				<!-- ABOUT THE PROJECT -->
-				<a href="#about-the-project" id="about-the-project" style="color: inherit; text-decoration: none;">
-					<h2>About The Project</h2>
-				</a>
-				<p>React and React Native compatible library for use with Easybase. This serverless platform works with a <strong>free</strong> account. <code>easybase-react</code> can be used with a table&#39;s REACT integration or with a Project. In the latter case, this package provides functions for managing user authentication. Documentation for this project can be found <a href="#useEasybase">here</a>. </p>
-				<table>
-					<thead>
-						<tr>
-							<th>REACT Integration</th>
-							<th>Project</th>
-						</tr>
-					</thead>
-					<tbody><tr>
-							<td>Live usage analytics</td>
-							<td>Live usage analytics</td>
-						</tr>
-						<tr>
-							<td>Custom table permissions</td>
-							<td>Custom table permissions</td>
-						</tr>
-						<tr>
-							<td>Database query builder</td>
-							<td>Database query builder</td>
-						</tr>
-						<tr>
-							<td>Access to visual queries</td>
-							<td>Access to visual queries</td>
-						</tr>
-						<tr>
-							<td><em><del>User authentication</del></em></td>
-							<td>User authentication</td>
-						</tr>
-						<tr>
-							<td><em><del>Get/Set user attributes</del></em></td>
-							<td>Get/Set user attributes</td>
-						</tr>
-						<tr>
-							<td><em><del>Access multiple tables</del></em></td>
-							<td>Access multiple tables</td>
-						</tr>
-						<tr>
-							<td><em><del>Associate records to users</del></em></td>
-							<td>Associate records to users</td>
-						</tr>
-				</tbody></table>
-				<p><strong>Cloud functions</strong> can be invoked using this package with the automatically generated route as provided by Easybase. <a href="https://easybase.io/react/">Click here</a> to learn more about Easybase.io and check out the examples below.</p>
-				<a href="#purpose" id="purpose" style="color: inherit; text-decoration: none;">
-					<h3>Purpose</h3>
-				</a>
-				<p>This project aims to be the most developer-friendly serverless framework for React. Functions and attributes of <code>easybase-react</code> are stateful and explicitly follow the React component lifecycle. </p>
-				<p>The <strong>only</strong> configuration needed to get this library up and running is an <code>ebconfig.js</code> token, as provided by Easybase. Your React &amp; React Native applications will instantly have secure access to the features laid out in the above table.</p>
-				<a href="#built-with" id="built-with" style="color: inherit; text-decoration: none;">
-					<h3>Built With</h3>
-				</a>
-				<ul>
-					<li><a href="https://github.com/transitive-bullshit/create-react-library">create-react-library</a></li>
-					<li><a href="https://github.com/lquixada/cross-fetch">cross-fetch</a></li>
-					<li><a href="https://easybase.io">easybase.io</a></li>
-					<li><a href="https://github.com/gullerya/object-observer">object-observer</a></li>
-					<li><a href="https://github.com/developit/microbundle">microbundle</a></li>
-				</ul>
-				<!-- GETTING STARTED -->
-				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
-					<h2>Getting Started</h2>
-				</a>
-				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
-					<h3>Prerequisites</h3>
-				</a>
-				<ul>
-					<li>React 16.8.0</li>
-					<li>npm</li>
-				</ul>
-				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
-					<h3>Installation</h3>
-				</a>
-				<pre><code class="language-sh"><span style="color: #000000">npm install easybase-react</span>
-</code></pre>
-				<a href="#database" id="database" style="color: inherit; text-decoration: none;">
-					<h3>Database</h3>
-				</a>
-				<a href="#create-a-react-integration-or-project" id="create-a-react-integration-or-project" style="color: inherit; text-decoration: none;">
-					<h4>Create a React integration or Project</h4>
-				</a>
-				<p align="center">
-					<img src="./assets/react-integration-3.gif" width="80%" alt="react easybase integration 1">
-					<br />
-					<br />
-					<img src="./assets/users-2.gif" width="80%" alt="react easybase integration 2">
-				</p>
-				<a href="#then-download-your-token-and-place-it-at-the-root-of-your-project" id="then-download-your-token-and-place-it-at-the-root-of-your-project" style="color: inherit; text-decoration: none;">
-					<h4>Then, download your token and place it at the root of your project</h4>
-				</a>
-				<pre>
-├── src/
-│   ├── App.js
-│   ├── index.js
-│   └── ebconfig.js
-├── assets/
-├── package.json
-└── ...
-</pre>
-				<a href="#cloud-functions" id="cloud-functions" style="color: inherit; text-decoration: none;">
-					<h3>Cloud Functions</h3>
-				</a>
-				<a href="#deploy-a-new-cloud-function" id="deploy-a-new-cloud-function" style="color: inherit; text-decoration: none;">
-					<h4>Deploy a new cloud function</h4>
-				</a>
-				<p align="center">
-					<img src="./assets/deploy-function-1.png" width="80%" alt="react easybase deploy function 1">
-				</p>
-				<a href="#take-note-of-the-automatically-generated-route" id="take-note-of-the-automatically-generated-route" style="color: inherit; text-decoration: none;">
-					<h4>Take note of the automatically generated route</h4>
-				</a>
-				<p align="center">
-					<img src="./assets/deploy-function-14.png" width="80%" alt="react easybase deploy function 1">
-				</p>
-				<!-- USAGE EXAMPLES -->
-				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-					<h2>Usage</h2>
-				</a>
-				<a href="#database-1" id="database-1" style="color: inherit; text-decoration: none;">
-					<h3>Database</h3>
-				</a>
-				<p>Wrap your root component in <em>EasybaseProvider</em> with your credentials.</p>
-				<pre><code class="language-jsx"><span style="color: #000000">import React, { useEffect } from &quot;react&quot;;</span>
-<span style="color: #000000">import { EasybaseProvider, useEasybase } from &#039;easybase-react&#039;;</span>
-<span style="color: #000000">import ebconfig from &quot;./ebconfig.json&quot;;</span>
-
-<span style="color: #000000">function App() {</span>
-<span style="color: #000000">  return (</span>
-<span style="color: #000000">    &lt;EasybaseProvider ebconfig={ebconfig}&gt;</span>
-<span style="color: #000000">      &lt;Container /&gt;</span>
-<span style="color: #000000">    &lt;/EasybaseProvider&gt;</span>
-<span style="color: #000000">  );</span>
-<span style="color: #000000">}</span>
-</code></pre>
-				<br />
-				<details>
-					<summary>If you're using a project, implement a sign-in/sign-up workflow for users.</summary>
-					<p>
-						<pre><code class="language-jsx"><span style="color: #000000">function ProjectUser() {</span>
-<span style="color: #000000">  const [usernameValue, setUsernameValue] = useState(&quot;&quot;);</span>
-<span style="color: #000000">  const [passwordValue, setPasswordValue] = useState(&quot;&quot;);</span>
-
-<span style="color: #000000">  const {</span>
-<span style="color: #000000">    isUserSignedIn,</span>
-<span style="color: #000000">    signIn,</span>
-<span style="color: #000000">    signUp,</span>
-<span style="color: #000000">    getUserAttributes</span>
-<span style="color: #000000">  } = useEasybase();</span>
-
-<span style="color: #000000">  if (isUserSignedIn()) {</span>
-<span style="color: #000000">    return (</span>
-<span style="color: #000000">      &lt;div&gt;</span>
-<span style="color: #000000">        &lt;h2&gt;Your signed in!&lt;/h2&gt;</span>
-<span style="color: #000000">        &lt;button onClick={ _ =&gt; getUserAttributes().then(console.log) }&gt;</span>
-<span style="color: #000000">          Click me only works if your authenticated!</span>
-<span style="color: #000000">        &lt;/button&gt;</span>
-<span style="color: #000000">        &lt;Container /&gt;</span>
-<span style="color: #000000">      &lt;/div&gt;</span>
-<span style="color: #000000">    )</span>
-<span style="color: #000000">  } else {</span>
-<span style="color: #000000">    return (</span>
-<span style="color: #000000">      &lt;div style={{ display: &quot;flex&quot;, flexDirection: &quot;column&quot; }}&gt;</span>
-<span style="color: #000000">        &lt;h4&gt;Username&lt;/h4&gt;</span>
-<span style="color: #000000">        &lt;input value={usernameValue} onChange={e =&gt; setUsernameValue(e.target.value)} /&gt;</span>
-<span style="color: #000000">        &lt;h4&gt;Password&lt;/h4&gt;</span>
-<span style="color: #000000">        &lt;input type=&quot;password&quot; value={passwordValue} onChange={e =&gt; setPasswordValue(e.target.value)} /&gt;</span>
-<span style="color: #000000">        &lt;button onClick={_ =&gt; signIn(usernameValue, passwordValue)}&gt;</span>
-<span style="color: #000000">          Sign In</span>
-<span style="color: #000000">        &lt;/button&gt;</span>
-<span style="color: #000000">        &lt;button onClick={_ =&gt; signUp(usernameValue, passwordValue)}&gt;</span>
-<span style="color: #000000">          Sign Up</span>
-<span style="color: #000000">        &lt;/button&gt;</span>
-<span style="color: #000000">      &lt;/div&gt;</span>
-<span style="color: #000000">    )</span>
-<span style="color: #000000">  }</span>
-<span style="color: #000000">}</span>
-</code></pre>
-					</p>
-				</details>
-				<br />
-				<details>
-					<summary>Then, interface with your data in a stateful and synchronous manner.</summary>
-					<p>
-						<p><a href="https://easybase.github.io/EasyQB/">EasyQB</a> is a powerful query builder to perform <strong>Select</strong>, <strong>Update</strong>, <strong>Insert</strong>, and <strong>Delete</strong> operations on your table. You can access this through the <code>.db</code> function. <a href="https://easybase.github.io/EasyQB/">Learn how to use the <code>.db</code> function here</a>. Here&#39;s an example of how to use a simple clause to read and insert data with your table.</p>
-						<pre><code class="language-jsx"><span style="color: #000000">function Container() {</span>
-<span style="color: #000000">  const { db } = useEasybase();</span>
-
-<span style="color: #000000">  const [easybaseData, setEasybaseData] = useState([])</span>
-<span style="color: #000000">  const [currentPage, setCurrentPage] = useState(0)</span>
-
-<span style="color: #000000">  useEffect(() =&gt; {</span>
-<span style="color: #000000">    const mounted = async () =&gt; {</span>
-<span style="color: #000000">      const res = await db(&#039;MY TABLE&#039;).return().limit(10).offset(currentPage * 10).all()</span>
-<span style="color: #000000">      setCurrentData(res)</span>
-<span style="color: #000000">    }</span>
-
-<span style="color: #000000">    mounted();</span>
-<span style="color: #000000">  }, [currentPage]);</span>
-
-<span style="color: #000000">  const onChange = async (_key, column, newValue) =&gt; {</span>
-<span style="color: #000000">      await db(&#039;MY TABLE&#039;).set({ [column]: newValue }).where({ _key: _key }).one()</span>
-<span style="color: #000000">  }</span>
-
-<span style="color: #000000">  const onChangePage = (pageNum) =&gt; {</span>
-<span style="color: #000000">    setCurrentPage(pageNum)</span>
-<span style="color: #000000">  }</span>
-
-<span style="color: #000000">  return (</span>
-<span style="color: #000000">    &lt;div&gt;</span>
-<span style="color: #000000">      {easybaseData.map(ele =&gt; &lt;Card</span>
-<span style="color: #000000">          {...ele}</span>
-<span style="color: #000000">          onChangeValue={onChangeValue}</span>
-<span style="color: #000000">          onChangePage={onChangePage}</span>
-<span style="color: #000000">        /&gt;</span>
-<span style="color: #000000">      )}</span>
-<span style="color: #000000">    &lt;/div&gt;</span>
-<span style="color: #000000">  )</span>
-
-<span style="color: #000000">}</span>
-</code></pre>
-						<p>To see just how much functionality is packed into the <code>.db</code> function (aggregators, grouping, expressions), <a href="https://easybase.github.io/EasyQB/">check out the documentation here</a>.</p>
-					</p>
-				</details>
-				<br />
-				<p>Learn about using the <code>.db</code> function for <a href="https://easybase.github.io/EasyQB/docs/select_queries.html">Select</a>, <a href="https://easybase.github.io/EasyQB/docs/update_queries.html">Update</a>, <a href="https://easybase.github.io/EasyQB/docs/delete_queries.html">Delete</a>, or <a href="https://easybase.github.io/EasyQB/docs/insert_queries.html">Insert</a> queries!</p>
-				<a href="#cloud-functions-1" id="cloud-functions-1" style="color: inherit; text-decoration: none;">
-					<h3>Cloud Functions</h3>
-				</a>
-				<p>The <em>EasybaseProvider</em> pattern is not necessary for invoking cloud functions, only <em>callFunction</em> is needed.</p>
-				<pre><code class="language-jsx"><span style="color: #000000">import { callFunction } from &#039;easybase-react&#039;;</span>
-
-<span style="color: #000000">function App() {</span>
-<span style="color: #000000">    async function handleButtonClick() {</span>
-<span style="color: #000000">        const response = await callFunction(&quot;123456-YOUR-ROUTE&quot;, {</span>
-<span style="color: #000000">            hello: &quot;world&quot;,</span>
-<span style="color: #000000">            message: &quot;Find me in event.body&quot;</span>
-<span style="color: #000000">        });</span>
-
-<span style="color: #000000">        console.log(&quot;Cloud function: &quot; + response);</span>
-<span style="color: #000000">    }</span>
-
-<span style="color: #000000">    //...</span>
-<span style="color: #000000">}</span>
-</code></pre>
 				<!-- DOCUMENTATION -->
 				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
 					<h2>Documentation</h2>
 				</a>
-				<p>Documentation for this library <a href="https://easybase.io/docs/easybase-react/">is available here</a>.</p>
+				<p>Formal documentation for this library <a href="https://easybase.io/docs/easybase-react/">is available here</a>.</p>
 				<p>Information on <strong>database querying</strong> <a href="https://easybase.github.io/EasyQB/">can be found in the EasyQB docs</a>.</p>
-				<!-- EXAMPLES -->
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<p><a href="https://easybase.io/react/#setup">Get your project up and running in just a couple of minutes</a>:</p>
+				<ol>
+					<li>Download your <code>ebconfig</code> token and place it at the root of your project</li>
+				</ol>
+				<pre><code><span style="color: #000000">├── </span><span style="color: #001080">src</span><span style="color: #000000">/</span>
+<span style="color: #000000">│   ├── </span><span style="color: #001080">App</span><span style="color: #000000">.</span><span style="color: #001080">js</span>
+<span style="color: #000000">│   ├── </span><span style="color: #001080">index</span><span style="color: #000000">.</span><span style="color: #001080">js</span>
+<span style="color: #000000">│   └── </span><span style="color: #001080">ebconfig</span><span style="color: #000000">.</span><span style="color: #001080">js</span><span style="color: #000000">  &lt;–––</span>
+<span style="color: #000000">├── </span><span style="color: #001080">assets</span><span style="color: #000000">/</span>
+<span style="color: #000000">├── </span><span style="color: #001080">package</span><span style="color: #000000">.</span><span style="color: #001080">json</span>
+<span style="color: #000000">└── ...</span>
+</code></pre>
+				<ol start="2">
+					<li>Then, wrap your root component in <em>EasybaseProvider</em> with your credentials.<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> </span><span style="color: #001080">easybase</span><span style="color: #000000">-</span><span style="color: #001080">react</span>
+</code></pre>
+					</li>
+				</ol>
+				<pre><code class="language-jsx"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">React</span><span style="color: #000000">, { </span><span style="color: #001080">useEffect</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;react&quot;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">EasybaseProvider</span><span style="color: #000000">, </span><span style="color: #001080">useEasybase</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;easybase-react&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">ebconfig</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;./ebconfig&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">App</span><span style="color: #000000">() {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> (</span>
+<span style="color: #000000">    </span><span style="color: #800000">&lt;</span><span style="color: #267F99">EasybaseProvider</span><span style="color: #000000"> </span><span style="color: #FF0000">ebconfig</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">ebconfig</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">      </span><span style="color: #800000">&lt;</span><span style="color: #267F99">Container</span><span style="color: #000000"> </span><span style="color: #800000">/&gt;</span>
+<span style="color: #000000">    </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">EasybaseProvider</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">  );</span>
+<span style="color: #000000">}</span>
+</code></pre>
 				<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
 					<h2>Examples</h2>
 				</a>
-				<p><a href="https://www.freecodecamp.org/news/build-react-native-app-user-authentication/">User authentication walkthrough</a></p>
-				<p><a href="https://easybase.io/react/2021/03/09/The-Easiest-Way-To-Deploy-Cloud-Functions-for-your-React-Projects/">Deploying cloud functions</a></p>
-				<!-- TROUBLESHOOT -->
-				<a href="#troubleshoot" id="troubleshoot" style="color: inherit; text-decoration: none;">
-					<h2>Troubleshoot</h2>
-				</a>
-				<a href="#react-native" id="react-native" style="color: inherit; text-decoration: none;">
-					<h4>React Native</h4>
-				</a>
-				<p>For React Native users, this library will not work with <a href="https://expo.io/">expo</a> due to native dependencies. Instead, use <code>react-native run-ios</code>.</p>
-				<p>Errors can arise because this library depends on <a href="https://react-native-async-storage.github.io/async-storage/docs/install/">Async Storage</a> which requires <em>linking</em>. This package attempts to automatically handle this for you during postinstall (<code>scripts/postinstall.js</code>). If this script fails or you encounter an error along the lines of <code>Unable to resolve module &#39;@react-native-community/async-storage&#39;...</code>, here are two different methods to configure your React Native project.</p>
-				<ol>
-					<li><code>npm start -- --reset-cache</code></li>
-					<li>Exit bundler, proceed as normal</li>
-				</ol>
-				<p>  Or</p>
-				<ol>
-					<li><code>npm install @react-native-community/async-storage@1.12.1</code></li>
-					<li><a href="https://github.com/react-native-async-storage/async-storage/tree/9aad474ff7ca64d34ef94358a39205a609455aca#link">Link package via these instructions</a></li>
-				</ol>
-				<a href="#react" id="react" style="color: inherit; text-decoration: none;">
-					<h4>React</h4>
-				</a>
-				<p>No linking is required for React. If you encounter any errors during installation or runtime, simply reinstall the library.</p>
-				<ol>
-					<li>Delete <code>node_modules/</code> folder</li>
-					<li><code>npm install easybase-react</code></li>
-				</ol>
-				<!-- LICENSE -->
-				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
-					<h2>License</h2>
-				</a>
-				<p>Distributed under the MIT License. See <code>LICENSE</code> for more information.</p>
+				<ul>
+					<li><p><a href="https://easybase.io/react-and-react-native-user-authentication/">Single Component User Authentication</a></p>
+					</li>
+					<li><p><a href="https://easybase.io/react-database-app-tutorial/">Stateful Database</a></p>
+					</li>
+					<li><p><a href="https://easybase.io/react/#google-analytics-integration">Google Analytics Integration</a></p>
+					</li>
+				</ul>
 				<!-- CONTACT -->
 				<a href="#contact" id="contact" style="color: inherit; text-decoration: none;">
 					<h2>Contact</h2>
 				</a>
-				<p><a href="https://twitter.com/easybase_io">@easybase_io</a> - <a href="mailto:hello@easybase.io">hello@easybase.io</a></p>
-				<p>Project Link: <a href="https://github.com/easybase/easybase-react">https://github.com/easybase/easybase-react</a></p>
-				<p><a href="https://www.producthunt.com/posts/easybase-io?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-easybase-io" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=278380&theme=dark" alt="Easybase.io - Serverless platform for apps and projects. React.js Focused. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a></p>
+				<p><a href="https://twitter.com/easybase_io">@easybase_io</a> – <a href="mailto:hello@easybase.io">hello@easybase.io</a></p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -409,7 +149,22 @@
 						<a href="modules/easybasecontext.html">Easybase<wbr>Context</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="modules/cache.html">cache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cache_native.html">cache.native</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="modules/callfunction.html">call<wbr>Function</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/storage.html">storage</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/storage.html">storage</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/storage_error.html">storage/error</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/ui_auth.html">ui/<wbr>Auth</a>
@@ -447,6 +202,9 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 			</ul>
 		</div>
 	</div>
