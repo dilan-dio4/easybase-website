@@ -2,7 +2,7 @@
 layout: blog-guide
 title: How to use Easybase with React & React Native — Full Walkthrough
 date: 2020-12-20 09:20:10 -0400
-date_modified: 2021-05-06 05:00:15 -0400
+date_modified: 2021-09-20 05:00:15 -0400
 title_image: /assets/images/react-hero.png
 og_image: /assets/images/og_white_black.png
 author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&q=100&fm=jpg&cs=tinysrgb&w=85&h=85&fit=crop&crop=focalpoint&fp-x=0.51&fp-y=.375&fp-z=1.75
@@ -10,8 +10,8 @@ author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 tags: React
 meta_description: Comprehensive tutorial on using Easybase with React and React Native, featuring user authentication, visual queries, and serverless database.
-tocTitles: ["Introduction", "Setup", "React Configuration", "Database", "useReturn", "Sign In & Sign Up Authentication", "Authenticated Database", "Visual Queries", "Google Analytics Integration", "Cloud Functions", "Conclusion"]
-tocLinks: ["#introduction", "#setup", "#react-configuration", "#database", "#usereturn", "#sign-in--sign-up-authentication", "#authenticated-database", "#visual-queries", "#google-analytics-integration", "#cloud-functions", "#conclusion"]
+tocTitles: ["Introduction", "Setup", "React Configuration", "Database", "useReturn", "Upload Media", "Sign In & Sign Up Authentication", "Authenticated Database", "Visual Queries", "Google Analytics Integration", "Conclusion"]
+tocLinks: ["#introduction", "#setup", "#react-configuration", "#database", "#usereturn", "#upload-media", "#sign-in--sign-up-authentication", "#authenticated-database", "#visual-queries", "#google-analytics-integration", "#conclusion"]
 ---
 
 ## Introduction
@@ -494,6 +494,77 @@ Now, changing the `minPrice` keeps the data in `frame` fresh!
 
 <br />
 
+## Upload Media
+
+<div class="sectionBox">
+<p>
+  <b>Related functions:</b>
+  <a href="/docs/easybase-react/interfaces/types_types.contextvalue.html#setimage" target="_blank">setImage</a>, 
+  <a href="/docs/easybase-react/interfaces/types_types.contextvalue.html#setvideo" target="_blank">setVideo</a>,
+  <a href="/docs/easybase-react/interfaces/types_types.contextvalue.html#setfile" target="_blank">setFile</a>
+</p>
+</div>
+
+There's a slightly different process for uploading images, videos, and other files with the `easybase-react` package. Instead of using [`db().set()`](https://easybase.github.io/EasyQB/docs/update_queries.html), as would be used for updating other data types, use `setImage`, `setVideo`, or `setFile` which are **properties of the `useEasybase` hook**. These functions will keep your `useReturn()` instance updated when media or others files are successfully attached to a record.
+
+To demonstrate the [`setImage`](/docs/easybase-react/interfaces/types_types.contextvalue.html#setimage) function, clicking on a product card will now allow users to select an image, instead of opening the shopping link. 
+
+
+<!-- {% raw %} -->
+```jsx
+import React, { useState, useRef } from 'react';
+// ...
+function Home() {
+  const [minPrice, setMinPrice] = useState(0);
+  const { db, useReturn, e, isUserSignedIn, setImage } = useEasybase();
+  // ...
+  const inputEl = useRef(null);
+
+  const onImageClick = (_key) => {
+    inputEl.current.onchange = () => {
+      // Runs when the user selects a file...
+      if (inputEl.current.files && inputEl.current.files.length > 0) {
+        const imageFile = inputEl.current.files[0];
+        if (imageFile.type.includes("image")) {
+          // The last parameter (table name) is only required for projects
+          setImage(_key, "demo_image", imageFile, "REACT DEMO");
+          // setImage, setVideo, and setFile take the same parameters
+        }
+      }
+    };
+
+    inputEl.current.click();
+  }
+
+  return (
+    <div style={{ display: "flex", flexWrap: "wrap" }}>
+      {/* ... */}
+      {frame.map(ele =>
+        <div className="cardRoot">
+          <a onClick={_ => onImageClick(ele._key)}>{/* <---- */}
+            <img src={ele.demo_image} />
+          </a>
+          <h4>{ele.product_name}</h4>
+          <p>${ele.price}</p>
+          <button className="cardButton" onClick={() => {}}>⭐ Save for later ⭐</button>
+        </div>
+      )}
+      <AddCardButton />
+    </div>
+  )
+}
+```
+<!-- {% endraw %} -->
+
+Now when you click on a product image a file explorer will open. Select an image. When it is uploaded your `frame` is automatically refreshed with the new photo.
+
+
+<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react upload media" data-src="/assets/images/posts_images/react-32.png" />
+
+To attach media or other files to a record, the record *_key* and column name must be known. Pass that information-along with the file object-into either `setImage`, `setVideo`, or `setFile`. **Note that the correct function must be used for its corresponding table column type**.
+
+<br />
+
 ## [Sign In & Sign Up Authentication](/react-and-react-native-user-authentication/)
 
 <div class="sectionBox">
@@ -827,69 +898,6 @@ Events and their associated parameters can be seen in the "Realtime" tab and *ev
 
 <br />
 
-## Cloud Functions
-
-<div class="sectionBox">
-<p>
-  <b>Related functions:</b> 
-  <a href="/docs/easybase-react/modules/callfunction.html" target="_blank">callFunction</a>
-</p>
-</div>
-
-Easybase's serverless functions allow you to trigger code snippets running behind the cloud. These event-driven functions can be updated live in the Easybase code editor without changing your application code. You can deploy, edit and test functions effectively in the *Functions* interface.
-
-There are many benefits to using cloud functions for your application, including responsive scaling, lower cost, and the ability to hide processes from your front-end. Furthermore, developers don't have to manually track analytics or worry about the portability of their code. For a deeper dive into cloud functions with React, [this resource will demonstrate how to easily deploy cloud functions](/react/2021/03/09/The-Easiest-Way-To-Deploy-Cloud-Functions-for-your-React-Projects/) with React and React Native.
-
-Use the **Create Dialog** to deploy a new function:
-
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-14.png" />
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-15.png" />
-
-I'll use the **Async** template. If we expand the **deploy** menu, we can use the **testing** tab to run this function and display the result. The template that I specifically selected will call an external API to get the most recent price of Bitcoin, in USD.
-
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-16.png" />
-
-If we add rows to the **Input** section, those values will be available in the function's `event.body`. **We'll see later that the same applies for calling our functions in code.** I'm going to edit the function to return the parameters that are sent in **Input**, save it, and show the output below. `context.succeed()` and `context.fail()` will return variables that are available as strings to your client-side application.
-
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-17.png" />
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-18.png" />
-
-Node is well-known for its iconic package management system. To **install dependencies** for your cloud function, simply add the package name and version to the `dependencies` section of the `package.json`. No need to deal with the `node_modules/` folder. Dependencies will automatically be installed every time you save your function based on your root `package.json`.
-
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-19.png" />
-
-Now you can import that module into your code. Once saved, use the **testing** tab to see the dependency is working properly.
-
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-21.png" />
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-22.png" />
-
-Packages, and their corresponding version, are available on [npmjs.com](https://www.npmjs.com/).
-
-<img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase react visual query" data-src="/assets/images/posts_images/react-20.png" />
-
-To call your function in React or React Native, import `callFunction` as you would `EasybaseProvider`, then pass in the unique route found under the **Deploy** tab. It is under this tab you will also be able to find more information about calling your function in production. You can use either `await callFunction(...)` or `callFunction(...).then(res)` to get the response of the function as a string. Your code may look like the following:
-
-<!-- {% raw %} -->
-```jsx
-import { useEasybase, callFunction } from 'easybase-react';
-
-export default function() {
-    async function handleButtonClick() {
-        const response = await callFunction('d6f217bde0b6b4d-my-function', {
-            hello: "world",
-            message: "Find me in event.body"
-        });
-
-        console.log("Cloud function: " + response);
-    }
-
-    //...
-}
-```
-<!-- {% endraw %} -->
-
-<br />
-
 ## Conclusion
 
 Deploying a serverless React or React Native application is made accessible with Easybase.io + `easybase-react`. Take a look at the [Github repo](https://github.com/easybase/easybase-react) for some more information on *usage* and *installation*. We **successfully created a web app** that features a backend database, user authentication, sign in/sign up workflow, easy-to-use visual queries, and secure user-corresponding backend storage. Also, we demonstrated how to deploy cloud functions that can be called by name in your React and React Native code.
@@ -900,4 +908,4 @@ Thanks a lot for reading! Please be sure to **share this article** using the soc
 
 * [Customizing Query Values](/about/2020/09/15/Customizing-query-values/)
 * [User Authentication](/react/2020/11/25/The-Easiest-Way-To-Add-User-Authentication-To-Your-React-Project/)
-* [Cloud Functions](https://www.freecodecamp.org/news/cloud-functions-in-react-with-easybase/)
+* [Firebase Alternative](/react-database-app-tutorial/)
