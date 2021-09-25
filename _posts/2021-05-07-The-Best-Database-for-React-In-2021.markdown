@@ -2,6 +2,7 @@
 layout: blog-guide
 title: Adding a Serverless Database To React Tutorial (Firebase Alternative)
 date: 2021-05-07 05:20:00 -0400
+date_modified: 2021-09-25 10:00:00 -0400
 categories: react
 title_image: /assets/images/posts_images/react-best-database-firebase-alternative.png
 title_image_sm: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=90&q=80&h=45
@@ -12,8 +13,8 @@ author_image: https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib
 author_name: Ryan Parker
 author_description: Ryan Parker is a Growth Marketing Manager and Staff Writer for Easybase. He has previously written and contributed to various tech-related publications.
 meta_description: React is a great library for creating web apps. You may ask, how can I add a database to my project? This tutorial will demonstrate using React with a database.
-tocTitles: ["Introduction", "Project Setup", "Database", "Insert", "Delete", "Update", "Looking Ahead"]
-tocLinks: ["#introduction", "#project-setup", "#database", "#insert", "#delete", "#update", "#looking-ahead"]
+tocTitles: ["Introduction", "Project Setup", "Database", "Insert", "Delete", "Update", "Upload Media", "Looking Ahead"]
+tocLinks: ["#introduction", "#project-setup", "#database", "#insert", "#delete", "#update", "#upload-media", "#looking-ahead"]
 permalink: react-database-app-tutorial/
 ---
 
@@ -498,6 +499,18 @@ function DbExample() {
 <!-- {% endraw %} -->
 
 <img data-jslghtbx class="custom-lightbox lazyload w-100" alt="Easybase best react database firebase alternative 14" data-src="/assets/images/posts_images/best-db-14.png" />
+
+## [Upload Media](/react/#upload-media)
+
+<div class="sectionBox">
+<p>
+
+Head to <b><a href="/react/#upload-media">this section</a></b> to learn how to upload media and files with the <code class="highlighter-rouge">setImage</code>, <code class="highlighter-rouge">setVideo</code>, and <code class="highlighter-rouge">setFile</code> functions.
+
+</p>
+</div>
+
+<br />
 
 ## Looking Ahead
 
