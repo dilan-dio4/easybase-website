@@ -5,118 +5,6 @@ description: Get in touch with an expert at Easybase!
 ---
 
 <style>
-    #contact input,
-    #contact textarea,
-    #contact button[type="submit"] {
-        font-weight: 400;
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-        font-size: 14px;
-        border-radius: 4px;
-    }
-
-    #contact {
-        padding: 25px;
-        margin-top: 50px;
-        margin-bottom: 200px;
-        width: 500px;
-        max-width: 500px;
-        border-radius: 5px;
-        -webkit-appearance: none;
-    }
-
-    #contact h1 {
-        display: block;
-        font-size: 38px;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
-
-    #contact h2 {
-        margin: 5px 0 15px;
-        display: block;
-        font-size: 15px;
-        font-weight: 400;
-        margin-bottom: 40px;
-        line-height: 1.5;
-    }
-
-    #contact fieldset {
-        border: medium none !important;
-        margin: 0 0 12px;
-        min-width: 100%;
-        padding: 0;
-        width: 100%;
-        display: flex;
-    }
-
-    #contact input,
-    #contact textarea {
-        width: 100%;
-        box-shadow: rgb(60 66 87 / 16%) 0px 0px 0px 1px;
-        -webkit-box-shadow: rgb(60 66 87 / 16%) 0px 0px 0px 1px;
-        background: #FFF;
-        margin: 0 0 5px;
-        padding: 12px;
-        transition: color .24s, background-color .24s, box-shadow .24s;
-        border: none;
-        outline: none;
-        -webkit-appearance: none;
-    }
-
-    #contact input:focus,
-    #contact textarea:focus,
-    #contact input:active,
-    #contact textarea:active {
-        box-shadow: rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(60 66 87 / 16%) 0px 0px 0px 1px;
-        -webkit-box-shadow: rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(60 66 87 / 16%) 0px 0px 0px 1px;
-    }
-
-    #contact textarea {
-        height: 116px;
-        max-width: 100%;
-    }
-
-    #contact button[type="submit"] {
-        cursor: pointer;
-        width: 100%;
-        border: none;
-        background-color: #0070f3;
-        color: #FFF;
-        margin: 0 0 5px;
-        padding: 10px;
-        font-size: 15px;
-        font-weight: 700;
-        box-shadow: none;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-    }
-
-    #contact button[type="submit"]:hover {
-        background-color: #005cc4;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
-    }
-
-    #contact button[type="submit"]:active {
-        background-color: #0154b3;
-    }
-
-    ::-webkit-input-placeholder {
-        color: #888;
-    }
-
-    :-moz-placeholder {
-        color: #888;
-    }
-
-    ::-moz-placeholder {
-        color: #888;
-    }
-
-    :-ms-input-placeholder {
-        color: #888;
-    }
-
     .section-margin {
         margin-top: 1rem;
         overflow: hidden;
@@ -136,50 +24,12 @@ description: Get in touch with an expert at Easybase!
     }
 </style>
 
-<section class="section-blue py-5 section-margin px-2">
+<section class="section-blue section-margin px-2 py-5">
     <h1 class="text-center m-0" style="color: #fff; font-weight: 700; font-size: 34px; z-index: 2; position: relative;">Your turn to ask the questions!</h1>
 </section>
 
-<section class="section-grey p-0">
-    <div class="container">
-        <div class="d-flex justify-content-center">
-            <form id="contact" onsubmit="return sendReq()" accept-charset="UTF-8" action="#" method="POST">
-                <h2>Tell us about yourself and we'll connect you with an expert who will be happy to give you a personalized demo and answer any questions you have.
-                </h2>
-                <fieldset>
-                    <label class="off-screen" for="message-first-name">First name</label>
-                    <input ontouchstart="" placeholder="First name" type="text" name="first-name" id="message-first-name" required autofocus class="mr-2">
-
-                    <label class="off-screen" for="message-last-name">Last name</label>
-                    <input ontouchstart="" placeholder="Last name" type="text" name="last-name" id="message-last-name" required class="ml-2">
-                </fieldset>
-                <fieldset>
-                    <label class="off-screen" for="message-email">Email address</label>
-                    <input ontouchstart="" placeholder="Email address" type="email" name="email" id="message-email" required>
-                </fieldset>
-                <fieldset>
-                    <label class="off-screen" for="message-company">Company name</label>
-                    <input ontouchstart="" placeholder="Company name" type="text" name="company" id="message-company" required>
-                </fieldset>
-                <fieldset>
-                    <label class="off-screen" for="message-company">Phone number</label>
-                    <input ontouchstart="" placeholder="Phone number" type="tel" name="phone" id="message-phone" required>
-                </fieldset>
-                <fieldset>
-                    <label class="off-screen" for="message-message">What are you hoping to accomplish with Easybase?</label>
-                    <textarea ontouchstart="" placeholder="What are you hoping to accomplish with Easybase?" name="message" id="message-message" required></textarea>
-                </fieldset>
-                <fieldset>
-                    <label class="off-screen" for="message-submit">Submit</label>
-                    <button name="submit" type="submit" id="message-submit" data-submit="...Sending">Submit</button>
-                </fieldset>
-                <label class="off-screen" for="message-gotcha">Gotcha</label>
-                <input ontouchstart="" name="_gotcha" style="display:none" id="message-gotcha">
-                <label class="off-screen" for="message-type">Type</label>
-                <input ontouchstart="" name="type" style="display:none" value="talk" id="message-type">
-            </form>
-        </div>
-    </div>
+<section class="section-white p-0 mt-4">
+    <iframe src="https://meet.easybase.io/intro-demo?view=compact" style="width:100%; height:750px;" frameborder="0" scrolling="yes"></iframe>
 </section>
 
 <script>
@@ -227,32 +77,4 @@ description: Get in touch with an expert at Easybase!
             }
         );
     });
-
-    function disableForm() {
-        Array.from(document.getElementById("contact").getElementsByTagName("button")).forEach(e => {
-            e.setAttribute("disabled", true);
-        })
-    }
-
-    function enableForm() {
-        Array.from(document.getElementById("contact").getElementsByTagName("button")).forEach(e => {
-            e.removeAttribute("disabled");
-        })
-    }
-
-    function sendReq() {
-        const url = "https://formcarry.com/s/9OdMhO2UJo";
-        disableForm();
-
-        fetch(url, {
-            method: "POST",
-            body: new FormData(document.getElementById("contact")),
-        }).then(() => {
-            enableForm();
-            window.location = "https://easybase.io/contact-talk-thank/";
-        }).catch(() => {
-            enableForm();
-        });
-        return false;
-    }
 </script>
