@@ -36,7 +36,7 @@ window.addEventListener("load", function () {
     }
     statusWorker();
 
-    document.getElementsByClassName("mobile-menu_indicator")[0].addEventListener('click', toggleMobileNav, false);
+    document.getElementsByClassName("mobile-menu_indicator-button")[0].addEventListener('click', toggleMobileNav, false);
     document.getElementById("icon-close-mobile").addEventListener('click', toggleMobileNav, false);
 
     var getScrollY = function () { return (window.pageYOffset || window.document.documentElement.scrollTop) - (window.document.documentElement.clientTop || 0); };

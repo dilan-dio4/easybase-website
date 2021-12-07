@@ -132,6 +132,7 @@ export default function App() {
   )
 }
 ```
+<!-- {% endraw %} -->
 
 <img data-jslghtbx class="custom-lightbox lazyload" style="max-height: 700px;margin: auto;display: block;max-width:100%" alt="Easybase user authentication 4" data-src="/assets/images/posts_images/new-react-auth-4.png" />
 

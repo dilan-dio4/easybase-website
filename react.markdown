@@ -353,7 +353,7 @@ The **useReturn** function is an alternate, lifecycle-friendly hook to `db().ret
 
 The `useReturn` hook automatically re-fetch the data of a given query, similar to how the `useEffect` hook runs a function when certain variables change. `.return` queries are built in the exact same way, **just don't call `.all` or `.one`**.
 
-Imagine a situation in which your data had an attribute called *rating* and your app had an input that controls a state variable called *minRating*. The  `useReturn` hook would keep your data [called `frame`] fresh as this variable is changed: 
+Imagine a situation in which your data had an attribute called *rating* and your app had an input that controls a state variable called *minRating*. The `useReturn` hook would keep your data [called `frame`] fresh as this variable is changed: 
 
 <!-- {% raw %} -->
 ```js
@@ -549,6 +549,7 @@ function Home() {
           <button className="cardButton" onClick={() => {}}>⭐ Save for later ⭐</button>
         </div>
       )}
+      <input ref={inputEl} hidden type="file" />
       <AddCardButton />
     </div>
   )
