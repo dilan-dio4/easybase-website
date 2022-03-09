@@ -434,8 +434,8 @@ div.header-contact-us {
     font-family: var(--font-sans);
     line-height: 1.11em;
     font-weight: 800;
-    letter-spacing: -0.0222974;
-    font-size: 50px;
+    letter-spacing: -0.0222974em;
+    font-size: 100px;
     font-weight: 700;
     text-transform: none;
     margin-bottom: 3rem;
@@ -456,21 +456,21 @@ div.header-contact-us {
 .hero-buttons-root {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 72px;
+    flex-direction: column;
+    justify-content: center;
     margin-top: 2rem;
     margin-bottom: 10px;
     min-width: 458px;
+    align-self: start;
 }
 
 .hero-buttons-root::after {
     content: "";
     position: absolute;
     background-color: rgba(0, 0, 0, 0.01);
-    left: -5px;
-    height: 82px;
-    right: 48px;
+    left: -35px;
+    height: 140px;
+    right: -35px;
     overflow: visible;
     z-index: 1;
     border-radius: 10px;
@@ -1081,9 +1081,8 @@ div.header-contact-us {
     }
 
     .hero-primary-text {
-        font-size: 50px;
-        text-align: center;
-        margin-bottom: 0px;
+        font-size: 60px;
+        margin-bottom: 80px;
     }
 
     .hero-buttons-root {
@@ -1096,11 +1095,7 @@ div.header-contact-us {
     }
 
     .hero-buttons-root::after {
-        left: 60px;
-        height: 157px;
-        right: 60px;
-        margin-top: -20px;
-        min-width: initial;
+        display: none;
     }
 
     .footer-footer {
@@ -1431,7 +1426,7 @@ div.header-contact-us {
     --mod-form-line-height: 1.25rem;
     --mod-form-height: var(--mod-space-medium);
     --highlight-color: #d1ebff;
-    --banner-height: 40px;
+    --banner-height: 0px;
     --flash-container-bg: #22e2298c;
     --flasher-bg: var(--mod-cyan-darker);
     --for-button-height: 120px;
@@ -1654,6 +1649,18 @@ header {
     position: relative;
     top: -40px;
     max-width: 100%;
+}
+
+.hero-input {
+    border: 1px solid #eee;
+    background: #FFF;
+    padding: 8px 20px;
+    font-weight: 600;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    height: 50px;
+    width: 280px;
 }
 
 #message input[type="text"], #message input[type="email"], #message input[type="tel"], #message input[type="url"], #message textarea {
@@ -1972,5 +1979,43 @@ ion-icon[size="large"] {
     right: 0;
     width: 140px;
     position: absolute;
-    top: calc(-20vh + 40px);
+    bottom: 15px;
+}
+
+/** Just alert stuff */
+
+#myAlert.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+#myAlert {
+    visibility: hidden;
+    position: fixed;
+    color: white;
+    border-radius: 10px;
+    top: 56px;
+    right: 0;
+    transform: translate(-15px, 15px);
+    background: #2ECC71;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity .2s ease-in-out;
+}
+
+.myAlert-text-icon {
+    align-items: stretch;
+    box-shadow: 0 1px 1px rgb(10 10 10 / 10%);
+    display: flex;
+    max-width: 300px;
+
+}
+
+.myAlert-message {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    font-weight: 700;
+    padding: 15px 25px;
 }
