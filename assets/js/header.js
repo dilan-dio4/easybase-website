@@ -4,12 +4,6 @@ function toggleMobileNav() {
 }
 
 window.addEventListener("load", function () {
-
-    document.getElementById('banner_close').addEventListener('click', function () {
-        document.getElementsByClassName('banner_banner')[0].classList.toggle('banner_hidden');
-        document.documentElement.style.setProperty('--banner-height', "0px");
-    });
-
     async function statusWorker() {
         try {
             const status_res = await fetch('https://8x8pb0hcdvq9.statuspage.io/api/v2/status.json');
