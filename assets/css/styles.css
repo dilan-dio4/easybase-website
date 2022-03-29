@@ -438,7 +438,6 @@ div.header-contact-us {
     font-size: 100px;
     font-weight: 700;
     text-transform: none;
-    margin-bottom: 3rem;
 }
 
 .hero-secondary-text {
@@ -1070,6 +1069,14 @@ div.header-contact-us {
     bottom: 10px;
 }
 
+
+@media screen and (max-height: 700px) {
+    .hero-primary-text {
+        margin-top: 10px;
+        font-size: 68px;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .steps-container {
         flex-direction: column !important;
@@ -1081,8 +1088,8 @@ div.header-contact-us {
     }
 
     .hero-primary-text {
+        margin-top: 0px;
         font-size: 50px;
-        margin-bottom: 80px;
     }
 
     .hero-buttons-root {
@@ -1660,7 +1667,8 @@ header {
     font-size: 16px;
     border-radius: 5px;
     height: 50px;
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
 }
 
 #message input[type="text"], #message input[type="email"], #message input[type="tel"], #message input[type="url"], #message textarea {
